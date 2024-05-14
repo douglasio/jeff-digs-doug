@@ -1,4 +1,6 @@
 {
+  "name": "jeff-digs-doug",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next",
@@ -8,22 +10,18 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@emotion/cache": "^11.11.0",
-    "@emotion/react": "^11.11.4",
-    "@emotion/styled": "^11.11.5",
-    "@mui/material": "^5.15.17",
-    "@mui/material-nextjs": "^5.15.11",
+    "@mantine/core": "^7.9.1",
+    "@mantine/form": "^7.9.1",
+    "@mantine/hooks": "^7.9.1",
     "@types/node": "^18.11.5",
     "@types/react": "^18.0.23",
     "@types/react-dom": "^18.0.7",
+    "axios": "^1.6.8",
     "next": "latest",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "serve": "^14.2.0",
     "typescript": "^4.8.4"
-  },
-  "resolutions": {
-    "styled-components": "^5"
   },
   "devDependencies": {
     "eslint": "^8",
@@ -31,6 +29,9 @@
     "eslint-config-prettier": "^9.1.0",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
+    "postcss": "^8.4.38",
+    "postcss-preset-mantine": "^1.15.0",
+    "postcss-simple-vars": "^7.0.1",
     "prettier": "^3.2.5"
   },
   "lint-staged": {

@@ -1,0 +1,7 @@
+.hubspotForm {
+  transform: scale(0.5);
+}
+
+.hubspotForm .page {
+  display: none;
+}
