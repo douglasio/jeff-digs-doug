@@ -1,4 +1,4 @@
-import * as Styled from "./layout.styles";
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 
 export default function RootLayout({
   children,
@@ -7,7 +7,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Styled.Body>{children}</Styled.Body>
+      <body>
+        <AppRouterCacheProvider>{children}</AppRouterCacheProvider>
+      </body>
     </html>
   );
 }
