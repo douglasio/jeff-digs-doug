@@ -1,3 +1,5 @@
+import * as Styled from "./layout.styles";
+
 export default function RootLayout({
   children,
 }: {
@@ -5,7 +7,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <Styled.Body>{children}</Styled.Body>
     </html>
   );
 }

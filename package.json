@@ -3,16 +3,33 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "serve out"
+    "start": "serve out",
+    "lint": "next lint",
+    "prepare": "husky"
   },
   "dependencies": {
     "@types/node": "^18.11.5",
-    "@types/react-dom": "^18.0.7",
     "@types/react": "^18.0.23",
+    "@types/react-dom": "^18.0.7",
     "next": "latest",
-    "react-dom": "^18.2.0",
     "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "serve": "^14.2.0",
+    "styled-components": "^6.1.11",
     "typescript": "^4.8.4"
+  },
+  "resolutions": {
+    "styled-components": "^5"
+  },
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3",
+    "eslint-config-prettier": "^9.1.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   }
 }
