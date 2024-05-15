@@ -15,6 +15,9 @@ import { WEDDING_DETAILS } from "_util";
 export const metadata = {
 	title: "Jeff Digs Doug",
 	description: "A wedding website for the greatest couple of all time",
+};
+
+export const viewport = {
 	themeColor: COLORS.BLUE[9],
 };
 
@@ -28,13 +31,12 @@ export default function RootLayout({
 			<head>
 				<ColorSchemeScript />
 			</head>
-
-			<MantineProvider
-				cssVariablesResolver={resolver}
-				forceColorScheme="dark"
-				theme={theme}
-			>
-				<body className={classes.body}>
+			<body className={classes.body}>
+				<MantineProvider
+					cssVariablesResolver={resolver}
+					forceColorScheme="dark"
+					theme={theme}
+				>
 					<Grid m="xl">
 						<GridCol span={3}>
 							<Image
@@ -59,8 +61,8 @@ export default function RootLayout({
 							<Nav />
 						</GridCol>
 					</Grid>
-				</body>
-			</MantineProvider>
+				</MantineProvider>
+			</body>
 		</html>
 	);
 }

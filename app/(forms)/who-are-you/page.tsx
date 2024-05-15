@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { HubSpotForm } from "_components";
 
 const Page = () => {
