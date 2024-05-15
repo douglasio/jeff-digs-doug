@@ -1,10 +1,9 @@
 export const HUBSPOT = {
-	PORTAL_ID: "2847769",
+	PORTAL_ID: process.env.NEXT_PUBLIC_HUBSPOT_PORTAL_ID,
 	FORM_ID: {
-		INTAKE_FORM: "be0cfe31-d5e9-478e-815a-0173308fffa2",
+		INTAKE_FORM: process.env.NEXT_PUBLIC_HUBSPOT_INTAKE_FORM_ID,
 	},
-	SUBMIT_ENDPOINT:
-		"https://api.hsforms.com/submissions/v3/integration/submit/",
+	SUBMIT_ENDPOINT: process.env.NEXT_PUBLIC_HUBSPOT_FORM_SUBMIT_ENDPOINT,
 };
 
 export const WEDDING_DETAILS = {
