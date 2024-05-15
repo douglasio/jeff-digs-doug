@@ -35,6 +35,6 @@
     "prettier": "^3.2.5"
   },
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "**/*": "prettier --write --ignore-unknown && yarn run lint"
   }
 }
