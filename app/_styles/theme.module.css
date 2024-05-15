@@ -1,0 +1,15 @@
+.navLinkRoot {
+	--nl-bg: transparent;
+
+	background-color: transparent;
+	border-left: 1px solid transparent;
+	font-style: italic;
+
+	&[data-active] {
+		border-left: 1px solid var(--mantine-primary-color-filled);
+	}
+
+	&:hover {
+		border-left: 1px solid var(--mantine-primary-color-light);
+	}
+}
