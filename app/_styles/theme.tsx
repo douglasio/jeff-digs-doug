@@ -1,5 +1,13 @@
 "use client";
-import { CSSVariablesResolver, createTheme, rem, NavLink } from "@mantine/core";
+import {
+	createTheme,
+	rem,
+	NavLink,
+	Input,
+	Overlay,
+	LoadingOverlay,
+	Image,
+} from "@mantine/core";
 import { COLORS, FONTS } from "_styles";
 import classes from "./theme.module.css";
 
@@ -14,23 +22,40 @@ export const theme = createTheme({
 		lg: rem(25),
 		xl: rem(30),
 	},
-	headings: { fontFamily: FONTS.MRS_EAVES.style.fontFamily },
+	headings: {
+		fontFamily: FONTS.MRS_EAVES.style.fontFamily,
+	},
 	defaultRadius: "0px",
 	components: {
 		NavLink: NavLink.extend({
 			classNames: { root: classes.navLinkRoot },
 		}),
-	},
-});
-
-export const resolver: CSSVariablesResolver = (theme) => ({
-	variables: {
-		"--nl-bg": "red",
-	},
-	light: {
-		"--nl-bg": "red",
-	},
-	dark: {
-		"--nl-bg": "red",
+		Input: Input.extend({
+			classNames: { input: classes.input, wrapper: classes.inputWrapper },
+			defaultProps: {
+				size: "xl",
+			},
+		}),
+		Overlay: Overlay.extend({
+			defaultProps: {
+				blur: 7,
+				color: COLORS.BLUE[8],
+			},
+		}),
+		LoadingOverlay: LoadingOverlay.extend({
+			defaultProps: {
+				overlayProps: { blur: 7, color: COLORS.BLUE[8] },
+				loaderProps: {
+					children: (
+						<Image
+							alt="Loading..."
+							src="static/images/initials_Horizontal_1.png"
+							className={classes.loaderSpin}
+						/>
+					),
+				},
+				transitionProps: { transition: "fade", duration: 500 },
+			},
+		}),
 	},
 });

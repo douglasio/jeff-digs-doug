@@ -2,95 +2,57 @@
 
 import { useState } from "react";
 import axios from "axios";
-import { TextInput, Checkbox, Button, Group, Box } from "@mantine/core";
+import { useDisclosure } from "@mantine/hooks";
+import {
+	TextInput,
+	Button,
+	Modal,
+	Select,
+	Autocomplete,
+	Stack,
+} from "@mantine/core";
 import { useForm } from "@mantine/form";
-import { HUBSPOT } from "_util";
-
-type IntakeFormType = (
-	firstname: string,
-	lastname: string,
-	email: string,
-	address: string,
-	city: string,
-	state: string,
-) => void;
+import { IconAt, IconMoodSad } from "@tabler/icons-react";
+import { HUBSPOT, stateNames } from "_util";
 
 const FORM_VALIDATIONS = {
 	REQUIRED: (value: string) => (value.length < 1 ? "Required" : null),
 	MIN_LENGTH: (value: string) => (value.length < 2 ? "Too short" : null),
 	EMAIL_ADDRESS: (value: string) =>
 		/^\S+@\S+$/.test(value) ? null : "Invalid email",
-};
-
-const submit_hubspot_form: IntakeFormType = async (
-	firstname,
-	lastname,
-	email,
-	address,
-	city,
-	state,
-) => {
-	const portalId = HUBSPOT.PORTAL_ID;
-	const formGuid = HUBSPOT.FORM_ID.INTAKE_FORM;
-	const config = {
-		// important!
-		headers: {
-			"Content-Type": "application/json",
-		},
-	};
-
-	const response = await axios.post(
-		`${HUBSPOT.SUBMIT_ENDPOINT}${portalId}/${formGuid}`,
-		{
-			portalId,
-			formGuid,
-			fields: [
-				{
-					name: "firstname",
-					value: "",
-				},
-				{
-					name: "lastname",
-					value: "",
-				},
-				{
-					name: "email",
-					value: "",
-				},
-				{
-					name: "address",
-					value: "",
-				},
-				{
-					name: "city",
-					value: "",
-				},
-				{
-					name: "state",
-					value: "",
-				},
-			],
-			context: {
-				pageUri: "http://localhost",
-				pageName: "Local",
-			},
-		},
-		config,
-	);
-	return response;
+	STATE: (value: string) =>
+		!stateNames.includes(value) ? "Pick a state from the list" : null,
 };
 
 export const HubSpotForm = () => {
+	const [status, setStatus] = useState<
+		"idle" | "submitting" | "submitted" | "error"
+	>("idle");
+
+	const [openedModal, handlers] = useDisclosure(false, {
+		onClose: () => setStatus("idle"),
+	});
+
 	const form = useForm({
 		mode: "uncontrolled",
 		validateInputOnBlur: true,
 		initialValues: {
-			firstname: "",
-			lastname: "",
-			email: "",
-			address: "",
-			city: "",
-			state: "",
+			//// BLANK
+			// firstname: "",
+			// lastname: "",
+			// email: "",
+			// address: "",
+			// city: "",
+			// state: "",
+			// zip: "",
+			//// TESTING
+			firstname: "Doug",
+			lastname: "Odell",
+			email: "jeffdigsdoug@gmail.com",
+			address: "123 Fake Street",
+			city: "San Diego",
+			state: "CA",
+			zip: "92104",
 		},
 
 		validate: {
@@ -99,74 +61,136 @@ export const HubSpotForm = () => {
 			email: FORM_VALIDATIONS.EMAIL_ADDRESS,
 			address: FORM_VALIDATIONS.REQUIRED,
 			city: FORM_VALIDATIONS.REQUIRED,
-			state: FORM_VALIDATIONS.REQUIRED,
+			state: FORM_VALIDATIONS.STATE,
+			zip: FORM_VALIDATIONS.REQUIRED,
 		},
 	});
 
-	//   const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement>) => {
-	//     e.preventDefault(); // prevent form submit default behavior
-	//     if (!firstName || !email) return; // if an input field is empty, don't submit the form
-	//     const hubspot_response = await submit_hubspot_form(
-	//       firstName,
-	//       lastName,
-	//       email,
-	//       address,
-	//       city,
-	//       state,
-	//     );
-	//     console.log(hubspot_response); // make sure it succeeded!
-	//   };
+	const handleSubmit = async (values: typeof form.values) => {
+		setStatus("submitting");
+
+		const portalId = HUBSPOT.PORTAL_ID;
+		const formGuid = HUBSPOT.FORM_ID.INTAKE_FORM;
+		const config = {
+			headers: {
+				"Content-Type": "application/json",
+			},
+		};
+
+		const mappedValues = Object.entries(values).map((value) => {
+			return {
+				name: value[0],
+				value: value[1],
+			};
+		});
+
+		console.log("mappedValues", mappedValues);
+
+		const response = await axios
+			.post(
+				`${HUBSPOT.SUBMIT_ENDPOINT}${portalId}/${formGuid}`,
+				{
+					portalId,
+					formGuid,
+					fields: mappedValues,
+					context: {
+						pageUri: "http://localhost",
+						pageName: "Local",
+					},
+				},
+				config,
+			)
+			.then((response) => {
+				//success
+				setStatus("submitted");
+			})
+			.catch((error) => {
+				//error
+				setStatus("error");
+				handlers.open();
+				//https://axios-http.com/docs/handling_errors
+				if (error.response) {
+					console.error("Form submit error!");
+					console.log(error.response.data);
+					console.log(error.response.status);
+					console.log(error.response.headers);
+				} else if (error.request) {
+					console.error(error.request);
+				} else {
+					console.error("Error", error.message);
+				}
+			});
+
+		return response;
+	};
+	console.log(status);
 
 	return (
-		<Box maw={340} mx="auto">
-			<form onSubmit={form.onSubmit((values) => console.log(values))}>
-				<TextInput
-					withAsterisk
-					label="First Name"
-					placeholder="First Name"
-					key={form.key("firstname")}
-					{...form.getInputProps("firstname")}
-				/>
-				<TextInput
-					withAsterisk
-					label="Last Name"
-					placeholder="Last Name"
-					key={form.key("lastname")}
-					{...form.getInputProps("lastname")}
-				/>
-				<TextInput
-					withAsterisk
-					label="Email"
-					placeholder="your@email.com"
-					key={form.key("email")}
-					{...form.getInputProps("email")}
-				/>
-				<TextInput
-					withAsterisk
-					label="Street Address"
-					placeholder="Street Address"
-					key={form.key("address")}
-					{...form.getInputProps("address")}
-				/>
-				<TextInput
-					withAsterisk
-					label="City"
-					placeholder="City"
-					key={form.key("city")}
-					{...form.getInputProps("city")}
-				/>
-				<TextInput
-					withAsterisk
-					label="State"
-					placeholder="State"
-					key={form.key("state")}
-					{...form.getInputProps("state")}
-				/>
-				<Button type="submit" mt="sm">
-					Submit
-				</Button>
+		<>
+			<form onSubmit={form.onSubmit((values) => handleSubmit(values))}>
+				<Stack>
+					<TextInput
+						label="First Name"
+						placeholder="First Name"
+						key={form.key("firstname")}
+						{...form.getInputProps("firstname")}
+					/>
+					<TextInput
+						label="Last Name"
+						placeholder="Last Name"
+						key={form.key("lastname")}
+						{...form.getInputProps("lastname")}
+					/>
+					<TextInput
+						label="Email"
+						placeholder="your@email.com"
+						leftSection={<IconAt />}
+						key={form.key("email")}
+						{...form.getInputProps("email")}
+					/>
+					<TextInput
+						label="Street Address"
+						placeholder="Street Address"
+						key={form.key("address")}
+						{...form.getInputProps("address")}
+					/>
+					<TextInput
+						label="City"
+						placeholder="City"
+						key={form.key("city")}
+						{...form.getInputProps("city")}
+					/>
+					<Autocomplete
+						label="State"
+						data={stateNames}
+						placeholder="State"
+						key={form.key("state")}
+						{...form.getInputProps("state")}
+					/>
+					<TextInput
+						required
+						label="ZIP Code"
+						placeholder="90210"
+						key={form.key("zip")}
+						{...form.getInputProps("zip")}
+					/>
+					<Button type="submit" mt="sm">
+						Submit
+					</Button>
+				</Stack>
 			</form>
-		</Box>
+			<Modal
+				opened={openedModal}
+				withCloseButton={false}
+				onClose={handlers.close} // also resets form status
+			>
+				<p>
+					<IconMoodSad style={{ verticalAlign: "text-top" }} /> It
+					didn&rsquo;t work.
+				</p>
+				<Button onClick={handlers.close}>Try again</Button>
+			</Modal>
+		</>
 	);
 };
 

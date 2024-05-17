@@ -1,3 +1,8 @@
+import states from "states-us";
+
+// array of state names - used in forms / validations
+export const stateNames = states.map((state) => state.name);
+
 export const HUBSPOT = {
 	PORTAL_ID: process.env.NEXT_PUBLIC_HUBSPOT_PORTAL_ID,
 	FORM_ID: {

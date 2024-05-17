@@ -1,0 +1,4 @@
+:root {
+	--input-bg: transparent;
+	--input-fz: var(--mantine-font-size-md);
+}

@@ -6,11 +6,13 @@ import {
 	Image,
 	MantineProvider,
 	Title,
+	Text,
+	Flex,
+	Overlay,
 } from "@mantine/core";
-import { Nav } from "_components";
-import { COLORS, resolver, theme } from "_styles";
+import { COLORS, theme } from "_styles";
+import "./_styles/global.css";
 import classes from "./layout.module.css";
-import { WEDDING_DETAILS } from "_util";
 
 export const metadata = {
 	title: "Jeff Digs Doug",
@@ -32,35 +34,8 @@ export default function RootLayout({
 				<ColorSchemeScript />
 			</head>
 			<body className={classes.body}>
-				<MantineProvider
-					cssVariablesResolver={resolver}
-					forceColorScheme="dark"
-					theme={theme}
-				>
-					<Grid m="xl">
-						<GridCol span={3}>
-							<Image
-								alt="D&J"
-								src={"static/images/initials_Vertical_1.png"}
-								h="200"
-								w="auto"
-								mb="xl"
-							/>
-							<Title order={1}>
-								The Wedding of Jeff Chen and Doug Odell
-							</Title>
-							<p>{WEDDING_DETAILS.DATE}</p>
-							<p>
-								{WEDDING_DETAILS.VENUE}
-								<br />
-								{WEDDING_DETAILS.CITY}
-							</p>
-						</GridCol>
-						<GridCol span={6}>{children}</GridCol>
-						<GridCol span={3}>
-							<Nav />
-						</GridCol>
-					</Grid>
+				<MantineProvider forceColorScheme="dark" theme={theme}>
+					{children}
 				</MantineProvider>
 			</body>
 		</html>

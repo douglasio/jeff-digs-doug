@@ -1,0 +1,7 @@
+.image-overlay {
+	filter: brightness(0.85) hue-rotate(350deg) grayscale(0.1);
+}
+
+.text-no-wrap {
+	white-space: nowrap;
+}
