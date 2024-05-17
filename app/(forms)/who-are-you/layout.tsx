@@ -1,18 +1,4 @@
-import {
-	ColorSchemeScript,
-	Grid,
-	GridCol,
-	Image,
-	MantineProvider,
-	Title,
-	Text,
-	Flex,
-	Overlay,
-	Center,
-	LoadingOverlay,
-	rem,
-} from "@mantine/core";
-import { useDisclosure, useLocalStorage, useTimeout } from "@mantine/hooks";
+import { Grid, GridCol, Image, Center, rem } from "@mantine/core";
 import { Loader } from "_components";
 // import classes from "./layout.module.css";
 

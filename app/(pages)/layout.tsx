@@ -1,17 +1,5 @@
-import {
-	ColorSchemeScript,
-	Grid,
-	GridCol,
-	Image,
-	MantineProvider,
-	Title,
-	Text,
-	Flex,
-	Overlay,
-} from "@mantine/core";
+import { Grid, GridCol, Image, Title, Text, Flex } from "@mantine/core";
 import { Nav } from "_components";
-import { COLORS, resolver, theme } from "_styles";
-// import classes from "./layout.module.css";
 import { WEDDING_DETAILS } from "_util";
 
 export default function RootLayout({
@@ -20,11 +8,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<Grid
-			// className={classes.layoutGrid}
-			gutter={{ base: 0, md: "xl" }}
-			m={{ base: "0", sm: "xl" }}
-		>
+		<Grid gutter={{ base: 0, md: "xl" }} m={{ base: "0", sm: "xl" }}>
 			<GridCol
 				span={{ base: 12, sm: 3, md: 2 }}
 				pos={{ base: "absolute", sm: "static" }}

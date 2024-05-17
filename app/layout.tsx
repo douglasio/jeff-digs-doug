@@ -1,15 +1,5 @@
 import "@mantine/core/styles.layer.css";
-import {
-	ColorSchemeScript,
-	Grid,
-	GridCol,
-	Image,
-	MantineProvider,
-	Title,
-	Text,
-	Flex,
-	Overlay,
-} from "@mantine/core";
+import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 import { COLORS, theme } from "_styles";
 import "./_styles/global.css";
 import classes from "./layout.module.css";

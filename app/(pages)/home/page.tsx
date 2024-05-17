@@ -1,6 +1,5 @@
 import React from "react";
-import Link from "next/link";
-import { Box, Button, Flex, Grid, GridCol, Image, Text } from "@mantine/core";
+import { Button, Flex, Grid, GridCol, Image, Text } from "@mantine/core";
 
 const Page = () => {
 	return (

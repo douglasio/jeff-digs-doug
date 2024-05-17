@@ -3,14 +3,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useDisclosure } from "@mantine/hooks";
-import {
-	TextInput,
-	Button,
-	Modal,
-	Select,
-	Autocomplete,
-	Stack,
-} from "@mantine/core";
+import { TextInput, Button, Modal, Autocomplete, Stack } from "@mantine/core";
 import { useForm } from "@mantine/form";
 import { IconAt, IconMoodSad } from "@tabler/icons-react";
 import { HUBSPOT, stateNames } from "_util";
@@ -25,6 +18,7 @@ const FORM_VALIDATIONS = {
 };
 
 export const HubSpotForm = () => {
+	// eslint-disable-next-line no-unused-vars
 	const [status, setStatus] = useState<
 		"idle" | "submitting" | "submitted" | "error"
 	>("idle");
@@ -98,7 +92,7 @@ export const HubSpotForm = () => {
 				},
 				config,
 			)
-			.then((response) => {
+			.then(() => {
 				//success
 				setStatus("submitted");
 			})
