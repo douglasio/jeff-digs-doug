@@ -84,8 +84,6 @@ export const HubSpotForm = () => {
 			};
 		});
 
-		console.log("mappedValues", mappedValues);
-
 		const response = await axios
 			.post(
 				`${HUBSPOT.SUBMIT_ENDPOINT}${portalId}/${formGuid}`,
@@ -110,20 +108,24 @@ export const HubSpotForm = () => {
 				handlers.open();
 				//https://axios-http.com/docs/handling_errors
 				if (error.response) {
-					console.error("Form submit error!");
-					console.log(error.response.data);
-					console.log(error.response.status);
-					console.log(error.response.headers);
+					// eslint-disable-next-line no-console
+					console.error(
+						"Form submit error!",
+						error.response.data,
+						error.response.status,
+						error.response.headers,
+					);
 				} else if (error.request) {
+					// eslint-disable-next-line no-console
 					console.error(error.request);
 				} else {
+					// eslint-disable-next-line no-console
 					console.error("Error", error.message);
 				}
 			});
 
 		return response;
 	};
-	console.log(status);
 
 	return (
 		<>

@@ -24,7 +24,7 @@
 		"react-dom": "^18.2.0",
 		"serve": "^14.2.0",
 		"states-us": "^1.0.4",
-		"typescript": "^4.8.4"
+		"typescript": "^5.4.5"
 	},
 	"devDependencies": {
 		"eslint": "^8",
