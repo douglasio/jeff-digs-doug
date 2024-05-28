@@ -1,5 +1,5 @@
-import { Grid, GridCol, Image, Center, rem } from "@mantine/core";
-import { Loader, SVG } from "_components";
+import { Grid, GridCol, Center, rem } from "@mantine/core";
+import { SVG } from "_components";
 // import classes from "./layout.module.css";
 
 export default function RootLayout({
