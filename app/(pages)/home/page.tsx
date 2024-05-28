@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Flex, Grid, GridCol, Image, Text } from "@mantine/core";
 
-const Page = () => {
+const Home = () => {
 	return (
 		<Grid>
 			<GridCol span={{ base: 12, md: 6 }}>
@@ -41,4 +41,4 @@ const Page = () => {
 	);
 };
 
-export default Page;
+export default Home;

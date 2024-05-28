@@ -48,3 +48,15 @@ export const SITE_PAGES: PageType[] = [
 		url: "/our-story",
 	},
 ];
+
+export const PATHS = {
+	PAGES: {
+		HOME: "/",
+		WHO_ARE_YOU: "/who-are-you",
+		SIGN_IN: "/sign-in",
+	},
+	API: {
+		AUTH_SIGNIN: "/api/auth/signin",
+		AUTH_CREDENTIALS: "/api/auth/callback/credentials",
+	},
+};

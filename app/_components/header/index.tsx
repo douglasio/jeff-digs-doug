@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FONTS } from "_styles/fonts";
 import { Burger, Container, Anchor, Group, Image } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
+import { SVG } from "_components";
 
 type Page = {
 	text: string;
@@ -43,13 +44,7 @@ export const Header = () => {
 		<header className={FONTS.MRS_EAVES.className}>
 			<Container component="nav" mt="md" visibleFrom="sm">
 				<Group>
-					<Image
-						src="../static/images/initials_Vertical_1.png"
-						alt="D&J"
-						w="100"
-						h="auto"
-						pr="lg"
-					/>
+					<SVG.Initials />
 					{pages.map((page) => (
 						<Anchor
 							key={page.text}

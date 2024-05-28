@@ -49,7 +49,7 @@ export const theme = createTheme({
 					children: (
 						<Image
 							alt="Loading..."
-							src="static/images/initials_Horizontal_1.png"
+							src="static/images/initials_Horizontal_green.png"
 							className={classes.loaderSpin}
 						/>
 					),

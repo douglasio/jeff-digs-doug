@@ -1,5 +1,5 @@
 import { Grid, GridCol, Image, Center, rem } from "@mantine/core";
-import { Loader } from "_components";
+import { Loader, SVG } from "_components";
 // import classes from "./layout.module.css";
 
 export default function RootLayout({
@@ -9,16 +9,13 @@ export default function RootLayout({
 }) {
 	return (
 		<>
-			<Loader type="timeout" />
 			<Center m={{ base: "xl", sm: "xl" }} mt={{ base: "lg" }}>
 				<Grid gutter={{ base: "md", sm: "xl" }}>
 					<GridCol
 						span={{ base: 12, sm: 4 }}
 						mt={{ base: "sm", sm: 0 }}
 					>
-						<Image
-							alt="D&J"
-							src="static/images/Initials_Vertical_1.png"
+						<SVG.Initials
 							w={{ base: rem(50), sm: "100%" }}
 							m={{ base: "0 auto", sm: "auto" }}
 							maw="200"
