@@ -5,6 +5,7 @@
 	"scripts": {
 		"dev": "next",
 		"build": "next build",
+		"build:wrangler": "npx wrangler pages dev build -b CFP_PASSWORD=test",
 		"start": "serve out",
 		"lint": "next lint",
 		"prepare": "husky",
