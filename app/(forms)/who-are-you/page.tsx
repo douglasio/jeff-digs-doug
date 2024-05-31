@@ -1,19 +1,7 @@
-import { authOptions } from "@/auth";
-import { getServerSession } from "next-auth";
-import { redirect } from "next/navigation";
 import { Title, Text } from "@mantine/core";
 import { HubSpotForm, Loader } from "_components";
-import { PATHS } from "_util";
 
 const Page = async () => {
-	const session = await getServerSession(authOptions);
-
-	if (!session) {
-		redirect(
-			`${PATHS.PAGES.SIGN_IN}?callbackUrl=${PATHS.PAGES.WHO_ARE_YOU}`,
-		);
-	}
-
 	return (
 		<>
 			<Loader type="timeout" />
