@@ -19,8 +19,8 @@ type InitialsType = ImageProps & {
 enum INITIALS_IMAGE_SRC {
 	VERTICAL_GREEN = "static/images/initials_vertical_green.png",
 	VERTICAL_BLUE = "static/images/initials_vertical_blue.png",
-	HORIZONTAL_GREEN = "static/images/initials_horiztonal_green.png",
-	HORIZONTAL_BLUE = "static/images/initials_horiztonal_blue.png",
+	HORIZONTAL_GREEN = "static/images/initials_horizontal_green.png",
+	HORIZONTAL_BLUE = "static/images/initials_horizontal_blue.png",
 }
 
 export const Initials = ({
