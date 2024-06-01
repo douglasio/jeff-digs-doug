@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import states from "states-us";
 
 // array of state names - used in forms / validations

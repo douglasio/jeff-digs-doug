@@ -16,10 +16,15 @@ type InitialsType = ImageProps & {
 	color?: keyof typeof initialsProps.colors;
 };
 
+// eslint-disable-next-line no-unused-vars
 enum INITIALS_IMAGE_SRC {
+	// eslint-disable-next-line no-unused-vars
 	VERTICAL_GREEN = "static/images/initials_vertical_green.png",
+	// eslint-disable-next-line no-unused-vars
 	VERTICAL_BLUE = "static/images/initials_vertical_blue.png",
+	// eslint-disable-next-line no-unused-vars
 	HORIZONTAL_GREEN = "static/images/initials_horizontal_green.png",
+	// eslint-disable-next-line no-unused-vars
 	HORIZONTAL_BLUE = "static/images/initials_horizontal_blue.png",
 }
 

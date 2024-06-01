@@ -1,12 +1,4 @@
-import {
-	Grid,
-	GridCol,
-	Center,
-	rem,
-	Container,
-	Image,
-	Stack,
-} from "@mantine/core";
+import { Grid, GridCol, Center, Image } from "@mantine/core";
 import { SVG } from "_components";
 import classes from "./layout.module.css";
 
@@ -43,6 +35,7 @@ export default function RootLayout({
 			<footer>
 				<Center>
 					<Image
+						alt="decorative leaves"
 						src="static/images/center_leaves.png"
 						w={{ base: "110vw", sm: "50vw" }}
 						maw="950px"

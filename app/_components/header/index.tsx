@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { FONTS } from "_styles/fonts";
-import { Burger, Container, Anchor, Group, Image } from "@mantine/core";
+import { Burger, Container, Anchor, Group } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { SVG } from "_components";
 

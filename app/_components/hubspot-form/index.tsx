@@ -1,13 +1,12 @@
 "use client";
 
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useDisclosure, useLocalStorage } from "@mantine/hooks";
 import {
 	TextInput,
 	Button,
-	Modal,
 	Autocomplete,
 	Stack,
 	Title,
@@ -16,7 +15,7 @@ import {
 	Loader as MantineLoader,
 	Transition,
 	Container,
-	rem,
+	Modal,
 } from "@mantine/core";
 import { useForm } from "@mantine/form";
 import { IconAt, IconMoodSad } from "@tabler/icons-react";
@@ -35,8 +34,6 @@ const FORM_VALIDATIONS = {
 type FormStateType = FORM_STATES;
 
 export const HubSpotForm = () => {
-	const searchParams = useSearchParams();
-	// const qsStatus = searchParams.get("status") as FormStateType;
 	// eslint-disable-next-line no-unused-vars
 	const [status, setStatus] = useState<FormStateType>(FORM_STATES.LOADING);
 	const [completed, setCompleted] = useLocalStorage({
@@ -48,28 +45,31 @@ export const HubSpotForm = () => {
 		onClose: () => setStatus(FORM_STATES.IDLE),
 	});
 
+	const initialValues =
+		process.env.NODE_ENV === "development"
+			? {
+					firstname: "Joe",
+					lastname: "Tests",
+					email: "test@gmail.com",
+					address: "123 Fake Street",
+					city: "Los Angeles",
+					state: "California",
+					zip: "92104",
+				}
+			: {
+					firstname: "",
+					lastname: "",
+					email: "",
+					address: "",
+					city: "",
+					state: "",
+					zip: "",
+				};
+
 	const form = useForm({
 		mode: "uncontrolled",
 		validateInputOnBlur: true,
-		initialValues: {
-			//// BLANK
-			// firstname: "",
-			// lastname: "",
-			// email: "",
-			// address: "",
-			// city: "",
-			// state: "",
-			// zip: "",
-			//// TESTING
-			firstname: "Doug",
-			lastname: "Odell",
-			email: "jeffdigsdoug@gmail.com",
-			address: "123 Fake Street",
-			city: "San Diego",
-			state: "California",
-			zip: "92104",
-		},
-
+		initialValues: initialValues,
 		validate: {
 			firstname: FORM_VALIDATIONS.REQUIRED,
 			lastname: FORM_VALIDATIONS.REQUIRED,
@@ -151,11 +151,9 @@ export const HubSpotForm = () => {
 		return response;
 	};
 
-	console.log("form status: ", status);
-
 	useEffect(() => {
 		completed && setStatus(FORM_STATES.SUBMITTED);
-	});
+	}, [completed]);
 
 	return (
 		<>
@@ -232,6 +230,19 @@ export const HubSpotForm = () => {
 								</Button>
 							</Stack>
 						</form>
+						<Modal
+							opened={openedModal}
+							withCloseButton={false}
+							onClose={handlers.close} // also resets form status
+						>
+							<p>
+								<IconMoodSad
+									style={{ verticalAlign: "text-top" }}
+								/>{" "}
+								It didn&rsquo;t work.
+							</p>
+							<Button onClick={handlers.close}>Try again</Button>
+						</Modal>
 					</Container>
 				)}
 			</Transition>

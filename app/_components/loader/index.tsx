@@ -6,14 +6,13 @@ import { useShallowEffect, useTimeout } from "@mantine/hooks";
 
 interface LoaderProps {
 	onComplete?: () => void;
-	showOnce?: boolean;
 	type: "timeout" | "load";
 }
 
-export const Loader = ({ showOnce = false, onComplete, type }: LoaderProps) => {
+export const Loader = ({ onComplete, type }: LoaderProps) => {
 	const [visible, setVisible] = useState(true);
-	// eslint-disable-next-line no-unused-vars
 
+	// eslint-disable-next-line no-unused-vars
 	const { start, clear } = useTimeout(() => {
 		setVisible(false);
 		onComplete && onComplete();
