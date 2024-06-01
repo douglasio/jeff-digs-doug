@@ -11,6 +11,14 @@ export const HUBSPOT = {
 	SUBMIT_ENDPOINT: process.env.NEXT_PUBLIC_HUBSPOT_FORM_SUBMIT_ENDPOINT,
 };
 
+export enum FORM_STATES {
+	LOADING = "loading",
+	IDLE = "idle",
+	SUBMITTING = "submitting",
+	SUBMITTED = "submitted",
+	ERROR = "error",
+}
+
 export const WEDDING_DETAILS = {
 	DATE: "November 8, 2025",
 	VENUE: "Willowdale Estate",

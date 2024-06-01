@@ -1,0 +1,13 @@
+.main {
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	min-height: 100vh;
+	overflow-x: hidden;
+
+	> footer {
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		overflow-x: hidden;
+	}
+}

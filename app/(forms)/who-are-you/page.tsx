@@ -1,18 +1,16 @@
-import { Title, Text } from "@mantine/core";
-import { HubSpotForm, Loader } from "_components";
+import type { Metadata } from "next";
+import { HubSpotForm } from "_components";
+import { Suspense } from "react";
 
-const Page = async () => {
-	return (
-		<>
-			<Loader type="timeout" />
-			<Title order={1} w={{ base: "auto", sm: "60%" }}>
-				You are not invited to the wedding of{" "}
-				<span className="text-no-wrap">Doug &amp; Jeff</span>
-			</Title>
-			<Text mb="xl">(But you could be if you fill out this form)</Text>
-			<HubSpotForm />
-		</>
-	);
+export const metadata: Metadata = {
+	title: "Who Are You",
+	description: "Give us your info",
 };
+
+const Page = async () => (
+	<Suspense>
+		<HubSpotForm />
+	</Suspense>
+);
 
 export default Page;

@@ -1,0 +1,20 @@
+.jumbo {
+	&[data-size="xs"] {
+		font-size: 4rem;
+	}
+	&[data-size="sm"] {
+		font-size: 5rem;
+	}
+
+	&[data-size="md"] {
+		font-size: 7rem;
+	}
+
+	&[data-size="lg"] {
+		font-size: 10rem;
+	}
+
+	&[data-size="xl"] {
+		font-size: 15rem;
+	}
+}

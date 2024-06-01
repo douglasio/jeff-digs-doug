@@ -1,0 +1,72 @@
+{
+  "scope": "Workspace",
+  "tasks": {
+    "task-z9Rq3d7qQ11fKBiKDcftG": {
+      "id": "task-z9Rq3d7qQ11fKBiKDcftG",
+      "description": "Style password sign in page",
+      "columnId": "column-todo"
+    },
+    "V97ov5mmQgJKHkSF8wE8W": {
+      "id": "V97ov5mmQgJKHkSF8wE8W",
+      "description": "Add success handler for Hubspot form",
+      "columnId": "column-done"
+    },
+    "GKackMcniUIwuGo9PpIBh": {
+      "id": "GKackMcniUIwuGo9PpIBh",
+      "description": "Add error handler for Hubspot form",
+      "columnId": "column-done"
+    },
+    "wFmkDOK6aTlCyrn7eGvAo": {
+      "id": "wFmkDOK6aTlCyrn7eGvAo",
+      "description": "Style the State dropdown",
+      "columnId": "column-todo"
+    },
+    "Y9gmnLErVq2UiscdSp55N": {
+      "id": "Y9gmnLErVq2UiscdSp55N",
+      "description": "Style the 404 page",
+      "columnId": "column-todo"
+    },
+    "Xi_d5A0Ba3jY4vHCiHP8B": {
+      "id": "Xi_d5A0Ba3jY4vHCiHP8B",
+      "description": "Convert all Mantine Images to Next Images for optimization",
+      "columnId": "column-todo"
+    },
+    "ELo9k1yY9hrjACNoxTDGV": {
+      "id": "ELo9k1yY9hrjACNoxTDGV",
+      "description": "Make the loader animation only show on first load?",
+      "columnId": "column-done"
+    },
+    "p4pIm7abYXegO_uthfs6_": {
+      "id": "p4pIm7abYXegO_uthfs6_",
+      "description": "",
+      "columnId": "column-todo"
+    }
+  },
+  "columns": [
+    {
+      "id": "column-todo",
+      "title": "To do",
+      "tasksIds": [
+        "task-z9Rq3d7qQ11fKBiKDcftG",
+        "wFmkDOK6aTlCyrn7eGvAo",
+        "Y9gmnLErVq2UiscdSp55N",
+        "Xi_d5A0Ba3jY4vHCiHP8B",
+        "p4pIm7abYXegO_uthfs6_"
+      ]
+    },
+    {
+      "id": "column-doing",
+      "title": "Doing",
+      "tasksIds": []
+    },
+    {
+      "id": "column-done",
+      "title": "Done",
+      "tasksIds": [
+        "GKackMcniUIwuGo9PpIBh",
+        "V97ov5mmQgJKHkSF8wE8W",
+        "ELo9k1yY9hrjACNoxTDGV"
+      ]
+    }
+  ]
+}

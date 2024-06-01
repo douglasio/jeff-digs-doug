@@ -1,3 +1,33 @@
+.buttonRoot {
+	--button-height-xs: calc(2rem * var(--mantine-scale));
+	--button-height-sm: calc(3rem * var(--mantine-scale));
+	--button-height-md: calc(4rem * var(--mantine-scale));
+	--button-height-lg: calc(5rem * var(--mantine-scale));
+	--button-height-xl: calc(6rem * var(--mantine-scale));
+
+	/* --button-height-compact-xs: calc(1.375rem * var(--mantine-scale));
+	--button-height-compact-sm: calc(1.625rem * var(--mantine-scale));
+	--button-height-compact-md: calc(1.875rem * var(--mantine-scale));
+	--button-height-compact-lg: calc(2.125rem * var(--mantine-scale));
+	--button-height-compact-xl: calc(2.5rem * var(--mantine-scale));
+
+	--button-padding-x-xs: calc(0.875rem * var(--mantine-scale));
+	--button-padding-x-sm: calc(1.125rem * var(--mantine-scale));
+	--button-padding-x-md: calc(1.375rem * var(--mantine-scale));
+	--button-padding-x-lg: calc(1.625rem * var(--mantine-scale));
+	--button-padding-x-xl: calc(2rem * var(--mantine-scale));
+
+	--button-padding-x-compact-xs: calc(0.4375rem * var(--mantine-scale));
+	--button-padding-x-compact-sm: calc(0.5rem * var(--mantine-scale));
+	--button-padding-x-compact-md: calc(0.625rem * var(--mantine-scale));
+	--button-padding-x-compact-lg: calc(0.75rem * var(--mantine-scale));
+	--button-padding-x-compact-xl: calc(0.875rem * var(--mantine-scale));
+
+	--button-height: var(--button-height-sm);
+	--button-padding-x: var(--button-padding-x-sm);
+	--button-color: var(--mantine-color-white); */
+}
+
 .navLinkRoot {
 	--nl-bg: transparent;
 	border-left: 1px solid transparent;
@@ -46,4 +76,12 @@
 		opacity: 1;
 		transform: rotateY(-360deg);
 	}
+}
+
+.modalBody {
+	background-color: var(--mantine-color-blue-9);
+}
+
+.title {
+	letter-spacing: -0.025em;
 }
