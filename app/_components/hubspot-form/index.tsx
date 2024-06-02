@@ -250,7 +250,7 @@ export const HubSpotForm = () => {
 					>
 						<Jumbo size="md">Thanks!</Jumbo>
 						<Text fs="italic" ml="sm" size="lg">
-							We&rsquo;ll get back you.
+							We&rsquo;ll get back to you.
 						</Text>
 						<Button
 							onClick={handleResubmit}
