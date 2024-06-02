@@ -3,28 +3,18 @@ import { sha256, getCookieKeyValue } from "./utils";
 
 export async function onRequestPost(context: {
 	request: Request;
-	env: {
-		CFP_PASSWORD1?: string;
-		CFP_PASSWORD2?: string;
-		CFP_PASSWORD3?: string;
-	};
+	env: { CFP_PASSWORD?: string };
 }): Promise<Response> {
 	const { request, env } = context;
 	const body = await request.formData();
 	const { password, redirect } = Object.fromEntries(body);
 	const hashedPassword = await sha256(password.toString());
-	const hashedCfpPassword1 = await sha256(env.CFP_PASSWORD1 as string);
-	const hashedCfpPassword2 = await sha256(env.CFP_PASSWORD2 as string);
-	const hashedCfpPassword3 = await sha256(env.CFP_PASSWORD3 as string);
+	const hashedCfpPassword = await sha256(env.CFP_PASSWORD as string);
 	const redirectPath = redirect.toString() || "/";
 
-	if (
-		hashedPassword === hashedCfpPassword1 ||
-		hashedPassword === hashedCfpPassword2 ||
-		hashedPassword === hashedCfpPassword3
-	) {
+	if (hashedPassword === hashedCfpPassword) {
 		// Valid password. Redirect to home page and set cookie with auth hash.
-		const cookieKeyValue = await getCookieKeyValue(env.CFP_PASSWORD1);
+		const cookieKeyValue = await getCookieKeyValue(env.CFP_PASSWORD);
 
 		return new Response("", {
 			status: 302,

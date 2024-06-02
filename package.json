@@ -7,7 +7,7 @@
 		"start": "next",
 		"start:api": "npx json-server --port 3001 --watch public/mock-api/db.json",
 		"build": "next build",
-		"build:wrangler": "npx wrangler pages dev build -b CFP_PASSWORD1=test1 CFP_PASSWORD2=test2 CFP_PASSWORD3=test3",
+		"build:wrangler": "npx wrangler pages dev build -b CFP_PASSWORD=test",
 		"serve": "serve out",
 		"build:serve": "next build && npm run serve",
 		"lint": "next lint",
