@@ -26,7 +26,7 @@ export const COLORS: ColorsType = {
 		"#8f9c7c",
 		"#889673",
 		"#758260",
-		"#677353",
+		"#84936f",
 		"#84926E",
 	],
 	OFF_WHITE: [

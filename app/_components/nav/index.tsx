@@ -13,7 +13,7 @@ export const Nav = () => {
 	};
 
 	return (
-		<Stack align="flex-end" component="nav" gap="xs">
+		<Stack align="flex-end" component="nav" gap="0">
 			{SITE_PAGES.map((page) => (
 				<NavLink
 					key={page.text}
@@ -22,6 +22,7 @@ export const Nav = () => {
 					label={page.text}
 					component={Link}
 					href={page.url}
+					variant="subtle"
 				/>
 			))}
 		</Stack>

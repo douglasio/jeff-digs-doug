@@ -11,6 +11,7 @@ import {
 	Title,
 	Button,
 	Autocomplete,
+	Text,
 } from "@mantine/core";
 import { COLORS, FONTS } from "_styles";
 import classes from "./theme.module.css";
@@ -60,6 +61,9 @@ export const theme = createTheme({
 		}),
 		NavLink: NavLink.extend({
 			classNames: { root: classes.navLinkRoot },
+			defaultProps: {
+				fs: "italic",
+			},
 		}),
 		Input: Input.extend({
 			classNames: { input: classes.input, wrapper: classes.inputWrapper },
@@ -92,6 +96,12 @@ export const theme = createTheme({
 					),
 				},
 				transitionProps: { transition: "fade", duration: 500 },
+			},
+		}),
+		Text: Text.extend({
+			defaultProps: {
+				fw: "300",
+				lh: "1.3em",
 			},
 		}),
 		Title: Title.extend({

@@ -1,10 +1,15 @@
 import React from "react";
 import { Button, Flex, Grid, GridCol, Image, Text } from "@mantine/core";
+import { IconChevronRight } from "@tabler/icons-react";
+
+export const metadata = {
+	title: "Home",
+};
 
 const Home = () => {
 	return (
 		<Grid>
-			<GridCol span={{ base: 12, md: 6 }}>
+			<GridCol span={{ base: 12, md: 8 }}>
 				<Image
 					className="image-overlay"
 					alt="One of our engagement photos on the beach in the DR"
@@ -15,9 +20,10 @@ const Home = () => {
 					mt="-xl"
 					mb="-xl"
 					src="static/images/engagement_1.jpg"
+					loading="lazy"
 				/>
 			</GridCol>
-			<GridCol span={{ base: 12, md: 6 }}>
+			<GridCol span={{ base: 12, md: 4 }}>
 				<Flex
 					direction="column"
 					justify="flex-end"
@@ -25,13 +31,13 @@ const Home = () => {
 					h="100%"
 				>
 					<div>
-						<Text mb="xl" fw="200" fs="normal" size="lg">
+						<Text mb="xl" fs="italic" size="lg">
 							Welcome to the wedding of Jeff and Doug, where two
 							people who love each other are finally getting
 							married. No, they&rsquo;re not related. That&rsquo;s
 							what makes it so special.
 						</Text>
-						<Button rightSection={"&gt;"}>
+						<Button rightSection={<IconChevronRight />}>
 							See how we got here
 						</Button>
 					</div>
