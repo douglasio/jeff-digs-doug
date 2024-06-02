@@ -36,10 +36,10 @@
       "description": "Make the loader animation only show on first load?",
       "columnId": "column-done"
     },
-    "p4pIm7abYXegO_uthfs6_": {
-      "id": "p4pIm7abYXegO_uthfs6_",
-      "description": "",
-      "columnId": "column-todo"
+    "7e3WgMejyAAxP2hE2cYTX": {
+      "id": "7e3WgMejyAAxP2hE2cYTX",
+      "description": "Figure out why the stupid loader image is broken",
+      "columnId": "column-doing"
     }
   },
   "columns": [
@@ -50,14 +50,15 @@
         "task-z9Rq3d7qQ11fKBiKDcftG",
         "wFmkDOK6aTlCyrn7eGvAo",
         "Y9gmnLErVq2UiscdSp55N",
-        "Xi_d5A0Ba3jY4vHCiHP8B",
-        "p4pIm7abYXegO_uthfs6_"
+        "Xi_d5A0Ba3jY4vHCiHP8B"
       ]
     },
     {
       "id": "column-doing",
       "title": "Doing",
-      "tasksIds": []
+      "tasksIds": [
+        "7e3WgMejyAAxP2hE2cYTX"
+      ]
     },
     {
       "id": "column-done",

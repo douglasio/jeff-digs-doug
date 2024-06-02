@@ -16,40 +16,58 @@ type InitialsType = ImageProps & {
 	color?: keyof typeof initialsProps.colors;
 };
 
-// eslint-disable-next-line no-unused-vars
-enum INITIALS_IMAGE_SRC {
-	// eslint-disable-next-line no-unused-vars
-	VERTICAL_GREEN = "static/images/initials_vertical_green.png",
-	// eslint-disable-next-line no-unused-vars
-	VERTICAL_BLUE = "static/images/initials_vertical_blue.png",
-	// eslint-disable-next-line no-unused-vars
-	HORIZONTAL_GREEN = "static/images/initials_horizontal_green.png",
-	// eslint-disable-next-line no-unused-vars
-	HORIZONTAL_BLUE = "static/images/initials_horizontal_blue.png",
-}
-
 export const Initials = ({
 	variant = "vertical",
 	color = "green",
 	...props
 }: InitialsType) => {
-	let imageSrc;
-
 	if (variant === initialsProps.variants.vertical) {
 		if (color === initialsProps.colors.green) {
-			imageSrc = INITIALS_IMAGE_SRC.VERTICAL_GREEN;
+			return (
+				<Image
+					src="/static/images/Initials_Vertical_green.png"
+					alt="D&J"
+					w="100"
+					h="auto"
+					pr="lg"
+					{...props}
+				/>
+			);
 		} else if (color === initialsProps.colors.blue) {
-			imageSrc = INITIALS_IMAGE_SRC.VERTICAL_BLUE;
+			return (
+				<Image
+					src="/static/images/Initials_Vertical_blue.png"
+					alt="D&J"
+					w="100"
+					h="auto"
+					pr="lg"
+					{...props}
+				/>
+			);
 		}
 	} else if (variant === initialsProps.variants.horizontal) {
 		if (color === initialsProps.colors.green) {
-			imageSrc = INITIALS_IMAGE_SRC.HORIZONTAL_GREEN;
+			return (
+				<Image
+					src="/static/images/Initials_Horizontal_green.png"
+					alt="D&J"
+					w="100"
+					h="auto"
+					pr="lg"
+					{...props}
+				/>
+			);
 		} else if (color === initialsProps.colors.blue) {
-			imageSrc = INITIALS_IMAGE_SRC.HORIZONTAL_BLUE;
+			return (
+				<Image
+					src="/static/images/Initials_Horizontal_blue.png"
+					alt="D&J"
+					w="100"
+					h="auto"
+					pr="lg"
+					{...props}
+				/>
+			);
 		}
 	}
-
-	return (
-		<Image src={imageSrc} alt="D&J" w="100" h="auto" pr="lg" {...props} />
-	);
 };

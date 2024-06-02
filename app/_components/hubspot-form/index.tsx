@@ -151,6 +151,10 @@ export const HubSpotForm = () => {
 		return response;
 	};
 
+	const handleResubmit = () => {
+		setCompleted(false);
+	};
+
 	useEffect(() => {
 		completed && setStatus(FORM_STATES.SUBMITTED);
 	}, [completed]);
@@ -167,13 +171,18 @@ export const HubSpotForm = () => {
 				{(styles) => (
 					<Container style={styles}>
 						<Title order={1}>
-							You are not invited to the wedding of{" "}
+							You are not yet invited to the wedding of{" "}
 							<span className="text-no-wrap">
 								Doug &amp; Jeff
 							</span>
 						</Title>
-						<Text mt="sm" mb={{ base: "lg", sm: "md" }} fs="italic">
-							(But you could be if you fill out this form)
+						<Text
+							size="lg"
+							mt="sm"
+							mb={{ base: "lg", sm: "md" }}
+							fs="italic"
+						>
+							But you might be if you fill out this form
 						</Text>
 						<form
 							onSubmit={form.onSubmit((values) =>
@@ -248,7 +257,7 @@ export const HubSpotForm = () => {
 			</Transition>
 			{status === FORM_STATES.SUBMITTING && (
 				<Center>
-					<MantineLoader size="xl" />
+					<MantineLoader size="xl" mt="lg" />
 				</Center>
 			)}
 			<Transition
@@ -267,6 +276,15 @@ export const HubSpotForm = () => {
 						<Text fs="italic" ml="sm" size="lg">
 							We&rsquo;ll get back you.
 						</Text>
+						<Button
+							onClick={handleResubmit}
+							mt="lg"
+							ml="sm"
+							size="xs"
+							variant="outline"
+						>
+							Actually, I need to submit it again
+						</Button>
 					</Container>
 				)}
 			</Transition>

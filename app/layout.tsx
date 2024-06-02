@@ -5,8 +5,12 @@ import "./_styles/global.css";
 import classes from "./layout.module.css";
 
 export const metadata = {
-	title: "Jeff Digs Doug",
-	description: "A wedding website for the greatest couple of all time",
+	title: {
+		template: "%s | Doug & Jeff's Wedding",
+		default: "Doug & Jeff's Wedding",
+	},
+	description:
+		"Doug and Jeff are getting married on November 8, 2025 at The Willowdale Estate in Topsfield, MA",
 };
 
 export const viewport = {
@@ -22,6 +26,51 @@ export default function RootLayout({
 		<html lang="en">
 			<head>
 				<ColorSchemeScript />
+				<link
+					rel="icon"
+					href="/favicon.ico"
+					type="image/x-icon"
+					sizes="any"
+				/>
+				<link rel="/static/images/engagement_hands_ring.jpg" />
+				{/* Facebook */}
+				<meta
+					property="og:url"
+					content="https://www.jeffdigsdoug.com"
+				/>
+				<meta property="og:type" content="website" />
+				<meta property="og:title" content={metadata.title.default} />
+				<meta
+					property="og:description"
+					content={metadata.description}
+				/>
+				<meta
+					property="og:image"
+					content="/static/images/engagement_hands_ring.jpg"
+				/>
+
+				<meta property="og:image:width" content="1200" />
+				<meta property="og:image:height" content="630" />
+				<meta
+					property="og:image:alt"
+					content="Engagement photo of Doug and Jeff holding hands with Jeff's ring near the beach"
+				/>
+				{/* Twitter */}
+				<meta name="twitter:card" content="summary_large_image" />
+				<meta property="twitter:domain" content="jeffdigsdoug.com" />
+				<meta
+					property="twitter:url"
+					content="https://www.jeffdigsdoug.com"
+				/>
+				<meta name="twitter:title" content={metadata.title.default} />
+				<meta
+					name="twitter:description"
+					content={metadata.description}
+				/>
+				<meta
+					name="twitter:image"
+					content="/static/images/engagement_hands_ring.jpg"
+				/>
 			</head>
 			<body className={classes.body}>
 				<MantineProvider forceColorScheme="dark" theme={theme}>
