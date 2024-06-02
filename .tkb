@@ -4,7 +4,7 @@
     "task-z9Rq3d7qQ11fKBiKDcftG": {
       "id": "task-z9Rq3d7qQ11fKBiKDcftG",
       "description": "Style password sign in page",
-      "columnId": "column-todo"
+      "columnId": "column-doing"
     },
     "V97ov5mmQgJKHkSF8wE8W": {
       "id": "V97ov5mmQgJKHkSF8wE8W",
@@ -47,7 +47,6 @@
       "id": "column-todo",
       "title": "To do",
       "tasksIds": [
-        "task-z9Rq3d7qQ11fKBiKDcftG",
         "wFmkDOK6aTlCyrn7eGvAo",
         "Y9gmnLErVq2UiscdSp55N",
         "Xi_d5A0Ba3jY4vHCiHP8B"
@@ -57,6 +56,7 @@
       "id": "column-doing",
       "title": "Doing",
       "tasksIds": [
+        "task-z9Rq3d7qQ11fKBiKDcftG",
         "7e3WgMejyAAxP2hE2cYTX"
       ]
     },

@@ -25,7 +25,7 @@ export const Initials = ({
 		if (color === initialsProps.colors.green) {
 			return (
 				<Image
-					src="/static/images/Initials_Vertical_green.png"
+					src="static/images/Initials_Vertical_green.png"
 					alt="D&J"
 					w="100"
 					h="auto"
@@ -36,7 +36,7 @@ export const Initials = ({
 		} else if (color === initialsProps.colors.blue) {
 			return (
 				<Image
-					src="/static/images/Initials_Vertical_blue.png"
+					src="static/images/Initials_Vertical_blue.png"
 					alt="D&J"
 					w="100"
 					h="auto"
@@ -49,7 +49,7 @@ export const Initials = ({
 		if (color === initialsProps.colors.green) {
 			return (
 				<Image
-					src="/static/images/Initials_Horizontal_green.png"
+					src="static/images/Initials_Horizontal_green.png"
 					alt="D&J"
 					w="100"
 					h="auto"
@@ -60,7 +60,7 @@ export const Initials = ({
 		} else if (color === initialsProps.colors.blue) {
 			return (
 				<Image
-					src="/static/images/Initials_Horizontal_blue.png"
+					src="static/images/Initials_Horizontal_blue.png"
 					alt="D&J"
 					w="100"
 					h="auto"
