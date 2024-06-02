@@ -1,6 +1,7 @@
 import "@mantine/core/styles.layer.css";
 import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 import { COLORS, theme } from "_styles";
+import { WEDDING_DETAILS } from "_util";
 import "./_styles/global.css";
 import classes from "./layout.module.css";
 
@@ -9,8 +10,7 @@ export const metadata = {
 		template: "%s | Doug & Jeff's Wedding",
 		default: "Doug & Jeff's Wedding",
 	},
-	description:
-		"Doug and Jeff are getting married on November 8, 2025 at The Willowdale Estate in Topsfield, MA",
+	description: `Doug and Jeff are getting married on ${WEDDING_DETAILS.DATE} at ${WEDDING_DETAILS.VENUE} in ${WEDDING_DETAILS.CITY}`,
 };
 
 export const viewport = {

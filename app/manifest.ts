@@ -1,12 +1,12 @@
 import { MetadataRoute } from "next";
 import { COLORS } from "_styles";
+import { WEDDING_DETAILS } from "_util";
 
 export default function manifest(): MetadataRoute.Manifest {
 	return {
 		name: "Doug & Jeff's Wedding",
 		short_name: "D&J",
-		description:
-			"Doug and Jeff are getting married on November 8, 2025 at The Willowdale Estate in Topsfield, MA",
+		description: `Doug and Jeff are getting married on ${WEDDING_DETAILS.DATE} at ${WEDDING_DETAILS.VENUE} in ${WEDDING_DETAILS.CITY}`,
 		start_url: "/",
 
 		theme_color: COLORS.SAGE[9],
