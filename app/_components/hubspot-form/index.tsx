@@ -18,15 +18,17 @@ import {
 	Modal,
 } from "@mantine/core";
 import { useForm } from "@mantine/form";
-import { IconAt, IconMoodSad } from "@tabler/icons-react";
 import { Jumbo, Loader } from "_components";
 import { FORM_STATES, HUBSPOT, stateNames } from "_util";
 
 const FORM_VALIDATIONS = {
-	REQUIRED: (value: string) => (value.length < 1 ? "Required" : null),
-	MIN_LENGTH: (value: string) => (value.length < 2 ? "Too short" : null),
+	REQUIRED: (value: string) =>
+		!value || value?.length < 1 ? "Required" : null,
+	MIN_LENGTH: (value: string) => (value?.length < 2 ? "Too short" : null),
 	EMAIL_ADDRESS: (value: string) =>
-		/^\S+@\S+$/.test(value) ? null : "Invalid email",
+		/^\S+@\S+$/.test(value)
+			? null
+			: "Please enter a real email (with an @)",
 	STATE: (value: string) =>
 		!stateNames.includes(value) ? "Pick a state from the list" : null,
 };
@@ -49,12 +51,12 @@ export const HubSpotForm = () => {
 		process.env.NODE_ENV === "development"
 			? {
 					firstname: "Joe",
-					lastname: "Tests",
-					email: "test@gmail.com",
-					address: "123 Fake Street",
-					city: "Los Angeles",
-					state: "California",
-					zip: "92104",
+					// lastname: "Tests",
+					// email: "test@gmail.com",
+					// address: "123 Fake Street",
+					// city: "Los Angeles",
+					// state: "California",
+					// zip: "92104",
 				}
 			: {
 					firstname: "",
@@ -128,8 +130,8 @@ export const HubSpotForm = () => {
 			})
 			.catch((error) => {
 				//error
-				setStatus(FORM_STATES.ERROR);
 				handlers.open();
+				setStatus(FORM_STATES.ERROR);
 				//https://axios-http.com/docs/handling_errors
 				if (error.response) {
 					// eslint-disable-next-line no-console
@@ -150,6 +152,8 @@ export const HubSpotForm = () => {
 
 		return response;
 	};
+
+	process.env.NODE_ENV === "development" && console.log(status);
 
 	const handleResubmit = () => {
 		setCompleted(false);
@@ -191,27 +195,26 @@ export const HubSpotForm = () => {
 						>
 							<Stack>
 								<TextInput
-									label="First Name"
-									placeholder="First Name"
+									label="First name"
+									placeholder="First name"
 									key={form.key("firstname")}
 									{...form.getInputProps("firstname")}
 								/>
 								<TextInput
-									label="Last Name"
-									placeholder="Last Name"
+									label="Last name"
+									placeholder="Last name"
 									key={form.key("lastname")}
 									{...form.getInputProps("lastname")}
 								/>
 								<TextInput
 									label="Email"
 									placeholder="your@email.com"
-									leftSection={<IconAt />}
 									key={form.key("email")}
 									{...form.getInputProps("email")}
 								/>
 								<TextInput
-									label="Street Address"
-									placeholder="Street Address"
+									label="Street address"
+									placeholder="1 Placeholder Street"
 									key={form.key("address")}
 									{...form.getInputProps("address")}
 								/>
@@ -223,14 +226,14 @@ export const HubSpotForm = () => {
 								/>
 								<Autocomplete
 									label="State"
-									data={stateNames}
 									placeholder="State"
+									data={stateNames}
 									key={form.key("state")}
 									{...form.getInputProps("state")}
 								/>
 								<TextInput
-									label="ZIP Code"
-									placeholder="90210"
+									label="ZIP code"
+									placeholder="00000"
 									key={form.key("zip")}
 									{...form.getInputProps("zip")}
 								/>
@@ -239,19 +242,6 @@ export const HubSpotForm = () => {
 								</Button>
 							</Stack>
 						</form>
-						<Modal
-							opened={openedModal}
-							withCloseButton={false}
-							onClose={handlers.close} // also resets form status
-						>
-							<p>
-								<IconMoodSad
-									style={{ verticalAlign: "text-top" }}
-								/>{" "}
-								It didn&rsquo;t work.
-							</p>
-							<Button onClick={handlers.close}>Try again</Button>
-						</Modal>
 					</Container>
 				)}
 			</Transition>
@@ -288,6 +278,16 @@ export const HubSpotForm = () => {
 					</Container>
 				)}
 			</Transition>
+			<Modal
+				opened={openedModal}
+				withCloseButton={false}
+				onClose={handlers.close} // also resets form status
+			>
+				<Text fs="italic" mb="xs">
+					It didn&rsquo;t work...
+				</Text>
+				<Button onClick={handlers.close}>Try again</Button>
+			</Modal>
 		</>
 	);
 

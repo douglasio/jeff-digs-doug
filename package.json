@@ -1,11 +1,11 @@
 {
 	"name": "jeff-digs-doug",
-	"version": "0.2.0",
+	"version": "1.0.0",
 	"private": true,
 	"scripts": {
 		"dev": "next",
 		"start": "next",
-		"start:json": "npx json-server --port 3001 --watch public/mock-api/db.json",
+		"start:api": "npx json-server --port 3001 --watch public/mock-api/db.json",
 		"build": "next build",
 		"build:wrangler": "npx wrangler pages dev build -b CFP_PASSWORD=test",
 		"serve": "serve out",
