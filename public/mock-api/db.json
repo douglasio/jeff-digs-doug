@@ -155,6 +155,46 @@
         "pageUri": "/who-are-you",
         "pageName": "Who Are You | Doug & Jeff's Wedding"
       }
+    },
+    {
+      "id": "aa5c",
+      "portalId": "hubspot",
+      "formGuid": "1",
+      "fields": [
+        {
+          "name": "firstname",
+          "value": "Joe"
+        },
+        {
+          "name": "lastname",
+          "value": "Tests"
+        },
+        {
+          "name": "email",
+          "value": "test@gmail.com"
+        },
+        {
+          "name": "address",
+          "value": "123 Fake Street"
+        },
+        {
+          "name": "city",
+          "value": "Los Angeles"
+        },
+        {
+          "name": "state",
+          "value": "California"
+        },
+        {
+          "name": "zip",
+          "value": "92104"
+        }
+      ],
+      "context": {
+        "pageUri": "/who-are-you",
+        "pageName": "Who Are You | Doug & Jeff's Wedding"
+      },
+      "timeout": 3000
     }
   ]
 }
