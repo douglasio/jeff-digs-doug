@@ -25,7 +25,7 @@ export default function RootLayout({
 				>
 					<Image
 						alt="D&J"
-						src={"static/images/initials_Vertical_green.png"}
+						src={"static/images/initials_vertical_green.png"}
 						fit="contain"
 						w="200px"
 						mb="xl"
