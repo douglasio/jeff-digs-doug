@@ -54,11 +54,21 @@
     "nPP6zM-QI6xh1wXOdOKL2": {
       "id": "nPP6zM-QI6xh1wXOdOKL2",
       "description": "Change \"error\" color",
-      "columnId": "column-todo"
+      "columnId": "column-done"
     },
     "fPsU0i-apCuFD_tb6_BFm": {
       "id": "fPsU0i-apCuFD_tb6_BFm",
       "description": "Change placeholder for ZIP code rom 90210",
+      "columnId": "column-done"
+    },
+    "I1pb13SrUFyWP2SJLZW-U": {
+      "id": "I1pb13SrUFyWP2SJLZW-U",
+      "description": "Get rid of useEffects where possible",
+      "columnId": "column-todo"
+    },
+    "pe45NB96vtQ_wD71r3MGL": {
+      "id": "pe45NB96vtQ_wD71r3MGL",
+      "description": "Implement react-query",
       "columnId": "column-todo"
     }
   },
@@ -67,8 +77,8 @@
       "id": "column-todo",
       "title": "To do",
       "tasksIds": [
-        "nPP6zM-QI6xh1wXOdOKL2",
-        "fPsU0i-apCuFD_tb6_BFm",
+        "I1pb13SrUFyWP2SJLZW-U",
+        "pe45NB96vtQ_wD71r3MGL",
         "Y9gmnLErVq2UiscdSp55N",
         "56wqNe6Xxjdi2DSB1Hx2n",
         "g0ZbAkcteRtFVVNtZNtS3"
@@ -85,6 +95,8 @@
       "id": "column-done",
       "title": "Done",
       "tasksIds": [
+        "fPsU0i-apCuFD_tb6_BFm",
+        "nPP6zM-QI6xh1wXOdOKL2",
         "7e3WgMejyAAxP2hE2cYTX",
         "task-z9Rq3d7qQ11fKBiKDcftG",
         "GKackMcniUIwuGo9PpIBh",

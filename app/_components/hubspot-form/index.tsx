@@ -51,12 +51,12 @@ export const HubSpotForm = () => {
 		process.env.NODE_ENV === "development"
 			? {
 					firstname: "Joe",
-					// lastname: "Tests",
-					// email: "test@gmail.com",
-					// address: "123 Fake Street",
-					// city: "Los Angeles",
-					// state: "California",
-					// zip: "92104",
+					lastname: "Tests",
+					email: "test@gmail.com",
+					address: "123 Fake Street",
+					city: "Los Angeles",
+					state: "California",
+					zip: "92104",
 				}
 			: {
 					firstname: "",

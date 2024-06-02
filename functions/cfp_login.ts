@@ -8,7 +8,7 @@ export async function onRequestPost(context: {
 	const { request, env } = context;
 	const body = await request.formData();
 	const { password, redirect } = Object.fromEntries(body);
-	const hashedPassword = await sha256(password.toString());
+	const hashedPassword = await sha256(password.toString().toLowerCase());
 	const hashedCfpPassword = await sha256(env.CFP_PASSWORD as string);
 	const redirectPath = redirect.toString() || "/";
 
