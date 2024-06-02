@@ -146,14 +146,15 @@ export function getTemplate({
       <main>
 			<p class="welcome">
 				<div class="line line1">WELCOME TO DOUG AND JEFF&rsquo;S WEDDING WEBSITE</div>
-				<div class="line line2">please enter your </div>
-				<div class="line line3">credentials.<span class="blink">_</span></div>
+				<div style="margin: 1rem"></div>
+				<div class="line line2">please enter the name </div>
+				<div class="line line3">of the city where they met<span class="blink">_</span></div>
 			</p>
           
           <form method="post" action="/cfp_login">
-		  	<label for="pw">Password:</label>
+		  	<label for="pw">password:</label>
             <input type="hidden" name="redirect" value="${redirectPath}" />
-            <input id="pw" type="password" name="password" aria-label="Password" autocomplete="current-password" required autofocus>
+            <input id="pw" type="password" name="password" aria-label="password" autocomplete="current-password" required autofocus>
             <button type="submit">[ enter ]</button>
           </form>
 		  ${withError ? `<p class="welcome error">incorrect password, please try again</p>` : ""}

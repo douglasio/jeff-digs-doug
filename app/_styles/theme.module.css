@@ -1,3 +1,14 @@
+.autocompleteDropdown {
+	border: 0;
+	background-color: var(--mantine-color-sage-7);
+}
+
+.autocompleteOption {
+	&:hover {
+		background-color: var(--mantine-color-sage-6);
+	}
+}
+
 .buttonRoot {
 	--button-height-xs: calc(2rem * var(--mantine-scale));
 	--button-height-sm: calc(3rem * var(--mantine-scale));
@@ -51,6 +62,7 @@
 
 	&::placeholder {
 		color: var(--mantine-primary-color-filled);
+		font-style: italic;
 	}
 }
 

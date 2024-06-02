@@ -10,6 +10,7 @@ import {
 	Modal,
 	Title,
 	Button,
+	Autocomplete,
 } from "@mantine/core";
 import { COLORS, FONTS } from "_styles";
 import classes from "./theme.module.css";
@@ -48,6 +49,12 @@ export const theme = createTheme({
 	},
 	defaultRadius: "0px",
 	components: {
+		Autocomplete: Autocomplete.extend({
+			classNames: {
+				dropdown: classes.autocompleteDropdown,
+				option: classes.autocompleteOption,
+			},
+		}),
 		Button: Button.extend({
 			classNames: { root: classes.buttonRoot },
 		}),

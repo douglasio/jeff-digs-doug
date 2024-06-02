@@ -4,7 +4,7 @@
     "task-z9Rq3d7qQ11fKBiKDcftG": {
       "id": "task-z9Rq3d7qQ11fKBiKDcftG",
       "description": "Style password sign in page",
-      "columnId": "column-doing"
+      "columnId": "column-done"
     },
     "V97ov5mmQgJKHkSF8wE8W": {
       "id": "V97ov5mmQgJKHkSF8wE8W",
@@ -19,7 +19,7 @@
     "wFmkDOK6aTlCyrn7eGvAo": {
       "id": "wFmkDOK6aTlCyrn7eGvAo",
       "description": "Style the State dropdown",
-      "columnId": "column-todo"
+      "columnId": "column-done"
     },
     "Y9gmnLErVq2UiscdSp55N": {
       "id": "Y9gmnLErVq2UiscdSp55N",
@@ -28,8 +28,8 @@
     },
     "Xi_d5A0Ba3jY4vHCiHP8B": {
       "id": "Xi_d5A0Ba3jY4vHCiHP8B",
-      "description": "Convert all Mantine Images to Next Images for optimization",
-      "columnId": "column-todo"
+      "description": "Convert all Mantine Images to Next Images for optimization\n_Actually Next Images don't work with Cloudflare..._",
+      "columnId": "column-OhG4eQZ8zJtumE6fMmKEE"
     },
     "ELo9k1yY9hrjACNoxTDGV": {
       "id": "ELo9k1yY9hrjACNoxTDGV",
@@ -39,7 +39,42 @@
     "7e3WgMejyAAxP2hE2cYTX": {
       "id": "7e3WgMejyAAxP2hE2cYTX",
       "description": "Figure out why the stupid loader image is broken",
-      "columnId": "column-doing"
+      "columnId": "column-done"
+    },
+    "56wqNe6Xxjdi2DSB1Hx2n": {
+      "id": "56wqNe6Xxjdi2DSB1Hx2n",
+      "description": "Style homepage",
+      "columnId": "column-todo"
+    },
+    "g0ZbAkcteRtFVVNtZNtS3": {
+      "id": "g0ZbAkcteRtFVVNtZNtS3",
+      "description": "SEO optimizations, OpenGraph, etc.",
+      "columnId": "column-todo"
+    },
+    "nPP6zM-QI6xh1wXOdOKL2": {
+      "id": "nPP6zM-QI6xh1wXOdOKL2",
+      "description": "Change \"error\" color",
+      "columnId": "column-done"
+    },
+    "fPsU0i-apCuFD_tb6_BFm": {
+      "id": "fPsU0i-apCuFD_tb6_BFm",
+      "description": "Change placeholder for ZIP code rom 90210",
+      "columnId": "column-done"
+    },
+    "I1pb13SrUFyWP2SJLZW-U": {
+      "id": "I1pb13SrUFyWP2SJLZW-U",
+      "description": "Get rid of useEffects where possible",
+      "columnId": "column-done"
+    },
+    "pe45NB96vtQ_wD71r3MGL": {
+      "id": "pe45NB96vtQ_wD71r3MGL",
+      "description": "Implement react-query",
+      "columnId": "column-done"
+    },
+    "FuxXXz2UHDMyjg-XBS45J": {
+      "id": "FuxXXz2UHDMyjg-XBS45J",
+      "description": "Route form submissions to list in Hubspot",
+      "columnId": "column-done"
     }
   },
   "columns": [
@@ -47,26 +82,38 @@
       "id": "column-todo",
       "title": "To do",
       "tasksIds": [
-        "wFmkDOK6aTlCyrn7eGvAo",
         "Y9gmnLErVq2UiscdSp55N",
-        "Xi_d5A0Ba3jY4vHCiHP8B"
+        "56wqNe6Xxjdi2DSB1Hx2n",
+        "g0ZbAkcteRtFVVNtZNtS3"
       ]
     },
     {
       "id": "column-doing",
       "title": "Doing",
-      "tasksIds": [
-        "task-z9Rq3d7qQ11fKBiKDcftG",
-        "7e3WgMejyAAxP2hE2cYTX"
-      ]
+      "tasksIds": []
     },
     {
       "id": "column-done",
       "title": "Done",
       "tasksIds": [
+        "FuxXXz2UHDMyjg-XBS45J",
+        "pe45NB96vtQ_wD71r3MGL",
+        "wFmkDOK6aTlCyrn7eGvAo",
+        "I1pb13SrUFyWP2SJLZW-U",
+        "fPsU0i-apCuFD_tb6_BFm",
+        "nPP6zM-QI6xh1wXOdOKL2",
+        "7e3WgMejyAAxP2hE2cYTX",
+        "task-z9Rq3d7qQ11fKBiKDcftG",
         "GKackMcniUIwuGo9PpIBh",
         "V97ov5mmQgJKHkSF8wE8W",
         "ELo9k1yY9hrjACNoxTDGV"
+      ]
+    },
+    {
+      "id": "column-OhG4eQZ8zJtumE6fMmKEE",
+      "title": "Skipped",
+      "tasksIds": [
+        "Xi_d5A0Ba3jY4vHCiHP8B"
       ]
     }
   ]
