@@ -11,7 +11,6 @@ import {
 	Stack,
 	Title,
 	Text,
-	Center,
 	Loader as MantineLoader,
 	Transition,
 	Container,
@@ -89,6 +88,7 @@ async function submitForm(values: HubspotFieldType[], pathname: string) {
 	]);
 
 	if (response.status === "rejected") {
+		// eslint-disable-next-line no-console
 		console.log(response);
 		throw new Error("Submit Error");
 	}
@@ -117,20 +117,18 @@ export const HubSpotForm = () => {
 			zip: FORM_VALIDATIONS.REQUIRED,
 		},
 	});
-	const { mutate, isIdle, isPending, isError, isSuccess, reset } =
-		useMutation({
-			mutationFn: (values: HubspotFieldType[]) =>
-				submitForm(values, pathname),
-			onSuccess: () => {
-				setCompleted(true);
-			},
-			onError: (error) => {
-				console.log("react-query error!");
-				handlers.open();
-				// eslint-disable-next-line no-console
-				console.error(error);
-			},
-		});
+	const { mutate, isPending, isSuccess, reset } = useMutation({
+		mutationFn: (values: HubspotFieldType[]) =>
+			submitForm(values, pathname),
+		onSuccess: () => {
+			setCompleted(true);
+		},
+		onError: (error) => {
+			handlers.open();
+			// eslint-disable-next-line no-console
+			console.error(error);
+		},
+	});
 
 	const [openedModal, handlers] = useDisclosure(false, {
 		onClose: reset,

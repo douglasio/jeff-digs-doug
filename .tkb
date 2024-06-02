@@ -19,7 +19,7 @@
     "wFmkDOK6aTlCyrn7eGvAo": {
       "id": "wFmkDOK6aTlCyrn7eGvAo",
       "description": "Style the State dropdown",
-      "columnId": "column-doing"
+      "columnId": "column-done"
     },
     "Y9gmnLErVq2UiscdSp55N": {
       "id": "Y9gmnLErVq2UiscdSp55N",
@@ -64,12 +64,17 @@
     "I1pb13SrUFyWP2SJLZW-U": {
       "id": "I1pb13SrUFyWP2SJLZW-U",
       "description": "Get rid of useEffects where possible",
-      "columnId": "column-todo"
+      "columnId": "column-done"
     },
     "pe45NB96vtQ_wD71r3MGL": {
       "id": "pe45NB96vtQ_wD71r3MGL",
       "description": "Implement react-query",
-      "columnId": "column-todo"
+      "columnId": "column-done"
+    },
+    "FuxXXz2UHDMyjg-XBS45J": {
+      "id": "FuxXXz2UHDMyjg-XBS45J",
+      "description": "Route form submissions to list in Hubspot",
+      "columnId": "column-done"
     }
   },
   "columns": [
@@ -77,8 +82,6 @@
       "id": "column-todo",
       "title": "To do",
       "tasksIds": [
-        "I1pb13SrUFyWP2SJLZW-U",
-        "pe45NB96vtQ_wD71r3MGL",
         "Y9gmnLErVq2UiscdSp55N",
         "56wqNe6Xxjdi2DSB1Hx2n",
         "g0ZbAkcteRtFVVNtZNtS3"
@@ -87,14 +90,16 @@
     {
       "id": "column-doing",
       "title": "Doing",
-      "tasksIds": [
-        "wFmkDOK6aTlCyrn7eGvAo"
-      ]
+      "tasksIds": []
     },
     {
       "id": "column-done",
       "title": "Done",
       "tasksIds": [
+        "FuxXXz2UHDMyjg-XBS45J",
+        "pe45NB96vtQ_wD71r3MGL",
+        "wFmkDOK6aTlCyrn7eGvAo",
+        "I1pb13SrUFyWP2SJLZW-U",
         "fPsU0i-apCuFD_tb6_BFm",
         "nPP6zM-QI6xh1wXOdOKL2",
         "7e3WgMejyAAxP2hE2cYTX",
