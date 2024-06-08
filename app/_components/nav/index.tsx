@@ -13,7 +13,7 @@ export const Nav = () => {
 	};
 
 	return (
-		<Stack align="flex-end" component="nav" gap="0">
+		<Stack align="flex-end" gap="0">
 			{SITE_PAGES.map((page) => (
 				<NavLink
 					key={page.text}

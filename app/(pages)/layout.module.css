@@ -1,3 +1,8 @@
 .siteTitle {
 	font-size: 2.5rem;
 }
+
+.grid {
+	display: grid;
+	min-height: 100vh;
+}

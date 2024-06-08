@@ -10,17 +10,16 @@ export default function RootLayout({
 }) {
 	return (
 		<Grid
+			className={classes.grid}
 			gutter={{ base: 0, md: "xl" }}
-			m={{ base: "0", sm: "xl" }}
-			component="main"
+			component={"main"}
 		>
 			<GridCol
 				span={{ base: 12, sm: 3, md: 3 }}
-				pos={{ base: "absolute", sm: "static" }}
-				top="0"
-				left="0"
 				visibleFrom="sm"
 				component={"header"}
+				pos="relative"
+				mt="xl"
 			>
 				<Flex
 					justify={"flex-start"}
@@ -48,9 +47,21 @@ export default function RootLayout({
 						{WEDDING_DETAILS.CITY}
 					</Text>
 				</Flex>
+
+				<Image
+					pos="absolute"
+					src="static/images/corner_leaves.png"
+					left="0"
+					bottom="0"
+				/>
 			</GridCol>
 			<GridCol span={{ base: 12, sm: 6, md: 7 }}>{children}</GridCol>
-			<GridCol visibleFrom="sm" span={{ base: 12, sm: 3, md: 2 }}>
+			<GridCol
+				visibleFrom="sm"
+				span={{ base: 12, sm: 3, md: 2 }}
+				mt="xl"
+				component="nav"
+			>
 				<Nav />
 			</GridCol>
 		</Grid>

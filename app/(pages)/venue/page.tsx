@@ -1,17 +1,21 @@
 import React from "react";
 import Link from "next/link";
 import { Image } from "@mantine/core";
+import { PageHeader } from "_components";
+import { SITE_PAGES } from "_util";
 
 const Venue = () => {
 	return (
 		<div>
-			<h1>Venue</h1>
-			<p>Hello World! This is the Venue page</p>
-			<Image
-				src="/images/center_leaves.jpg"
-				alt=""
-				height="auto"
-				width="500"
+			<PageHeader
+				image="static/images/willowdale_fall.webp"
+				title={
+					<>
+						The
+						<br />
+						Venue
+					</>
+				}
 			/>
 			<p>
 				Visit the <Link href="/about">About</Link> page.

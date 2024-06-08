@@ -79,7 +79,12 @@
     "shfxb6XK9W66bzVj4YrnX": {
       "id": "shfxb6XK9W66bzVj4YrnX",
       "description": "Explore photo filtering libraries",
-      "columnId": "column-todo"
+      "columnId": "column-OhG4eQZ8zJtumE6fMmKEE"
+    },
+    "mEG9p78p2fwrT1p4EpNFp": {
+      "id": "mEG9p78p2fwrT1p4EpNFp",
+      "description": "Fix transitions",
+      "columnId": "column-doing"
     }
   },
   "columns": [
@@ -87,7 +92,6 @@
       "id": "column-todo",
       "title": "To do",
       "tasksIds": [
-        "shfxb6XK9W66bzVj4YrnX",
         "Y9gmnLErVq2UiscdSp55N",
         "56wqNe6Xxjdi2DSB1Hx2n",
         "g0ZbAkcteRtFVVNtZNtS3"
@@ -96,7 +100,9 @@
     {
       "id": "column-doing",
       "title": "Doing",
-      "tasksIds": []
+      "tasksIds": [
+        "mEG9p78p2fwrT1p4EpNFp"
+      ]
     },
     {
       "id": "column-done",
@@ -119,6 +125,7 @@
       "id": "column-OhG4eQZ8zJtumE6fMmKEE",
       "title": "Skipped",
       "tasksIds": [
+        "shfxb6XK9W66bzVj4YrnX",
         "Xi_d5A0Ba3jY4vHCiHP8B"
       ]
     }
