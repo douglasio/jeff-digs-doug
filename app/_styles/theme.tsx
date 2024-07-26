@@ -12,6 +12,7 @@ import {
 	Button,
 	Autocomplete,
 	Text,
+	Grid,
 } from "@mantine/core";
 import { COLORS, FONTS } from "_styles";
 import classes from "./theme.module.css";
@@ -21,21 +22,21 @@ export const theme = createTheme({
 	primaryColor: "sage",
 	fontFamily: FONTS.BRANDON_GROTESQUE.style.fontFamily,
 	fontSizes: {
-		xs: rem(15),
-		sm: rem(20),
-		md: rem(25),
-		lg: rem(30),
-		xl: rem(35),
+		xs: rem(20),
+		sm: rem(25),
+		md: rem(35),
+		lg: rem(55),
+		xl: rem(75),
 	},
 	spacing: {
 		xs: rem(15),
-		sm: rem(20),
-		md: rem(30),
-		lg: rem(40),
-		xl: rem(50),
+		sm: rem(30),
+		md: rem(50),
+		lg: rem(70),
+		xl: rem(100),
 	},
 	headings: {
-		fontFamily: FONTS.MRS_EAVES.style.fontFamily,
+		fontFamily: FONTS.BRANDON_GROTESQUE.style.fontFamily,
 		fontWeight: "500",
 		sizes: {
 			h1: {
@@ -44,7 +45,8 @@ export const theme = createTheme({
 			},
 			h2: {
 				fontSize: rem(35),
-				lineHeight: "1",
+				lineHeight: "1.25",
+				fontWeight: "400",
 			},
 		},
 	},
@@ -59,10 +61,14 @@ export const theme = createTheme({
 		Button: Button.extend({
 			classNames: { root: classes.buttonRoot },
 		}),
+		Grid: Grid.extend({
+			classNames: { inner: classes.gridInner },
+		}),
 		NavLink: NavLink.extend({
 			classNames: { root: classes.navLinkRoot },
 			defaultProps: {
 				fs: "italic",
+				fw: 300,
 			},
 		}),
 		Input: Input.extend({

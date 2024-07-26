@@ -44,7 +44,7 @@
     "56wqNe6Xxjdi2DSB1Hx2n": {
       "id": "56wqNe6Xxjdi2DSB1Hx2n",
       "description": "Style homepage",
-      "columnId": "column-todo"
+      "columnId": "column-done"
     },
     "g0ZbAkcteRtFVVNtZNtS3": {
       "id": "g0ZbAkcteRtFVVNtZNtS3",
@@ -85,6 +85,26 @@
       "id": "mEG9p78p2fwrT1p4EpNFp",
       "description": "Fix transitions",
       "columnId": "column-doing"
+    },
+    "VeFMBUnN9ZFlFaavVZOdK": {
+      "id": "VeFMBUnN9ZFlFaavVZOdK",
+      "description": "Replace pngs with svgs",
+      "columnId": "column-done"
+    },
+    "IkW_-kBHksKyMwmQMl98P": {
+      "id": "IkW_-kBHksKyMwmQMl98P",
+      "description": "Style Venue page",
+      "columnId": "column-todo"
+    },
+    "iJ5m8_q_mfAfpY9YieA2r": {
+      "id": "iJ5m8_q_mfAfpY9YieA2r",
+      "description": "Style Agenda page",
+      "columnId": "column-todo"
+    },
+    "ffY4NxNpxTaPtI00nKWgW": {
+      "id": "ffY4NxNpxTaPtI00nKWgW",
+      "description": "Animations and stuff for buttons, pages",
+      "columnId": "column-todo"
     }
   },
   "columns": [
@@ -92,9 +112,11 @@
       "id": "column-todo",
       "title": "To do",
       "tasksIds": [
+        "g0ZbAkcteRtFVVNtZNtS3",
+        "IkW_-kBHksKyMwmQMl98P",
+        "iJ5m8_q_mfAfpY9YieA2r",
         "Y9gmnLErVq2UiscdSp55N",
-        "56wqNe6Xxjdi2DSB1Hx2n",
-        "g0ZbAkcteRtFVVNtZNtS3"
+        "ffY4NxNpxTaPtI00nKWgW"
       ]
     },
     {
@@ -108,6 +130,8 @@
       "id": "column-done",
       "title": "Done",
       "tasksIds": [
+        "56wqNe6Xxjdi2DSB1Hx2n",
+        "VeFMBUnN9ZFlFaavVZOdK",
         "FuxXXz2UHDMyjg-XBS45J",
         "pe45NB96vtQ_wD71r3MGL",
         "wFmkDOK6aTlCyrn7eGvAo",

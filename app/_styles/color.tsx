@@ -17,6 +17,18 @@ export const COLORS: ColorsType = {
 		"#536e7e",
 		"#07374F",
 	],
+	NAVY: [
+		"#f0f6fa",
+		"#e1e9ee",
+		"#bed2df",
+		"#98b9cf",
+		"#78a5c2",
+		"#6499ba",
+		"#5992b8",
+		"#497ea2",
+		"#3e7091",
+		"#152e3d",
+	],
 	SAGE: [
 		"#f3f7eb",
 		"#e7ece1",

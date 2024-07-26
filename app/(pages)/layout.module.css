@@ -1,8 +1,14 @@
-.siteTitle {
-	font-size: 2.5rem;
+.backgroundLeaves {
+	--background-leaves-width: 100rem;
+
+	left: 50%;
+	position: fixed;
+	top: 0;
+	margin-left: calc(var(--background-leaves-width) / 2 * -1);
+	width: var(--background-leaves-width);
+	z-index: -1;
 }
 
-.grid {
-	display: grid;
-	min-height: 100vh;
+.main {
+	height: 100%;
 }

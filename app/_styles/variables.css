@@ -1,4 +1,5 @@
 :root {
 	--mantine-color-error: #c36363;
 	--nl-bg: transparent !;
+	--button-hover: var(--mantine-primary-color-5);
 }

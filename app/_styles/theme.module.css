@@ -11,23 +11,23 @@
 
 .buttonRoot {
 	--button-height-xs: calc(2rem * var(--mantine-scale));
-	--button-height-sm: calc(3rem * var(--mantine-scale));
-	--button-height-md: calc(4rem * var(--mantine-scale));
-	--button-height-lg: calc(5rem * var(--mantine-scale));
-	--button-height-xl: calc(6rem * var(--mantine-scale));
+	--button-height-sm: calc(4rem * var(--mantine-scale));
+	--button-height-md: calc(7rem * var(--mantine-scale));
+	--button-height-lg: calc(8rem * var(--mantine-scale));
+	--button-height-xl: calc(9rem * var(--mantine-scale));
 
 	/* --button-height-compact-xs: calc(1.375rem * var(--mantine-scale));
 	--button-height-compact-sm: calc(1.625rem * var(--mantine-scale));
 	--button-height-compact-md: calc(1.875rem * var(--mantine-scale));
 	--button-height-compact-lg: calc(2.125rem * var(--mantine-scale));
-	--button-height-compact-xl: calc(2.5rem * var(--mantine-scale));
+	--button-height-compact-xl: calc(2.5rem * var(--mantine-scale));*/
 
-	--button-padding-x-xs: calc(0.875rem * var(--mantine-scale));
-	--button-padding-x-sm: calc(1.125rem * var(--mantine-scale));
-	--button-padding-x-md: calc(1.375rem * var(--mantine-scale));
-	--button-padding-x-lg: calc(1.625rem * var(--mantine-scale));
-	--button-padding-x-xl: calc(2rem * var(--mantine-scale));
-
+	--button-padding-x-xs: calc(1rem * var(--mantine-scale));
+	--button-padding-x-sm: calc(5rem * var(--mantine-scale));
+	--button-padding-x-md: calc(6rem * var(--mantine-scale));
+	--button-padding-x-lg: calc(7rem * var(--mantine-scale));
+	--button-padding-x-xl: calc(8rem * var(--mantine-scale));
+	/*
 	--button-padding-x-compact-xs: calc(0.4375rem * var(--mantine-scale));
 	--button-padding-x-compact-sm: calc(0.5rem * var(--mantine-scale));
 	--button-padding-x-compact-md: calc(0.625rem * var(--mantine-scale));
@@ -37,19 +37,25 @@
 	--button-height: var(--button-height-sm);
 	--button-padding-x: var(--button-padding-x-sm);
 	--button-color: var(--mantine-color-white); */
+	font-weight: 300;
 }
 
 .navLinkRoot {
 	--nl-bg: transparent !important;
-	border-left: 2px solid transparent;
+	line-height: 0.75;
 
 	&[data-active] {
-		border-left: 2px solid var(--mantine-primary-color-filled);
+		border-bottom: 2px solid var(--mantine-primary-color-filled);
 	}
 
 	&:hover {
-		border-left: 2px solid var(--mantine-color-sage-6);
+		border-bottom: 2px solid var(--mantine-color-sage-6);
 	}
+}
+
+.gridInner {
+	height: 100%;
+	margin: 0;
 }
 
 .input {
@@ -94,5 +100,12 @@
 }
 
 .title {
-	letter-spacing: -0.025em;
+	h1& {
+		text-transform: uppercase;
+	}
+
+	h2& {
+		color: var(--mantine-color-sage-9);
+		font-variant: small-caps;
+	}
 }

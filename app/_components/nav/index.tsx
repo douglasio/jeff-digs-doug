@@ -1,9 +1,10 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { NavLink, Stack } from "@mantine/core";
+import { Flex } from "@mantine/core";
 import { SITE_PAGES } from "_util";
 import classes from "./index.module.css";
+import { FONTS } from "_styles";
 
 export const Nav = () => {
 	const pathname = usePathname();
@@ -13,18 +14,20 @@ export const Nav = () => {
 	};
 
 	return (
-		<Stack align="flex-end" gap="0">
+		<Flex align="end" h="5rem" component="nav" gap="xs" maw="100%">
 			{SITE_PAGES.map((page) => (
-				<NavLink
+				<Link
 					key={page.text}
-					active={isActiveNavLink(page.url)}
-					className={classes.navLink}
-					label={page.text}
-					component={Link}
+					className={[
+						classes.navLink,
+						FONTS.BRANDON_GROTESQUE.className,
+						isActiveNavLink(page.url) && classes.active,
+					].join(" ")}
 					href={page.url}
-					variant="subtle"
-				/>
+				>
+					{page.text}
+				</Link>
 			))}
-		</Stack>
+		</Flex>
 	);
 };
