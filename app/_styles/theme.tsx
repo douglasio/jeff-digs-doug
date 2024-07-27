@@ -13,12 +13,13 @@ import {
 	Autocomplete,
 	Text,
 	Grid,
+	Menu,
 } from "@mantine/core";
 import { COLORS, FONTS } from "_styles";
 import classes from "./theme.module.css";
 
 export const theme = createTheme({
-	colors: { blue: COLORS.BLUE, sage: COLORS.SAGE },
+	colors: { blue: COLORS.BLUE, sage: COLORS.SAGE, navy: COLORS.NAVY },
 	primaryColor: "sage",
 	fontFamily: FONTS.BRANDON_GROTESQUE.style.fontFamily,
 	fontSizes: {
@@ -75,6 +76,12 @@ export const theme = createTheme({
 			classNames: { input: classes.input, wrapper: classes.inputWrapper },
 			defaultProps: {
 				size: "xl",
+			},
+		}),
+		Menu: Menu.extend({
+			classNames: {
+				dropdown: classes.menuDropdown,
+				item: classes.menuItem,
 			},
 		}),
 		Modal: Modal.extend({

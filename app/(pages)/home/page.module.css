@@ -1,12 +1,10 @@
 .lockup {
+	max-width: 100%;
 	width: 30rem;
 }
 
 .floatingInitials {
-	left: 10vw;
-	position: absolute;
-	top: 10%;
-	width: 15rem;
+	width: 100%;
 }
 
 .grid {

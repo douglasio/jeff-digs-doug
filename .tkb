@@ -105,6 +105,16 @@
       "id": "ffY4NxNpxTaPtI00nKWgW",
       "description": "Animations and stuff for buttons, pages",
       "columnId": "column-todo"
+    },
+    "mEZ5JvSIv88rxBU47nGFI": {
+      "id": "mEZ5JvSIv88rxBU47nGFI",
+      "description": "Mobile nav me",
+      "columnId": "column-done"
+    },
+    "hp7GQh-nn2G7RiR4_hkoD": {
+      "id": "hp7GQh-nn2G7RiR4_hkoD",
+      "description": "Page transition animations",
+      "columnId": "column-doing"
     }
   },
   "columns": [
@@ -112,8 +122,8 @@
       "id": "column-todo",
       "title": "To do",
       "tasksIds": [
-        "g0ZbAkcteRtFVVNtZNtS3",
         "IkW_-kBHksKyMwmQMl98P",
+        "g0ZbAkcteRtFVVNtZNtS3",
         "iJ5m8_q_mfAfpY9YieA2r",
         "Y9gmnLErVq2UiscdSp55N",
         "ffY4NxNpxTaPtI00nKWgW"
@@ -123,6 +133,7 @@
       "id": "column-doing",
       "title": "Doing",
       "tasksIds": [
+        "hp7GQh-nn2G7RiR4_hkoD",
         "mEG9p78p2fwrT1p4EpNFp"
       ]
     },
@@ -130,6 +141,7 @@
       "id": "column-done",
       "title": "Done",
       "tasksIds": [
+        "mEZ5JvSIv88rxBU47nGFI",
         "56wqNe6Xxjdi2DSB1Hx2n",
         "VeFMBUnN9ZFlFaavVZOdK",
         "FuxXXz2UHDMyjg-XBS45J",

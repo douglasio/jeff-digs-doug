@@ -18,7 +18,7 @@
 		transition: 200ms all;
 	}
 
-	&.active {
+	&.active:not(.mobile) {
 		&:after {
 			background-color: var(--mantine-primary-color-filled);
 			opacity: 1;
@@ -26,11 +26,16 @@
 		}
 	}
 
-	&:hover {
+	&:hover:not(.mobile) {
 		&:after {
 			background-color: var(--mantine-primary-color-3);
 			opacity: 1;
 			width: 100%;
 		}
 	}
+}
+.menu {
+	right: var(--grid-col-padding);
+	position: fixed;
+	top: 1rem;
 }

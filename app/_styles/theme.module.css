@@ -95,6 +95,21 @@
 	}
 }
 
+.menuDropdown {
+	background-color: var(--mantine-color-navy-9);
+	border: 0;
+	padding: 0;
+}
+
+.menuItem {
+	border-bottom: 0;
+	padding: 0.5rem 2rem;
+
+	&:hover {
+		background-color: var(--mantine-color-blue-9);
+	}
+}
+
 .modalBody {
 	background-color: var(--mantine-color-blue-9);
 }

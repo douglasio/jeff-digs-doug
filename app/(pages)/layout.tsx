@@ -1,5 +1,5 @@
 import React from "react";
-import { SVG } from "_components";
+import { Nav, SVG } from "_components";
 import { COLORS } from "_styles";
 import classes from "./layout.module.css";
 
