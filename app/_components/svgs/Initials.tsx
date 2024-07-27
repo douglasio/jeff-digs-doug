@@ -1,4 +1,4 @@
-import { Image, ImageProps } from "@mantine/core";
+import React from "react";
 
 const initialsProps = {
 	variants: {

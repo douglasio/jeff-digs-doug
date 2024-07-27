@@ -1,25 +1,18 @@
 import React from "react";
-import Link from "next/link";
+import { Nav } from "_components";
 import { Image } from "@mantine/core";
-import { PageHeader } from "_components";
-import { SITE_PAGES } from "_util";
 
 const Venue = () => {
 	return (
 		<div>
-			<PageHeader
-				image="static/images/willowdale_fall.webp"
-				title={
-					<>
-						The
-						<br />
-						Venue
-					</>
-				}
+			<Nav />
+			<Image
+				alt="Willowdale front of house in the fall, photo credit: Mark Spooner"
+				src={"static/images/willowdale_fall.webp"}
+				fit="cover"
+				mah="50vh"
+				className="image-overlay"
 			/>
-			<p>
-				Visit the <Link href="/about">About</Link> page.
-			</p>
 		</div>
 	);
 };

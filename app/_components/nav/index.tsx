@@ -2,16 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useDisclosure } from "@mantine/hooks";
-import {
-	Box,
-	Burger,
-	Container,
-	Flex,
-	Menu,
-	NavLink,
-	Stack,
-	rem,
-} from "@mantine/core";
+import { Box, Burger, Flex, Menu } from "@mantine/core";
 import { SITE_PAGES } from "_util";
 import classes from "./index.module.css";
 import { FONTS } from "_styles";

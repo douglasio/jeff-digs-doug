@@ -1,8 +1,8 @@
 import "@mantine/core/styles.layer.css";
-import { ColorSchemeScript, Flex, Grid, MantineProvider } from "@mantine/core";
+import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 import { COLORS, theme } from "_styles";
 import { WEDDING_DETAILS } from "_util";
-import "./_styles/global.css";
+import "_styles/global.css";
 import classes from "./layout.module.css";
 
 export const metadata = {
