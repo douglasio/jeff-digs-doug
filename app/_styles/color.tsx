@@ -25,8 +25,8 @@ export const COLORS: ColorsType = {
 		"#78a5c2",
 		"#6499ba",
 		"#5992b8",
-		"#497ea2",
 		"#3e7091",
+		"#194B64",
 		"#152e3d",
 	],
 	SAGE: [
