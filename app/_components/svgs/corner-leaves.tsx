@@ -1,15 +1,15 @@
 import React from "react";
 import { Image, MantineColor } from "@mantine/core";
 
-const svgTitle = ""; //decorative
+// const svgTitle = ""; //decorative
 
 type CornerLeavesProps = React.SVGProps<SVGSVGElement> & {
-	color: MantineColor;
+	// color: MantineColor;
 	rotation?: "bottom-left" | "bottom-right" | "top-left" | "top-right";
 };
 
 export const CornerLeaves = ({
-	color,
+	// color,
 	rotation,
 	...props
 }: CornerLeavesProps) => {

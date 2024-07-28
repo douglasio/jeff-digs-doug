@@ -49,6 +49,9 @@ export const theme = createTheme({
 				lineHeight: "1.25",
 				fontWeight: "400",
 			},
+			h4: {
+				fontSize: rem(35),
+			},
 		},
 	},
 	defaultRadius: "0px",

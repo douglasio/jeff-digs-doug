@@ -116,11 +116,21 @@
 
 .title {
 	h1& {
-		text-transform: uppercase;
+		/* text-transform: uppercase; */
 	}
 
 	h2& {
 		color: var(--mantine-color-sage-9);
+		font-style: italic;
 		font-variant: small-caps;
+	}
+
+	h3& {
+		color: var(--mantine-color-sage-9);
+		font-style: italic;
+	}
+
+	h4& {
+		color: var(--mantine-color-sage-9);
 	}
 }

@@ -1,3 +1,4 @@
+import { COLORS } from "_styles";
 import React from "react";
 
 const initialsProps = {
@@ -23,7 +24,6 @@ export const Initials = ({
 	color = "green",
 	...props
 }: InitialsType) => {
-	console.log(props);
 	if (variant === "vertical") {
 		return (
 			<svg
@@ -36,9 +36,7 @@ export const Initials = ({
 				<title id="djVerticalTitle">{svgTitle}</title>
 				<defs>
 					<style>
-						{
-							".cls-1,.cls-2{fill:#84926e;stroke-width:0}.cls-2{fill:#d6d5d4}"
-						}
+						{`.cls-1,.cls-2{fill:${color === "green" ? COLORS.SAGE[9] : COLORS.BLUE[9]};stroke-width:0}.cls-2{fill:#d6d5d4}`}
 					</style>
 				</defs>
 				<path

@@ -15,7 +15,7 @@
 		height: 2px;
 		margin: 0 auto;
 		opacity: 0;
-		transition: 200ms all;
+		/* transition: 200ms all; */
 	}
 
 	&.active:not(.mobile) {
@@ -38,4 +38,10 @@
 	right: var(--grid-col-padding);
 	position: fixed;
 	top: 1rem;
+}
+
+.logo {
+	display: flex;
+	margin-right: 1rem;
+	width: 3.5rem;
 }
