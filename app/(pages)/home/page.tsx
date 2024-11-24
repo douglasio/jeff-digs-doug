@@ -48,7 +48,7 @@ const Home = () => {
 					</Box>
 				</GridCol>
 				<GridCol span={{ base: 12, md: 8, xl: 7 }}>
-					<Nav />
+					{/* <Nav /> */}
 					<Stack align="flex-start" justify="flex-start" gap="md">
 						<Space h="lg" visibleFrom="sm" />
 						<SVG.IntroLockup className={classes.lockup} />
@@ -58,14 +58,18 @@ const Home = () => {
 							<br />
 							{WEDDING_DETAILS.VENUE}, {WEDDING_DETAILS.CITY}
 						</Title>
-						{/* <Space h="sm" /> */}
 						<Text fs="italic" size="md" lh="sm" w="70%">
+							You&rsquo;re early! Come back later for more
+							details, an agenda, registry, our story, and more.
+						</Text>
+						{/* <Space h="sm" /> */}
+						{/* <Text fs="italic" size="md" lh="sm" w="70%">
 							Welcome to the wedding of Doug &amp; Jeff, where two
 							people who love each other are finally getting
 							married. No, they&rsquo;re not related. That&rsquo;s
 							what makes it so special.
-						</Text>
-						<Button mt="md">See how we got here</Button>
+						</Text> */}
+						{/* <Button mt="md">See how we got here</Button> */}
 					</Stack>
 				</GridCol>
 			</Grid>

@@ -6,7 +6,7 @@ import { FONTS } from "_styles";
 const Venue = () => {
 	return (
 		<>
-			<Nav center={true} showLogo={true} />
+			{/* <Nav center={true} showLogo={true} /> */}
 			<Grid gutter="xl" mr="lg" maw="1920px" m="0 auto">
 				<GridCol
 					span={{ base: 12, sm: 6 }}
