@@ -1,7 +1,6 @@
 import React from "react";
 import {
 	Box,
-	Button,
 	Grid,
 	GridCol,
 	Image,
@@ -11,7 +10,7 @@ import {
 	Title,
 	rem,
 } from "@mantine/core";
-import { Nav, SVG } from "_components";
+import { SVG } from "_components";
 import { WEDDING_DETAILS } from "_util";
 import classes from "./page.module.css";
 import { COLORS } from "_styles";

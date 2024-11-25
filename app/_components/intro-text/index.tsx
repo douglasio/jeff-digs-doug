@@ -6,7 +6,7 @@ type IntroTextProps = {
 };
 
 export const IntroText = ({ children }: IntroTextProps) => (
-	<Text fs="italic" size="md" lh="sm" w="70%">
+	<Text fs="italic" size="md" lh="1.2em" w="70%" fw="lighter">
 		{children}
 	</Text>
 );

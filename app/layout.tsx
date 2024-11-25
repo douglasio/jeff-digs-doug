@@ -33,6 +33,7 @@ export default function RootLayout({
 					sizes="any"
 				/>
 				<link rel="/static/images/engagement_hands_ring.jpg" />
+				<meta name="robots" content="noindex,nofollow" />
 				{/* Facebook */}
 				<meta
 					property="og:url"

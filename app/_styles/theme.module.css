@@ -1,3 +1,39 @@
+/* Accordion */
+
+.accordionControl {
+	background-color: var(--mantine-color-sage-9);
+	padding-inline: var(--mantine-spacing-sm);
+}
+
+.accordionContent {
+	padding: var(--mantine-spacing-xs);
+	padding-bottom: 0;
+	padding-top: var(--mantine-spacing-sm);
+}
+
+.accordionItem {
+	background-color: transparent;
+	border: 0;
+	padding-bottom: 0;
+	padding-top: 0;
+
+	& + .accordionItem {
+		margin-top: var(--mantine-spacing-sm);
+	}
+}
+
+.accordionLabel {
+	font-size: var(--mantine-font-size-sm);
+	padding-bottom: var(--mantine-font-size-xs);
+	padding-top: var(--mantine-font-size-xs);
+}
+
+.accordionPanel {
+	background-color: transparent;
+}
+
+/* Autocomplete */
+
 .autocompleteDropdown {
 	border: 0;
 	background-color: var(--mantine-color-sage-7);
@@ -8,6 +44,8 @@
 		background-color: var(--mantine-color-sage-6);
 	}
 }
+
+/* Button */
 
 .buttonRoot {
 	--button-height-xs: calc(2rem * var(--mantine-scale));
@@ -38,6 +76,11 @@
 	--button-padding-x: var(--button-padding-x-sm);
 	--button-color: var(--mantine-color-white); */
 	font-weight: 300;
+}
+
+a.buttonRoot:hover {
+	color: var(--mantine-color-sage-1);
+	text-decoration: underline;
 }
 
 .navLinkRoot {
@@ -131,6 +174,25 @@
 	}
 
 	h4& {
+		font-size: 2.5em;
 		color: var(--mantine-color-sage-9);
 	}
+
+	h5& {
+		color: var(--mantine-color-sage-9);
+		font-size: 1.5em;
+		text-transform: uppercase;
+	}
+
+	/* a,
+	&:visited {
+		color: var(--mantine-color-sage-9);
+		text-decoration: none;
+
+		&:hover,
+		&:active {
+			color: var(--mantine-color-sage-1);
+			text-decoration: underline;
+		}
+	} */
 }

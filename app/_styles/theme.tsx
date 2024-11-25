@@ -1,5 +1,6 @@
 "use client";
 import {
+	Accordion,
 	createTheme,
 	rem,
 	NavLink,
@@ -17,6 +18,8 @@ import {
 } from "@mantine/core";
 import { COLORS, FONTS } from "_styles";
 import classes from "./theme.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 export const theme = createTheme({
 	colors: { blue: COLORS.BLUE, sage: COLORS.SAGE, navy: COLORS.NAVY },
@@ -56,6 +59,22 @@ export const theme = createTheme({
 	},
 	defaultRadius: "0px",
 	components: {
+		Accordion: Accordion.extend({
+			classNames: {
+				panel: classes.accordionPanel,
+				control: classes.accordionControl,
+				content: classes.accordionContent,
+				chevron: classes.accordionChevron,
+				root: classes.accordionRoot,
+				item: classes.accordionItem,
+				label: classes.accordionLabel,
+			},
+			defaultProps: {
+				mb: "sm",
+				chevronSize: "3rem",
+				chevron: <FontAwesomeIcon icon={faChevronDown} />,
+			},
+		}),
 		Autocomplete: Autocomplete.extend({
 			classNames: {
 				dropdown: classes.autocompleteDropdown,
@@ -118,6 +137,7 @@ export const theme = createTheme({
 			defaultProps: {
 				fw: "300",
 				lh: "1.3em",
+				size: "sm",
 			},
 		}),
 		Title: Title.extend({

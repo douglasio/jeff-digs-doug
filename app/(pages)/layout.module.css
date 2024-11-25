@@ -12,4 +12,20 @@
 
 .main {
 	height: 100%;
+
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin-bottom: var(--mantine-spacing-xs);
+	}
+
+	p {
+		margin-bottom: var(--mantine-spacing-sm);
+	}
+
+	h5 {
+		margin-top: var(--mantine-spacing-sm);
+	}
 }

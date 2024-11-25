@@ -1,7 +1,5 @@
 import React from "react";
-import { IntroText, Nav } from "_components";
-import { Grid, GridCol, Image, Stack, Text, Title } from "@mantine/core";
-import { FONTS } from "_styles";
+import { Grid, GridCol, Image } from "@mantine/core";
 
 const OurStory = () => {
 	return (

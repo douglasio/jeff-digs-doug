@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, MantineColor } from "@mantine/core";
+import { Image } from "@mantine/core";
 
 // const svgTitle = ""; //decorative
 
