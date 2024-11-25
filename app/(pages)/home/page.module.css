@@ -1,0 +1,26 @@
+.lockup {
+	max-width: 100%;
+	width: 30rem;
+}
+
+.floatingInitials {
+	width: 100%;
+}
+
+.grid {
+	height: 100%;
+
+	.mantine-Grid-inner {
+		height: 100%;
+		margin: 0;
+	}
+}
+
+.cornerLeaves {
+	bottom: 0;
+	min-width: 25rem;
+	position: fixed;
+	right: -5rem;
+	width: 30vw;
+	z-index: -1;
+}

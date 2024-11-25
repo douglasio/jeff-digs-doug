@@ -1,3 +1,39 @@
+/* Accordion */
+
+.accordionControl {
+	background-color: var(--mantine-color-sage-9);
+	padding-inline: var(--mantine-spacing-sm);
+}
+
+.accordionContent {
+	padding: var(--mantine-spacing-xs);
+	padding-bottom: 0;
+	padding-top: var(--mantine-spacing-sm);
+}
+
+.accordionItem {
+	background-color: transparent;
+	border: 0;
+	padding-bottom: 0;
+	padding-top: 0;
+
+	& + .accordionItem {
+		margin-top: var(--mantine-spacing-sm);
+	}
+}
+
+.accordionLabel {
+	font-size: var(--mantine-font-size-sm);
+	padding-bottom: var(--mantine-font-size-xs);
+	padding-top: var(--mantine-font-size-xs);
+}
+
+.accordionPanel {
+	background-color: transparent;
+}
+
+/* Autocomplete */
+
 .autocompleteDropdown {
 	border: 0;
 	background-color: var(--mantine-color-sage-7);
@@ -9,25 +45,27 @@
 	}
 }
 
+/* Button */
+
 .buttonRoot {
 	--button-height-xs: calc(2rem * var(--mantine-scale));
-	--button-height-sm: calc(3rem * var(--mantine-scale));
-	--button-height-md: calc(4rem * var(--mantine-scale));
-	--button-height-lg: calc(5rem * var(--mantine-scale));
-	--button-height-xl: calc(6rem * var(--mantine-scale));
+	--button-height-sm: calc(4rem * var(--mantine-scale));
+	--button-height-md: calc(7rem * var(--mantine-scale));
+	--button-height-lg: calc(8rem * var(--mantine-scale));
+	--button-height-xl: calc(9rem * var(--mantine-scale));
 
 	/* --button-height-compact-xs: calc(1.375rem * var(--mantine-scale));
 	--button-height-compact-sm: calc(1.625rem * var(--mantine-scale));
 	--button-height-compact-md: calc(1.875rem * var(--mantine-scale));
 	--button-height-compact-lg: calc(2.125rem * var(--mantine-scale));
-	--button-height-compact-xl: calc(2.5rem * var(--mantine-scale));
+	--button-height-compact-xl: calc(2.5rem * var(--mantine-scale));*/
 
-	--button-padding-x-xs: calc(0.875rem * var(--mantine-scale));
-	--button-padding-x-sm: calc(1.125rem * var(--mantine-scale));
-	--button-padding-x-md: calc(1.375rem * var(--mantine-scale));
-	--button-padding-x-lg: calc(1.625rem * var(--mantine-scale));
-	--button-padding-x-xl: calc(2rem * var(--mantine-scale));
-
+	--button-padding-x-xs: calc(1rem * var(--mantine-scale));
+	--button-padding-x-sm: calc(5rem * var(--mantine-scale));
+	--button-padding-x-md: calc(6rem * var(--mantine-scale));
+	--button-padding-x-lg: calc(7rem * var(--mantine-scale));
+	--button-padding-x-xl: calc(8rem * var(--mantine-scale));
+	/*
 	--button-padding-x-compact-xs: calc(0.4375rem * var(--mantine-scale));
 	--button-padding-x-compact-sm: calc(0.5rem * var(--mantine-scale));
 	--button-padding-x-compact-md: calc(0.625rem * var(--mantine-scale));
@@ -37,20 +75,30 @@
 	--button-height: var(--button-height-sm);
 	--button-padding-x: var(--button-padding-x-sm);
 	--button-color: var(--mantine-color-white); */
+	font-weight: 300;
+}
+
+a.buttonRoot:hover {
+	color: var(--mantine-color-sage-1);
+	text-decoration: underline;
 }
 
 .navLinkRoot {
-	--nl-bg: transparent;
-	border-left: 1px solid transparent;
-	font-style: italic;
+	--nl-bg: transparent !important;
+	line-height: 0.75;
 
 	&[data-active] {
-		border-left: 1px solid var(--mantine-primary-color-filled);
+		border-bottom: 2px solid var(--mantine-primary-color-filled);
 	}
 
 	&:hover {
-		border-left: 1px solid var(--mantine-primary-color-light);
+		border-bottom: 2px solid var(--mantine-color-sage-6);
 	}
+}
+
+.gridInner {
+	height: 100%;
+	margin: 0;
 }
 
 .input {
@@ -90,10 +138,61 @@
 	}
 }
 
+.menuDropdown {
+	background-color: var(--mantine-color-navy-9);
+	border: 0;
+	padding: 0;
+}
+
+.menuItem {
+	border-bottom: 0;
+	padding: 0.5rem 2rem;
+
+	&:hover {
+		background-color: var(--mantine-color-blue-9);
+	}
+}
+
 .modalBody {
 	background-color: var(--mantine-color-blue-9);
 }
 
 .title {
-	letter-spacing: -0.025em;
+	h1& {
+		/* text-transform: uppercase; */
+	}
+
+	h2& {
+		color: var(--mantine-color-sage-9);
+		font-style: italic;
+		font-variant: small-caps;
+	}
+
+	h3& {
+		color: var(--mantine-color-sage-9);
+		font-style: italic;
+	}
+
+	h4& {
+		font-size: 2.5em;
+		color: var(--mantine-color-sage-9);
+	}
+
+	h5& {
+		color: var(--mantine-color-sage-9);
+		font-size: 1.5em;
+		text-transform: uppercase;
+	}
+
+	/* a,
+	&:visited {
+		color: var(--mantine-color-sage-9);
+		text-decoration: none;
+
+		&:hover,
+		&:active {
+			color: var(--mantine-color-sage-1);
+			text-decoration: underline;
+		}
+	} */
 }

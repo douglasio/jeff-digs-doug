@@ -1,5 +1,6 @@
 "use client";
 import {
+	Accordion,
 	createTheme,
 	rem,
 	NavLink,
@@ -11,30 +12,35 @@ import {
 	Title,
 	Button,
 	Autocomplete,
+	Text,
+	Grid,
+	Menu,
 } from "@mantine/core";
 import { COLORS, FONTS } from "_styles";
 import classes from "./theme.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 export const theme = createTheme({
-	colors: { blue: COLORS.BLUE, sage: COLORS.SAGE },
+	colors: { blue: COLORS.BLUE, sage: COLORS.SAGE, navy: COLORS.NAVY },
 	primaryColor: "sage",
 	fontFamily: FONTS.BRANDON_GROTESQUE.style.fontFamily,
 	fontSizes: {
-		xs: rem(15),
-		sm: rem(20),
-		md: rem(25),
-		lg: rem(30),
-		xl: rem(35),
+		xs: rem(20),
+		sm: rem(25),
+		md: rem(35),
+		lg: rem(55),
+		xl: rem(75),
 	},
 	spacing: {
 		xs: rem(15),
-		sm: rem(20),
-		md: rem(30),
-		lg: rem(40),
-		xl: rem(50),
+		sm: rem(30),
+		md: rem(50),
+		lg: rem(70),
+		xl: rem(100),
 	},
 	headings: {
-		fontFamily: FONTS.MRS_EAVES.style.fontFamily,
+		fontFamily: FONTS.BRANDON_GROTESQUE.style.fontFamily,
 		fontWeight: "500",
 		sizes: {
 			h1: {
@@ -43,12 +49,32 @@ export const theme = createTheme({
 			},
 			h2: {
 				fontSize: rem(35),
-				lineHeight: "1",
+				lineHeight: "1.25",
+				fontWeight: "400",
+			},
+			h4: {
+				fontSize: rem(35),
 			},
 		},
 	},
 	defaultRadius: "0px",
 	components: {
+		Accordion: Accordion.extend({
+			classNames: {
+				panel: classes.accordionPanel,
+				control: classes.accordionControl,
+				content: classes.accordionContent,
+				chevron: classes.accordionChevron,
+				root: classes.accordionRoot,
+				item: classes.accordionItem,
+				label: classes.accordionLabel,
+			},
+			defaultProps: {
+				mb: "sm",
+				chevronSize: "2rem",
+				chevron: <FontAwesomeIcon icon={faChevronDown} />,
+			},
+		}),
 		Autocomplete: Autocomplete.extend({
 			classNames: {
 				dropdown: classes.autocompleteDropdown,
@@ -58,13 +84,26 @@ export const theme = createTheme({
 		Button: Button.extend({
 			classNames: { root: classes.buttonRoot },
 		}),
+		Grid: Grid.extend({
+			classNames: { inner: classes.gridInner },
+		}),
 		NavLink: NavLink.extend({
 			classNames: { root: classes.navLinkRoot },
+			defaultProps: {
+				fs: "italic",
+				fw: 300,
+			},
 		}),
 		Input: Input.extend({
 			classNames: { input: classes.input, wrapper: classes.inputWrapper },
 			defaultProps: {
 				size: "xl",
+			},
+		}),
+		Menu: Menu.extend({
+			classNames: {
+				dropdown: classes.menuDropdown,
+				item: classes.menuItem,
 			},
 		}),
 		Modal: Modal.extend({
@@ -92,6 +131,13 @@ export const theme = createTheme({
 					),
 				},
 				transitionProps: { transition: "fade", duration: 500 },
+			},
+		}),
+		Text: Text.extend({
+			defaultProps: {
+				fw: "300",
+				lh: "1.3em",
+				size: "sm",
 			},
 		}),
 		Title: Title.extend({

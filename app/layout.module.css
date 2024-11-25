@@ -1,5 +1,7 @@
 .body {
 	background-color: var(--mantine-color-blue-9);
+	height: 100%;
+	overflow-x: hidden;
 }
 
 /* .layout-grid {

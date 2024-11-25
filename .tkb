@@ -44,7 +44,7 @@
     "56wqNe6Xxjdi2DSB1Hx2n": {
       "id": "56wqNe6Xxjdi2DSB1Hx2n",
       "description": "Style homepage",
-      "columnId": "column-todo"
+      "columnId": "column-done"
     },
     "g0ZbAkcteRtFVVNtZNtS3": {
       "id": "g0ZbAkcteRtFVVNtZNtS3",
@@ -75,6 +75,51 @@
       "id": "FuxXXz2UHDMyjg-XBS45J",
       "description": "Route form submissions to list in Hubspot",
       "columnId": "column-done"
+    },
+    "shfxb6XK9W66bzVj4YrnX": {
+      "id": "shfxb6XK9W66bzVj4YrnX",
+      "description": "Explore photo filtering libraries",
+      "columnId": "column-OhG4eQZ8zJtumE6fMmKEE"
+    },
+    "mEG9p78p2fwrT1p4EpNFp": {
+      "id": "mEG9p78p2fwrT1p4EpNFp",
+      "description": "Fix transitions",
+      "columnId": "column-todo"
+    },
+    "VeFMBUnN9ZFlFaavVZOdK": {
+      "id": "VeFMBUnN9ZFlFaavVZOdK",
+      "description": "Replace pngs with svgs",
+      "columnId": "column-done"
+    },
+    "IkW_-kBHksKyMwmQMl98P": {
+      "id": "IkW_-kBHksKyMwmQMl98P",
+      "description": "Style Venue page",
+      "columnId": "column-done"
+    },
+    "iJ5m8_q_mfAfpY9YieA2r": {
+      "id": "iJ5m8_q_mfAfpY9YieA2r",
+      "description": "Style Agenda page",
+      "columnId": "column-doing"
+    },
+    "ffY4NxNpxTaPtI00nKWgW": {
+      "id": "ffY4NxNpxTaPtI00nKWgW",
+      "description": "Animations and stuff for buttons, pages",
+      "columnId": "column-todo"
+    },
+    "mEZ5JvSIv88rxBU47nGFI": {
+      "id": "mEZ5JvSIv88rxBU47nGFI",
+      "description": "Mobile nav me",
+      "columnId": "column-done"
+    },
+    "hp7GQh-nn2G7RiR4_hkoD": {
+      "id": "hp7GQh-nn2G7RiR4_hkoD",
+      "description": "Page transition animations",
+      "columnId": "column-todo"
+    },
+    "4eixgtp_PpIR0b0JilrSd": {
+      "id": "4eixgtp_PpIR0b0JilrSd",
+      "description": "",
+      "columnId": "column-todo"
     }
   },
   "columns": [
@@ -82,20 +127,29 @@
       "id": "column-todo",
       "title": "To do",
       "tasksIds": [
+        "g0ZbAkcteRtFVVNtZNtS3",
         "Y9gmnLErVq2UiscdSp55N",
-        "56wqNe6Xxjdi2DSB1Hx2n",
-        "g0ZbAkcteRtFVVNtZNtS3"
+        "ffY4NxNpxTaPtI00nKWgW",
+        "hp7GQh-nn2G7RiR4_hkoD",
+        "mEG9p78p2fwrT1p4EpNFp",
+        "4eixgtp_PpIR0b0JilrSd"
       ]
     },
     {
       "id": "column-doing",
       "title": "Doing",
-      "tasksIds": []
+      "tasksIds": [
+        "iJ5m8_q_mfAfpY9YieA2r"
+      ]
     },
     {
       "id": "column-done",
       "title": "Done",
       "tasksIds": [
+        "IkW_-kBHksKyMwmQMl98P",
+        "mEZ5JvSIv88rxBU47nGFI",
+        "56wqNe6Xxjdi2DSB1Hx2n",
+        "VeFMBUnN9ZFlFaavVZOdK",
         "FuxXXz2UHDMyjg-XBS45J",
         "pe45NB96vtQ_wD71r3MGL",
         "wFmkDOK6aTlCyrn7eGvAo",
@@ -113,6 +167,7 @@
       "id": "column-OhG4eQZ8zJtumE6fMmKEE",
       "title": "Skipped",
       "tasksIds": [
+        "shfxb6XK9W66bzVj4YrnX",
         "Xi_d5A0Ba3jY4vHCiHP8B"
       ]
     }

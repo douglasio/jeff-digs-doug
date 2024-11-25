@@ -26,7 +26,7 @@ type PageType = {
 export const SITE_PAGES: PageType[] = [
 	{
 		text: "Home",
-		url: "/",
+		url: "/home",
 	},
 	{
 		text: "Venue",
@@ -52,12 +52,8 @@ export const SITE_PAGES: PageType[] = [
 
 export const PATHS = {
 	PAGES: {
-		HOME: "/",
+		HOME: "/home",
 		WHO_ARE_YOU: "/who-are-you",
 		SIGN_IN: "/sign-in",
-	},
-	API: {
-		AUTH_SIGNIN: "/api/auth/signin",
-		AUTH_CREDENTIALS: "/api/auth/callback/credentials",
 	},
 };
