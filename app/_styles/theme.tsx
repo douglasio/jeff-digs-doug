@@ -71,7 +71,7 @@ export const theme = createTheme({
 			},
 			defaultProps: {
 				mb: "sm",
-				chevronSize: "3rem",
+				chevronSize: "2rem",
 				chevron: <FontAwesomeIcon icon={faChevronDown} />,
 			},
 		}),

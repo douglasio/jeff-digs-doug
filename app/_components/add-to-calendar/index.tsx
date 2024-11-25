@@ -17,9 +17,12 @@ interface AddToCalendarButtonProps {
 }
 
 export const AddToCalendar = ({ event }: AddToCalendarProps) => {
+	const googleUrl = google(event);
+	const icsUrl = ics(event);
+
 	const url = {
-		google: google(event),
-		ics: ics(event),
+		google: googleUrl,
+		ics: icsUrl,
 	};
 
 	const Button = ({ label, linkType }: AddToCalendarButtonProps) => (
@@ -39,9 +42,8 @@ export const AddToCalendar = ({ event }: AddToCalendarProps) => {
 
 	return (
 		<Group gap="xs">
-			<Button label="Apple" linkType="ics" />
-			<Button label="Google" linkType="google" />
-			<Button label="Others" linkType="ics" />
+			<Button label="Add to calendar" linkType="ics" />
+			<Button label="Add to Google calendar" linkType="google" />
 		</Group>
 	);
 };
