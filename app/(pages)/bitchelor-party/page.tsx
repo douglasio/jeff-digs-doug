@@ -19,6 +19,12 @@ import { faPlane, faCar, faSun } from "@fortawesome/free-solid-svg-icons";
 import { AddToCalendar, IntroText } from "_components";
 import { FONTS } from "_styles";
 import styles from "./page.module.css";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "The Bitchelor Party",
+	description: "If you are receiving this invite, you are very cool.",
+};
 
 const BitchelorParty = () => {
 	interface TextButtonProps extends ButtonProps {

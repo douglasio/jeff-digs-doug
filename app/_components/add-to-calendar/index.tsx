@@ -24,13 +24,11 @@ export const AddToCalendar = ({ event }: AddToCalendarProps) => {
 
 	const Button = ({ label, linkType }: AddToCalendarButtonProps) => (
 		<MantineButton
+			component="a"
+			download={linkType === "ics" ? "calendar.ics" : false}
+			href={url[linkType]}
+			target={linkType === "ics" ? "_self" : "_blank"}
 			title={`Add ${event.title} to calendar`}
-			onClick={() =>
-				window.open(
-					url[linkType],
-					linkType === "ics" ? "_self" : "_blank",
-				)
-			}
 			size="xs"
 			variant="outline"
 		>
