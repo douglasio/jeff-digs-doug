@@ -98,7 +98,7 @@ const BitchelorParty = () => {
 										icon={faCalendarAlt}
 										className={styles.icon}
 									/> */}
-								Thursday, May 8&mdash; Sunday, May 11, 2025
+								Thursday, May 8&mdash;Sunday, May 11, 2025
 							</Title>
 							<Title order={2}>
 								<address>
