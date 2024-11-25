@@ -1,9 +1,38 @@
 @import "./variables.css";
 
-.image-overlay {
-	filter: brightness(0.85) hue-rotate(350deg) grayscale(0.1);
+html,
+body {
+	height: 100%;
+	overflow-x: 0;
+	font-size: 16px;
+}
+
+.image-dimmed {
+	filter: brightness(0.85) grayscale(0.3);
+}
+
+.image-dimmed-more {
+	filter: brightness(0.75) grayscale(0.4);
+}
+
+.image-fill {
+	height: 100%;
+	object-fit: cover;
 }
 
 .text-no-wrap {
 	white-space: nowrap;
+}
+
+a:not(.mantine-Button-root),
+&:visited {
+	color: var(--mantine-color-sage-4);
+	cursor: pointer;
+	text-decoration: none;
+
+	&:hover,
+	&:active {
+		color: var(--mantine-color-sage-1);
+		text-decoration: underline;
+	}
 }

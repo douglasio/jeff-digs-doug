@@ -23,12 +23,12 @@ export default function RootLayout({
 							ta="right"
 						>
 							<SVG.Initials
-								w={{ base: "150px", sm: "100%", md: "250px" }}
-								m={{ base: "0 auto", sm: "auto" }}
-								h="auto"
-								mb={{ base: "0", sm: "lg" }}
-								pr="0"
-								mr={{ base: "auto", sm: "0" }}
+							// w={{ base: "150px", sm: "100%", md: "250px" }}
+							// m={{ base: "0 auto", sm: "auto" }}
+							// h="auto"
+							// mb={{ base: "0", sm: "lg" }}
+							// pr="0"
+							// mr={{ base: "auto", sm: "0" }}
 							/>
 						</GridCol>
 						<GridCol span={{ base: 12, sm: 8 }}>{children}</GridCol>
