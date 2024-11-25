@@ -102,10 +102,6 @@ const BitchelorParty = () => {
 							</Title>
 							<Title order={2}>
 								<address>
-									{/* <FontAwesomeIcon
-											icon={faHouse}
-											className={styles.icon}
-										/> */}
 									2033 East Belding Drive, Palm Springs, CA
 									92262
 								</address>
@@ -282,7 +278,7 @@ const BitchelorParty = () => {
 							</Text>
 							<Title order={5}>Check-In/Check-Out</Title>
 							<Text>
-								Check in after 3:00 PM on 5/8. Check out after
+								Check in after 3:00 PM on 5/8. Check out before
 								11:00 AM on 5/11.
 							</Text>
 							<Title order={5}>Sleeping Arrangements</Title>
