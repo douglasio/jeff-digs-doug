@@ -1,6 +1,7 @@
 import React from "react";
 import {
 	Box,
+	Button,
 	Grid,
 	GridCol,
 	Image,
@@ -10,10 +11,11 @@ import {
 	Title,
 	rem,
 } from "@mantine/core";
-import { SVG } from "_components";
+import { AddToCalendar, Nav, SVG } from "_components";
 import { WEDDING_DETAILS } from "_util";
 import classes from "./page.module.css";
 import { COLORS } from "_styles";
+import Link from "next/link";
 
 export const metadata = {
 	title: "Home",
@@ -47,29 +49,37 @@ const Home = () => {
 					</Box>
 				</GridCol>
 				<GridCol span={{ base: 12, md: 8, xl: 7 }}>
-					{/* <Nav /> */}
-					<Stack align="flex-start" justify="flex-start" gap="md">
-						<Space h="lg" visibleFrom="sm" />
-						<SVG.IntroLockup className={classes.lockup} />
-						{/* <Space h="sm" /> */}
-						<Title order={2} fs="italic">
+					<Nav />
+					<Space h="lg" visibleFrom="sm" />
+					<SVG.IntroLockup className={classes.lockup} />
+
+					<section>
+						<Title order={2}>
 							{WEDDING_DETAILS.DATE}
 							<br />
-							{WEDDING_DETAILS.VENUE}, {WEDDING_DETAILS.CITY}
+							<address>
+								{WEDDING_DETAILS.VENUE}, {WEDDING_DETAILS.CITY}
+							</address>
 						</Title>
-						<Text fs="italic" size="md" lh="sm" w="70%">
-							You&rsquo;re early! Come back later for more
-							details, an agenda, registry, our story, and more.
-						</Text>
-						{/* <Space h="sm" /> */}
-						{/* <Text fs="italic" size="md" lh="sm" w="70%">
-							Welcome to the wedding of Doug &amp; Jeff, where two
-							people who love each other are finally getting
-							married. No, they&rsquo;re not related. That&rsquo;s
-							what makes it so special.
-						</Text> */}
-						{/* <Button mt="md">See how we got here</Button> */}
-					</Stack>
+						<AddToCalendar
+							event={{
+								title: "Doug &amp; Jeff&rsquo;s Wedding",
+								description: "https://www.jeffdigsdoug.com/",
+								start: "2025-11-08 16:00:00 -0800",
+								end: "2025-11-08 22:00:00 -0800",
+								location: `${WEDDING_DETAILS.VENUE}, ${WEDDING_DETAILS.STREET}, ${WEDDING_DETAILS.CITY}`,
+							}}
+						/>
+					</section>
+					<Text fs="italic" size="md" lh="sm" w="70%" mt="sm">
+						Welcome to the wedding of Doug &amp; Jeff, where two
+						people who love each other are finally getting married.
+						No, they&rsquo;re not related. That&rsquo;s what makes
+						it so special.
+					</Text>
+					<Button component={Link} href="/our-story">
+						See how we got here
+					</Button>
 				</GridCol>
 			</Grid>
 			<SVG.CornerLeaves

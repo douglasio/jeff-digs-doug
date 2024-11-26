@@ -15,6 +15,7 @@ export const HUBSPOT = {
 export const WEDDING_DETAILS = {
 	DATE: "November 8, 2025",
 	VENUE: "Willowdale Estate",
+	STREET: "24 Ashbury Street",
 	CITY: "Topsfield, MA",
 };
 

@@ -15,14 +15,51 @@ import {
 	Text,
 	Grid,
 	Menu,
+	VariantColorsResolver,
+	defaultVariantColorsResolver,
+	parseThemeColor,
 } from "@mantine/core";
 import { COLORS, FONTS } from "_styles";
 import classes from "./theme.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
+// const variantColorResolver: VariantColorsResolver = (input) => {
+// 	const defaultResolvedColors = defaultVariantColorsResolver(input);
+// 	const parsedColor = parseThemeColor({
+// 		color: input.color || input.theme.primaryColor,
+// 		theme: input.theme,
+// 	});
+
+// 	// Override some properties for variant
+// 	// if (
+// 	// 	parsedColor.isThemeColor &&
+// 	// 	parsedColor.color === "sage" &&
+// 	// 	input.variant === "outline"
+// 	// ) {
+// 	// 	return {
+// 	// 		...defaultResolvedColors,
+// 	// 		color: "var(--mantine-color-black)",
+// 	// 		// hoverColor: "var(--mantine-color-black)",
+// 	// 	};
+// 	// }
+
+// 	// Completely override variant
+// 	// if (input.variant === "outline") {
+// 	// 	return {
+// 	// 		background: "transparent",
+// 	// 		hover: input.theme.primaryColor,
+// 	// 		border: input.theme.primaryColor,
+// 	// 		color: input.theme.primaryColor,
+// 	// 	};
+// 	// }
+
+// 	return defaultResolvedColors;
+// };
+
 export const theme = createTheme({
 	colors: { blue: COLORS.BLUE, sage: COLORS.SAGE, navy: COLORS.NAVY },
+	// variantColorResolver,
 	primaryColor: "sage",
 	fontFamily: FONTS.BRANDON_GROTESQUE.style.fontFamily,
 	fontSizes: {

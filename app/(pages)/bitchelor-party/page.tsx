@@ -4,8 +4,6 @@ import {
 	AccordionItem,
 	AccordionControl,
 	AccordionPanel,
-	Button,
-	ButtonProps,
 	Grid,
 	GridCol,
 	Image,
@@ -14,11 +12,9 @@ import {
 	Title,
 	SimpleGrid,
 } from "@mantine/core";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlane, faCar, faSun } from "@fortawesome/free-solid-svg-icons";
-import { AddToCalendar, IntroText } from "_components";
+import { AddToCalendar, IntroText, TextButton } from "_components";
 import { FONTS } from "_styles";
-import styles from "./page.module.css";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -27,22 +23,6 @@ export const metadata: Metadata = {
 };
 
 const BitchelorParty = () => {
-	interface TextButtonProps extends ButtonProps {
-		href: string;
-	}
-	const TextButton = ({ children, href }: TextButtonProps) => (
-		<Button
-			component="a"
-			href={href}
-			p="0"
-			m="0"
-			target="_blank"
-			variant="transparent"
-		>
-			{children}
-		</Button>
-	);
-
 	return (
 		<>
 			{/* <Nav center={true} showLogo={true} /> */}
@@ -92,20 +72,11 @@ const BitchelorParty = () => {
 							The Bitchelor Party
 						</Title>
 						<section>
-							{/* <Stack gap={"xs"}> */}
 							<Title order={2}>
-								{/* <FontAwesomeIcon
-										icon={faCalendarAlt}
-										className={styles.icon}
-									/> */}
 								Thursday, May 8&mdash;Sunday, May 11, 2025
 							</Title>
 							<Title order={2}>
 								<address>
-									{/* <FontAwesomeIcon
-											icon={faHouse}
-											className={styles.icon}
-										/> */}
 									2033 East Belding Drive, Palm Springs, CA
 									92262
 								</address>
@@ -121,7 +92,6 @@ const BitchelorParty = () => {
 										"2033 East Belding Drive, Palm Springs, CA 92262",
 								}}
 							/>
-							{/* </Stack> */}
 						</section>
 						<IntroText>
 							Bachelors have one pre-wedding celebration with
@@ -157,25 +127,22 @@ const BitchelorParty = () => {
 											align="flex-start"
 											mb="xs"
 										>
-											<TextButton href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI1LTA1LTA4agcIARIDQk9TcgcIARIDUFNQGh4SCjIwMjUtMDUtMTFqBwgBEgNQU1ByBwgBEgNCT1NAAUgBcAGCAQsI____________AZgBAQ">
-												<FontAwesomeIcon
-													icon={faPlane}
-													className={styles.icon}
-												/>
+											<TextButton
+												icon={faPlane}
+												href="https://www.google.com/travel/flights/search?tfs=CBwQAhoeEgoyMDI1LTA1LTA4agcIARIDQk9TcgcIARIDUFNQGh4SCjIwMjUtMDUtMTFqBwgBEgNQU1ByBwgBEgNCT1NAAUgBcAGCAQsI____________AZgBAQ"
+											>
 												Flights from Boston
 											</TextButton>
-											<TextButton href="https://www.google.com/travel/flights/search?tfs=CBwQAhojEgoyMDI1LTA1LTA4agwIAxIIL20vMHJoNmtyBwgBEgNQU1AaIxIKMjAyNS0wNS0xMWoHCAESA1BTUHIMCAMSCC9tLzByaDZrQAFIAXABggELCP___________wGYAQE">
-												<FontAwesomeIcon
-													icon={faPlane}
-													className={styles.icon}
-												/>
+											<TextButton
+												icon={faPlane}
+												href="https://www.google.com/travel/flights/search?tfs=CBwQAhojEgoyMDI1LTA1LTA4agwIAxIIL20vMHJoNmtyBwgBEgNQU1AaIxIKMjAyNS0wNS0xMWoHCAESA1BTUHIMCAMSCC9tLzByaDZrQAFIAXABggELCP___________wGYAQE"
+											>
 												Flights from D.C.
 											</TextButton>
-											<TextButton href="https://www.google.com/travel/flights/search?tfs=CBwQAhokEgoyMDI1LTA1LTA4ag0IAxIJL20vMDJfMjg2cgcIARIDUFNQGiQSCjIwMjUtMDUtMTFqBwgBEgNQU1ByDQgDEgkvbS8wMl8yODZAAUgBcAGCAQsI____________AZgBAQ">
-												<FontAwesomeIcon
-													icon={faPlane}
-													className={styles.icon}
-												/>
+											<TextButton
+												icon={faPlane}
+												href="https://www.google.com/travel/flights/search?tfs=CBwQAhokEgoyMDI1LTA1LTA4ag0IAxIJL20vMDJfMjg2cgcIARIDUFNQGiQSCjIwMjUtMDUtMTFqBwgBEgNQU1ByDQgDEgkvbS8wMl8yODZAAUgBcAGCAQsI____________AZgBAQ"
+											>
 												Flights from New York
 											</TextButton>
 										</Stack>
@@ -197,18 +164,16 @@ const BitchelorParty = () => {
 											align="flex-start"
 											mb="xs"
 										>
-											<TextButton href="https://www.google.com/travel/flights/search?tfs=CBwQAhojEgoyMDI1LTA1LTA4agwIAxIIL20vMGQzNXlyBwgBEgNQU1AaIxIKMjAyNS0wNS0xMWoHCAESA1BTUHIMCAMSCC9tLzBkMzV5QAFIAXABggELCP___________wGYAQE">
-												<FontAwesomeIcon
-													icon={faPlane}
-													className={styles.icon}
-												/>
+											<TextButton
+												icon={faPlane}
+												href="https://www.google.com/travel/flights/search?tfs=CBwQAhojEgoyMDI1LTA1LTA4agwIAxIIL20vMGQzNXlyBwgBEgNQU1AaIxIKMjAyNS0wNS0xMWoHCAESA1BTUHIMCAMSCC9tLzBkMzV5QAFIAXABggELCP___________wGYAQE"
+											>
 												Flights
 											</TextButton>
-											<TextButton href="https://www.google.com/maps/dir/Phoenix/Palm+Springs,+CA/@33.4387746,-116.9486963,1331358m/data=!3m1!1e3!4m14!4m13!1m5!1m1!1s0x872b12ed50a179cb:0x8c69c7f8354a1bac!2m2!1d-112.0740373!2d33.4483771!1m5!1m1!1s0x80db1ad4ffdbe5b3:0xa1e56987c2ed797c!2m2!1d-116.5452921!2d33.8302961!3e0?entry=ttu&g_ep=EgoyMDI0MTExOS4yIKXMDSoASAFQAw%3D%3D">
-												<FontAwesomeIcon
-													icon={faCar}
-													className={styles.icon}
-												/>{" "}
+											<TextButton
+												icon={faCar}
+												href="https://www.google.com/maps/dir/Phoenix/Palm+Springs,+CA/@33.4387746,-116.9486963,1331358m/data=!3m1!1e3!4m14!4m13!1m5!1m1!1s0x872b12ed50a179cb:0x8c69c7f8354a1bac!2m2!1d-112.0740373!2d33.4483771!1m5!1m1!1s0x80db1ad4ffdbe5b3:0xa1e56987c2ed797c!2m2!1d-116.5452921!2d33.8302961!3e0?entry=ttu&g_ep=EgoyMDI0MTExOS4yIKXMDSoASAFQAw%3D%3D"
+											>
 												Driving directions
 											</TextButton>
 										</Stack>
@@ -244,11 +209,10 @@ const BitchelorParty = () => {
 								be mindful that we will be in a desert so
 								sunscreen is important and stay hydrated.
 								<br />
-								<TextButton href="https://www.accuweather.com/en/us/palm-springs/92262/may-weather/331971?year=2025">
-									<FontAwesomeIcon
-										icon={faSun}
-										className={styles.icon}
-									/>
+								<TextButton
+									icon={faSun}
+									href="https://www.accuweather.com/en/us/palm-springs/92262/may-weather/331971?year=2025"
+								>
 									Check the forecast
 								</TextButton>
 							</Text>

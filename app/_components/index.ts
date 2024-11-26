@@ -7,3 +7,4 @@ export * from "./loader";
 export * from "./nav";
 export * as SVG from "./svgs";
 export * from "./transition";
+export * from "./text-button";

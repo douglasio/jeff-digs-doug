@@ -24,7 +24,7 @@ body {
 	white-space: nowrap;
 }
 
-a:not(.mantine-Button-root),
+a:not(.mantine-Button-root):not([class*="navLink"]),
 &:visited {
 	color: var(--mantine-color-sage-4);
 	cursor: pointer;

@@ -8,6 +8,11 @@
 	text-decoration: none;
 	white-space: nowrap;
 
+	&:hover,
+	&.active {
+		text-decoration: none;
+	}
+
 	&:after {
 		background-color: transparent;
 		content: "";
