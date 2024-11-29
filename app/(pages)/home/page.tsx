@@ -6,7 +6,6 @@ import {
 	GridCol,
 	Image,
 	Space,
-	Stack,
 	Text,
 	Title,
 	rem,
@@ -24,8 +23,18 @@ export const metadata = {
 const Home = () => {
 	return (
 		<>
-			<Grid className={classes.grid} gutter="xl" align="stretch">
-				<GridCol span={{ base: 12, md: 4, xl: 5 }} p="0">
+			<Grid
+				className={"page-grid"}
+				gutter={{ base: "xs", sm: "xl" }}
+				align="stretch"
+			>
+				<GridCol
+					span={{ base: 12, md: 4, xl: 5 }}
+					pt="0"
+					pl="0"
+					pb="0"
+					pr={{ base: 0, sm: "xl" }}
+				>
 					<Image
 						className="image-dimmed"
 						alt="One of our engagement photos on the beach in the DR"
@@ -49,7 +58,7 @@ const Home = () => {
 					</Box>
 				</GridCol>
 				<GridCol span={{ base: 12, md: 8, xl: 7 }}>
-					<Nav />
+					<Nav variant="inline" />
 					<Space h="lg" visibleFrom="sm" />
 					<SVG.IntroLockup className={classes.lockup} />
 

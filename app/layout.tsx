@@ -73,7 +73,7 @@ export default function RootLayout({
 					content="/static/images/engagement_hands_ring.jpg"
 				/>
 			</head>
-			<body className={classes.body}>
+			<body id="body" className={classes.body}>
 				<MantineProvider forceColorScheme="dark" theme={theme}>
 					{children}
 				</MantineProvider>

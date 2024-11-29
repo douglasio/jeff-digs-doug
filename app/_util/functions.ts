@@ -1,6 +1,8 @@
-export function classNames(classes: (string | false)[]) {
+type ClassArg = string | false | undefined;
+
+export function classNames(classes: ClassArg[]) {
 	const filteredClasses = classes
-		.filter((c: string | false) => c !== false)
+		.filter((c: ClassArg) => typeof c === "string")
 		.join(" ");
 	return filteredClasses;
 }

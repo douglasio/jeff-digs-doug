@@ -38,7 +38,7 @@ export const CornerLeaves = ({
 			alt=""
 			className={props.className}
 			src="static/images/corner_leaves.svg"
-			style={{ transform: `rotate(${rotateDeg()}deg);` }}
+			style={{ transform: `rotate(${rotateDeg()}deg)` }}
 		/>
 		// <svg
 		// 	id="cornerLeaves"

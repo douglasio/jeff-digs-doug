@@ -15,9 +15,6 @@ import {
 	Text,
 	Grid,
 	Menu,
-	VariantColorsResolver,
-	defaultVariantColorsResolver,
-	parseThemeColor,
 } from "@mantine/core";
 import { COLORS, FONTS } from "_styles";
 import classes from "./theme.module.css";

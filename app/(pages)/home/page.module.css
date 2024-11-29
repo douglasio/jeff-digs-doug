@@ -7,15 +7,6 @@
 	width: 100%;
 }
 
-.grid {
-	height: 100%;
-
-	.mantine-Grid-inner {
-		height: 100%;
-		margin: 0;
-	}
-}
-
 .cornerLeaves {
 	bottom: 0;
 	min-width: 25rem;

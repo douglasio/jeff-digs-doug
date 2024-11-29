@@ -2,22 +2,22 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useDisclosure, useIntersection } from "@mantine/hooks";
-import { Box, Burger, Flex, Menu } from "@mantine/core";
+import { Burger, Flex, Menu } from "@mantine/core";
 import { classNames, SITE_PAGES } from "_util";
 import { FONTS } from "_styles";
 import { SVG } from "_components";
 import classes from "./index.module.css";
 
 type NavProps = {
-	center?: boolean;
+	variant?: "inline" | "top";
 	showLogo?: boolean;
+	containerRef?: IntersectionObserverInit["root"];
 };
 
-export const Nav = ({ center, showLogo }: NavProps) => {
+export const Nav = ({ variant = "top", showLogo }: NavProps) => {
 	const pathname = usePathname();
 	const [opened, { toggle }] = useDisclosure(false);
 	const { ref, entry } = useIntersection({
-		root: document.querySelector("#root"),
 		threshold: 1,
 	});
 
@@ -29,32 +29,41 @@ export const Nav = ({ center, showLogo }: NavProps) => {
 		<>
 			{/* desktop nav */}
 			<Flex
-				align="end"
+				align="center"
 				className={classNames([
 					classes.nav,
-					!entry?.isIntersecting && classes.isPinned,
+					variant === "top" &&
+						entry?.isIntersecting &&
+						classes.isUnpinned,
 				])}
 				component="nav"
 				gap="xs"
-				h="5.5rem"
-				justify={center ? "center" : "flex-start"}
+				justify={variant === "top" ? "center" : "flex-start"}
 				maw="100%"
+				p="xs"
+				pos="sticky"
 				ref={ref}
 				visibleFrom="sm"
 			>
 				{showLogo && (
-					<Link href="/home" className={classes.logo}>
+					<Link
+						href="/home"
+						className={classNames([
+							classes.logo,
+							entry?.isIntersecting && classes.isPinned,
+						])}
+					>
 						<SVG.Initials />
 					</Link>
 				)}
 				{SITE_PAGES.map((page) => (
 					<Link
 						key={page.text}
-						className={[
+						className={classNames([
 							classes.navLink,
 							FONTS.BRANDON_GROTESQUE.className,
 							isActiveNavLink(page.url) && classes.active,
-						].join(" ")}
+						])}
 						href={page.url}
 					>
 						{page.text}
@@ -62,22 +71,44 @@ export const Nav = ({ center, showLogo }: NavProps) => {
 				))}
 			</Flex>
 			{/* mobile nav */}
-			<Box className={classes.menu} hiddenFrom="sm">
+			<Flex hiddenFrom="sm" className={classes.mobileNav}>
+				<Link href="/">
+					<SVG.Initials
+						className={classes.logo}
+						variant="horizontal"
+					/>
+				</Link>
+				{/* <Box className={classes.menu}> */}
 				<Menu
 					closeOnItemClick={true}
-					position="left-start"
 					transitionProps={{
 						transition: "pop-top-right",
 					}}
+					// accessibility for menu mavigations - https://mantine.dev/core/menu/#navigation
+					loop={false}
+					withinPortal={false}
+					trapFocus={false}
+					menuItemTabIndex={0}
 				>
 					<Menu.Target>
 						<Burger
 							opened={opened}
 							onClick={toggle}
 							aria-label="Toggle navigation"
+							className={classes.burger}
+							h="auto"
+							p="0"
+							flex=""
 						/>
 					</Menu.Target>
-					<Menu.Dropdown component="nav" w="45%">
+					<Menu.Dropdown
+						component="nav"
+						className={classes.dropdown}
+						h="calc(100vh - 3rem)"
+						w="100%"
+						left="0"
+						top="3rem"
+					>
 						{SITE_PAGES.map((page) => (
 							<Menu.Item
 								component={Link}
@@ -95,7 +126,8 @@ export const Nav = ({ center, showLogo }: NavProps) => {
 						))}
 					</Menu.Dropdown>
 				</Menu>
-			</Box>
+				{/* </Box> */}
+			</Flex>
 		</>
 	);
 };

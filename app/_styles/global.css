@@ -2,9 +2,23 @@
 
 html,
 body {
-	height: 100%;
-	overflow-x: 0;
+	height: 100vh;
+	margin: 0;
+	overflow-x: hidden;
 	font-size: 16px;
+}
+
+.page-grid {
+	height: 100%;
+
+	.mantine-Grid-inner {
+		height: 100%;
+		margin: 0;
+	}
+
+	@media screen and (max-width: $mantine-breakpoint-sm) {
+		margin-top: var(--mobile-nav-height);
+	}
 }
 
 .image-dimmed {
