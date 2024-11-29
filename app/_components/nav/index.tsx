@@ -1,12 +1,12 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useDisclosure } from "@mantine/hooks";
+import { useDisclosure, useIntersection } from "@mantine/hooks";
 import { Box, Burger, Flex, Menu } from "@mantine/core";
-import { SITE_PAGES } from "_util";
-import classes from "./index.module.css";
+import { classNames, SITE_PAGES } from "_util";
 import { FONTS } from "_styles";
 import { SVG } from "_components";
+import classes from "./index.module.css";
 
 type NavProps = {
 	center?: boolean;
@@ -16,6 +16,10 @@ type NavProps = {
 export const Nav = ({ center, showLogo }: NavProps) => {
 	const pathname = usePathname();
 	const [opened, { toggle }] = useDisclosure(false);
+	const { ref, entry } = useIntersection({
+		root: document.querySelector("#root"),
+		threshold: 1,
+	});
 
 	const isActiveNavLink = (href: string): boolean => {
 		return pathname === href;
@@ -26,14 +30,17 @@ export const Nav = ({ center, showLogo }: NavProps) => {
 			{/* desktop nav */}
 			<Flex
 				align="end"
+				className={classNames([
+					classes.nav,
+					!entry?.isIntersecting && classes.isPinned,
+				])}
 				component="nav"
 				gap="xs"
-				h="5rem"
+				h="5.5rem"
 				justify={center ? "center" : "flex-start"}
 				maw="100%"
-				pos="sticky"
+				ref={ref}
 				visibleFrom="sm"
-				top="5px"
 			>
 				{showLogo && (
 					<Link href="/home" className={classes.logo}>
