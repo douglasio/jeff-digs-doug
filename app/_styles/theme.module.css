@@ -76,11 +76,19 @@
 	--button-padding-x: var(--button-padding-x-sm);
 	--button-color: var(--mantine-color-white); */
 	font-weight: 300;
+	max-width: 100%;
 }
 
 a.buttonRoot:hover {
 	color: var(--mantine-color-sage-1);
 	text-decoration: underline;
+}
+
+/* makes the homepage go full height, along with 0 top/bottom padding on the GridCol with the image */
+.gridInner {
+	height: 100%;
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 .navLinkRoot {

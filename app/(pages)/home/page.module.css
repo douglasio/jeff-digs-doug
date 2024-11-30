@@ -1,6 +1,11 @@
 .lockup {
 	max-width: 100%;
-	width: 30rem;
+	margin: 0 0 var(--mantine-spacing-xs) 0;
+
+	@media screen and (min-width: $mantine-breakpoint-sm) {
+		margin: 0;
+		width: 30rem;
+	}
 }
 
 .floatingInitials {
@@ -14,4 +19,10 @@
 	right: -5rem;
 	width: 30vw;
 	z-index: -1;
+}
+
+.homeMobileNav {
+	@media screen and (min-width: $mantine-breakpoint-sm) {
+		display: none;
+	}
 }

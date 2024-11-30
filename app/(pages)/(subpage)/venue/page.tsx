@@ -1,33 +1,50 @@
 import React from "react";
 import { Metadata } from "next";
+import Link from "next/link";
 import { IntroText, TextButton } from "_components";
-import { GridCol, Image, Stack, Text, Title } from "@mantine/core";
+import {
+	AspectRatio,
+	Button,
+	GridCol,
+	Image,
+	Stack,
+	Text,
+	Title,
+} from "@mantine/core";
 import { FONTS } from "_styles";
 import { WEDDING_DETAILS } from "_util";
-import { faCar } from "@fortawesome/free-solid-svg-icons";
+import {
+	faArrowUpRightFromSquare,
+	faBoxOpen,
+	faCar,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const metadata: Metadata = {
 	title: "The Venue",
 	description: "The Willowdale Estate will be awesome, you will see.",
 };
 
+const LeftImage = () => (
+	<Image
+		alt="Willowdale front of house in the fall, photo credit: Mark Spooner"
+		src={"static/images/willowdale.webp"}
+		className="image-dimmed image-fill"
+	/>
+);
+
 const Venue = () => {
 	return (
 		<>
-			<GridCol
-				span={{ base: 12, sm: 6, xl: 5 }}
-				// pt="0"
-				// pl="0"
-				// pb="0"
-				// pr={{ base: 0, sm: "xl" }}
-			>
-				<Image
-					alt="Willowdale front of house in the fall, photo credit: Mark Spooner"
-					src={"static/images/willowdale.webp"}
-					className="image-dimmed image-fill"
-				/>
-			</GridCol>
 			<GridCol span={{ base: 12, sm: 6 }}>
+				<AspectRatio visibleFrom="sm" ratio={4 / 6}>
+					<LeftImage />
+				</AspectRatio>
+				<AspectRatio hiddenFrom="sm" ratio={1 / 1}>
+					<LeftImage />
+				</AspectRatio>
+			</GridCol>
+			<GridCol span={{ base: 12, sm: 7 }} p="sm">
 				<Stack
 					align="flex-start"
 					justify="flex-start"
@@ -52,12 +69,18 @@ const Venue = () => {
 					</IntroText>
 					<section>
 						<Title order={4}>Getting to Willowdale</Title>
-						<Text>
-							It’s off Route 1. Take Ipswich Street until you see
-							a big grassy field on your right. Then take a right
-							onto Asbury Street and then a left onto Bradley
-							Palmer State Park Road. You’ll see signs. Park in
-							the parking lot.
+						<Text>It’s off Route 1. </Text>
+
+						<Text component="ol">
+							<li>
+								Take Ipswich Street until you see a big grassy
+								field on your right.
+							</li>
+							<li>Take a right onto Asbury Street</li>
+							<li>
+								Take a left onto Bradley Palmer State Park Road
+							</li>
+							<li> You’ll see signs. Park in the parking lot.</li>
 						</Text>
 						<Text mb="xs">
 							Or you can ignore all that and use GPS like everyone
@@ -72,15 +95,29 @@ const Venue = () => {
 					</section>
 					<iframe
 						width="600"
-						height="450"
+						height="300"
 						style={{
 							border: 0,
 							filter: "brightness(0.8) grayscale(0.5) sepia(0.2)",
+							width: "100%",
 							maxWidth: "100%",
 						}}
 						loading="lazy"
 						src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJoUiZGCca44kR9CsWrleFE8g&key=AIzaSyCu4Q2UOOBigMYq86auRI_TYZXPZdPXsoQ"
 					></iframe>
+					<Button
+						component={Link}
+						href="https://www.willowdaleestate.com/weddings/our-venue"
+						target="_blank"
+						rightSection={
+							<FontAwesomeIcon
+								icon={faArrowUpRightFromSquare}
+								style={{ width: "1rem" }}
+							/>
+						}
+					>
+						More about Willowdale
+					</Button>
 				</Stack>
 			</GridCol>
 		</>

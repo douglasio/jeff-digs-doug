@@ -55,6 +55,7 @@ export const PATHS = {
 	PAGES: {
 		HOME: "/home",
 		WHO_ARE_YOU: "/who-are-you",
+		VENUE: "/venue",
 		SIGN_IN: "/sign-in",
 	},
 };

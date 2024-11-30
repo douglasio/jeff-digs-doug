@@ -13,10 +13,10 @@ export default function SubpageLayout({
 			<Grid
 				id="page-grid"
 				className={"page-grid"}
-				gutter={{ base: "xs", sm: "xl" }}
-				align="stretch"
+				gutter={{ base: "sm", sm: "xl" }}
 				m="auto"
-				w="80%"
+				w={{ base: "auto", sm: "80%" }}
+				overflow="visible"
 			>
 				{children}
 			</Grid>

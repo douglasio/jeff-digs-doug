@@ -34,7 +34,6 @@
 		height: 2px;
 		margin: 0 auto;
 		opacity: 0;
-		/* transition: 200ms all; */
 	}
 
 	&.active:not(.mobile) {
@@ -56,48 +55,78 @@
 
 .logo {
 	display: flex;
-	margin-right: 1rem;
-
+	margin: 1rem 1rem;
+	margin-right: 1em;
 	width: 3.5rem;
-
 	transition: 200ms width linear;
 
 	&.isPinned {
 		width: 6rem;
 	}
+
+	&.logoHidden {
+		opacity: 0;
+	}
 }
 
 .mobileNav {
+	align-items: stretch;
 	background-color: var(--mantine-color-blue-9);
-	height: var(--mobile-nav-height);
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	padding: 0.25rem var(--mantine-spacing-xs);
 	display: flex;
+	height: var(--mobile-nav-height);
+	padding: 1.5rem var(--mantine-spacing-xs);
+	position: sticky;
 	justify-content: space-between;
+	top: 0;
+	width: 100%;
+	z-index: 9999;
 
 	.burger {
-		display: flex;
+		display: inline-flex;
 		flex-direction: row;
 		align-items: center;
 		justify-content: flex-end;
 	}
 
 	.logo {
+		display: block;
 		height: 100%;
+		width: auto;
+		margin: 0;
+
+		> * {
+			height: 100%;
+			width: auto;
+		}
 	}
 
 	.dropdown {
 		background-color: var(--mantine-color-blue-9);
-		padding: 0 var(--mantine-spacing-xs);
+		/* background-image: url("/static/images/leafc-06.svg"); */
+		/* background-repeat: no-repeat;
+		background-size: 130vw;
+		background-position: 0 0; */
+		/* box-shadow: 0 0 1rem 1rem var(--mantine-color-blue-9); */
+		padding: var(--mantine-spacing-xs);
 		position: fixed;
 		left: 0;
 		top: 0;
 	}
 
-	.navLink {
-		text-align: right;
+	&.isInline {
+		background-color: transparent;
+		margin-bottom: calc(var(--mobile-nav-height) * -1);
 	}
+
+	/* &.isPinned {
+		background-color: var(--mantine-color-blue-9);
+	} */
+}
+
+.dropdownLeaf {
+	mix-blend-mode: saturation;
+	position: absolute;
+	/* right: 0; */
+	width: 100vw;
+	z-index: 1;
 }

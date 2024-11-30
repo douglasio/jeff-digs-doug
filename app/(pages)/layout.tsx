@@ -10,12 +10,14 @@ export default function PageLayout({
 }) {
 	return (
 		<main id="main" className={classes.main}>
-			<SVG.CenterLeaves
-				direction="down"
-				color={COLORS.NAVY[9]}
-				className={classes.backgroundLeaves}
-			/>
-			{children}
+			<>
+				<SVG.CenterLeaves
+					direction="down"
+					color={COLORS.NAVY[9]}
+					className={classes.backgroundLeaves}
+				/>
+				{children}
+			</>
 		</main>
 	);
 }

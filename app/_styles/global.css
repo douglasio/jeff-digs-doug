@@ -2,22 +2,22 @@
 
 html,
 body {
-	height: 100vh;
+	height: 100%;
 	margin: 0;
-	overflow-x: hidden;
+	padding: 0;
+	/* overflow-x: hidden; */
 	font-size: 16px;
 }
 
 .page-grid {
-	height: 100%;
+	/* max-width: calc(100% - (var(--grid-col-padding) * 2)); */
 
-	.mantine-Grid-inner {
+	> .mantine-Grid-inner {
 		height: 100%;
-		margin: 0;
 	}
 
-	@media screen and (max-width: $mantine-breakpoint-sm) {
-		margin-top: var(--mobile-nav-height);
+	@media screen and (min-width: $mantine-breakpoint-sm) {
+		height: 100%;
 	}
 }
 
@@ -48,5 +48,15 @@ a:not(.mantine-Button-root):not([class*="navLink"]),
 	&:active {
 		color: var(--mantine-color-sage-1);
 		text-decoration: underline;
+	}
+}
+
+ol {
+	margin-left: 0.9em;
+
+	li {
+		&::marker {
+			font-size: 0.9em;
+		}
 	}
 }

@@ -1,11 +1,5 @@
 .body {
 	background-color: var(--mantine-color-blue-9);
-	height: 100%;
-	overflow-x: hidden;
+	/* height: 100%; */
+	/* overflow-x: hidden; */
 }
-
-/* .layout-grid {
-	&:nth-child(1) {
-		align-items: right;
-	}
-} */

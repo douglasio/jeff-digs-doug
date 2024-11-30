@@ -63,7 +63,7 @@ export const theme = createTheme({
 		xs: rem(20),
 		sm: rem(25),
 		md: rem(35),
-		lg: rem(55),
+		lg: rem(45),
 		xl: rem(75),
 	},
 	spacing: {
@@ -120,6 +120,9 @@ export const theme = createTheme({
 		}),
 		Grid: Grid.extend({
 			classNames: { inner: classes.gridInner },
+			defaultProps: {
+				overflow: "hidden",
+			},
 		}),
 		NavLink: NavLink.extend({
 			classNames: { root: classes.navLinkRoot },
