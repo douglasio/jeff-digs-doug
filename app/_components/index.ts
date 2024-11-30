@@ -1,5 +1,4 @@
 export * from "./add-to-calendar";
-export * from "./header";
 export * from "./hubspot-form";
 export * from "./intro-text";
 export * from "./jumbo";

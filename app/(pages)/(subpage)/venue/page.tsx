@@ -15,7 +15,6 @@ import { FONTS } from "_styles";
 import { WEDDING_DETAILS } from "_util";
 import {
 	faArrowUpRightFromSquare,
-	faBoxOpen,
 	faCar,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

@@ -2,12 +2,10 @@ import React from "react";
 import {
 	Box,
 	Button,
-	Container,
 	Grid,
 	GridCol,
 	Image,
 	Space,
-	Text,
 	Title,
 	rem,
 } from "@mantine/core";

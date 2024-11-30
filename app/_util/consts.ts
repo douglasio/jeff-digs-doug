@@ -24,14 +24,24 @@ type PageType = {
 	url: string;
 };
 
+export const PATHS = {
+	PAGES: {
+		HOME: "/home",
+		WHO_ARE_YOU: "/who-are-you",
+		VENUE: "/venue",
+		OUR_STORY: "/our-story",
+		SIGN_IN: "/sign-in",
+	},
+};
+
 export const SITE_PAGES: PageType[] = [
 	{
 		text: "Home",
-		url: "/home",
+		url: PATHS.PAGES.HOME,
 	},
 	{
 		text: "Venue",
-		url: "/venue",
+		url: PATHS.PAGES.VENUE,
 	},
 	{
 		text: "Agenda",
@@ -47,15 +57,6 @@ export const SITE_PAGES: PageType[] = [
 	},
 	{
 		text: "Our Story",
-		url: "/our-story",
+		url: PATHS.PAGES.OUR_STORY,
 	},
 ];
-
-export const PATHS = {
-	PAGES: {
-		HOME: "/home",
-		WHO_ARE_YOU: "/who-are-you",
-		VENUE: "/venue",
-		SIGN_IN: "/sign-in",
-	},
-};

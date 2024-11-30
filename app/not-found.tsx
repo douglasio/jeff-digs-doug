@@ -1,13 +1,5 @@
 import Link from "next/link";
-import {
-	Container,
-	Grid,
-	GridCol,
-	Image,
-	Title,
-	Text,
-	Button,
-} from "@mantine/core";
+import { Container, Grid, GridCol, Title, Text, Button } from "@mantine/core";
 import { SVG } from "_components";
 
 export const metadata = {

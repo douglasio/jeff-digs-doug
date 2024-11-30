@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useDisclosure, useIntersection } from "@mantine/hooks";
-import { Burger, Flex, Menu, Image } from "@mantine/core";
+import { Burger, Flex, Menu } from "@mantine/core";
 import { motion } from "motion/react";
 import { classNames, SITE_PAGES } from "_util";
 import { FONTS } from "_styles";
@@ -23,9 +23,7 @@ export const Nav = ({
 }: NavProps) => {
 	const pathname = usePathname();
 	const [opened, { toggle }] = useDisclosure(false);
-	const { ref, entry } = useIntersection({
-		threshold: 1,
-	});
+	const { ref, entry } = useIntersection({ threshold: 1 });
 
 	const isActiveNavLink = (href: string): boolean => {
 		return pathname === href;
@@ -38,6 +36,7 @@ export const Nav = ({
 				align="center"
 				className={classNames([
 					classes.nav,
+					variant === "top" && classes.top,
 					variant === "top" &&
 						!entry?.isIntersecting &&
 						classes.isPinned,
