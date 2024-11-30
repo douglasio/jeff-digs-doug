@@ -1,9 +1,5 @@
 .timelineItem {
-	/* margin-left: 50%;
-	position: relative; */
-}
-
-.timelinePhoto {
-	/* transform: translateX(calc(-100% - 6rem));
-	width: 500px; */
+	.mantine-Timeline-itemBullet {
+		overflow: hidden;
+	}
 }

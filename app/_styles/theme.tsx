@@ -15,6 +15,7 @@ import {
 	Text,
 	Grid,
 	Menu,
+	Paper,
 } from "@mantine/core";
 import { COLORS, FONTS } from "_styles";
 import classes from "./theme.module.css";
@@ -153,6 +154,11 @@ export const theme = createTheme({
 			defaultProps: {
 				blur: 7,
 				color: COLORS.BLUE[8],
+			},
+		}),
+		Paper: Paper.extend({
+			classNames: {
+				root: classes.paperRoot,
 			},
 		}),
 		LoadingOverlay: LoadingOverlay.extend({

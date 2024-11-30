@@ -8,6 +8,8 @@ import {
 	Text,
 	Title,
 	Image,
+	AspectRatioProps,
+	AspectRatio,
 } from "@mantine/core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
@@ -33,26 +35,24 @@ const timelineItemVariants: Variants = {
 const bulletSize = 40;
 
 type TimelineProps = {
+	active: number;
 	events: {
 		key: number;
 		bullet?: IconProp;
 		date: string;
-		title: string;
-		description?: string;
+		title: string | React.ReactNode;
+		description?: string | React.ReactNode;
 		image?: {
 			url: string;
 			alt: string;
+			ratio?: AspectRatioProps["ratio"];
 		};
 	}[];
 };
 
-export const Timeline = ({ events }: TimelineProps) => {
+export const Timeline = ({ events, active }: TimelineProps) => {
 	return (
-		<MantineTimeline
-			active={events.length - 2}
-			bulletSize={bulletSize}
-			lineWidth={2}
-		>
+		<MantineTimeline active={active} bulletSize={bulletSize} lineWidth={2}>
 			{events.map(({ key, bullet, date, title, description, image }) => (
 				<TimelineItem
 					key={key}
@@ -71,24 +71,36 @@ export const Timeline = ({ events }: TimelineProps) => {
 						initial="offscreen"
 						whileInView="onscreen"
 						viewport={{
-							// once: true,
-							amount: 0.8,
+							once: true,
+							amount: 0.5,
 							margin: "50% 0 50px 0",
 						}}
 						variants={timelineItemVariants}
 					>
 						<Title order={2}>{title}</Title>
 						<Text>{description}</Text>
-						{image && (
-							<Image
-								alt={image.alt}
-								className={classNames([
-									"image-dimmed-more",
-									classes.timelinePhoto,
-								])}
-								src={image.url}
-							/>
-						)}
+						{image &&
+							(image.ratio ? (
+								<AspectRatio ratio={image.ratio}>
+									<Image
+										alt={image.alt}
+										className={classNames([
+											"image-dimmed-more",
+											classes.timelinePhoto,
+										])}
+										src={image.url}
+									/>
+								</AspectRatio>
+							) : (
+								<Image
+									alt={image.alt}
+									className={classNames([
+										"image-dimmed-more",
+										classes.timelinePhoto,
+									])}
+									src={image.url}
+								/>
+							))}
 					</motion.div>
 				</TimelineItem>
 			))}

@@ -160,11 +160,12 @@ a.buttonRoot:hover {
 	background-color: var(--mantine-color-blue-9);
 }
 
-.title {
-	h1& {
-		/* text-transform: uppercase; */
-	}
+.paperRoot {
+	background-color: var(--mantine-color-navy-9);
+	padding: 1rem;
+}
 
+.title {
 	h2& {
 		color: var(--mantine-color-sage-9);
 		font-style: italic;
