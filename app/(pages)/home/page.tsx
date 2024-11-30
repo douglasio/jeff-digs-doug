@@ -10,7 +10,7 @@ import {
 	rem,
 } from "@mantine/core";
 import { AddToCalendar, IntroText, Nav, SVG } from "_components";
-import { WEDDING_DETAILS } from "_util";
+import { contentAreaProps, mobileNavBreakpoint, WEDDING_DETAILS } from "_util";
 import classes from "./page.module.css";
 import { COLORS } from "_styles";
 import Link from "next/link";
@@ -29,14 +29,13 @@ const Home = () => {
 			/>
 			<Grid
 				id="page-grid"
-				// className={"page-grid"}
 				gutter={{ base: "sm", sm: "xl" }}
 				h="100%"
 				m={{ base: "0", sm: "auto" }}
 				mt="0"
 			>
 				<GridCol
-					span={{ base: 12, sm: 5 }}
+					span={{ base: 12, md: 5 }}
 					// pt="0"
 					// pl="0"
 					pb="0"
@@ -67,12 +66,12 @@ const Home = () => {
 						</Box>
 					</Box>
 				</GridCol>
-				<GridCol span={{ base: 12, sm: 7 }} p="sm">
-					<Space h="lg" visibleFrom="sm" />
-					<Box visibleFrom="sm">
+				<GridCol span={{ base: 12, md: 7 }} {...contentAreaProps}>
+					<Space h="lg" visibleFrom={mobileNavBreakpoint} />
+					<Box visibleFrom={mobileNavBreakpoint}>
 						<Nav variant="inline" showLogo={false} />
 					</Box>
-					<Space h="sm" visibleFrom="sm" />
+					<Space h="sm" visibleFrom={mobileNavBreakpoint} />
 					<SVG.IntroLockup className={classes.lockup} />
 					<Box mb="sm">
 						<Title order={2}>

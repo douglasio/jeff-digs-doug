@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid } from "@mantine/core";
+import { Grid, Space } from "@mantine/core";
 import { Nav } from "_components";
 
 export default function SubpageLayout({
@@ -20,6 +20,7 @@ export default function SubpageLayout({
 			>
 				{children}
 			</Grid>
+			<Space h="xl" />
 		</>
 	);
 }

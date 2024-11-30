@@ -16,6 +16,9 @@ import {
 	Grid,
 	Menu,
 	Paper,
+	Chip,
+	Timeline,
+	List,
 } from "@mantine/core";
 import { COLORS, FONTS } from "_styles";
 import classes from "./theme.module.css";
@@ -56,6 +59,13 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 // };
 
 export const theme = createTheme({
+	breakpoints: {
+		xs: "30em",
+		sm: "48em",
+		md: "64em",
+		lg: "74em",
+		xl: "110em",
+	},
 	colors: { blue: COLORS.BLUE, sage: COLORS.SAGE, navy: COLORS.NAVY },
 	// variantColorResolver,
 	primaryColor: "sage",
@@ -119,6 +129,12 @@ export const theme = createTheme({
 		Button: Button.extend({
 			classNames: { root: classes.buttonRoot },
 		}),
+		Chip: Chip.extend({
+			defaultProps: {
+				size: "xs",
+			},
+			classNames: { root: classes.chipRoot, label: classes.chipLabel },
+		}),
 		Grid: Grid.extend({
 			classNames: { inner: classes.gridInner },
 			defaultProps: {
@@ -136,6 +152,14 @@ export const theme = createTheme({
 			classNames: { input: classes.input, wrapper: classes.inputWrapper },
 			defaultProps: {
 				size: "xl",
+			},
+		}),
+		List: List.extend({
+			classNames: {
+				itemWrapper: classes.listItemWrapper,
+			},
+			defaultProps: {
+				size: "sm",
 			},
 		}),
 		Menu: Menu.extend({
@@ -181,6 +205,11 @@ export const theme = createTheme({
 				fw: "300",
 				lh: "1.3em",
 				size: "sm",
+			},
+		}),
+		Timeline: Timeline.extend({
+			classNames: {
+				itemTitle: classes.timelineItemTitle,
 			},
 		}),
 		Title: Title.extend({

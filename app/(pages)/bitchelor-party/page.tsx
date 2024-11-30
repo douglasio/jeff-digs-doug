@@ -16,6 +16,7 @@ import { faPlane, faCar, faSun } from "@fortawesome/free-solid-svg-icons";
 import { AddToCalendar, IntroText, TextButton } from "_components";
 import { FONTS } from "_styles";
 import { Metadata } from "next";
+import { PHOTO_CREDIT } from "_util";
 
 export const metadata: Metadata = {
 	title: "The Bitchelor Party",
@@ -45,7 +46,7 @@ const BitchelorParty = () => {
 						mb="md"
 					/>
 					<Image
-						alt="Doug and Jeff dancing with friends in the DR post-engagement, photo credit: Adolfo Florentino"
+						alt={`Doug and Jeff dancing with friends in the DR post-engagement, photo credit: ${PHOTO_CREDIT.ENGAGEMENT}`}
 						src={"static/images/engagement_dancing.jpg"}
 						className="image-dimmed image-fill"
 						h={{ base: "auto", sm: "80vh" }}
@@ -311,7 +312,7 @@ const BitchelorParty = () => {
 						</section>
 					</Stack>
 					<Image
-						alt="Doug and Jeff dancing with friends in the DR post-engagement, photo credit: Adolfo Florentino"
+						alt={`Doug and Jeff dancing with friends in the DR post-engagement, photo credit: ${PHOTO_CREDIT.ENGAGEMENT}`}
 						src={"static/images/engagement_dancing.jpg"}
 						className="image-dimmed"
 						hiddenFrom="sm"

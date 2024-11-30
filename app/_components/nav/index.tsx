@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import { useDisclosure, useIntersection } from "@mantine/hooks";
 import { Burger, Flex, Menu } from "@mantine/core";
 import { motion } from "motion/react";
-import { classNames, SITE_PAGES } from "_util";
+import { classNames, mobileNavBreakpoint, SITE_PAGES } from "_util";
 import { FONTS } from "_styles";
 import { SVG } from "_components";
 import classes from "./index.module.css";
@@ -46,10 +46,9 @@ export const Nav = ({
 				gap="xs"
 				justify={variant === "top" ? "center" : "flex-start"}
 				maw="100%"
-				p={{ base: "xs", sm: 0 }}
 				pos="sticky"
 				ref={ref}
-				visibleFrom="sm"
+				visibleFrom={mobileNavBreakpoint}
 			>
 				{showLogo && (
 					<Link
@@ -79,12 +78,14 @@ export const Nav = ({
 
 			{/* mobile nav */}
 			<Flex
-				hiddenFrom="sm"
+				hiddenFrom={mobileNavBreakpoint}
 				className={classNames([
 					classes.mobileNav,
 					variant === "inline" && classes.isInline,
 					entry?.isIntersecting && classes.isPinned,
 				])}
+				pl="md"
+				pr="md"
 			>
 				{/* if showLogo is true and nav is pinned */}
 				<Link href="/">

@@ -1,23 +1,65 @@
 import React from "react";
-import { Grid, GridCol, Image } from "@mantine/core";
+import { type Metadata } from "next";
+import {
+	AspectRatio,
+	Chip,
+	GridCol,
+	Group,
+	Image,
+	Space,
+	Title,
+} from "@mantine/core";
+import { contentAreaProps, mobileNavBreakpoint, PHOTO_CREDIT } from "_util";
+import { FONTS } from "_styles";
+import { IntroText } from "_components";
+
+export const metadata: Metadata = {
+	title: "Agenda",
+	description: "Always know where you need to be.",
+};
+
+const LeftImage = () => (
+	<Image
+		alt={`Jeff feeding Doug and arancini post-engagement: ${PHOTO_CREDIT.ENGAGEMENT}`}
+		src={"static/images/engagement_feeding.jpg"}
+		className="image-dimmed image-fill"
+	/>
+);
 
 const Agenda = () => {
 	return (
 		<>
-			{/* <Nav center={true} showLogo={true} /> */}
-			<Grid gutter="xl" mr="lg" maw="1920px" m="0 auto">
-				<GridCol
-					span={{ base: 12, sm: 6 }}
-					style={{ overflow: "hidden" }}
+			<GridCol span={{ base: 12, md: 5 }}>
+				<AspectRatio visibleFrom={mobileNavBreakpoint} ratio={4 / 6}>
+					<LeftImage />
+				</AspectRatio>
+			</GridCol>
+			<GridCol span={{ base: 12, md: 7 }} {...contentAreaProps}>
+				<Title className={FONTS.MRS_EAVES.className} order={1}>
+					Agenda
+				</Title>
+				<IntroText>
+					Not all those who wander are lost. But in the event that you
+					are lost, look here to figure out where you&rsquo;re
+					supposed to be.
+				</IntroText>
+
+				<Group gap="xs">
+					<Chip defaultChecked>Everyone</Chip>
+					<Chip>Guests</Chip>
+					<Chip>Wedding Party</Chip>
+					<Chip>The Couple</Chip>
+				</Group>
+
+				<AspectRatio
+					mt="xl"
+					hiddenFrom={mobileNavBreakpoint}
+					ratio={4 / 3}
 				>
-					<Image
-						alt="Willowdale front of house in the fall, photo credit: Mark Spooner"
-						src={"static/images/willowdale.webp"}
-						className="image-dimmed image-fill"
-					/>
-				</GridCol>
-				<GridCol span={{ base: 12, sm: 6 }}></GridCol>
-			</Grid>
+					<LeftImage />
+				</AspectRatio>
+				<Space h="xl" />
+			</GridCol>
 		</>
 	);
 };

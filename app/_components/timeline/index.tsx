@@ -53,35 +53,46 @@ type TimelineProps = {
 export const Timeline = ({ events, active }: TimelineProps) => {
 	return (
 		<MantineTimeline active={active} bulletSize={bulletSize} lineWidth={2}>
-			{events.map(({ key, bullet, date, title, description, image }) => (
-				<TimelineItem
-					key={key}
-					bullet={
-						bullet && (
-							<FontAwesomeIcon
-								icon={bullet}
-								style={{ height: bulletSize - 10 }}
-							/>
-						)
-					}
-					className={classes.timelineItem}
-					title={date}
-				>
-					<motion.div
-						initial="offscreen"
-						whileInView="onscreen"
-						viewport={{
-							once: true,
-							amount: 0.5,
-							margin: "50% 0 50px 0",
-						}}
-						variants={timelineItemVariants}
+			{events.map(
+				({ key, bullet, date, title, description, image }, i) => (
+					<TimelineItem
+						key={key}
+						bullet={
+							bullet && (
+								<FontAwesomeIcon
+									icon={bullet}
+									style={{ height: bulletSize - 10 }}
+								/>
+							)
+						}
+						className={classes.timelineItem}
+						title={date}
 					>
-						<Title order={2}>{title}</Title>
-						<Text>{description}</Text>
-						{image &&
-							(image.ratio ? (
-								<AspectRatio ratio={image.ratio}>
+						<motion.div
+							initial={i > 0 ? "offscreen" : false}
+							whileInView="onscreen"
+							viewport={{
+								once: true,
+								amount: 0.5,
+								margin: "50% 0 50px 0",
+							}}
+							variants={timelineItemVariants}
+						>
+							<Title order={2}>{title}</Title>
+							<Text>{description}</Text>
+							{image &&
+								(image.ratio ? (
+									<AspectRatio ratio={image.ratio}>
+										<Image
+											alt={image.alt}
+											className={classNames([
+												"image-dimmed-more",
+												classes.timelinePhoto,
+											])}
+											src={image.url}
+										/>
+									</AspectRatio>
+								) : (
 									<Image
 										alt={image.alt}
 										className={classNames([
@@ -90,20 +101,11 @@ export const Timeline = ({ events, active }: TimelineProps) => {
 										])}
 										src={image.url}
 									/>
-								</AspectRatio>
-							) : (
-								<Image
-									alt={image.alt}
-									className={classNames([
-										"image-dimmed-more",
-										classes.timelinePhoto,
-									])}
-									src={image.url}
-								/>
-							))}
-					</motion.div>
-				</TimelineItem>
-			))}
+								))}
+						</motion.div>
+					</TimelineItem>
+				),
+			)}
 		</MantineTimeline>
 	);
 };

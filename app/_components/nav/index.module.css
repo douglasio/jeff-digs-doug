@@ -1,6 +1,5 @@
 .nav {
 	background-color: transparent;
-	/* margin-bottom: var(--mantine-spacing-md); */
 	top: -1px;
 	width: 100%;
 	z-index: 9999;
@@ -10,9 +9,9 @@
 		/* transition: 200ms background-color; */
 	}
 
-	&.top {
+	/* &.top {
 		margin-bottom: var(--mantine-spacing-sm);
-	}
+	} */
 }
 
 .navLink {
