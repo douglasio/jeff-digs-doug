@@ -44,7 +44,7 @@ const Venue = () => {
 					<LeftImage />
 				</AspectRatio>
 			</GridCol>
-			<GridCol span={{ base: 12, sm: 7 }} p="sm">
+			<GridCol span={{ base: 12, sm: 6 }}>
 				<Stack
 					align="flex-start"
 					justify="flex-start"
