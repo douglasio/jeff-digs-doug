@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion, Variants } from "motion/react";
+import { motion, type Variants } from "motion/react";
 import {
 	Timeline as MantineTimeline,
 	TimelineItem,

@@ -15,7 +15,7 @@ export default function SubpageLayout({
 				className={"page-grid"}
 				gutter={{ base: "sm", sm: "xl" }}
 				m="auto"
-				w={{ base: "auto", sm: "80%" }}
+				w={{ base: "auto", sm: "90%" }}
 				overflow="visible"
 			>
 				{children}

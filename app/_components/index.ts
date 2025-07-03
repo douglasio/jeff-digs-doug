@@ -4,6 +4,7 @@ export * from "./intro-text";
 export * from "./jumbo";
 export * from "./loader";
 export * from "./nav";
+export * from "./party-card";
 export * as SVG from "./svgs";
 export * from "./transition";
 export * from "./text-button";

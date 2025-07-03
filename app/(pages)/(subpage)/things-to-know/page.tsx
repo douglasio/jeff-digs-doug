@@ -96,8 +96,8 @@ const ThingsToKnow = () => {
 							invitation for details or ask us for more info.
 						</Text>
 						<Text>
-							We request you submit your all RSVPs by October 1,
-							2025.
+							We request you submit your all RSVPs by{" "}
+							<strong>October 1, 2025</strong>.
 						</Text>
 					</Paper>
 					<Paper {...paperProps}>

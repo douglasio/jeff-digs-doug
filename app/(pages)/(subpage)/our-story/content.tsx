@@ -46,11 +46,11 @@ export const timelineEvents = [
 		title: <>First Valentine&rsquo;s Day</>,
 		description: (
 			<>
-				After a few months of dating, Jeff and Doug celebrated their
-				first Valentine&rsquo;s Day together by deciding there was no
-				way their relationship could continue. Within 5&ndash;7 business
-				days, they had realized that was actually not correct and
-				promptly resumed dating.
+				After a few months of dating, we celebrated our first
+				Valentine&rsquo;s Day together by deciding there was no way our
+				relationship could continue. Within 5&ndash;7 business days, we
+				realized that was actually not correct and promptly resumed
+				dating.
 			</>
 		),
 	},
@@ -61,11 +61,11 @@ export const timelineEvents = [
 		title: "Moved in together",
 		description: (
 			<>
-				Jeff basically moved into Doug’s apartment 3 weeks after they
-				met, but we actually moved into our own place in Everett later
-				that year. It was a year marked by painting walls in fun shades
-				of blue, trying to stop Boba from peeing on everything they own,
-				and recovering from concussions inflicted by the
+				Jeff basically moved into Doug&rsquo;s apartment 3 weeks after
+				we met, but we actually moved into our own place in Everett
+				later that year. It was a year marked by painting walls in fun
+				shades of blue, trying to stop Boba from peeing on everything we
+				owned, and recovering from concussions inflicted by the
 				apartment&rsquo;s beautiful polished concrete floors.{" "}
 			</>
 		),
@@ -98,13 +98,18 @@ export const timelineEvents = [
 		title: "Moved cross-country",
 		description: (
 			<>
-				When we first started dating, Jeff mentioned that he
+				When they first started dating, Jeff mentioned that he
 				wasn&rsquo;t looking for anything serious as he was most likely
 				moving to the west coast within the year. Doug said &ldquo;me
 				too,&rdquo; and a couple short years later, we made that a
 				reality.
 			</>
 		),
+		image: {
+			url: "static/images/timeline_082225.JPG",
+			alt: "Jeff and Doug on a plane to San Diego",
+			ratio: 1.5 / 1,
+		},
 	},
 	{
 		key: 7,
@@ -113,9 +118,9 @@ export const timelineEvents = [
 		title: "Had a third child",
 		description: (
 			<>
-				Jeff took one look at those floppy ears and said &ldquo;I have
-				to have him.&rdquo; And despite better judgement, we welcomed a
-				third fur child into our midst.
+				Jeff took one look at those floppy ears and within minutes
+				applied to adopt Gordito, or Gordy for short. And despite better
+				judgement, a third fur child was added to the mix.
 			</>
 		),
 		image: {
@@ -131,10 +136,10 @@ export const timelineEvents = [
 		title: "Started a throuple",
 		description: (
 			<>
-				Our good friend and future officiant Kara began staying with us
-				for extended trips during her time as a digital nomad. It only
-				took about a year of constant badgering before she finally
-				joined us in San Diego.
+				Good friend and future officiant Kara began staying with us for
+				extended trips during her time as a digital nomad. It only took
+				about a year of constant badgering before she finally joined us
+				in San Diego.
 			</>
 		),
 		image: {
@@ -164,32 +169,18 @@ export const timelineEvents = [
 	},
 	{
 		key: 10,
-		bullet: faTruckMoving,
-		date: "June 2025",
-		title: "Moved to New York (baybeeee)",
-		description: (
-			<>
-				Jeff and Doug move to one of the most expensive cities in the
-				country to save on rent. And to be closer to family and friends,
-				take advantage of a functioning public transit system, and be
-				able to walk to coffee shop sometimes.
-			</>
-		),
-	},
-	{
-		key: 11,
 		bullet: faMarsDouble,
 		date: "November 2025",
 		title: "Got married",
 		description: (
 			<>
-				On November 8, 2025, Jeff and Doug throw the best wedding anyone
-				has ever been to, everything goes off without a hitch, and the
-				venue thinks it&rsquo;s such an amazing event they decide to
-				comp the entire thing. Jeff and Doug live happily ever after,
-				both separately winning the lottery immediately following their
-				nuptials and retiring early to travel the world and/or buy a
-				small compound for all their family and friends to live on.
+				On November 8, 2025, we throw the best wedding anyone has ever
+				been to, everything goes off without a hitch, and the venue
+				thinks it&rsquo;s such an amazing event they decide to comp the
+				entire thing. we live happily ever after, both separately
+				winning the lottery immediately following their nuptials and
+				retiring early to travel the world and/or buy a small compound
+				for all their family, friends, and animals to live on.
 			</>
 		),
 	},
@@ -199,7 +190,7 @@ export const gridNumbers = [
 	{
 		key: 1,
 		label: "Cities visited",
-		number: 20,
+		number: 21,
 	},
 	{
 		key: 3,
@@ -209,7 +200,7 @@ export const gridNumbers = [
 	{
 		key: 2,
 		label: "Apartments lived in",
-		number: 3,
+		number: 4,
 	},
 	{
 		key: 4,

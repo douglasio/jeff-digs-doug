@@ -28,7 +28,7 @@ const OurStory = () => {
 				<Space h="md" />
 				<Timeline
 					events={content.timelineEvents}
-					active={content.timelineEvents.length - 3}
+					active={content.timelineEvents.length - 2}
 				/>
 				<Space h="md" />
 				<Title order={2} size="lg">
