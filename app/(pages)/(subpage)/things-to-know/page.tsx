@@ -39,6 +39,7 @@ const listItemProps = {
 				color={COLORS.SAGE[5]}
 				height="1em"
 				style={{ marginTop: "3px" }} //visual adjustment to align with text
+				title="Do"
 			/>
 		),
 	},
@@ -49,6 +50,7 @@ const listItemProps = {
 				color={COLORS.NAVY[5]}
 				height="1em"
 				style={{ marginTop: "7px" }} //visual adjustment to align with text
+				title="Don't"
 			/>
 		),
 	},
@@ -90,11 +92,11 @@ const ThingsToKnow = () => {
 					<Paper {...paperProps}>
 						<SectionTitle>RSVPs</SectionTitle>
 						<Text>
-							All RSVPs will be digital via this website, see your
+							All RSVPs will be digital via this website. See your
 							invitation for details or ask us for more info.
 						</Text>
 						<Text>
-							We request you submit your all RSVPs by August 1,
+							We request you submit your all RSVPs by October 1,
 							2025.
 						</Text>
 					</Paper>
@@ -111,6 +113,7 @@ const ThingsToKnow = () => {
 							We will have professional photographers documenting
 							the evening.
 						</Text>
+						<Title order={3}>Do&rsquo;s and Don&rsquo;ts:</Title>
 						<List {...listItemProps.check}>
 							<ListItem {...listItemProps.x}>
 								Conspicuous photo-taking during the ceremony

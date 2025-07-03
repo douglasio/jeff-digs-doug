@@ -33,6 +33,7 @@ export const PATHS = {
 		AGENDA: "/agenda",
 		THINGS_TO_KNOW: "/things-to-know",
 		OUR_STORY: "/our-story",
+		WEDDING_PARTY: "/wedding-party",
 		SIGN_IN: "/sign-in",
 	},
 };
@@ -46,17 +47,17 @@ export const SITE_PAGES: PageType[] = [
 		text: "Venue",
 		url: PATHS.PAGES.VENUE,
 	},
-	// {
-	// 	text: "Agenda",
-	// 	url: PATHS.PAGES.AGENDA,
-	// },
+	{
+		text: "Agenda",
+		url: PATHS.PAGES.AGENDA,
+	},
 	{
 		text: "Things to Know",
 		url: PATHS.PAGES.THINGS_TO_KNOW,
 	},
 	{
 		text: "Wedding Party",
-		url: "/wedding-party",
+		url: PATHS.PAGES.WEDDING_PARTY,
 	},
 	{
 		text: "Our Story",

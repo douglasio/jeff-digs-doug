@@ -74,7 +74,7 @@ export const Timeline = ({ events, active }: TimelineProps) => {
 							viewport={{
 								once: true,
 								amount: 0.5,
-								margin: "50% 0 50px 0",
+								margin: "50px",
 							}}
 							variants={timelineItemVariants}
 						>
