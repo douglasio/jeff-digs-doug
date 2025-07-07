@@ -60,11 +60,6 @@
 	--button-height-compact-lg: calc(2.125rem * var(--mantine-scale));
 	--button-height-compact-xl: calc(2.5rem * var(--mantine-scale));*/
 
-	--button-padding-x-xs: calc(1rem * var(--mantine-scale));
-	--button-padding-x-sm: calc(5rem * var(--mantine-scale));
-	--button-padding-x-md: calc(6rem * var(--mantine-scale));
-	--button-padding-x-lg: calc(7rem * var(--mantine-scale));
-	--button-padding-x-xl: calc(8rem * var(--mantine-scale));
 	/*
 	--button-padding-x-compact-xs: calc(0.4375rem * var(--mantine-scale));
 	--button-padding-x-compact-sm: calc(0.5rem * var(--mantine-scale));
@@ -76,7 +71,6 @@
 	--button-padding-x: var(--button-padding-x-sm);
 	--button-color: var(--mantine-color-white); */
 	font-weight: 300;
-	max-width: 100%;
 }
 
 a.buttonRoot:hover {

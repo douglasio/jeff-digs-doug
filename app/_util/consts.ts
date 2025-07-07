@@ -35,6 +35,7 @@ export const PATHS = {
 		OUR_STORY: "/our-story",
 		WEDDING_PARTY: "/wedding-party",
 		SIGN_IN: "/sign-in",
+		REGISTRY: "/registry",
 	},
 };
 
@@ -62,6 +63,10 @@ export const SITE_PAGES: PageType[] = [
 	{
 		text: "Our Story",
 		url: PATHS.PAGES.OUR_STORY,
+	},
+	{
+		text: "Registry",
+		url: PATHS.PAGES.REGISTRY,
 	},
 ];
 

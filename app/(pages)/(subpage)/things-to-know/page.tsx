@@ -68,10 +68,62 @@ const ThingsToKnow = () => {
 				</IntroText>
 				<SimpleGrid cols={{ base: 1, [mobileNavBreakpoint]: 2, xl: 3 }}>
 					<Paper {...paperProps}>
-						<SectionTitle>Dress Code</SectionTitle>
+						<SectionTitle>Hotels</SectionTitle>
 						<Text>
-							Think <em>Hunger Games</em>. The costumes, not the
-							killing. Well...
+							A hotel block is available at{" "}
+							<a
+								href="https://www.coveatsalem.com/"
+								target="_blank"
+							>
+								The Cove Hotel
+							</a>{" "}
+							in Salem, MA.
+						</Text>
+						<Title order={5}>Rates:</Title>
+						<List mr="sm">
+							<ListItem>
+								Double Queen
+								<br />3 available
+								<br />
+								$299 per night plus tax
+							</ListItem>
+							<ListItem>
+								Double Queen Suite
+								<br />5 available
+								<br />
+								$339 per night plus tax
+							</ListItem>
+							<ListItem>
+								King Suite
+								<br />7 available
+								<br />
+								$349 per night plus tax
+							</ListItem>
+						</List>
+					</Paper>
+					<Paper {...paperProps}>
+						<SectionTitle>Transportation</SectionTitle>
+						<Title order={5}>Shuttle</Title>
+						<Text>
+							Shuttles will be provided from The Cove Hotel to
+							Willowdate Estate.
+						</Text>
+						<Title order={5}>Parking</Title>
+						<Text>
+							There is ample parking at the venue if you are
+							driving.
+						</Text>
+					</Paper>
+					<Paper {...paperProps}>
+						<SectionTitle>RSVPs</SectionTitle>
+						<Text>
+							All RSVPs can be submitted digitally via this
+							website. See your invitation for details or ask for
+							more info.
+						</Text>
+						<Text>
+							We request that all RSVPs be submitting by{" "}
+							<strong>October 1, 2025</strong>.
 						</Text>
 					</Paper>
 					<Paper {...paperProps}>
@@ -83,28 +135,6 @@ const ThingsToKnow = () => {
 						<Text>
 							Please do not bring your children or pets to our
 							wedding.
-						</Text>
-					</Paper>
-					<Paper {...paperProps}>
-						<SectionTitle>Parking</SectionTitle>
-						<Text>There is ample parking at the venue.</Text>
-					</Paper>
-					<Paper {...paperProps}>
-						<SectionTitle>RSVPs</SectionTitle>
-						<Text>
-							All RSVPs will be digital via this website. See your
-							invitation for details or ask us for more info.
-						</Text>
-						<Text>
-							We request you submit your all RSVPs by{" "}
-							<strong>October 1, 2025</strong>.
-						</Text>
-					</Paper>
-					<Paper {...paperProps}>
-						<SectionTitle>Bar</SectionTitle>
-						<Text>
-							We are happy to provide an open bar for the entire
-							evening. Drink up if you partake, fools.
 						</Text>
 					</Paper>
 					<Paper {...paperProps}>
@@ -127,6 +157,21 @@ const ThingsToKnow = () => {
 								Jeff and Doug have posted the professional shots
 							</ListItem>
 						</List>
+					</Paper>
+					<Paper {...paperProps}>
+						<SectionTitle>Bar</SectionTitle>
+						<Text>
+							We are happy to provide an open bar for the entire
+							evening.
+						</Text>
+						<Text>Drink up if you partake, fools.</Text>
+					</Paper>
+					<Paper {...paperProps}>
+						<SectionTitle>Dress Code</SectionTitle>
+						<Text>
+							Think <em>Hunger Games</em>. The costumes, not the
+							killing. Well...
+						</Text>
 					</Paper>
 				</SimpleGrid>
 			</Container>

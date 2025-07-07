@@ -13,7 +13,6 @@ type NavProps = {
 	className?: string;
 	variant?: "inline" | "top";
 	showLogo?: boolean;
-	containerRef?: IntersectionObserverInit["root"];
 };
 
 export const Nav = ({
@@ -23,7 +22,9 @@ export const Nav = ({
 }: NavProps) => {
 	const pathname = usePathname();
 	const [opened, { toggle }] = useDisclosure(false);
-	const { ref, entry } = useIntersection({ threshold: 1 });
+	const { ref, entry } = useIntersection({
+		threshold: 1,
+	});
 
 	const isActiveNavLink = (href: string): boolean => {
 		return pathname === href;
