@@ -48,7 +48,7 @@ export const PartyCard = ({
 			}}
 			variants={{
 				offscreen: {
-					opacity: 0,
+					opacity: 0.1,
 					y: 25,
 				},
 				onscreen: {

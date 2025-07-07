@@ -18,7 +18,7 @@ import classes from "./index.module.css";
 
 const timelineItemVariants: Variants = {
 	offscreen: {
-		opacity: 0,
+		opacity: 0.1,
 		x: -25,
 	},
 	onscreen: {

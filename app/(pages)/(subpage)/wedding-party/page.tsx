@@ -39,10 +39,14 @@ const partyPeople = {
 				intro: (
 					<>
 						Chris was Doug&rsquo;s randomly assigned college
-						roommate, and now he has a beard.
+						roommate&mdash;and now he has a beard. He&rsquo;s stuck
+						with Doug from lobster night at Sherman Hall to their
+						crazy Italian landlord to the PoGo years and beyond. A
+						true OG, Chris is one of the few reasons Doug would ever
+						travel to Texas.
 					</>
 				),
-				rose: "Same kind of Asian as the groom",
+				rose: "Is also Taiwanese like the groom",
 				bud: "Still has the opportunity to get better glasses",
 				thorn: "Lives in Texas",
 			},
@@ -58,20 +62,24 @@ const partyPeople = {
 			description: {
 				intro: (
 					<>
-						Tai was Doug&rsquo;s randomly assigned college roommate,
-						and they went to Japan together.
+						Tai was also a random college roommate assignment. Their
+						friendship can be calculated in pounds of sushi eaten,
+						episodes of <em>Attack on Titan</em> watched, and time
+						spent talking about Japan.
 					</>
 				),
-				rose: <>His mom is a great cook</>,
+				rose: <>Married to Sherry</>,
 				bud: (
 					<>
-						One day the memory of watching the final season of{" "}
+						One day, the memory of watching the final season of{" "}
 						<em>Game of Thrones</em> together will fade
 					</>
 				),
 				thorn: (
 					<>
-						A little <em>too</em> good at video games
+						Encyclopedic knowledge of movies, TV, and anime has
+						struggled to keep up with the amount of content made in
+						recent years
 					</>
 				),
 			},
@@ -86,8 +94,11 @@ const partyPeople = {
 			description: {
 				intro: (
 					<>
-						Tony, or Anthony if you did&rsquo;t go to BU, was in the
-						same theatre group as Doug.
+						Tony, or Anthony if you didn&rsquo;t go to BU, was in
+						the theatre group <em>Wandering Minds</em> with Doug.
+						They built a lasting connection over being theatre
+						nerds, computer nerds, and nerds for staying in touch
+						with good people despite time and distance.
 					</>
 				),
 				rose: (
@@ -198,8 +209,8 @@ const partyPeople = {
 				),
 				bud: (
 					<>
-						Here&rsquo;s hoping he doesn&rsquo; succomb to his heart
-						murmur for many years to come
+						Here&rsquo;s hoping he doesn&rsquo;t succumb to his
+						heart murmur for many years to come
 					</>
 				),
 				thorn: "Tried to run away",
@@ -213,15 +224,17 @@ const partyPeople = {
 				alt: "cat peeing in toilet",
 			},
 			description: {
-				intro: <>Boba terrorizes everyone daily.</>,
-				rose: "Ready and willing to defend her housemates from anything, including other housemates",
-				bud: (
+				intro: (
 					<>
-						Here&rsquo;s to her continued ability to pee in
-						appropriate places
+						Boba terrorizes everyone daily. Equal parts cuddle
+						monster and regular monster. Always ready and willing to
+						defend her housemates from anything, including other
+						housemates.
 					</>
 				),
-				thorn: "Too many to list",
+				rose: "Taught herself how to use a human toilet",
+				bud: <>May someday atone for her sins</>,
+				thorn: "Attacks on sight",
 			},
 		},
 		{
@@ -232,14 +245,19 @@ const partyPeople = {
 				alt: "italian greimaraner",
 			},
 			description: {
-				intro: <>Gordy is lucky he still has one floppy ear.</>,
-				rose: (
-					<>Gives Doug the affection he doesn&rsquo;t get from Jeff</>
+				intro: (
+					<>
+						Gordy is lucky he still has one floppy ear, otherwise
+						he&rsquo;d just be your average Tijuana street dog.
+						Instead, he enjoys a life of treats, soft pillows, and
+						being celebrated every time he walks into a room.
+					</>
 				),
+				rose: <>Gives Doug the affection that Jeff denies him</>,
 				bud: (
 					<>
-						Hoping he doesn&rsquo;t freeze to death on the east
-						coast
+						May he enjoy this time in his life before he&rsquo;s
+						experienced a New England winter
 					</>
 				),
 				thorn: "Afraid of large bags",
@@ -319,7 +337,9 @@ const WeddingParty = () => {
 									<strong>THORN</strong> (challenges or areas
 									of improvement)
 								</Title>
-								<Text size="xs">Is a woman</Text>
+								<Text size="xs">
+									Is a woman <em>(just kiddinggg)</em>
+								</Text>
 							</ListItem>
 						</List>
 					</GridCol>
@@ -347,8 +367,9 @@ const WeddingParty = () => {
 
 			<Title order={2}>The San Diego Zoo</Title>
 			<Text>
-				While they won&rsquo;t be in attendance, their fur will almost
-				definitely be stuck to some of the grooms&rsquo; attire.
+				While their pets won&rsquo;t be in attendance, their fur will
+				almost definitely be stuck to some of the grooms&rsquo; attire,
+				so they deserver a shout-out here.
 			</Text>
 
 			<SimpleGrid {...partyGridProps}>

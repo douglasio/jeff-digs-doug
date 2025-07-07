@@ -152,17 +152,15 @@ export const Nav = ({
 								x: -100,
 							}}
 							animate={{
-								// opacity: [0, 1, 1],
-								rotate: [null, -70, 10],
-								y: [null, 60, 100],
-								x: [null, 10, 200],
+								opacity: [0, 0.25, 1],
+								rotate: [-10, 0, -30],
+								y: [-500, -100, 150],
+								x: [200, -200, 150],
 							}}
 							transition={{
-								duration: 5,
-								// type: "linear",
-								ease: "easeOut",
-								times: [0, 0.5, 1],
-								repeat: Infinity,
+								duration: 1.25,
+								ease: "linear",
+								times: [0, 0.45, 1],
 							}}
 							src="/static/images/leafc-06.svg"
 						/>
