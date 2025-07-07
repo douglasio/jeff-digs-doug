@@ -1,13 +1,19 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useDisclosure, useIntersection } from "@mantine/hooks";
+import {
+	useDebouncedCallback,
+	useDisclosure,
+	useIntersection,
+	useWindowEvent,
+} from "@mantine/hooks";
 import { Burger, Flex, Menu } from "@mantine/core";
 import { motion } from "motion/react";
 import { classNames, mobileNavBreakpoint, SITE_PAGES } from "_util";
 import { FONTS } from "_styles";
 import { SVG } from "_components";
 import classes from "./index.module.css";
+import { useState } from "react";
 
 type NavProps = {
 	className?: string;
@@ -22,13 +28,24 @@ export const Nav = ({
 }: NavProps) => {
 	const pathname = usePathname();
 	const [opened, { toggle }] = useDisclosure(false);
-	const { ref, entry } = useIntersection({
-		threshold: 1,
-	});
+	const [isScrolled, setIsScrolled] = useState(false);
+	// const { ref, entry } = useIntersection({
+	// 	threshold: 1,
+	// });
 
 	const isActiveNavLink = (href: string): boolean => {
 		return pathname === href;
 	};
+
+	const handleScroll = useDebouncedCallback(() => {
+		if (window.scrollY > 0) {
+			setIsScrolled(true);
+		} else {
+			setIsScrolled(false);
+		}
+	}, 200);
+
+	useWindowEvent("scroll", handleScroll);
 
 	return (
 		<>
@@ -38,9 +55,7 @@ export const Nav = ({
 				className={classNames([
 					classes.nav,
 					variant === "top" && classes.top,
-					variant === "top" &&
-						!entry?.isIntersecting &&
-						classes.isPinned,
+					variant === "top" && isScrolled && classes.isPinned,
 					classNameProp,
 				])}
 				component="nav"
@@ -48,7 +63,6 @@ export const Nav = ({
 				justify={variant === "top" ? "center" : "flex-start"}
 				maw="100%"
 				pos="sticky"
-				ref={ref}
 				visibleFrom={mobileNavBreakpoint}
 			>
 				{showLogo && (
@@ -56,7 +70,7 @@ export const Nav = ({
 						href="/home"
 						className={classNames([
 							classes.logo,
-							entry?.isIntersecting && classes.isPinned,
+							!isScrolled && classes.isPinned,
 						])}
 					>
 						<SVG.Initials />
@@ -83,7 +97,7 @@ export const Nav = ({
 				className={classNames([
 					classes.mobileNav,
 					variant === "inline" && classes.isInline,
-					entry?.isIntersecting && classes.isPinned,
+					isScrolled && classes.isPinned,
 				])}
 				pl="md"
 				pr="md"
