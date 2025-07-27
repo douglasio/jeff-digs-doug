@@ -53,4 +53,16 @@ export const COLORS: ColorsType = {
 		"#686560",
 		"#5e564e",
 	],
+	LAVENDER: [
+		"#fcf1fc",
+		"#ede2ee",
+		"#d6c5d6",
+		"#bea5be",
+		"#a98aaa",
+		"#9d799e",
+		"#987199",
+		"#845e85",
+		"#765377",
+		"#68466a",
+	],
 };

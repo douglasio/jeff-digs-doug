@@ -60,11 +60,6 @@
 	--button-height-compact-lg: calc(2.125rem * var(--mantine-scale));
 	--button-height-compact-xl: calc(2.5rem * var(--mantine-scale));*/
 
-	--button-padding-x-xs: calc(1rem * var(--mantine-scale));
-	--button-padding-x-sm: calc(5rem * var(--mantine-scale));
-	--button-padding-x-md: calc(6rem * var(--mantine-scale));
-	--button-padding-x-lg: calc(7rem * var(--mantine-scale));
-	--button-padding-x-xl: calc(8rem * var(--mantine-scale));
 	/*
 	--button-padding-x-compact-xs: calc(0.4375rem * var(--mantine-scale));
 	--button-padding-x-compact-sm: calc(0.5rem * var(--mantine-scale));
@@ -83,6 +78,20 @@ a.buttonRoot:hover {
 	text-decoration: underline;
 }
 
+.chipRoot {
+}
+
+.chipLabel {
+	height: 2em;
+}
+
+/* makes the homepage go full height, along with 0 top/bottom padding on the GridCol with the image */
+.gridInner {
+	height: 100%;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
 .navLinkRoot {
 	--nl-bg: transparent !important;
 	line-height: 0.75;
@@ -94,11 +103,6 @@ a.buttonRoot:hover {
 	&:hover {
 		border-bottom: 2px solid var(--mantine-color-sage-6);
 	}
-}
-
-.gridInner {
-	height: 100%;
-	margin: 0;
 }
 
 .input {
@@ -118,6 +122,11 @@ a.buttonRoot:hover {
 	&label {
 		color: red;
 	}
+}
+
+.listItemWrapper {
+	--li-align: top;
+	padding-bottom: var(--mantine-spacing-xs);
 }
 
 .loaderSpin {
@@ -157,11 +166,16 @@ a.buttonRoot:hover {
 	background-color: var(--mantine-color-blue-9);
 }
 
-.title {
-	h1& {
-		/* text-transform: uppercase; */
-	}
+.paperRoot {
+	background-color: var(--mantine-color-navy-9);
+	padding: 1rem;
+}
 
+.timelineItemTitle {
+	font-size: var(--mantine-font-size-sm);
+}
+
+.title {
 	h2& {
 		color: var(--mantine-color-sage-9);
 		font-style: italic;

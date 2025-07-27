@@ -15,21 +15,66 @@ import {
 	Text,
 	Grid,
 	Menu,
+	Paper,
+	Chip,
+	Timeline,
+	List,
 } from "@mantine/core";
 import { COLORS, FONTS } from "_styles";
 import classes from "./theme.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
+// const variantColorResolver: VariantColorsResolver = (input) => {
+// 	const defaultResolvedColors = defaultVariantColorsResolver(input);
+// 	const parsedColor = parseThemeColor({
+// 		color: input.color || input.theme.primaryColor,
+// 		theme: input.theme,
+// 	});
+
+// 	// Override some properties for variant
+// 	// if (
+// 	// 	parsedColor.isThemeColor &&
+// 	// 	parsedColor.color === "sage" &&
+// 	// 	input.variant === "outline"
+// 	// ) {
+// 	// 	return {
+// 	// 		...defaultResolvedColors,
+// 	// 		color: "var(--mantine-color-black)",
+// 	// 		// hoverColor: "var(--mantine-color-black)",
+// 	// 	};
+// 	// }
+
+// 	// Completely override variant
+// 	// if (input.variant === "outline") {
+// 	// 	return {
+// 	// 		background: "transparent",
+// 	// 		hover: input.theme.primaryColor,
+// 	// 		border: input.theme.primaryColor,
+// 	// 		color: input.theme.primaryColor,
+// 	// 	};
+// 	// }
+
+// 	return defaultResolvedColors;
+// };
+
 export const theme = createTheme({
+	breakpoints: {
+		xs: "30em",
+		sm: "48em",
+		md: "64em",
+		lg: "74em",
+		xl: "110em",
+	},
 	colors: { blue: COLORS.BLUE, sage: COLORS.SAGE, navy: COLORS.NAVY },
+	// variantColorResolver,
 	primaryColor: "sage",
 	fontFamily: FONTS.BRANDON_GROTESQUE.style.fontFamily,
 	fontSizes: {
 		xs: rem(20),
 		sm: rem(25),
 		md: rem(35),
-		lg: rem(55),
+		lg: rem(45),
 		xl: rem(75),
 	},
 	spacing: {
@@ -84,8 +129,17 @@ export const theme = createTheme({
 		Button: Button.extend({
 			classNames: { root: classes.buttonRoot },
 		}),
+		Chip: Chip.extend({
+			defaultProps: {
+				size: "xs",
+			},
+			classNames: { root: classes.chipRoot, label: classes.chipLabel },
+		}),
 		Grid: Grid.extend({
 			classNames: { inner: classes.gridInner },
+			defaultProps: {
+				overflow: "hidden",
+			},
 		}),
 		NavLink: NavLink.extend({
 			classNames: { root: classes.navLinkRoot },
@@ -98,6 +152,14 @@ export const theme = createTheme({
 			classNames: { input: classes.input, wrapper: classes.inputWrapper },
 			defaultProps: {
 				size: "xl",
+			},
+		}),
+		List: List.extend({
+			classNames: {
+				itemWrapper: classes.listItemWrapper,
+			},
+			defaultProps: {
+				size: "sm",
 			},
 		}),
 		Menu: Menu.extend({
@@ -116,6 +178,11 @@ export const theme = createTheme({
 			defaultProps: {
 				blur: 7,
 				color: COLORS.BLUE[8],
+			},
+		}),
+		Paper: Paper.extend({
+			classNames: {
+				root: classes.paperRoot,
 			},
 		}),
 		LoadingOverlay: LoadingOverlay.extend({
@@ -138,6 +205,11 @@ export const theme = createTheme({
 				fw: "300",
 				lh: "1.3em",
 				size: "sm",
+			},
+		}),
+		Timeline: Timeline.extend({
+			classNames: {
+				itemTitle: classes.timelineItemTitle,
 			},
 		}),
 		Title: Title.extend({
