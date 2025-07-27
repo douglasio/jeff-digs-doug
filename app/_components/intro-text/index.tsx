@@ -10,6 +10,8 @@ export const IntroText = ({ children, ...props }: IntroTextProps) => (
 		fs="italic"
 		size="md"
 		lh="1.2em"
+		mt="xs"
+		mb="md"
 		w={{ base: "auto", sm: "80%" }}
 		fw="lighter"
 		{...props}

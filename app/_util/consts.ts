@@ -23,6 +23,7 @@ export const WEDDING_DETAILS = {
 type PageType = {
 	text: string;
 	url: string;
+	display?: "button" | "link";
 };
 
 export const PATHS = {
@@ -35,7 +36,8 @@ export const PATHS = {
 		OUR_STORY: "/our-story",
 		WEDDING_PARTY: "/wedding-party",
 		SIGN_IN: "/sign-in",
-		REGISTRY: "/registry",
+		RSVP: "rsvp",
+		// REGISTRY: "/registry",
 	},
 };
 
@@ -64,9 +66,14 @@ export const SITE_PAGES: PageType[] = [
 		text: "Our Story",
 		url: PATHS.PAGES.OUR_STORY,
 	},
+	// {
+	// 	text: "Registry",
+	// 	url: PATHS.PAGES.REGISTRY,
+	// },
 	{
-		text: "Registry",
-		url: PATHS.PAGES.REGISTRY,
+		text: "RSVP",
+		url: PATHS.PAGES.RSVP,
+		display: "button",
 	},
 ];
 

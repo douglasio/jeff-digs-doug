@@ -121,13 +121,14 @@ const Venue = () => {
 				<Title order={4}>Venue Details</Title>
 				<Title order={5}>Indoor Wedding</Title>
 				<Text>
-					This will be an indoor wedding, however depending on the
-					weather we may take advantage of the outdoor space for the
-					ceremony. That said, it will be November in New England, so
-					be prepared.
+					It&rsquo;s November in New England. We&rsquo;ll be having an
+					indoor wedding, because we aren&rsquo;t masochists.
 				</Text>
 				<Title order={5}>Parking</Title>
-				<Text>There is ample parking at the venue.</Text>
+				<Text>
+					There is ample parking just outside the venue, if you are
+					choosing to drive.
+				</Text>
 				<AspectRatio hiddenFrom={mobileNavBreakpoint} ratio={5 / 2}>
 					<LeftImage3 />
 				</AspectRatio>
@@ -150,8 +151,8 @@ const Venue = () => {
 						lists despite Doug repeatedly saying it looked dated and
 						like it might smell weird. But after touring, the energy
 						was undeniable. Loaded with character, cozy but premium,
-						historic, and shrouded by forest so one will hear us
-						partying.
+						historic, and shrouded by forest so one will hear your
+						screams&mdash;of joy, of course.
 					</Text>
 					<Text>
 						After consulting with some friends and trying to picture
@@ -165,7 +166,7 @@ const Venue = () => {
 						received a package in the mail with chocolate chip
 						cookies baked on-site and a personalized letter from our
 						tour guide. When you try those cookies, you&rsquo;ll
-						understand why that really sealed the deal.
+						understand why they really sealed the deal.
 					</Text>
 				</section>
 				<Button

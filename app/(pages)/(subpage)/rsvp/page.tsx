@@ -1,0 +1,104 @@
+import React from "react";
+import { Metadata } from "next";
+import { IntroText, RSVP as RSVPComponent } from "_components";
+import {
+	AspectRatio,
+	Badge,
+	Button,
+	Card,
+	CardSection,
+	Container,
+	GridCol,
+	Image,
+	SimpleGrid,
+	Title,
+} from "@mantine/core";
+import { COLORS, FONTS } from "_styles";
+
+export const metadata: Metadata = {
+	title: "Registry",
+	description: "It's not about the money, except on this page it is.",
+};
+
+type RegistryCardProps = {
+	imageUrl: string;
+	title: string;
+	description: string;
+	buttonText: string;
+	badgeText?: string;
+};
+
+const RegistryCard = ({
+	imageUrl,
+	title,
+	description,
+	buttonText,
+	badgeText,
+}: RegistryCardProps) => {
+	return (
+		<Card>
+			<CardSection>
+				<AspectRatio ratio={1 / 1} className="image-container-warm-ice">
+					<Image src={imageUrl}></Image>
+				</AspectRatio>
+			</CardSection>
+			<Title mt="xs" order={2}>
+				{title} Package{" "}
+				{badgeText && (
+					<Badge color={COLORS.LAVENDER[5]}>{badgeText}</Badge>
+				)}
+			</Title>
+			{/* <Text>{description}</Text> */}
+			<Button
+				component="a"
+				href="https://account.venmo.com/u/Douglasio"
+				target="_blank"
+			>
+				{buttonText}
+			</Button>
+		</Card>
+	);
+};
+
+const RSVP = () => {
+	return (
+		<GridCol span={12} mt="md">
+			<Container>
+				<Title className={FONTS.MRS_EAVES.className} order={1}>
+					RSVP
+				</Title>
+				<IntroText>Répondez s&rsquo;il vous plaît.</IntroText>
+				<RSVPComponent />
+				<SimpleGrid cols={{ base: 1, sm: 2, xl: 4 }}>
+					<RegistryCard
+						imageUrl="/static/images/gordy1.JPG"
+						title="Grab a Drink"
+						description="If you want to be polite, but cash is tight."
+						buttonText="Give $25"
+					/>
+					<RegistryCard
+						imageUrl="/static/images/gordy2.JPG"
+						title="A Nice Dinner"
+						description="You&rsquo;ve been to a wedding before, you know how this goes."
+						buttonText="Give $100"
+					/>
+					<RegistryCard
+						imageUrl="/static/images/gordy3.JPG"
+						title="Flight to Boston"
+						description="You want the couple to be able t."
+						buttonText="Give $500"
+					/>
+					<RegistryCard
+						imageUrl="/static/images/gordy4.JPG"
+						title="Mortgage Payment"
+						description="If you want to be polite, but cash is tight."
+						buttonText="Give $1,000"
+						badgeText="Most Popular"
+					/>
+				</SimpleGrid>
+			</Container>
+		</GridCol>
+	);
+};
+
+export default RSVP;

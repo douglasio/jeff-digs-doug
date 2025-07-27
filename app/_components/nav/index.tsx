@@ -7,7 +7,7 @@ import {
 	useIntersection,
 	useWindowEvent,
 } from "@mantine/hooks";
-import { Burger, Flex, Menu } from "@mantine/core";
+import { Burger, Button, Flex, Menu } from "@mantine/core";
 import { motion } from "motion/react";
 import { classNames, mobileNavBreakpoint, SITE_PAGES } from "_util";
 import { FONTS } from "_styles";
@@ -76,19 +76,29 @@ export const Nav = ({
 						<SVG.Initials />
 					</Link>
 				)}
-				{SITE_PAGES.map((page) => (
-					<Link
-						key={page.text}
-						className={classNames([
-							classes.navLink,
-							FONTS.BRANDON_GROTESQUE.className,
-							isActiveNavLink(page.url) && classes.active,
-						])}
-						href={page.url}
-					>
-						{page.text}
-					</Link>
-				))}
+				{SITE_PAGES.map((page) => {
+					return page.display === "button" ? (
+						<Button
+							component={Link}
+							key={page.text}
+							href={page.url}
+						>
+							{page.text}
+						</Button>
+					) : (
+						<Link
+							key={page.text}
+							className={classNames([
+								classes.navLink,
+								FONTS.BRANDON_GROTESQUE.className,
+								isActiveNavLink(page.url) && classes.active,
+							])}
+							href={page.url}
+						>
+							{page.text}
+						</Link>
+					);
+				})}
 			</Flex>
 
 			{/* mobile nav */}

@@ -287,7 +287,7 @@ const WeddingParty = () => {
 							ratio={1 / 1}
 						>
 							<Image
-								src="/static/images/jeff-doug-kara.jpg"
+								src="/static/images/kara-jeff-doug-hawaii.jpeg"
 								alt="Thrupple"
 							/>
 						</AspectRatio>

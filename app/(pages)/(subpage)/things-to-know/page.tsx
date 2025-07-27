@@ -2,6 +2,7 @@ import React from "react";
 import { Metadata } from "next";
 import { IntroText } from "_components";
 import {
+	Button,
 	Container,
 	GridCol,
 	List,
@@ -16,7 +17,11 @@ import {
 import { COLORS, FONTS } from "_styles";
 import { mobileNavBreakpoint } from "_util";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faThumbsDown, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
+import {
+	faArrowUpRightFromSquare,
+	faThumbsDown,
+	faThumbsUp,
+} from "@fortawesome/free-solid-svg-icons";
 
 export const metadata: Metadata = {
 	title: "Things to Know",
@@ -70,7 +75,7 @@ const ThingsToKnow = () => {
 					<Paper {...paperProps}>
 						<SectionTitle>Hotels</SectionTitle>
 						<Text>
-							A hotel block is available at{" "}
+							A hotel block with a discounted rate is available at{" "}
 							<a
 								href="https://www.coveatsalem.com/"
 								target="_blank"
@@ -79,6 +84,26 @@ const ThingsToKnow = () => {
 							</a>{" "}
 							in Salem, MA.
 						</Text>
+						<Button
+							component="a"
+							href="https://app.mews.com/distributor/cb5dea8f-d140-45d4-927c-b241005464d4?mewsAvailabilityBlockId=57549677-c061-4830-b419-b2a2016540b2&mewsStart=2025-11-07&mewsEnd=2025-11-09"
+							target="_blank"
+							rightSection={
+								<FontAwesomeIcon
+									icon={faArrowUpRightFromSquare}
+									style={{ width: "1rem" }}
+								/>
+							}
+						>
+							Book a room
+						</Button>
+
+						<Text mt="sm">
+							Use the link above to get the room block rates
+							listed below, or book wherever wherever you want,
+							you&rsquo;re an independent lady.
+						</Text>
+
 						<Title order={5}>Rates:</Title>
 						<List mr="sm">
 							<ListItem>
@@ -102,6 +127,18 @@ const ThingsToKnow = () => {
 						</List>
 					</Paper>
 					<Paper {...paperProps}>
+						<SectionTitle>RSVPs</SectionTitle>
+						<Text>
+							All RSVPs can be submitted digitally via this
+							website. See your invitation for details or ask for
+							more info.
+						</Text>
+						<Text>
+							We request that all RSVPs be submitting by{" "}
+							<strong>October 1, 2025</strong>.
+						</Text>
+					</Paper>
+					<Paper {...paperProps}>
 						<SectionTitle>Transportation</SectionTitle>
 						<Title order={5}>Shuttle</Title>
 						<Text>
@@ -112,18 +149,6 @@ const ThingsToKnow = () => {
 						<Text>
 							There is ample parking at the venue if you are
 							driving.
-						</Text>
-					</Paper>
-					<Paper {...paperProps}>
-						<SectionTitle>RSVPs</SectionTitle>
-						<Text>
-							All RSVPs can be submitted digitally via this
-							website. See your invitation for details or ask for
-							more info.
-						</Text>
-						<Text>
-							We request that all RSVPs be submitting by{" "}
-							<strong>October 1, 2025</strong>.
 						</Text>
 					</Paper>
 					<Paper {...paperProps}>

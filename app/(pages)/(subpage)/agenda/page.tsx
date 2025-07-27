@@ -1,17 +1,9 @@
 import React from "react";
 import { type Metadata } from "next";
-import {
-	AspectRatio,
-	Chip,
-	GridCol,
-	Group,
-	Image,
-	Space,
-	Title,
-} from "@mantine/core";
+import { AspectRatio, GridCol, Image, Space, Title } from "@mantine/core";
 import { contentAreaProps, mobileNavBreakpoint, PHOTO_CREDIT } from "_util";
 import { FONTS } from "_styles";
-import { IntroText } from "_components";
+import { FilterAgenda, IntroText } from "_components";
 
 export const metadata: Metadata = {
 	title: "Agenda",
@@ -44,12 +36,7 @@ const Agenda = () => {
 					supposed to be.
 				</IntroText>
 
-				<Group gap="xs">
-					<Chip defaultChecked>Everyone</Chip>
-					<Chip>Guests</Chip>
-					<Chip>Wedding Party</Chip>
-					<Chip>The Couple</Chip>
-				</Group>
+				<FilterAgenda />
 
 				<AspectRatio
 					mt="xl"
