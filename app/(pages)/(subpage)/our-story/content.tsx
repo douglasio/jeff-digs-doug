@@ -106,7 +106,7 @@ export const timelineEvents = [
 			</>
 		),
 		image: {
-			url: "static/images/timeline_082225.JPG",
+			url: "static/images/timeline_082225.jpg",
 			alt: "Jeff and Doug on a plane to San Diego",
 			ratio: 1.5 / 1,
 		},
