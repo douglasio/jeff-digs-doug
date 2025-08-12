@@ -22,6 +22,7 @@ import {
 	faThumbsDown,
 	faThumbsUp,
 } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 
 export const metadata: Metadata = {
 	title: "Things to Know",
@@ -71,7 +72,7 @@ const ThingsToKnow = () => {
 				<IntroText>
 					Because no wedding is complete without rules.
 				</IntroText>
-				<SimpleGrid cols={{ base: 1, [mobileNavBreakpoint]: 2, xl: 3 }}>
+				<SimpleGrid cols={{ base: 1, [mobileNavBreakpoint]: 2 }}>
 					<Paper {...paperProps}>
 						<SectionTitle>Hotels</SectionTitle>
 						<Text>
@@ -137,6 +138,9 @@ const ThingsToKnow = () => {
 							We request that all RSVPs be submitting by{" "}
 							<strong>October 1, 2025</strong>.
 						</Text>
+						<Button component={Link} href="/rsvp">
+							RSVP
+						</Button>
 					</Paper>
 					<Paper {...paperProps}>
 						<SectionTitle>Transportation</SectionTitle>

@@ -41,3 +41,6 @@ next-env.d.ts
 .env
 public/mock-api/db.json
 public/mock-api/db.json
+
+#open-next 
+.open-next

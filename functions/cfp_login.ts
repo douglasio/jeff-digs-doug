@@ -1,6 +1,8 @@
 import { CFP_COOKIE_MAX_AGE } from "./constants";
 import { sha256, getCookieKeyValue } from "./utils";
 
+//https://dev.to/charca/password-protection-for-cloudflare-pages-8ma
+
 export async function onRequestPost(context: {
 	request: Request;
 	env: { CFP_PASSWORD?: string };
