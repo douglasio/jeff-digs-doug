@@ -9,7 +9,7 @@ import {
 	Title,
 	rem,
 } from "@mantine/core";
-import { AddToCalendar, IntroText, Nav, SVG } from "_components";
+import { IntroText, Nav, SVG } from "_components";
 import { contentAreaProps, mobileNavBreakpoint, WEDDING_DETAILS } from "_util";
 import classes from "./page.module.css";
 import { COLORS } from "_styles";
@@ -84,15 +84,6 @@ const Home = () => {
 								</span>
 							</address>
 						</Title>
-						<AddToCalendar
-							event={{
-								title: "Doug &amp; Jeff&rsquo;s Wedding",
-								description: "https://www.jeffdigsdoug.com/",
-								start: "2025-11-08 16:00:00 -0800",
-								end: "2025-11-08 22:00:00 -0800",
-								location: `${WEDDING_DETAILS.VENUE}, ${WEDDING_DETAILS.STREET}, ${WEDDING_DETAILS.CITY}`,
-							}}
-						/>
 					</Box>
 					<IntroText mb="sm">
 						Welcome to the wedding of Doug &amp; Jeff, where two

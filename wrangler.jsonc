@@ -1,6 +1,6 @@
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
-	"name": "jeff-digs-doug",
+	"name": "jeff-digs-doug-dev",
 	"main": ".open-next/worker.js",
 	"compatibility_date": "2025-08-03",
 	"compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
@@ -11,5 +11,10 @@
 	},
 	"services": [
 		{ "binding": "WORKER_SELF_REFERENCE", "service": "jeff-digs-doug" }
-	]
+	],
+	"vars": {
+		"CFP_PASSWORD": "",
+		"CFP_SECRET": "",
+		"NODE_VERSION": "22.18.0"
+	}
 }

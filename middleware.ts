@@ -18,7 +18,14 @@ export default async function middleware(req: NextRequest) {
 	const session = await decrypt(cookie);
 
 	if (isProtectedRoute && !session?.userId) {
-		return NextResponse.redirect(new URL("/login", req.nextUrl));
+		// Given an incoming request...
+		const loginUrl = new URL("/login", req.url);
+		// Add ?from=/incoming-url to the /login URL
+		loginUrl.searchParams.set("from", req.nextUrl.pathname);
+		// And redirect to the new URL
+		return NextResponse.redirect(loginUrl);
+
+		// return NextResponse.redirect(new URL("/login", req.nextUrl));
 	}
 
 	if (isPublicRoute && session?.userId) {

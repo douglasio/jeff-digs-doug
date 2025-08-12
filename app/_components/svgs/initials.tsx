@@ -1,3 +1,4 @@
+import { VisuallyHidden } from "@mantine/core";
 import { COLORS } from "_styles";
 import React from "react";
 
@@ -139,5 +140,7 @@ export const Initials = ({
 				/>
 			</svg>
 		);
+	} else {
+		return <VisuallyHidden>no matching intials svg</VisuallyHidden>;
 	}
 };
