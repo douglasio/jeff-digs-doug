@@ -11,7 +11,7 @@
 		"build:serve": "next build && npm run serve",
 		"lint": "next lint && tsc --noemit",
 		"prepare": "husky && husky install",
-		"precommit": "npx run lint-staged",
+		"precommit": "npx lint-staged",
 		"prettier": "prettier . --write",
 		"preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
 		"deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",

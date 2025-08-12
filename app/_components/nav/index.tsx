@@ -4,7 +4,6 @@ import { usePathname } from "next/navigation";
 import {
 	useDebouncedCallback,
 	useDisclosure,
-	useIntersection,
 	useWindowEvent,
 } from "@mantine/hooks";
 import { Burger, Button, Flex, Menu } from "@mantine/core";
@@ -29,9 +28,6 @@ export const Nav = ({
 	const pathname = usePathname();
 	const [opened, { toggle }] = useDisclosure(false);
 	const [isScrolled, setIsScrolled] = useState(false);
-	// const { ref, entry } = useIntersection({
-	// 	threshold: 1,
-	// });
 
 	const isActiveNavLink = (href: string): boolean => {
 		return pathname === href;

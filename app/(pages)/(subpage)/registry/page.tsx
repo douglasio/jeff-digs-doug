@@ -1,7 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
-import Link from "next/link";
-import { IntroText, TextButton } from "_components";
+import { IntroText } from "_components";
 import {
 	AspectRatio,
 	Badge,
@@ -12,7 +11,6 @@ import {
 	GridCol,
 	Image,
 	SimpleGrid,
-	Text,
 	Title,
 } from "@mantine/core";
 import { COLORS, FONTS } from "_styles";
@@ -33,7 +31,6 @@ type RegistryCardProps = {
 const RegistryCard = ({
 	imageUrl,
 	title,
-	description,
 	buttonText,
 	badgeText,
 }: RegistryCardProps) => {
@@ -41,7 +38,7 @@ const RegistryCard = ({
 		<Card>
 			<CardSection>
 				<AspectRatio ratio={1 / 1} className="image-container-warm-ice">
-					<Image src={imageUrl}></Image>
+					<Image src={imageUrl} alt={title}></Image>
 				</AspectRatio>
 			</CardSection>
 			<Title mt="xs" order={2}>
@@ -50,7 +47,6 @@ const RegistryCard = ({
 					<Badge color={COLORS.LAVENDER[5]}>{badgeText}</Badge>
 				)}
 			</Title>
-			{/* <Text>{description}</Text> */}
 			<Button
 				component="a"
 				href="https://account.venmo.com/u/Douglasio"
@@ -89,7 +85,7 @@ const Registry = () => {
 					<RegistryCard
 						imageUrl="/static/images/gordy3.JPG"
 						title="Flight to Boston"
-						description="You want the couple to be able t."
+						description="You want the couple to be able to."
 						buttonText="Give $500"
 					/>
 					<RegistryCard

@@ -4,13 +4,7 @@ import { useActionState } from "react";
 import { useFormStatus } from "react-dom";
 import { useSearchParams } from "next/navigation";
 import { login } from "./actions";
-import {
-	Button,
-	Container,
-	PasswordInput,
-	Stack,
-	TextInput,
-} from "@mantine/core";
+import { Button, PasswordInput, Stack } from "@mantine/core";
 
 //https://www.youtube.com/watch?v=Otq0LY90Qso
 //https://github.com/cosdensolutions/code/blob/master/videos/long/auth-flow-next-js/
@@ -22,10 +16,6 @@ export const LoginForm = ({}: LoginFormProps) => {
 	const searchParams = useSearchParams();
 
 	const route = searchParams.get("from");
-
-	// eslint-disable-next-line no-console
-	state?.properties?.password?.errors &&
-		console.log("password error", state.properties.password.errors);
 
 	return (
 		<form action={loginAction}>

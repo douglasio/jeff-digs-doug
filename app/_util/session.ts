@@ -46,6 +46,6 @@ export async function decrypt(session: string | undefined = "") {
 		return payload;
 	} catch (error) {
 		// eslint-disable-next-line no-console
-		console.log("Failed to verify session");
+		console.error("Failed to verify session", error);
 	}
 }

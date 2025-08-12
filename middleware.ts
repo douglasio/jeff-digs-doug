@@ -7,8 +7,6 @@ const publicRoutes = ["/login"];
 
 export default async function middleware(req: NextRequest) {
 	const path = req.nextUrl.pathname;
-	// eslint-disable-next-line no-console
-	console.log(path);
 	const isProtectedRoute = protectedRoutes.includes(path);
 	const isPublicRoute = publicRoutes.includes(path);
 
@@ -34,4 +32,3 @@ export default async function middleware(req: NextRequest) {
 
 	return NextResponse.next();
 }
-

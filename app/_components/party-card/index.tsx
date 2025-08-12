@@ -1,7 +1,7 @@
 "use client";
 
 import React, { type ReactNode } from "react";
-import { delay, motion, stagger, type Variants } from "motion/react";
+import { motion } from "motion/react";
 import {
 	AspectRatio,
 	Card,
@@ -69,7 +69,7 @@ export const PartyCard = ({
 						className="image-container-warm-ice"
 						ratio={1 / 1}
 					>
-						<Image src={image.src} title={image.alt} />
+						<Image src={image.src} alt={image.alt} />
 					</AspectRatio>
 				</CardSection>
 				<Title order={3} size="md">

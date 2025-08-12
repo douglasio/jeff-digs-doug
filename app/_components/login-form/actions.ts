@@ -3,7 +3,7 @@
 import { z } from "zod";
 import { createSession, deleteSession } from "_util/session";
 import { redirect } from "next/navigation";
-import { PATHS, SITE_PAGES } from "_util";
+import { PATHS } from "_util";
 
 const testUser = {
 	id: "001",
