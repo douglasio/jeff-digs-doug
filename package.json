@@ -3,8 +3,8 @@
 	"version": "2.0.1",
 	"private": true,
 	"scripts": {
-		"dev": "next",
-		"start": "next",
+		"dev": "next --turbopack",
+		"start": "next --turbopack",
 		"start:api": "npx json-server --port 3001 --watch public/mock-api/db.json",
 		"build": "next build",
 		"serve": "serve out",
@@ -32,6 +32,7 @@
 		"@types/react-dom": "19.1.6",
 		"axios": "^1.10.0",
 		"calendar-link": "^2.11.0",
+		"jose": "^6.0.12",
 		"motion": "^12.23.0",
 		"next": "15.3.4",
 		"next-auth": "^4.24.11",
@@ -40,7 +41,8 @@
 		"react-dom": "19.1.0",
 		"serve": "^14.2.4",
 		"states-us": "^1.1.1",
-		"typescript": "^5.8.3"
+		"typescript": "^5.8.3",
+		"zod": "^4.0.17"
 	},
 	"devDependencies": {
 		"eslint": "^9.30.1",

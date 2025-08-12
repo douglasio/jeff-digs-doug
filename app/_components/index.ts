@@ -4,6 +4,7 @@ export * from "./hubspot-form";
 export * from "./intro-text";
 export * from "./jumbo";
 export * from "./loader";
+export * from "./login-form";
 export * from "./nav";
 export * from "./party-card";
 export * from "./rsvp";
