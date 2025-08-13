@@ -126,7 +126,7 @@ a.buttonRoot:hover {
 
 .listItemWrapper {
 	--li-align: top;
-	padding-bottom: var(--mantine-spacing-xs);
+	/* padding-bottom: var(--mantine-spacing-xs); */
 }
 
 .loaderSpin {

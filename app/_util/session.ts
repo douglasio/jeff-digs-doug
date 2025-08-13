@@ -39,6 +39,10 @@ export async function encrypt(payload: SessionPayload) {
 }
 
 export async function decrypt(session: string | undefined = "") {
+	if (!secretKey || secretKey.length === 0) {
+		throw new Error("The environment variable CFP_SECRET is not set.");
+	}
+
 	try {
 		const { payload } = await jwtVerify(session, encodedKey, {
 			algorithms: ["HS256"],
@@ -47,5 +51,7 @@ export async function decrypt(session: string | undefined = "") {
 	} catch (error) {
 		// eslint-disable-next-line no-console
 		console.error("Failed to verify session", error);
+		// eslint-disable-next-line no-console
+		console.log("session = ", session);
 	}
 }

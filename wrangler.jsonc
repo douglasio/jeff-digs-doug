@@ -13,8 +13,6 @@
 		{ "binding": "WORKER_SELF_REFERENCE", "service": "jeff-digs-doug" }
 	],
 	"vars": {
-		"CFP_PASSWORD": "",
-		"CFP_SECRET": "",
 		"NODE_VERSION": "22.18.0"
 	}
 }

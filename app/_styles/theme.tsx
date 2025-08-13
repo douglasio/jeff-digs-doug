@@ -100,6 +100,9 @@ export const theme = createTheme({
 			h4: {
 				fontSize: rem(35),
 			},
+			h6: {
+				fontSize: rem(17),
+			},
 		},
 	},
 	defaultRadius: "0px",

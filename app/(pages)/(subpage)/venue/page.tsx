@@ -93,7 +93,7 @@ const Venue = () => {
 						<li>Take a left onto Bradley Palmer State Park Road</li>
 						<li> You’ll see signs. Park in the parking lot.</li>
 					</Text>
-					<Text mb="xs">
+					<Text mt="xs" mb="xs">
 						Or you can ignore all that and use GPS like everyone
 						else.
 					</Text>

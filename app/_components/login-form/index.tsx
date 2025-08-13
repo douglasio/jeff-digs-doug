@@ -4,7 +4,7 @@ import { useActionState } from "react";
 import { useFormStatus } from "react-dom";
 import { useSearchParams } from "next/navigation";
 import { login } from "./actions";
-import { Button, PasswordInput, Stack } from "@mantine/core";
+import { Alert, Button, PasswordInput, Stack } from "@mantine/core";
 
 //https://www.youtube.com/watch?v=Otq0LY90Qso
 //https://github.com/cosdensolutions/code/blob/master/videos/long/auth-flow-next-js/
@@ -29,7 +29,7 @@ export const LoginForm = ({}: LoginFormProps) => {
 				<input name="route" type="hidden" value={route ?? ""} />
 				<SubmitButton />
 				{state?.properties?.password?.errors && (
-					<p>{state?.properties?.password?.errors}</p>
+					<Alert title={state?.properties?.password?.errors}></Alert>
 				)}
 			</Stack>
 		</form>

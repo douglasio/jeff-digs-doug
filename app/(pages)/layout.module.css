@@ -30,4 +30,9 @@
 	h5 {
 		margin-top: var(--mantine-spacing-sm);
 	}
+
+	h6 {
+		text-transform: uppercase;
+		font-style: italic;
+	}
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import { type Metadata } from "next";
-import { AspectRatio, GridCol, Image, Space, Title } from "@mantine/core";
+import { AspectRatio, GridCol, Image, Space, Text, Title } from "@mantine/core";
 import { contentAreaProps, mobileNavBreakpoint, PHOTO_CREDIT } from "_util";
 import { FONTS } from "_styles";
 import { FilterAgenda, IntroText } from "_components";
@@ -32,9 +32,14 @@ const Agenda = () => {
 				</Title>
 				<IntroText>
 					Not all those who wander are lost. But in the event that you
-					are lost, look here to figure out where you&rsquo;re
-					supposed to be.
+					<strong> are</strong> lost, look here to figure out where
+					you&rsquo;re supposed to be.
 				</IntroText>
+
+				<Text w="80%">
+					These dates and times and events are all subject to change.
+					Check back closer to the wedding date to verify.
+				</Text>
 
 				<FilterAgenda />
 

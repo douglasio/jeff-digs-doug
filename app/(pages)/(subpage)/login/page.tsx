@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { IntroText, LoginForm } from "_components";
 import { Container, Title } from "@mantine/core";
 import { FONTS } from "_styles";
@@ -16,7 +16,9 @@ const Login = () => {
 			<IntroText>
 				Enter the password that was provided with your invitation.
 			</IntroText>
-			<LoginForm />
+			<Suspense>
+				<LoginForm />
+			</Suspense>
 		</Container>
 	);
 };

@@ -13,7 +13,7 @@ const testUser = {
 const loginSchema = z.object({
 	password: z
 		.string()
-		.max(8, { message: "The password is be under 8 characters" })
+		.max(50, { message: "The password is be under 50 characters" })
 		.trim(),
 	route: z.string(),
 });

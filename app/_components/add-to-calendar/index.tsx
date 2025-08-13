@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendarCheck } from "@fortawesome/free-solid-svg-icons";
 import { type CalendarEvent, google, ics } from "calendar-link";
@@ -17,19 +17,17 @@ interface AddToCalendarButtonProps {
 }
 
 export const AddToCalendar = ({ event }: AddToCalendarProps) => {
-	const googleUrl = google(event);
-	const icsUrl = ics(event);
+	const [urls, setUrls] = useState({ google: "", ics: "" });
 
-	const url = {
-		google: googleUrl,
-		ics: icsUrl,
-	};
+	useEffect(() => {
+		setUrls({ google: google(event), ics: ics(event) });
+	}, [event]);
 
 	const Button = ({ label, linkType }: AddToCalendarButtonProps) => (
 		<MantineButton
 			component="a"
 			download={linkType === "ics" ? "calendar.ics" : false}
-			href={url[linkType]}
+			href={urls[linkType]}
 			target={linkType === "ics" ? "_self" : "_blank"}
 			title={`Add ${event.title} to calendar`}
 			size="xs"
