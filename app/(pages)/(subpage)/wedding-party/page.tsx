@@ -1,11 +1,10 @@
 import React from "react";
 import { Metadata } from "next";
-import { IntroText, PartyCard, SVG } from "_components";
+import { Image, IntroText, PartyCard, SVG } from "_components";
 import {
 	AspectRatio,
 	Grid,
 	GridCol,
-	Image,
 	List,
 	ListItem,
 	Paper,
@@ -32,7 +31,7 @@ const partyPeople = {
 			id: "chris",
 			name: "Chris Hong",
 			image: {
-				src: "/static/images/doug-and-chris.jpg",
+				src: "/static/images/webp/doug-and-chris.webp",
 				alt: "Chris Hong",
 			},
 			description: {
@@ -56,7 +55,7 @@ const partyPeople = {
 			id: "tai",
 			name: "Tai Nguyen",
 			image: {
-				src: "/static/images/doug-and-tai.jpg",
+				src: "/static/images/webp/doug-and-tai.webp",
 				alt: "Tai Nguyen",
 			},
 			description: {
@@ -88,7 +87,7 @@ const partyPeople = {
 			id: "tony",
 			name: "Tony Faraco-Hadlock",
 			image: {
-				src: "/static/images/doug-and-tony.jpg",
+				src: "/static/images/webp/doug-and-tony.webp",
 				alt: "Anthony",
 			},
 			description: {
@@ -116,7 +115,7 @@ const partyPeople = {
 			id: "anthony",
 			name: "Anthony Murphy",
 			image: {
-				src: "/static/images/jeff-and-anthony.jpg",
+				src: "/static/images/webp/jeff-and-anthony.webp",
 				alt: "His mom is nice",
 			},
 			description: {
@@ -144,7 +143,7 @@ const partyPeople = {
 			id: "kevin",
 			name: "Kevin Liang",
 			image: {
-				src: "/static/images/jeff-and-kevin.jpg",
+				src: "/static/images/webp/jeff-and-kevin.webp",
 				alt: "Thank god there's someone besides Doug to help keep Jeff in check",
 			},
 			description: {
@@ -169,7 +168,7 @@ const partyPeople = {
 			id: "zach",
 			name: "Zach Giordano",
 			image: {
-				src: "/static/images/jeff-and-zach.jpg",
+				src: "/static/images/webp/jeff-and-zach.webp",
 				alt: "Anthony",
 			},
 			description: {
@@ -196,7 +195,7 @@ const partyPeople = {
 			id: "cheeto",
 			name: "Cheeto",
 			image: {
-				src: "/static/images/cheeto.jpg",
+				src: "/static/images/webp/cheeto.webp",
 				alt: "example of an animal with limited intelligence",
 			},
 			description: {
@@ -220,7 +219,7 @@ const partyPeople = {
 			id: "boba",
 			name: "Boba",
 			image: {
-				src: "/static/images/boba.jpg",
+				src: "/static/images/webp/boba.webp",
 				alt: "cat peeing in toilet",
 			},
 			description: {
@@ -241,7 +240,7 @@ const partyPeople = {
 			id: "gordy",
 			name: "Gordy",
 			image: {
-				src: "/static/images/gordy.jpg",
+				src: "/static/images/webp/gordy.webp",
 				alt: "italian greimaraner",
 			},
 			description: {
@@ -281,18 +280,20 @@ const WeddingParty = () => {
 
 			<Paper mb="xl">
 				<Grid align="center">
-					<GridCol span={{ base: 6, xl: 5 }}>
+					<GridCol span={{ base: 12, sm: 6, xl: 5 }}>
 						<AspectRatio
 							className="image-container-warm-ice"
-							ratio={1 / 1}
+							ratio={1080 / 720}
 						>
 							<Image
-								src="/static/images/kara-jeff-doug-hawaii.jpeg"
+								src="/static/images/webp/kara-jeff-doug-hawaii.webp"
 								alt="Thrupple"
+								height={500}
+								width={1200}
 							/>
 						</AspectRatio>
 					</GridCol>
-					<GridCol span={{ base: 6, xl: 7 }}>
+					<GridCol span={{ base: 12, sm: 6, xl: 7 }}>
 						<Title order={3} size="md">
 							Kara Zinser
 						</Title>

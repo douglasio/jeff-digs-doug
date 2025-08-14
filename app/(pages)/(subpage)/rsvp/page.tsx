@@ -1,7 +1,7 @@
 import React from "react";
 import { Metadata } from "next";
 import { IntroText, RSVP as RSVPComponent } from "_components";
-import { Container, GridCol, Title } from "@mantine/core";
+import { Container, GridCol, Title, Text } from "@mantine/core";
 import { FONTS } from "_styles";
 
 export const metadata: Metadata = {
@@ -18,6 +18,16 @@ const RSVP = () => {
 				</Title>
 				<IntroText>Répondez s&rsquo;il vous plaît.</IntroText>
 				<RSVPComponent />
+				<Text size="xs" ta="center">
+					(If the form isn&rsquo;t working for you,{" "}
+					<a
+						href="https://dougandjeffswedding.rsvpify.com"
+						target="_blank"
+					>
+						try this
+					</a>
+					) .
+				</Text>
 			</Container>
 		</GridCol>
 	);

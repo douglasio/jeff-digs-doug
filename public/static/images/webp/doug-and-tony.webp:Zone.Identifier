@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://cloudconvert.com/
+HostUrl=https://us-east.storage.cloudconvert.com/tasks/455cd561-f60d-401a-afea-ece56f2c8ca5/doug-and-tony.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20250814%2Fva%2Fs3%2Faws4_request&X-Amz-Date=20250814T171506Z&X-Amz-Expires=86400&X-Amz-Signature=c98de35b82b64420904b5966994f637c6ecff2904e2cc08d4712ecd55baaeea2&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3D%22doug-and-tony.webp%22&response-content-type=image%2Fwebp&x-id=GetObject

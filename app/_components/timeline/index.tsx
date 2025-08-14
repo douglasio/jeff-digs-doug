@@ -7,12 +7,12 @@ import {
 	TimelineItem,
 	Text,
 	Title,
-	Image,
 	AspectRatioProps,
 	AspectRatio,
 } from "@mantine/core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import { Image } from "_components";
 import { classNames } from "_util";
 import classes from "./index.module.css";
 
@@ -89,6 +89,8 @@ export const Timeline = ({ events, active }: TimelineProps) => {
 												"image-dimmed-more",
 												classes.timelinePhoto,
 											])}
+											width={800}
+											height={800 * image.ratio}
 											src={image.url}
 										/>
 									</AspectRatio>
@@ -100,6 +102,8 @@ export const Timeline = ({ events, active }: TimelineProps) => {
 											classes.timelinePhoto,
 										])}
 										src={image.url}
+										width={800}
+										height={500}
 									/>
 								))}
 						</motion.div>

@@ -1,15 +1,6 @@
 import React from "react";
-import {
-	Box,
-	Button,
-	Grid,
-	GridCol,
-	Image,
-	Space,
-	Title,
-	rem,
-} from "@mantine/core";
-import { IntroText, Nav, SVG } from "_components";
+import { Box, Button, Grid, GridCol, Space, Title, rem } from "@mantine/core";
+import { Image, IntroText, Nav, SVG } from "_components";
 import { contentAreaProps, mobileNavBreakpoint, WEDDING_DETAILS } from "_util";
 import classes from "./page.module.css";
 import { COLORS } from "_styles";
@@ -47,10 +38,10 @@ const Home = () => {
 							className="image-dimmed"
 							alt="One of our engagement photos on the beach in the DR"
 							fit="cover"
-							w={"100%"}
+							width={1200}
+							height={800}
 							h="100%"
-							src="static/images/engagement_1.jpg"
-							loading="lazy"
+							src="/static/images/webp/engagement_1.webp"
 						/>
 						<Box
 							w={{ base: "40%", sm: rem(250) }}

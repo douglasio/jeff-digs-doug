@@ -129,6 +129,8 @@ export const Nav = ({
 					withinPortal={false}
 					trapFocus={false}
 					menuItemTabIndex={0}
+					opened={opened}
+					onChange={toggle}
 				>
 					<Menu.Target>
 						<Burger

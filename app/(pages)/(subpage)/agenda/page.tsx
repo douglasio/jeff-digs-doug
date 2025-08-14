@@ -1,6 +1,14 @@
 import React from "react";
 import { type Metadata } from "next";
-import { AspectRatio, GridCol, Image, Space, Text, Title } from "@mantine/core";
+import Image from "next/image";
+import {
+	AspectRatio,
+	GridCol,
+	Image as MantineImage,
+	Space,
+	Text,
+	Title,
+} from "@mantine/core";
 import { contentAreaProps, mobileNavBreakpoint, PHOTO_CREDIT } from "_util";
 import { FONTS } from "_styles";
 import { FilterAgenda, IntroText } from "_components";
@@ -11,10 +19,15 @@ export const metadata: Metadata = {
 };
 
 const LeftImage = () => (
-	<Image
+	<MantineImage
+		component={Image}
 		alt={`Jeff feeding Doug and arancini post-engagement: ${PHOTO_CREDIT.ENGAGEMENT}`}
-		src={"static/images/engagement_feeding.jpg"}
+		src="/static/images/webp/engagement_feeding.webp"
+		height={1350}
+		width={900}
+		quality={95}
 		className="image-dimmed image-fill"
+		// placeholder="blur"
 	/>
 );
 

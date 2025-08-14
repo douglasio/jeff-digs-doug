@@ -40,14 +40,14 @@ const BitchelorParty = () => {
 				>
 					<Image
 						alt="House exterior"
-						src={"static/images/bitchelor_house_3.webp"}
+						src={"/static/images/bitchelor_house_3.webp"}
 						className="image-dimmed-more image-fill"
 						h={{ base: "auto", sm: "80vh" }}
 						mb="md"
 					/>
 					<Image
 						alt={`Doug and Jeff dancing with friends in the DR post-engagement, photo credit: ${PHOTO_CREDIT.ENGAGEMENT}`}
-						src={"static/images/engagement_dancing.jpg"}
+						src={"/static/images/engagement_dancing.jpg"}
 						className="image-dimmed image-fill"
 						h={{ base: "auto", sm: "80vh" }}
 						mb="sm"
@@ -55,7 +55,7 @@ const BitchelorParty = () => {
 					/>
 					<Image
 						alt="House dining area"
-						src={"static/images/bitchelor_house_5.webp"}
+						src={"/static/images/bitchelor_house_5.webp"}
 						className="image-dimmed-more image-fill"
 						h={{ base: "auto", sm: "80vh" }}
 						mb="sm"
@@ -223,17 +223,23 @@ const BitchelorParty = () => {
 							<SimpleGrid cols={3} spacing="xs">
 								<Image
 									alt="Street view"
-									src={"static/images/bitchelor_house_1.webp"}
+									src={
+										"/static/images/bitchelor_house_1.webp"
+									}
 									className="image-dimmed"
 								/>
 								<Image
 									alt="Great room"
-									src={"static/images/bitchelor_house_4.webp"}
+									src={
+										"/static/images/bitchelor_house_4.webp"
+									}
 									className="image-dimmed"
 								/>
 								<Image
 									alt="Pool area"
-									src={"static/images/bitchelor_house_3.webp"}
+									src={
+										"/static/images/bitchelor_house_3.webp"
+									}
 									className="image-dimmed"
 								/>
 							</SimpleGrid>
@@ -313,7 +319,7 @@ const BitchelorParty = () => {
 					</Stack>
 					<Image
 						alt={`Doug and Jeff dancing with friends in the DR post-engagement, photo credit: ${PHOTO_CREDIT.ENGAGEMENT}`}
-						src={"static/images/engagement_dancing.jpg"}
+						src={"/static/images/engagement_dancing.jpg"}
 						className="image-dimmed"
 						hiddenFrom="sm"
 					/>

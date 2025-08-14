@@ -147,6 +147,14 @@ body {
 	white-space: nowrap;
 }
 
+#rsvpify-iframe-loader {
+	display: block;
+
+	path {
+		fill: var(--mantine-color-sage-9);
+	}
+}
+
 a:not(.mantine-Button-root):not([class*="navLink"]),
 &:visited {
 	color: var(--mantine-color-sage-4);

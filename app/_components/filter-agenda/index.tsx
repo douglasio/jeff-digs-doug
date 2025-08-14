@@ -134,7 +134,7 @@ const events: EventType = [
 		audience: "The Couple",
 		description: (
 			<Image
-				src="static/images/doug-and-jeff-happy.jpg"
+				src="/static/images/doug-and-jeff-happy.jpg"
 				alt="Doug and Jeff living happily ever after"
 				className="image-dimmed-more"
 			/>

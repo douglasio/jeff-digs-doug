@@ -129,7 +129,7 @@
 
 .dropdownLeaf {
 	position: absolute;
-	/* right: 0; */
+	pointer-events: none;
 	width: 100vw;
 	z-index: 1;
 }

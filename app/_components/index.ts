@@ -1,6 +1,7 @@
 export * from "./add-to-calendar";
 export * from "./filter-agenda";
 export * from "./hubspot-form";
+export * from "./image";
 export * from "./intro-text";
 export * from "./jumbo";
 export * from "./loader";

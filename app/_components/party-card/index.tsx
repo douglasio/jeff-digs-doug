@@ -6,14 +6,13 @@ import {
 	AspectRatio,
 	Card,
 	CardSection,
-	Image,
 	List,
 	ListItem,
 	Text,
 	Title,
 	type CardProps,
 } from "@mantine/core";
-import { SVG } from "_components";
+import { Image, SVG } from "_components";
 
 type PartyCardProps = CardProps & {
 	name: string;
@@ -69,7 +68,12 @@ export const PartyCard = ({
 						className="image-container-warm-ice"
 						ratio={1 / 1}
 					>
-						<Image src={image.src} alt={image.alt} />
+						<Image
+							src={image.src}
+							alt={image.alt}
+							width={950}
+							height={950}
+						/>
 					</AspectRatio>
 				</CardSection>
 				<Title order={3} size="md">
