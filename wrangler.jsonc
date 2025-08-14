@@ -12,7 +12,5 @@
 	"services": [
 		{ "binding": "WORKER_SELF_REFERENCE", "service": "jeff-digs-doug" }
 	],
-	"vars": {
-		"NODE_VERSION": "22.18.0"
-	}
+	"keep_vars": true
 }
