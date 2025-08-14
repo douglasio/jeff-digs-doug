@@ -13,10 +13,11 @@ import { IntroText } from "_components";
 import { FONTS } from "_styles";
 import { Timeline } from "_components/timeline";
 import * as content from "./content";
+import { mobileNavBreakpoint } from "_util";
 
 const OurStory = () => {
 	return (
-		<GridCol span={12} mt="md">
+		<GridCol span={12} mt={{ base: 0, [mobileNavBreakpoint]: "md" }}>
 			<Container>
 				<Title className={FONTS.MRS_EAVES.className} order={1}>
 					Our Story

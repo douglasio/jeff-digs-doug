@@ -55,7 +55,7 @@ const LeftImage3 = () => (
 const Venue = () => {
 	return (
 		<>
-			<GridCol span={{ base: 12, md: 6 }}>
+			<GridCol span={{ base: 12, md: 6 }} mt={{ base: 0, sm: "md" }}>
 				<AspectRatio visibleFrom={mobileNavBreakpoint} ratio={1 / 1}>
 					<LeftImage />
 				</AspectRatio>
@@ -63,7 +63,7 @@ const Venue = () => {
 					<LeftImage />
 				</AspectRatio>
 			</GridCol>
-			<GridCol span={{ base: 12, md: 6 }} {...contentAreaProps}>
+			<GridCol span={{ base: 12, md: 6 }} mt="md" {...contentAreaProps}>
 				<Title className={FONTS.MRS_EAVES.className} order={1}>
 					The Venue
 				</Title>
@@ -105,7 +105,11 @@ const Venue = () => {
 					</TextButton>
 				</section>
 			</GridCol>
-			<GridCol span={{ base: 12, md: 6 }} {...contentAreaProps}>
+			<GridCol
+				span={{ base: 12, md: 6 }}
+				mt={{ base: 0, sm: "md" }}
+				{...contentAreaProps}
+			>
 				<Title order={4}>Venue Details</Title>
 				<Title order={5}>Indoor Wedding</Title>
 				<Text>

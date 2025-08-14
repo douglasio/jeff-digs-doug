@@ -268,7 +268,10 @@ const partyPeople = {
 
 const WeddingParty = () => {
 	return (
-		<GridCol span={{ base: 12 }} m="0 auto" mt="md">
+		<GridCol
+			span={{ base: 12 }}
+			mt={{ base: 0, [mobileNavBreakpoint]: "md" }}
+		>
 			<Container w="100%">
 				<Title className={FONTS.MRS_EAVES.className} order={1}>
 					Wedding Party

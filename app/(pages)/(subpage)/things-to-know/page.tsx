@@ -64,7 +64,7 @@ const listItemProps = {
 
 const ThingsToKnow = () => {
 	return (
-		<GridCol span={12} mt="md">
+		<GridCol span={12} mt={{ base: 0, [mobileNavBreakpoint]: "md" }}>
 			<Container w="100%">
 				<Title className={FONTS.MRS_EAVES.className} order={1}>
 					Things to Know

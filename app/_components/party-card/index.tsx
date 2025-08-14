@@ -1,7 +1,5 @@
-"use client";
-
 import React, { type ReactNode } from "react";
-import { motion } from "motion/react";
+import * as motion from "motion/react-client";
 import {
 	AspectRatio,
 	Card,

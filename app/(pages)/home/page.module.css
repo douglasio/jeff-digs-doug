@@ -1,9 +1,9 @@
 .lockup {
 	max-width: 100%;
-	margin: 0 0 var(--mantine-spacing-md) 0;
+	margin: 0;
 
 	@media screen and (min-width: $mantine-breakpoint-sm) {
-		margin: 0;
+		margin: 0 0 var(--mantine-spacing-md) 0;
 		width: 30rem;
 	}
 }

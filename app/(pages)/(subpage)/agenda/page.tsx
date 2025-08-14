@@ -34,12 +34,19 @@ const LeftImage = () => (
 const Agenda = () => {
 	return (
 		<>
-			<GridCol span={{ base: 12, md: 5 }}>
+			<GridCol
+				span={{ base: 12, md: 5 }}
+				mt={{ base: 0, [mobileNavBreakpoint]: "md" }}
+			>
 				<AspectRatio visibleFrom={mobileNavBreakpoint} ratio={4 / 6}>
 					<LeftImage />
 				</AspectRatio>
 			</GridCol>
-			<GridCol span={{ base: 12, md: 7 }} {...contentAreaProps}>
+			<GridCol
+				span={{ base: 12, md: 7 }}
+				mt={{ base: 0, [mobileNavBreakpoint]: "md" }}
+				{...contentAreaProps}
+			>
 				<Title className={FONTS.MRS_EAVES.className} order={1}>
 					Agenda
 				</Title>

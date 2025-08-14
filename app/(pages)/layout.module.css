@@ -27,6 +27,10 @@
 		margin-bottom: var(--mantine-spacing-sm);
 	}
 
+	h4 {
+		margin-top: var(--mantine-spacing-sm);
+	}
+
 	h5 {
 		margin-top: var(--mantine-spacing-sm);
 	}
