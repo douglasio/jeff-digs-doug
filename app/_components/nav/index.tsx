@@ -1,4 +1,5 @@
 "use client";
+
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -7,9 +8,8 @@ import {
 	useWindowEvent,
 } from "@mantine/hooks";
 import { Burger, Button, Flex, Menu } from "@mantine/core";
-import { motion } from "motion/react";
 import { classNames, mobileNavBreakpoint, SITE_PAGES } from "_util";
-import { FONTS } from "_styles";
+import { COLORS, FONTS } from "_styles";
 import { SVG } from "_components";
 import classes from "./index.module.css";
 import { useState } from "react";
@@ -58,7 +58,7 @@ export const Nav = ({
 				gap="xs"
 				justify={variant === "top" ? "center" : "flex-start"}
 				maw="100%"
-				pos="sticky"
+				pos={variant === "inline" ? "relative" : "fixed"}
 				visibleFrom={mobileNavBreakpoint}
 			>
 				{showLogo && (
@@ -146,10 +146,23 @@ export const Nav = ({
 					<Menu.Dropdown
 						component="nav"
 						className={classes.dropdown}
-						h="calc(100vh - var(--mobile-nav-height))"
+						h={
+							variant === "inline"
+								? "100vh"
+								: "calc(100vh - var(--mobile-nav-height))"
+						}
 						w="100%"
 						left="0"
-						top="var(--mobile-nav-height)"
+						top={
+							variant === "inline"
+								? "-var(--mobile-nav-height)"
+								: "var(--mobile-nav-height)"
+						}
+						pt={
+							variant === "inline"
+								? "var(--mobile-nav-height)"
+								: "auto"
+						}
 					>
 						{SITE_PAGES.map((page) => (
 							<Menu.Item
@@ -166,26 +179,9 @@ export const Nav = ({
 								{page.text}
 							</Menu.Item>
 						))}
-						<motion.img
-							className={classes.dropdownLeaf}
-							initial={{
-								// opacity: 0,
-								rotate: 10,
-								y: -300,
-								x: -100,
-							}}
-							animate={{
-								opacity: [0, 0.25, 1],
-								rotate: [-10, 0, -30],
-								y: [-500, -100, 150],
-								x: [200, -200, 150],
-							}}
-							transition={{
-								duration: 1.25,
-								ease: "linear",
-								times: [0, 0.45, 1],
-							}}
-							src="/static/images/leafc-06.svg"
+						<SVG.EdgeLeaves
+							className={classes.navLeaves}
+							color={COLORS.NAVY[9]}
 						/>
 					</Menu.Dropdown>
 				</Menu>

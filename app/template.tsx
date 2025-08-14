@@ -1,6 +1,6 @@
 // app/template.tsx
 "use client";
-// import { motion } from "framer-motion";
+// import { motion } from "motion/react";
 
 // const variants = {
 // 	hidden: { opacity: 0, x: -200, y: 0 },
@@ -10,13 +10,13 @@
 export default function Template({ children }: { children: React.ReactNode }) {
 	return children;
 	// return (
-	// 	<motion.main
+	// 	<motion.div
 	// 		variants={variants}
 	// 		initial="hidden"
 	// 		animate="enter"
-	// 		transition={{ type: "ease" }}
+	// 		transition={{ ease: "easeIn" }}
 	// 	>
 	// 		{children}
-	// 	</motion.main>
+	// 	</motion.div>
 	// );
 }

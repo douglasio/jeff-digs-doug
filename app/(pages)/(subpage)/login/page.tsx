@@ -9,7 +9,7 @@ export const metadata = {
 
 const Login = () => {
 	return (
-		<Container mt="sm" w="50%">
+		<Container mt="sm" w={{ base: "auto", sm: "50%" }}>
 			<Title className={FONTS.MRS_EAVES.className} order={1}>
 				Hold it right there!
 			</Title>

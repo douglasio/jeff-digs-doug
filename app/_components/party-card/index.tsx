@@ -73,6 +73,8 @@ export const PartyCard = ({
 							alt={image.alt}
 							width={950}
 							height={950}
+							w="100%"
+							h="auto"
 						/>
 					</AspectRatio>
 				</CardSection>

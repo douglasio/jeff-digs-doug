@@ -65,7 +65,7 @@ const listItemProps = {
 const ThingsToKnow = () => {
 	return (
 		<GridCol span={12} mt="md">
-			<Container>
+			<Container w="100%">
 				<Title className={FONTS.MRS_EAVES.className} order={1}>
 					Things to Know
 				</Title>

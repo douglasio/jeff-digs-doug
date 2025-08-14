@@ -28,6 +28,7 @@ const LeftImage = () => (
 		className="image-dimmed image-fill"
 		width={1200}
 		height={1200}
+		priority
 	/>
 );
 

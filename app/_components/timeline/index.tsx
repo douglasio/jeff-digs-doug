@@ -1,14 +1,11 @@
-"use client";
-
 import React from "react";
-import { motion, type Variants } from "motion/react";
+import { type Variants } from "motion/react";
+import * as motion from "motion/react-client";
 import {
 	Timeline as MantineTimeline,
 	TimelineItem,
 	Text,
 	Title,
-	AspectRatioProps,
-	AspectRatio,
 } from "@mantine/core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
@@ -45,7 +42,6 @@ type TimelineProps = {
 		image?: {
 			url: string;
 			alt: string;
-			ratio?: AspectRatioProps["ratio"];
 		};
 	}[];
 };
@@ -80,32 +76,21 @@ export const Timeline = ({ events, active }: TimelineProps) => {
 						>
 							<Title order={2}>{title}</Title>
 							<Text>{description}</Text>
-							{image &&
-								(image.ratio ? (
-									<AspectRatio ratio={image.ratio}>
-										<Image
-											alt={image.alt}
-											className={classNames([
-												"image-dimmed-more",
-												classes.timelinePhoto,
-											])}
-											width={800}
-											height={800 * image.ratio}
-											src={image.url}
-										/>
-									</AspectRatio>
-								) : (
-									<Image
-										alt={image.alt}
-										className={classNames([
-											"image-dimmed-more",
-											classes.timelinePhoto,
-										])}
-										src={image.url}
-										width={800}
-										height={500}
-									/>
-								))}
+							{image && (
+								<Image
+									alt={image.alt}
+									className={classNames([
+										"image-dimmed-more",
+										classes.timelinePhoto,
+									])}
+									src={image.url}
+									width={800}
+									height={500}
+									w="100%"
+									h="auto"
+									priority={i === 0 && true}
+								/>
+							)}
 						</motion.div>
 					</TimelineItem>
 				),
