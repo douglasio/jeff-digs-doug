@@ -11,6 +11,9 @@ export const metadata = {
 	title: "Home",
 };
 
+const blurDataURL =
+	"data:image/webp;base64,UklGRsYCAABXRUJQVlA4WAoAAAAgAAAAgAAAVQAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDgg2AAAAJAIAJ0BKoEAVgA+7W6uUKm3KacrU2qC4B2JaW7dW70C/JhJ/J6NmptjXHU7nB1XcimhEgzApl+D/+jGS+iZE2y0qlKV7LmMKMgtf5xAAP7rCGpDHh+u9mrU97S3e9BZXezMCf+t67okZ8wjv6yvmUczPveE2iBYinHM6UNUJhtVffbfhLYKAEVFnUrt7nubsF/6ED+wShOzUVzbw65ayGg/i5o4Q7z+RNR9e28lagoOAZpFgmXaPOvCnRtr3ay9nbnYEv4Rdz7EUk7r97chu3LcLHVANAAAAA==";
+
 const Home = () => {
 	return (
 		<>
@@ -31,7 +34,7 @@ const Home = () => {
 						<motion.div
 							initial={{ y: "-25%", opacity: 0 }}
 							animate={{ y: 0, opacity: 1 }}
-							transition={{ duration: 0.75, ease: "easeOut" }}
+							transition={{ duration: 1, ease: "easeOut" }}
 							style={{ height: "100%" }}
 						>
 							<Image
@@ -42,14 +45,16 @@ const Home = () => {
 								height={800}
 								h="100%"
 								src="/static/images/webp/engagement_1.webp"
+								placeholder="blur"
+								blurDataURL={blurDataURL}
 								priority
 							/>
 						</motion.div>
 						<Box
 							component={motion.div}
-							initial={{ y: "25%", opacity: 0 }}
+							initial={{ y: "50%", opacity: 0 }}
 							animate={{ y: 0, opacity: 1 }}
-							transition={{ duration: 0.75, ease: "easeOut" }}
+							transition={{ duration: 1, ease: "easeOut" }}
 							w={{ base: "40%", sm: rem(250) }}
 							pos="absolute"
 							left="5vw"

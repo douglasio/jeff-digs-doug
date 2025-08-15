@@ -4,7 +4,7 @@ import { useActionState } from "react";
 import { useFormStatus } from "react-dom";
 import { useSearchParams } from "next/navigation";
 import { login } from "./actions";
-import { Alert, Button, PasswordInput, Stack } from "@mantine/core";
+import { Alert, Button, TextInput, Stack } from "@mantine/core";
 
 //https://www.youtube.com/watch?v=Otq0LY90Qso
 //https://github.com/cosdensolutions/code/blob/master/videos/long/auth-flow-next-js/
@@ -20,7 +20,7 @@ export const LoginForm = ({}: LoginFormProps) => {
 	return (
 		<form action={loginAction}>
 			<Stack>
-				<PasswordInput
+				<TextInput
 					label="Password"
 					type="password"
 					name="password"

@@ -61,20 +61,13 @@ export const PartyCard = ({
 			}}
 		>
 			<Card {...props}>
-				<CardSection mb="xs">
-					<AspectRatio
-						className="image-container-warm-ice"
-						ratio={1 / 1}
-					>
-						<Image
-							src={image.src}
-							alt={image.alt}
-							width={950}
-							height={950}
-							w="100%"
-							h="auto"
-						/>
-					</AspectRatio>
+				<CardSection
+					mb="xs"
+					className="image-container-warm-ice"
+					mih={{ base: 400, sm: 300 }}
+					mt="-1rem"
+				>
+					<Image src={image.src} alt={image.alt} fill />
 				</CardSection>
 				<Title order={3} size="md">
 					{name}
