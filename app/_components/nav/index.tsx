@@ -8,7 +8,12 @@ import {
 	useWindowEvent,
 } from "@mantine/hooks";
 import { Burger, Button, Flex, Menu } from "@mantine/core";
-import { classNames, mobileNavBreakpoint, SITE_PAGES } from "_util";
+import {
+	classNames,
+	contentAreaProps,
+	mobileNavBreakpoint,
+	SITE_PAGES,
+} from "_util";
 import { COLORS, FONTS } from "_styles";
 import { SVG } from "_components";
 import classes from "./index.module.css";
@@ -105,8 +110,7 @@ export const Nav = ({
 					variant === "inline" && classes.isInline,
 					isScrolled && classes.isPinned,
 				])}
-				pl="md"
-				pr="md"
+				{...contentAreaProps}
 			>
 				{/* if showLogo is true and nav is pinned */}
 				<Link href="/">

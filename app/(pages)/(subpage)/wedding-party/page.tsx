@@ -1,6 +1,12 @@
 import React from "react";
 import { Metadata } from "next";
-import { Image, IntroText, PartyCard, SVG } from "_components";
+import {
+	Image,
+	IntroText,
+	PartyCard,
+	SVG,
+	SubpageContainer,
+} from "_components";
 import {
 	AspectRatio,
 	Container,
@@ -272,7 +278,7 @@ const WeddingParty = () => {
 			span={{ base: 12 }}
 			mt={{ base: 0, [mobileNavBreakpoint]: "md" }}
 		>
-			<Container w="100%">
+			<SubpageContainer>
 				<Title className={FONTS.MRS_EAVES.className} order={1}>
 					Wedding Party
 				</Title>
@@ -391,7 +397,7 @@ const WeddingParty = () => {
 						<PartyCard {...person} index={i} key={person.id} />
 					))}
 				</SimpleGrid>
-			</Container>
+			</SubpageContainer>
 		</GridCol>
 	);
 };

@@ -9,7 +9,7 @@ import {
 	Text,
 	Title,
 } from "@mantine/core";
-import { IntroText } from "_components";
+import { IntroText, SubpageContainer } from "_components";
 import { FONTS } from "_styles";
 import { Timeline } from "_components/timeline";
 import * as content from "./content";
@@ -18,7 +18,7 @@ import { mobileNavBreakpoint } from "_util";
 const OurStory = () => {
 	return (
 		<GridCol span={12} mt={{ base: 0, [mobileNavBreakpoint]: "md" }}>
-			<Container>
+			<SubpageContainer>
 				<Title className={FONTS.MRS_EAVES.className} order={1}>
 					Our Story
 				</Title>
@@ -49,7 +49,7 @@ const OurStory = () => {
 						</Paper>
 					))}
 				</SimpleGrid>
-			</Container>
+			</SubpageContainer>
 		</GridCol>
 	);
 };

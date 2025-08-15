@@ -9,6 +9,7 @@ export * from "./login-form";
 export * from "./nav";
 export * from "./party-card";
 export * from "./rsvp";
+export * from "./subpage-container";
 export * as SVG from "./svgs";
 export * from "./transition";
 export * from "./text-button";

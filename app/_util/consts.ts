@@ -87,7 +87,7 @@ export enum PHOTO_CREDIT {
 	JEFF = "Jeff Chen",
 }
 
-export const contentAreaProps: GridColProps = {
-	pl: { base: "md", [mobileNavBreakpoint]: 0 },
-	pr: { base: "md", [mobileNavBreakpoint]: 0 },
+export const contentAreaProps = {
+	pl: { base: "xs", [mobileNavBreakpoint]: 0 },
+	pr: { base: "xs", [mobileNavBreakpoint]: 0 },
 };
