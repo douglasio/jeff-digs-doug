@@ -68,7 +68,7 @@ export const Nav = ({
 			>
 				{showLogo && (
 					<Link
-						href="/home"
+						href="/"
 						className={classNames([
 							classes.logo,
 							!isScrolled && classes.isPinned,

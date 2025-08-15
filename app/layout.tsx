@@ -3,6 +3,7 @@ import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 import { COLORS, theme } from "_styles";
 import { WEDDING_DETAILS } from "_util";
 import "_styles/global.css";
+import { SVG } from "_components";
 import classes from "./layout.module.css";
 
 export const metadata = {
@@ -75,7 +76,14 @@ export default function RootLayout({
 			</head>
 			<body className={classes.body}>
 				<MantineProvider forceColorScheme="dark" theme={theme}>
-					{children}
+					<main className={classes.main}>
+						<SVG.CenterLeaves
+							direction="down"
+							color={COLORS.NAVY[9]}
+							className={classes.backgroundLeaves}
+						/>
+						{children}
+					</main>
 				</MantineProvider>
 			</body>
 		</html>

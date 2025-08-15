@@ -28,7 +28,7 @@ type PageType = {
 
 export const PATHS = {
 	PAGES: {
-		HOME: "/home",
+		HOME: "/",
 		WHO_ARE_YOU: "/who-are-you",
 		VENUE: "/venue",
 		AGENDA: "/agenda",
