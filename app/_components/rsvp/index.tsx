@@ -14,12 +14,5 @@ export const RSVP = () => {
 			ref.current.appendChild(script);
 		}
 	}, []);
-	return (
-		<div ref={ref}></div>
-		// <iframe
-		// 	src="https://dougandjeffswedding.rsvpify.com"
-		// 	style={{ width: "100%", height: "100%", border: "none" }}
-		// 	scrolling="auto"
-		// />
-	);
+	return <div ref={ref}></div>;
 };

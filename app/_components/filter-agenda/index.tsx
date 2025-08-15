@@ -18,6 +18,7 @@ import Link from "next/link";
 import { WEDDING_DETAILS } from "_util";
 import { AddToCalendar } from "_components/add-to-calendar";
 import { COLORS } from "_styles";
+import classes from "./index.module.css";
 
 const audiences = [
 	// "Everyone",
@@ -134,7 +135,7 @@ const events: EventType = [
 		audience: "The Couple",
 		description: (
 			<Image
-				src="/static/images/doug-and-jeff-happy.jpg"
+				src="/static/images/webp/doug-and-jeff-happy.webp"
 				alt="Doug and Jeff living happily ever after"
 				className="image-dimmed-more"
 			/>
@@ -163,16 +164,14 @@ export const FilterAgenda = () => {
 	};
 
 	return (
-		<Container w="100%" p={0}>
+		<Container fluid px={0}>
 			<Group
 				// justify="center"
 				gap="xs"
-				// pos="sticky"
-				top="6rem"
-				// bg={COLORS.NAVY[9]}
-				// p="xs"
-				mb="sm"
-				style={{ zIndex: 999 }}
+				pos="sticky"
+				top={`var(--mobile-nav-height)`}
+				py="sm"
+				className={classes.chips}
 			>
 				{audiences.map((audience, i) => {
 					const isSelected = selectedAudience.includes(audience);
@@ -182,6 +181,7 @@ export const FilterAgenda = () => {
 							checked={isSelected}
 							onClick={() => toggleAudience(audience)}
 							color={audienceColors[audiences.indexOf(audience)]}
+							style={{ zIndex: 995 }}
 						>
 							{audience}
 						</Chip>

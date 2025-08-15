@@ -2,14 +2,9 @@ import React from "react";
 import { Metadata } from "next";
 import Link from "next/link";
 import { Image, IntroText, TextButton } from "_components";
-import { AspectRatio, Button, GridCol, Text, Title } from "@mantine/core";
+import { AspectRatio, Button, Grid, GridCol, Text, Title } from "@mantine/core";
 import { FONTS } from "_styles";
-import {
-	contentAreaProps,
-	mobileNavBreakpoint,
-	PHOTO_CREDIT,
-	WEDDING_DETAILS,
-} from "_util";
+import { mobileNavBreakpoint, PHOTO_CREDIT, WEDDING_DETAILS } from "_util";
 import {
 	faArrowUpRightFromSquare,
 	faCar,
@@ -28,6 +23,7 @@ const LeftImage = () => (
 		className="image-dimmed image-fill"
 		width={1200}
 		height={1200}
+		h={{ base: 500, [mobileNavBreakpoint]: 1200 }}
 		priority
 	/>
 );
@@ -54,8 +50,8 @@ const LeftImage3 = () => (
 
 const Venue = () => {
 	return (
-		<>
-			<GridCol span={{ base: 12, md: 6 }} mt={{ base: 0, sm: "md" }}>
+		<Grid>
+			<GridCol span={{ base: 12, md: 6 }}>
 				<AspectRatio visibleFrom={mobileNavBreakpoint} ratio={1 / 1}>
 					<LeftImage />
 				</AspectRatio>
@@ -63,7 +59,7 @@ const Venue = () => {
 					<LeftImage />
 				</AspectRatio>
 			</GridCol>
-			<GridCol span={{ base: 12, md: 6 }} mt="md" {...contentAreaProps}>
+			<GridCol span={{ base: 12, md: 6 }}>
 				<Title className={FONTS.MRS_EAVES.className} order={1}>
 					The Venue
 				</Title>
@@ -105,11 +101,7 @@ const Venue = () => {
 					</TextButton>
 				</section>
 			</GridCol>
-			<GridCol
-				span={{ base: 12, md: 6 }}
-				mt={{ base: 0, sm: "md" }}
-				{...contentAreaProps}
-			>
+			<GridCol span={{ base: 12, md: 6 }} mt={{ base: 0, sm: "md" }}>
 				<Title order={4}>Venue Details</Title>
 				<Title order={5}>Indoor Wedding</Title>
 				<Text>
@@ -135,7 +127,7 @@ const Venue = () => {
 					<LeftImage2 />
 				</AspectRatio>
 			</GridCol>
-			<GridCol span={{ base: 12, md: 6 }} {...contentAreaProps}>
+			<GridCol span={{ base: 12, md: 6 }}>
 				<section>
 					<Title order={4}>How we chose Willowdale</Title>
 					<Text>
@@ -182,7 +174,7 @@ const Venue = () => {
 					<LeftImage2 />
 				</AspectRatio>
 			</GridCol>
-		</>
+		</Grid>
 	);
 };
 

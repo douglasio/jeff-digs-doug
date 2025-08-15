@@ -100,6 +100,9 @@ export const theme = createTheme({
 			h4: {
 				fontSize: rem(35),
 			},
+			h5: {
+				fontSize: rem(35),
+			},
 			h6: {
 				fontSize: rem(17),
 			},
@@ -140,9 +143,9 @@ export const theme = createTheme({
 		}),
 		Grid: Grid.extend({
 			classNames: { inner: classes.gridInner },
-			defaultProps: {
-				overflow: "hidden",
-			},
+			// defaultProps: {
+			// 	overflow: "hidden",
+			// },
 		}),
 		NavLink: NavLink.extend({
 			classNames: { root: classes.navLinkRoot },

@@ -70,7 +70,7 @@ export const Timeline = ({ events, active }: TimelineProps) => {
 							viewport={{
 								once: true,
 								amount: 0.5,
-								margin: "50px",
+								margin: "100px",
 							}}
 							variants={timelineItemVariants}
 						>
@@ -88,6 +88,7 @@ export const Timeline = ({ events, active }: TimelineProps) => {
 									height={500}
 									w="100%"
 									h="auto"
+									maw={800}
 									priority={i === 0 && true}
 								/>
 							)}

@@ -87,11 +87,10 @@
 
 .mobileNav {
 	align-items: stretch;
-	background-color: var(--mantine-color-blue-9);
+	background-color: var(--mantine-color-navy-9);
 	display: flex;
 	height: var(--mobile-nav-height);
-	padding: 1.5rem var(--mantine-spacing-xs);
-	position: sticky;
+	position: fixed;
 	justify-content: space-between;
 	top: 0;
 	width: 100%;
@@ -119,7 +118,7 @@
 	}
 
 	.dropdown {
-		background-color: var(--mantine-color-blue-9);
+		background-color: var(--mantine-color-navy-9);
 		padding: var(--mantine-spacing-xs);
 		position: fixed;
 		left: 0;
@@ -134,9 +133,9 @@
 }
 
 .navLeaves {
-	height: 100vh;
+	height: 90vh;
 	pointer-events: none;
 	position: absolute;
-	top: 0;
+	bottom: 0;
 	z-index: 0;
 }
