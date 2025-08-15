@@ -1,16 +1,20 @@
 "use client";
+
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
 	useDebouncedCallback,
 	useDisclosure,
-	useIntersection,
 	useWindowEvent,
 } from "@mantine/hooks";
 import { Burger, Button, Flex, Menu } from "@mantine/core";
-import { motion } from "motion/react";
-import { classNames, mobileNavBreakpoint, SITE_PAGES } from "_util";
-import { FONTS } from "_styles";
+import {
+	classNames,
+	contentAreaProps,
+	mobileNavBreakpoint,
+	SITE_PAGES,
+} from "_util";
+import { COLORS, FONTS } from "_styles";
 import { SVG } from "_components";
 import classes from "./index.module.css";
 import { useState } from "react";
@@ -29,9 +33,6 @@ export const Nav = ({
 	const pathname = usePathname();
 	const [opened, { toggle }] = useDisclosure(false);
 	const [isScrolled, setIsScrolled] = useState(false);
-	// const { ref, entry } = useIntersection({
-	// 	threshold: 1,
-	// });
 
 	const isActiveNavLink = (href: string): boolean => {
 		return pathname === href;
@@ -62,7 +63,7 @@ export const Nav = ({
 				gap="xs"
 				justify={variant === "top" ? "center" : "flex-start"}
 				maw="100%"
-				pos="sticky"
+				pos={variant === "inline" ? "relative" : "fixed"}
 				visibleFrom={mobileNavBreakpoint}
 			>
 				{showLogo && (
@@ -109,8 +110,7 @@ export const Nav = ({
 					variant === "inline" && classes.isInline,
 					isScrolled && classes.isPinned,
 				])}
-				pl="md"
-				pr="md"
+				{...contentAreaProps}
 			>
 				{/* if showLogo is true and nav is pinned */}
 				<Link href="/">
@@ -133,6 +133,8 @@ export const Nav = ({
 					withinPortal={false}
 					trapFocus={false}
 					menuItemTabIndex={0}
+					opened={opened}
+					onChange={toggle}
 				>
 					<Menu.Target>
 						<Burger
@@ -148,10 +150,23 @@ export const Nav = ({
 					<Menu.Dropdown
 						component="nav"
 						className={classes.dropdown}
-						h="calc(100vh - var(--mobile-nav-height))"
+						h={
+							variant === "inline"
+								? "100vh"
+								: "calc(100vh - var(--mobile-nav-height))"
+						}
 						w="100%"
 						left="0"
-						top="var(--mobile-nav-height)"
+						top={
+							variant === "inline"
+								? "-var(--mobile-nav-height)"
+								: "var(--mobile-nav-height)"
+						}
+						pt={
+							variant === "inline"
+								? "var(--mobile-nav-height)"
+								: "auto"
+						}
 					>
 						{SITE_PAGES.map((page) => (
 							<Menu.Item
@@ -168,26 +183,9 @@ export const Nav = ({
 								{page.text}
 							</Menu.Item>
 						))}
-						<motion.img
-							className={classes.dropdownLeaf}
-							initial={{
-								// opacity: 0,
-								rotate: 10,
-								y: -300,
-								x: -100,
-							}}
-							animate={{
-								opacity: [0, 0.25, 1],
-								rotate: [-10, 0, -30],
-								y: [-500, -100, 150],
-								x: [200, -200, 150],
-							}}
-							transition={{
-								duration: 1.25,
-								ease: "linear",
-								times: [0, 0.45, 1],
-							}}
-							src="/static/images/leafc-06.svg"
+						<SVG.EdgeLeaves
+							className={classes.navLeaves}
+							color={COLORS.NAVY[9]}
 						/>
 					</Menu.Dropdown>
 				</Menu>

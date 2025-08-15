@@ -1,7 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
-import Link from "next/link";
-import { IntroText, TextButton } from "_components";
+import { IntroText } from "_components";
 import {
 	AspectRatio,
 	Badge,
@@ -12,7 +11,6 @@ import {
 	GridCol,
 	Image,
 	SimpleGrid,
-	Text,
 	Title,
 } from "@mantine/core";
 import { COLORS, FONTS } from "_styles";
@@ -33,7 +31,6 @@ type RegistryCardProps = {
 const RegistryCard = ({
 	imageUrl,
 	title,
-	description,
 	buttonText,
 	badgeText,
 }: RegistryCardProps) => {
@@ -41,7 +38,7 @@ const RegistryCard = ({
 		<Card>
 			<CardSection>
 				<AspectRatio ratio={1 / 1} className="image-container-warm-ice">
-					<Image src={imageUrl}></Image>
+					<Image src={imageUrl} alt={title}></Image>
 				</AspectRatio>
 			</CardSection>
 			<Title mt="xs" order={2}>
@@ -50,7 +47,6 @@ const RegistryCard = ({
 					<Badge color={COLORS.LAVENDER[5]}>{badgeText}</Badge>
 				)}
 			</Title>
-			{/* <Text>{description}</Text> */}
 			<Button
 				component="a"
 				href="https://account.venmo.com/u/Douglasio"
@@ -75,25 +71,25 @@ const Registry = () => {
 				</IntroText>
 				<SimpleGrid cols={{ base: 1, sm: 2, xl: 4 }}>
 					<RegistryCard
-						imageUrl="/static/images/gordy1.JPG"
+						imageUrl="/static/images/webp/gordy1.webp"
 						title="Grab a Drink"
 						description="If you want to be polite, but cash is tight."
 						buttonText="Give $25"
 					/>
 					<RegistryCard
-						imageUrl="/static/images/gordy2.JPG"
+						imageUrl="/static/images/webp/gordy2.webp"
 						title="A Nice Dinner"
 						description="You&rsquo;ve been to a wedding before, you know how this goes."
 						buttonText="Give $100"
 					/>
 					<RegistryCard
-						imageUrl="/static/images/gordy3.JPG"
+						imageUrl="/static/images/webp/gordy3.webp"
 						title="Flight to Boston"
-						description="You want the couple to be able t."
+						description="You want the couple to be able to."
 						buttonText="Give $500"
 					/>
 					<RegistryCard
-						imageUrl="/static/images/gordy4.JPG"
+						imageUrl="/static/images/webp/gordy4.webp"
 						title="Mortgage Payment"
 						description="If you want to be polite, but cash is tight."
 						buttonText="Give $1,000"

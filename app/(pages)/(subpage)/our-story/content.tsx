@@ -19,7 +19,7 @@ export const timelineEvents = [
 		description:
 			"These were the photos that made us swipe right. After a lot of back and forth over what sort of first date was acceptable during COVID, we eventually agreed to meet in person.",
 		image: {
-			url: "/static/images/timeline_092020.jpg",
+			url: "/static/images/webp/timeline_092020.webp",
 			alt: "Doug and Jeff Tinder images",
 		},
 	},
@@ -70,7 +70,7 @@ export const timelineEvents = [
 			</>
 		),
 		image: {
-			url: "/static/images/timeline_082021_1.jpeg",
+			url: "/static/images/webp/timeline_082021_1.webp",
 			alt: "Our apartment living room at the Batch Yard in Everett",
 		},
 	},
@@ -87,7 +87,7 @@ export const timelineEvents = [
 			</>
 		),
 		image: {
-			url: "/static/images/timeline_082021.jpeg",
+			url: "/static/images/webp/timeline_082021.webp",
 			alt: "Boba staring menacingly",
 		},
 	},
@@ -106,7 +106,7 @@ export const timelineEvents = [
 			</>
 		),
 		image: {
-			url: "static/images/timeline_082225.JPG",
+			url: "/static/images/webp/timeline_082225.webp",
 			alt: "Jeff and Doug on a plane to San Diego",
 			ratio: 1.5 / 1,
 		},
@@ -124,7 +124,7 @@ export const timelineEvents = [
 			</>
 		),
 		image: {
-			url: "/static/images/timeline_112022.jpeg",
+			url: "/static/images/webp/timeline_112022.webp",
 			alt: "Gordy the dog as a puppy looking eagerly at the cameraman",
 			ratio: 1 / 1,
 		},
@@ -143,7 +143,7 @@ export const timelineEvents = [
 			</>
 		),
 		image: {
-			url: "/static/images/timeline_032023.jpeg",
+			url: "/static/images/webp/timeline_032023.webp",
 			alt: "Jeff, Doug, and Kara on their group vacation to Hawaii",
 		},
 	},
@@ -162,7 +162,7 @@ export const timelineEvents = [
 			</>
 		),
 		image: {
-			url: "/static/images/timeline_072023.jpg",
+			url: "/static/images/webp/timeline_072023.webp",
 			alt: "Doug on one knee and Jeff crying because he is agreeing to let Doug yell at him to not leave his shoes all over the floor until the day he dies",
 			ratio: 1 / 1,
 		},

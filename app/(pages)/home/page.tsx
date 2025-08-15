@@ -1,15 +1,7 @@
 import React from "react";
-import {
-	Box,
-	Button,
-	Grid,
-	GridCol,
-	Image,
-	Space,
-	Title,
-	rem,
-} from "@mantine/core";
-import { AddToCalendar, IntroText, Nav, SVG } from "_components";
+import { Box, Button, Grid, GridCol, Space, Title, rem } from "@mantine/core";
+import * as motion from "motion/react-client";
+import { Image, IntroText, Nav, SVG } from "_components";
 import { contentAreaProps, mobileNavBreakpoint, WEDDING_DETAILS } from "_util";
 import classes from "./page.module.css";
 import { COLORS } from "_styles";
@@ -18,6 +10,9 @@ import Link from "next/link";
 export const metadata = {
 	title: "Home",
 };
+
+const blurDataURL =
+	"data:image/webp;base64,UklGRsYCAABXRUJQVlA4WAoAAAAgAAAAgAAAVQAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDgg2AAAAJAIAJ0BKoEAVgA+7W6uUKm3KacrU2qC4B2JaW7dW70C/JhJ/J6NmptjXHU7nB1XcimhEgzApl+D/+jGS+iZE2y0qlKV7LmMKMgtf5xAAP7rCGpDHh+u9mrU97S3e9BZXezMCf+t67okZ8wjv6yvmUczPveE2iBYinHM6UNUJhtVffbfhLYKAEVFnUrt7nubsF/6ED+wShOzUVzbw65ayGg/i5o4Q7z+RNR9e28lagoOAZpFgmXaPOvCnRtr3ay9nbnYEv4Rdz7EUk7r97chu3LcLHVANAAAAA==";
 
 const Home = () => {
 	return (
@@ -29,33 +24,40 @@ const Home = () => {
 			/>
 			<Grid
 				id="page-grid"
-				gutter={{ base: "sm", sm: "xl" }}
+				gutter={{ base: "sm", [mobileNavBreakpoint]: "xl" }}
 				h="100%"
 				m={{ base: "0", sm: "auto" }}
 				mt="0"
 			>
-				<GridCol
-					span={{ base: 12, md: 5 }}
-					// pt="0"
-					// pl="0"
-					pb="0"
-					pt="0"
-					// pr={{ base: 0, sm: "xl" }}
-				>
+				<GridCol span={{ base: 12, md: 5 }} pb="0" pt="0">
 					<Box pos="relative" w="100%" h="100%">
-						<Image
-							className="image-dimmed"
-							alt="One of our engagement photos on the beach in the DR"
-							fit="cover"
-							w={"100%"}
-							h="100%"
-							src="static/images/engagement_1.jpg"
-							loading="lazy"
-						/>
+						<motion.div
+							initial={{ y: "-25%", opacity: 0 }}
+							animate={{ y: 0, opacity: 1 }}
+							transition={{ duration: 1, ease: "easeOut" }}
+							style={{ height: "100%" }}
+						>
+							<Image
+								className="image-dimmed"
+								alt="One of our engagement photos on the beach in the DR"
+								fit="cover"
+								width={1200}
+								height={800}
+								h="100%"
+								src="/static/images/webp/engagement_1.webp"
+								placeholder="blur"
+								blurDataURL={blurDataURL}
+								priority
+							/>
+						</motion.div>
 						<Box
+							component={motion.div}
+							initial={{ y: "50%", opacity: 0 }}
+							animate={{ y: 0, opacity: 1 }}
+							transition={{ duration: 1, ease: "easeOut" }}
 							w={{ base: "40%", sm: rem(250) }}
 							pos="absolute"
-							left="10vw"
+							left="5vw"
 							top={{ base: "5%", sm: "10%" }}
 						>
 							<SVG.Initials
@@ -84,17 +86,8 @@ const Home = () => {
 								</span>
 							</address>
 						</Title>
-						<AddToCalendar
-							event={{
-								title: "Doug &amp; Jeff&rsquo;s Wedding",
-								description: "https://www.jeffdigsdoug.com/",
-								start: "2025-11-08 16:00:00 -0800",
-								end: "2025-11-08 22:00:00 -0800",
-								location: `${WEDDING_DETAILS.VENUE}, ${WEDDING_DETAILS.STREET}, ${WEDDING_DETAILS.CITY}`,
-							}}
-						/>
 					</Box>
-					<IntroText mb="sm">
+					<IntroText mb="md">
 						Welcome to the wedding of Doug &amp; Jeff, where two
 						people who love each other are finally getting married.
 						No, they&rsquo;re not related. That&rsquo;s what makes
@@ -103,6 +96,7 @@ const Home = () => {
 					<Button component={Link} href="/our-story">
 						See how we got here
 					</Button>
+					<Space h="lg" />
 				</GridCol>
 			</Grid>
 			<SVG.CornerLeaves

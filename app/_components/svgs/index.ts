@@ -1,4 +1,5 @@
 export * from "./bud";
+export * from "./edge-leaves";
 export * from "./initials";
 export * from "./intro-lockup";
 export * from "./corner-leaves";

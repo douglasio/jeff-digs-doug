@@ -1,19 +1,16 @@
-"use client";
-
 import React, { type ReactNode } from "react";
-import { delay, motion, stagger, type Variants } from "motion/react";
+import * as motion from "motion/react-client";
 import {
 	AspectRatio,
 	Card,
 	CardSection,
-	Image,
 	List,
 	ListItem,
 	Text,
 	Title,
 	type CardProps,
 } from "@mantine/core";
-import { SVG } from "_components";
+import { Image, SVG } from "_components";
 
 type PartyCardProps = CardProps & {
 	name: string;
@@ -64,13 +61,13 @@ export const PartyCard = ({
 			}}
 		>
 			<Card {...props}>
-				<CardSection mb="xs">
-					<AspectRatio
-						className="image-container-warm-ice"
-						ratio={1 / 1}
-					>
-						<Image src={image.src} title={image.alt} />
-					</AspectRatio>
+				<CardSection
+					mb="xs"
+					className="image-container-warm-ice"
+					mih={{ base: 400, sm: 300 }}
+					mt="-1rem"
+				>
+					<Image src={image.src} alt={image.alt} fill />
 				</CardSection>
 				<Title order={3} size="md">
 					{name}

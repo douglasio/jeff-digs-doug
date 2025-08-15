@@ -1,6 +1,14 @@
 import React from "react";
 import { type Metadata } from "next";
-import { AspectRatio, GridCol, Image, Space, Title } from "@mantine/core";
+import Image from "next/image";
+import {
+	AspectRatio,
+	GridCol,
+	Image as MantineImage,
+	Space,
+	Text,
+	Title,
+} from "@mantine/core";
 import { contentAreaProps, mobileNavBreakpoint, PHOTO_CREDIT } from "_util";
 import { FONTS } from "_styles";
 import { FilterAgenda, IntroText } from "_components";
@@ -11,30 +19,47 @@ export const metadata: Metadata = {
 };
 
 const LeftImage = () => (
-	<Image
+	<MantineImage
+		component={Image}
 		alt={`Jeff feeding Doug and arancini post-engagement: ${PHOTO_CREDIT.ENGAGEMENT}`}
-		src={"static/images/engagement_feeding.jpg"}
+		src="/static/images/webp/engagement_feeding.webp"
+		height={1350}
+		width={900}
+		quality={95}
 		className="image-dimmed image-fill"
+		// placeholder="blur"
 	/>
 );
 
 const Agenda = () => {
 	return (
 		<>
-			<GridCol span={{ base: 12, md: 5 }}>
+			<GridCol
+				span={{ base: 12, md: 5 }}
+				mt={{ base: 0, [mobileNavBreakpoint]: "md" }}
+			>
 				<AspectRatio visibleFrom={mobileNavBreakpoint} ratio={4 / 6}>
 					<LeftImage />
 				</AspectRatio>
 			</GridCol>
-			<GridCol span={{ base: 12, md: 7 }} {...contentAreaProps}>
+			<GridCol
+				span={{ base: 12, md: 7 }}
+				mt={{ base: 0, [mobileNavBreakpoint]: "md" }}
+				{...contentAreaProps}
+			>
 				<Title className={FONTS.MRS_EAVES.className} order={1}>
 					Agenda
 				</Title>
 				<IntroText>
 					Not all those who wander are lost. But in the event that you
-					are lost, look here to figure out where you&rsquo;re
-					supposed to be.
+					<strong> are</strong> lost, look here to figure out where
+					you&rsquo;re supposed to be.
 				</IntroText>
+
+				<Text w="80%">
+					These dates and times and events are all subject to change.
+					Check back closer to the wedding date to verify.
+				</Text>
 
 				<FilterAgenda />
 

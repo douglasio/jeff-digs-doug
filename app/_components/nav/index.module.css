@@ -25,6 +25,7 @@
 	font-style: italic;
 	font-weight: 300;
 	padding: 0.5rem 0.5%;
+	position: static;
 	text-decoration: none;
 	white-space: nowrap;
 	z-index: 9999;
@@ -58,6 +59,12 @@
 			width: 100%;
 		}
 	}
+
+	&.mobile {
+		padding: 0.5rem 3rem;
+		position: relative;
+		text-align: right;
+	}
 }
 
 .logo {
@@ -88,13 +95,14 @@
 	justify-content: space-between;
 	top: 0;
 	width: 100%;
-	z-index: 9999;
+	z-index: 998;
 
 	.burger {
 		display: inline-flex;
 		flex-direction: row;
 		align-items: center;
 		justify-content: flex-end;
+		z-index: 999;
 	}
 
 	.logo {
@@ -102,6 +110,7 @@
 		height: 100%;
 		width: auto;
 		margin: 0;
+		z-index: 999;
 
 		> * {
 			height: 100%;
@@ -115,21 +124,19 @@
 		position: fixed;
 		left: 0;
 		top: 0;
+		z-index: 999;
 	}
 
 	&.isInline {
 		background-color: transparent;
 		margin-bottom: calc(var(--mobile-nav-height) * -1);
 	}
-
-	/* &.isPinned {
-		background-color: var(--mantine-color-blue-9);
-	} */
 }
 
-.dropdownLeaf {
+.navLeaves {
+	height: 100vh;
+	pointer-events: none;
 	position: absolute;
-	/* right: 0; */
-	width: 100vw;
-	z-index: 1;
+	top: 0;
+	z-index: 0;
 }

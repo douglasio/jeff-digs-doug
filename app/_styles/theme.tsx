@@ -100,6 +100,9 @@ export const theme = createTheme({
 			h4: {
 				fontSize: rem(35),
 			},
+			h6: {
+				fontSize: rem(17),
+			},
 		},
 	},
 	defaultRadius: "0px",
@@ -192,7 +195,7 @@ export const theme = createTheme({
 					children: (
 						<Image
 							alt="Loading..."
-							src="static/images/initials_horizontal_green.png"
+							src="/static/images/initials_horizontal_green.png"
 							className={classes.loaderSpin}
 						/>
 					),

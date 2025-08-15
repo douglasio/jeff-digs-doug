@@ -38,7 +38,7 @@ export default function RootLayout({
 				<Center>
 					<Image
 						alt="decorative leaves"
-						src="static/images/center_leaves.png"
+						src="/static/images/center_leaves.png"
 						w={{ base: "110vw", sm: "50vw" }}
 						maw="950px"
 						mt="lg"

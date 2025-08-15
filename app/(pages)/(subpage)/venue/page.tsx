@@ -1,15 +1,8 @@
 import React from "react";
 import { Metadata } from "next";
 import Link from "next/link";
-import { IntroText, TextButton } from "_components";
-import {
-	AspectRatio,
-	Button,
-	GridCol,
-	Image,
-	Text,
-	Title,
-} from "@mantine/core";
+import { Image, IntroText, TextButton } from "_components";
+import { AspectRatio, Button, GridCol, Text, Title } from "@mantine/core";
 import { FONTS } from "_styles";
 import {
 	contentAreaProps,
@@ -31,39 +24,46 @@ export const metadata: Metadata = {
 const LeftImage = () => (
 	<Image
 		alt="Willowdale front of house in the fall, photo credit: Mark Spooner"
-		src={"static/images/willowdale.webp"}
+		src={"/static/images/webp/willowdale.webp"}
 		className="image-dimmed image-fill"
+		width={1200}
+		height={1200}
+		priority
 	/>
 );
 
 const LeftImage2 = () => (
 	<Image
 		className="image-dimmed image-fill"
-		src="/static/images/willowdale_cookies.webp"
+		src="/static/images/webp/willowdale_cookies.webp"
 		alt={`Cookie spread. Photo credit: ${PHOTO_CREDIT.WILLOWDALE2}`}
+		width={1024}
+		height={684}
 	/>
 );
 
 const LeftImage3 = () => (
 	<Image
 		className="image-dimmed-more image-fill"
-		src="/static/images/willowdale_ceremony.webp"
+		src="/static/images/webp/willowdale_ceremony.webp"
 		alt={`The indoor ceremony area. Photo credit: ${PHOTO_CREDIT.WILLOWDALE}`}
+		width={1200}
+		height={1200}
 	/>
 );
 
 const Venue = () => {
 	return (
 		<>
-			<GridCol span={{ base: 12, md: 6 }}>
-				<AspectRatio visibleFrom={mobileNavBreakpoint} ratio={4 / 6}>
+			<GridCol span={{ base: 12, md: 6 }} mt={{ base: 0, sm: "md" }}>
+				<AspectRatio visibleFrom={mobileNavBreakpoint} ratio={1 / 1}>
 					<LeftImage />
 				</AspectRatio>
 				<AspectRatio hiddenFrom={mobileNavBreakpoint} ratio={1 / 1}>
 					<LeftImage />
 				</AspectRatio>
 			</GridCol>
-			<GridCol span={{ base: 12, md: 6 }} {...contentAreaProps}>
+			<GridCol span={{ base: 12, md: 6 }} mt="md" {...contentAreaProps}>
 				<Title className={FONTS.MRS_EAVES.className} order={1}>
 					The Venue
 				</Title>
@@ -93,7 +93,7 @@ const Venue = () => {
 						<li>Take a left onto Bradley Palmer State Park Road</li>
 						<li> You’ll see signs. Park in the parking lot.</li>
 					</Text>
-					<Text mb="xs">
+					<Text mt="xs" mb="xs">
 						Or you can ignore all that and use GPS like everyone
 						else.
 					</Text>
@@ -104,20 +104,12 @@ const Venue = () => {
 						Driving directions
 					</TextButton>
 				</section>
-				{/* <iframe
-					width="600"
-					height="300"
-					style={{
-						border: 0,
-						filter: "brightness(0.8) grayscale(0.5) sepia(0.2)",
-						width: "100%",
-						maxWidth: "100%",
-					}}
-					loading="lazy"
-					src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJoUiZGCca44kR9CsWrleFE8g&key=AIzaSyCu4Q2UOOBigMYq86auRI_TYZXPZdPXsoQ"
-				></iframe> */}
 			</GridCol>
-			<GridCol span={{ base: 12, md: 6 }} {...contentAreaProps}>
+			<GridCol
+				span={{ base: 12, md: 6 }}
+				mt={{ base: 0, sm: "md" }}
+				{...contentAreaProps}
+			>
 				<Title order={4}>Venue Details</Title>
 				<Title order={5}>Indoor Wedding</Title>
 				<Text>

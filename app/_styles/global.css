@@ -18,6 +18,7 @@ body {
 
 	@media screen and (min-width: $mantine-breakpoint-sm) {
 		height: 100%;
+		margin: var(--mobile-nav-height) auto;
 	}
 }
 
@@ -145,6 +146,14 @@ body {
 
 .text-no-wrap {
 	white-space: nowrap;
+}
+
+#rsvpify-iframe-loader {
+	display: block;
+
+	path {
+		fill: var(--mantine-color-sage-9);
+	}
 }
 
 a:not(.mantine-Button-root):not([class*="navLink"]),

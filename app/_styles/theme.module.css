@@ -126,7 +126,7 @@ a.buttonRoot:hover {
 
 .listItemWrapper {
 	--li-align: top;
-	padding-bottom: var(--mantine-spacing-xs);
+	/* padding-bottom: var(--mantine-spacing-xs); */
 }
 
 .loaderSpin {
@@ -155,10 +155,13 @@ a.buttonRoot:hover {
 
 .menuItem {
 	border-bottom: 0;
+	border-right: 2px solid transparent;
 	padding: 0.5rem 2rem;
+	transform: translateX(2px);
 
 	&:hover {
-		background-color: var(--mantine-color-blue-9);
+		background-color: transparent;
+		border-right: 2px solid var(--mantine-color-sage-6);
 	}
 }
 

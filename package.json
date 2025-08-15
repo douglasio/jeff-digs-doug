@@ -1,18 +1,19 @@
 {
 	"name": "jeff-digs-doug",
-	"version": "1.3.0",
+	"version": "2.0.2",
 	"private": true,
 	"scripts": {
-		"dev": "next",
-		"start": "next",
+		"dev": "next --turbopack",
+		"start": "next --turbopack",
 		"start:api": "npx json-server --port 3001 --watch public/mock-api/db.json",
-		"start:wrangler": "npx wrangler pages dev build -b CFP_PASSWORD=test",
 		"build": "next build",
-		"serve": "serve out",
-		"build:serve": "next build && npm run serve",
 		"lint": "next lint && tsc --noemit",
-		"prepare": "husky",
-		"prettier": "prettier . --write"
+		"prepare": "husky && husky install",
+		"precommit": "npx lint-staged",
+		"prettier": "prettier . --write",
+		"preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+		"deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+		"cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
 	},
 	"dependencies": {
 		"@fortawesome/fontawesome-svg-core": "^6.7.2",
@@ -21,6 +22,7 @@
 		"@mantine/core": "^8.1.2",
 		"@mantine/form": "^8.1.2",
 		"@mantine/hooks": "^8.1.2",
+		"@opennextjs/cloudflare": "^1.6.5",
 		"@tabler/icons-react": "^3.34.0",
 		"@tanstack/react-query": "^5.81.5",
 		"@types/node": "^24.0.10",
@@ -28,14 +30,17 @@
 		"@types/react-dom": "19.1.6",
 		"axios": "^1.10.0",
 		"calendar-link": "^2.11.0",
+		"jose": "^6.0.12",
 		"motion": "^12.23.0",
 		"next": "15.3.4",
 		"next-auth": "^4.24.11",
+		"optional": "^0.1.4",
 		"react": "19.1.0",
 		"react-dom": "19.1.0",
 		"serve": "^14.2.4",
 		"states-us": "^1.1.1",
-		"typescript": "^5.8.3"
+		"typescript": "^5.8.3",
+		"zod": "^4.0.17"
 	},
 	"devDependencies": {
 		"eslint": "^9.30.1",
@@ -46,10 +51,13 @@
 		"postcss": "^8.5.6",
 		"postcss-preset-mantine": "^1.18.0",
 		"postcss-simple-vars": "^7.0.1",
-		"prettier": "^3.6.2"
+		"prettier": "^3.6.2",
+		"wrangler": "^4.28.1"
 	},
 	"lint-staged": {
-		"**/*": "prettier --write --ignore-unknown"
+		"**/*": "prettier --write --ignore-unknown",
+		"*.js": "eslint --cache --fix",
+		"*.{js,css,md}": "prettier --write"
 	},
 	"overrides": {
 		"@types/react": "19.1.8",
