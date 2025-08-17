@@ -1,5 +1,14 @@
 import Link from "next/link";
-import { Container, Grid, GridCol, Title, Text, Button } from "@mantine/core";
+import {
+	Container,
+	Grid,
+	GridCol,
+	Title,
+	Text,
+	Button,
+	SimpleGrid,
+	Box,
+} from "@mantine/core";
 import { Nav, SVG } from "_components";
 import { mobileNavBreakpoint } from "_util";
 
@@ -14,19 +23,20 @@ export default function NotFound() {
 			<Container
 				fluid
 				my={{
-					base: "var(--mobile-nav-height)",
-					[mobileNavBreakpoint]:
-						"calc(var(--mobile-nav-height) * 1.5)",
+					base: "calc(var(--mobile-nav-height) * 1.5)",
+					sm: "calc(var(--mobile-nav-height) * 2)",
 				}}
-				maw={1700}
+				maw={1100}
 				pb="lg"
 			>
-				<Grid align="center">
-					<GridCol span={6}>
-						<SVG.Initials variant="leaves" />
-					</GridCol>
-					<GridCol span={6}>
-						<Title order={1}>Oh, no, that&rsquo;s not&mdash;</Title>
+				<SimpleGrid cols={{ base: 0, sm: 2 }}>
+					<SVG.Initials variant="leaves" />
+
+					<Box>
+						<Title order={1}>
+							Oh, no, that&rsquo;s{" "}
+							<span className="text-no-wrap">not&mdash;</span>
+						</Title>
 						<Text mt="sm" mb="sm">
 							<Link
 								href="https://www.tiktok.com/@pop_cltr/video/7326575851657612576?lang=en"
@@ -36,10 +46,10 @@ export default function NotFound() {
 							</Link>
 						</Text>
 						<Button component={Link} href="/">
-							...Go home
+							Go home
 						</Button>
-					</GridCol>
-				</Grid>
+					</Box>
+				</SimpleGrid>
 			</Container>
 		</>
 	);
