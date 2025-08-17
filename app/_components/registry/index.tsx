@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
 	Alert,
 	Badge,
@@ -18,7 +18,11 @@ import { COLORS } from "_styles";
 import { useDisclosure } from "@mantine/hooks";
 import { Image } from "_components/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGift } from "@fortawesome/free-solid-svg-icons";
+import {
+	faArrowUpRightFromSquare,
+	faGift,
+} from "@fortawesome/free-solid-svg-icons";
+import { mobileNavBreakpoint } from "_util";
 
 type RegistryCardType = {
 	id: number;
@@ -169,24 +173,39 @@ export const RegistryComponent = () => {
 				size="xl"
 				mih="90vh"
 			>
-				<iframe
-					src={`https://venmo.com/douglasio?txn=pay&amount=${gift}`}
-					title="Gift"
-					width="100%"
-					height="500"
-				/>
-
+				<Box visibleFrom={mobileNavBreakpoint}>
+					<iframe
+						src={`https://venmo.com/douglasio?txn=pay&amount=${gift}`}
+						title="Gift"
+						width="100%"
+						height="500"
+					/>
+					<Center mt="xs">
+						<a
+							href={`https://venmo.com/douglasio?txn=pay&amount=${gift}`}
+							target="_blank"
+						>
+							Open Venmo in a new window
+						</a>
+					</Center>
+				</Box>
+				<Button
+					component="a"
+					href={`https://venmo.com/douglasio?txn=pay&amount=${gift}`}
+					target="_blank"
+					rightSection={
+						<FontAwesomeIcon
+							icon={faArrowUpRightFromSquare}
+							style={{ width: "1rem" }}
+						/>
+					}
+					hiddenFrom={mobileNavBreakpoint}
+				>
+					Open Venmo
+				</Button>
 				<Alert title="Don&rsquo;t have Venmo?" mt="xs">
 					<>An envelope of cash works, too.</>
 				</Alert>
-				<Center mt="xs">
-					<a
-						href={`https://venmo.com/douglasio?txn=pay&amount=${gift}`}
-						target="_blank"
-					>
-						Open Venmo in a new window
-					</a>
-				</Center>
 			</Modal>
 		</>
 	);

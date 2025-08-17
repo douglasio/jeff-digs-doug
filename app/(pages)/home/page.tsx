@@ -16,7 +16,9 @@ import { COLORS } from "_styles";
 import Link from "next/link";
 
 export const metadata = {
-	title: "Home",
+	title: "The Wedding of Doug & Jeff",
+	description:
+		"Welcome to the wedding of Doug & Jeff, where two people who love each other are finally getting married. No, they’re not related. That’s what makes it so special.",
 };
 
 const Home = () => {
