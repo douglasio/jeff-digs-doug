@@ -7,11 +7,11 @@ import {
 	useDisclosure,
 	useWindowEvent,
 } from "@mantine/hooks";
-import { Burger, Button, Flex, Menu } from "@mantine/core";
+import { Burger, Button, Flex, Menu, rem } from "@mantine/core";
 import {
 	classNames,
-	contentAreaProps,
 	mobileNavBreakpoint,
+	pageGutterSize,
 	SITE_PAGES,
 } from "_util";
 import { COLORS, FONTS } from "_styles";
@@ -68,7 +68,7 @@ export const Nav = ({
 			>
 				{showLogo && (
 					<Link
-						href="/home"
+						href="/"
 						className={classNames([
 							classes.logo,
 							!isScrolled && classes.isPinned,
@@ -110,7 +110,8 @@ export const Nav = ({
 					variant === "inline" && classes.isInline,
 					isScrolled && classes.isPinned,
 				])}
-				{...contentAreaProps}
+				py={rem(20)}
+				px={`calc(var(--mantine-spacing-${pageGutterSize.base}) * 1.5)`}
 			>
 				{/* if showLogo is true and nav is pinned */}
 				<Link href="/">
@@ -185,7 +186,7 @@ export const Nav = ({
 						))}
 						<SVG.EdgeLeaves
 							className={classes.navLeaves}
-							color={COLORS.NAVY[9]}
+							color={COLORS.BLUE[9]}
 						/>
 					</Menu.Dropdown>
 				</Menu>

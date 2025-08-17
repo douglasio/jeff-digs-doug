@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Space } from "@mantine/core";
+import { Container } from "@mantine/core";
 import { Nav } from "_components";
 import { mobileNavBreakpoint } from "_util";
 
@@ -11,20 +11,19 @@ export default function SubpageLayout({
 	return (
 		<>
 			<Nav variant="top" showLogo={true} />
-			<Grid
-				id="page-grid"
-				className={"page-grid"}
-				gutter={{ base: "0", sm: "xl" }} // don't change the gutter base width or you'll get horizontal scrolling
-				m={{
-					base: "0 auto",
-					[mobileNavBreakpoint]: "var(--mobile-nav-height) auto",
+			{/* grid must be wrapped in a container or it's a horizontal scrolling nightmare */}
+			<Container
+				fluid
+				my={{
+					base: "var(--mobile-nav-height)",
+					[mobileNavBreakpoint]:
+						"calc(var(--mobile-nav-height) * 1.5)",
 				}}
-				w={{ base: "auto", sm: "90%" }}
-				overflow="visible"
+				maw={1700}
+				pb="lg"
 			>
 				{children}
-			</Grid>
-			<Space h="xl" />
+			</Container>
 		</>
 	);
 }

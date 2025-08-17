@@ -3,13 +3,14 @@ import { type Metadata } from "next";
 import Image from "next/image";
 import {
 	AspectRatio,
+	Grid,
 	GridCol,
 	Image as MantineImage,
 	Space,
 	Text,
 	Title,
 } from "@mantine/core";
-import { contentAreaProps, mobileNavBreakpoint, PHOTO_CREDIT } from "_util";
+import { mobileNavBreakpoint, PHOTO_CREDIT } from "_util";
 import { FONTS } from "_styles";
 import { FilterAgenda, IntroText } from "_components";
 
@@ -27,26 +28,21 @@ const LeftImage = () => (
 		width={900}
 		quality={95}
 		className="image-dimmed image-fill"
-		// placeholder="blur"
 	/>
 );
 
 const Agenda = () => {
 	return (
-		<>
+		<Grid>
 			<GridCol
+				visibleFrom={mobileNavBreakpoint}
 				span={{ base: 12, md: 5 }}
-				mt={{ base: 0, [mobileNavBreakpoint]: "md" }}
 			>
-				<AspectRatio visibleFrom={mobileNavBreakpoint} ratio={4 / 6}>
+				<AspectRatio ratio={4 / 6}>
 					<LeftImage />
 				</AspectRatio>
 			</GridCol>
-			<GridCol
-				span={{ base: 12, md: 7 }}
-				mt={{ base: 0, [mobileNavBreakpoint]: "md" }}
-				{...contentAreaProps}
-			>
+			<GridCol span={{ base: 12, md: 7 }}>
 				<Title className={FONTS.MRS_EAVES.className} order={1}>
 					Agenda
 				</Title>
@@ -72,7 +68,7 @@ const Agenda = () => {
 				</AspectRatio>
 				<Space h="xl" />
 			</GridCol>
-		</>
+		</Grid>
 	);
 };
 

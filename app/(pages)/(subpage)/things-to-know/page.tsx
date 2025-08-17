@@ -1,10 +1,8 @@
 import React from "react";
 import { Metadata } from "next";
-import { IntroText, SubpageContainer } from "_components";
+import { IntroText } from "_components";
 import {
 	Button,
-	Container,
-	GridCol,
 	List,
 	ListItem,
 	Paper,
@@ -17,6 +15,7 @@ import {
 	AccordionItem,
 	AccordionControl,
 	AccordionPanel,
+	Space,
 } from "@mantine/core";
 import { COLORS, FONTS } from "_styles";
 import { mobileNavBreakpoint } from "_util";
@@ -213,8 +212,8 @@ const things = [
 			<>
 				{" "}
 				<Text>
-					Think <em>Hunger Games</em>. The costumes, not the killing.
-					Well...
+					Think <em>Hunger Games</em> realness. The costumes, not the
+					killing. Well...
 				</Text>
 			</>
 		),
@@ -223,35 +222,33 @@ const things = [
 
 const ThingsToKnow = () => {
 	return (
-		<GridCol span={12} mt={{ base: 0, [mobileNavBreakpoint]: "md" }}>
-			<SubpageContainer>
-				<Title className={FONTS.MRS_EAVES.className} order={1}>
-					Things to Know
-				</Title>
-				<IntroText>
-					Because no wedding is complete without rules.
-				</IntroText>
-				<SimpleGrid
-					visibleFrom="sm"
-					cols={{ base: 1, [mobileNavBreakpoint]: 2 }}
-				>
-					{things.map((thing) => (
-						<Paper key={thing.title} {...paperProps}>
-							<SectionTitle>{thing.title}</SectionTitle>
-							{thing.body}
-						</Paper>
-					))}
-				</SimpleGrid>
-				<Accordion hiddenFrom="sm" multiple>
-					{things.map((thing) => (
-						<AccordionItem key={thing.title} value={thing.title}>
-							<AccordionControl>{thing.title}</AccordionControl>
-							<AccordionPanel>{thing.body}</AccordionPanel>
-						</AccordionItem>
-					))}
-				</Accordion>
-			</SubpageContainer>
-		</GridCol>
+		<>
+			{/* need a spacer if there's no grid */}
+			<Space h="sm" />
+			<Title className={FONTS.MRS_EAVES.className} order={1}>
+				Things to Know
+			</Title>
+			<IntroText>Because no wedding is complete without rules.</IntroText>
+			<SimpleGrid
+				visibleFrom="sm"
+				cols={{ base: 1, [mobileNavBreakpoint]: 2 }}
+			>
+				{things.map((thing) => (
+					<Paper key={thing.title} {...paperProps}>
+						<SectionTitle>{thing.title}</SectionTitle>
+						{thing.body}
+					</Paper>
+				))}
+			</SimpleGrid>
+			<Accordion hiddenFrom="sm" multiple>
+				{things.map((thing) => (
+					<AccordionItem key={thing.title} value={thing.title}>
+						<AccordionControl>{thing.title}</AccordionControl>
+						<AccordionPanel>{thing.body}</AccordionPanel>
+					</AccordionItem>
+				))}
+			</Accordion>
+		</>
 	);
 };
 

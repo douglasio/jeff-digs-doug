@@ -28,7 +28,7 @@ type PageType = {
 
 export const PATHS = {
 	PAGES: {
-		HOME: "/home",
+		HOME: "/",
 		WHO_ARE_YOU: "/who-are-you",
 		VENUE: "/venue",
 		AGENDA: "/agenda",
@@ -79,6 +79,8 @@ export const SITE_PAGES: PageType[] = [
 
 export const mobileNavBreakpoint = "md";
 
+export const pageGutterSize = { base: "sm", [mobileNavBreakpoint]: 0 };
+
 export enum PHOTO_CREDIT {
 	ENGAGEMENT = "Adolfo Florentino",
 	WILLOWDALE = "Mark Spooner",
@@ -86,8 +88,3 @@ export enum PHOTO_CREDIT {
 	DOUG = "Douglas Odell",
 	JEFF = "Jeff Chen",
 }
-
-export const contentAreaProps = {
-	pl: { base: "xs", [mobileNavBreakpoint]: 0 },
-	pr: { base: "xs", [mobileNavBreakpoint]: 0 },
-};

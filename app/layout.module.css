@@ -3,3 +3,46 @@
 	/* height: 100%; */
 	/* overflow-x: hidden; */
 }
+
+.backgroundLeaves {
+	--background-leaves-width: 100rem;
+
+	left: 50%;
+	position: fixed;
+	top: 0;
+	margin-left: calc(var(--background-leaves-width) / 2 * -1);
+	max-width: 100%;
+	width: var(--background-leaves-width);
+	z-index: -1;
+}
+
+.main {
+	@media screen and (min-width: $mantine-breakpoint-sm) {
+		height: 100vh;
+	}
+
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin-bottom: var(--mantine-spacing-xs);
+	}
+
+	p {
+		margin-bottom: var(--mantine-spacing-sm);
+	}
+
+	h4 {
+		margin-top: var(--mantine-spacing-sm);
+	}
+
+	h5 {
+		margin-top: var(--mantine-spacing-sm);
+	}
+
+	h6 {
+		text-transform: uppercase;
+		font-style: italic;
+	}
+}

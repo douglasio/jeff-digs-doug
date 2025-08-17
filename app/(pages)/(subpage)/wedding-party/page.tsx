@@ -1,21 +1,14 @@
 import React from "react";
 import { Metadata } from "next";
+import { Image, IntroText, PartyCard, SVG } from "_components";
 import {
-	Image,
-	IntroText,
-	PartyCard,
-	SVG,
-	SubpageContainer,
-} from "_components";
-import {
-	AspectRatio,
-	Container,
 	Grid,
 	GridCol,
 	List,
 	ListItem,
 	Paper,
 	SimpleGrid,
+	Space,
 	Text,
 	Title,
 } from "@mantine/core";
@@ -274,131 +267,111 @@ const partyPeople = {
 
 const WeddingParty = () => {
 	return (
-		<GridCol
-			span={{ base: 12 }}
-			mt={{ base: 0, [mobileNavBreakpoint]: "md" }}
-		>
-			<SubpageContainer>
-				<Title className={FONTS.MRS_EAVES.className} order={1}>
-					Wedding Party
-				</Title>
-				<IntroText>
-					We assembled the dream team. <br />
-					Presented in no particular order...
-				</IntroText>
-
-				<Title order={2}>The Officiant</Title>
-
-				<Paper mb="xl">
-					<Grid align="center">
-						<GridCol span={{ base: 12, sm: 6, xl: 5 }}>
-							<AspectRatio
-								className="image-container-warm-ice"
-								ratio={1080 / 720}
+		<>
+			{/* need a spacer if there's no grid */}
+			<Space h="sm" />
+			<Title className={FONTS.MRS_EAVES.className} order={1}>
+				Wedding Party
+			</Title>
+			<IntroText>
+				We assembled the dream team. <br />
+				Presented in no particular order...
+			</IntroText>
+			<Title order={2}>The Officiant</Title>
+			<Paper mb="xl">
+				<Grid align="center">
+					<GridCol span={{ base: 12, sm: 6, xl: 5 }}>
+						<div className="image-container-warm-ice">
+							<Image
+								src="/static/images/webp/kara-jeff-doug-hawaii.webp"
+								alt="Thrupple"
+								width={700}
+								height={700}
+								mah={500}
+								priority
+							/>
+						</div>
+					</GridCol>
+					<GridCol span={{ base: 12, sm: 6, xl: 7 }}>
+						<Title order={3} size="md">
+							Kara Zinser
+						</Title>
+						<Text>
+							Kara is Doug and Jeff&rsquo;s unofficial third, and
+							their official officiant. And they were roommates.
+						</Text>
+						<List>
+							<ListItem
+								icon={
+									<SVG.Rose style={{ marginTop: "0.2em" }} />
+								}
 							>
-								<Image
-									src="/static/images/webp/kara-jeff-doug-hawaii.webp"
-									alt="Thrupple"
-									width={1200}
-									height={500}
-									priority
-								/>
-							</AspectRatio>
-						</GridCol>
-						<GridCol span={{ base: 12, sm: 6, xl: 7 }}>
-							<Title order={3} size="md">
-								Kara Zinser
-							</Title>
-							<Text>
-								Kara is Doug and Jeff&rsquo;s unofficial third,
-								and their official officiant. And they were
-								roommates.
-							</Text>
-							<List>
-								<ListItem
-									icon={
-										<SVG.Rose
-											style={{ marginTop: "0.2em" }}
-										/>
-									}
-								>
-									<Title order={3} mb="0">
-										<strong>ROSE</strong> (positives and
-										highlights)
-									</Title>
-									<Text size="xs">
-										Living proof that exposure to the queer
-										community <em>does</em> turn you gay
-									</Text>
-								</ListItem>
-								<ListItem
-									icon={
-										<SVG.Bud
-											style={{ marginTop: "0.2em" }}
-										/>
-									}
-								>
-									<Title order={3} mb="0">
-										<strong>BUD</strong> (future hopes and
-										dreams)
-									</Title>
-									<Text size="xs">
-										Her ankle will heal someday, probably
-									</Text>
-								</ListItem>
-								<ListItem
-									icon={
-										<SVG.Thorn
-											style={{ marginTop: "0.2em" }}
-										/>
-									}
-								>
-									<Title order={3} mb="0">
-										<strong>THORN</strong> (challenges or
-										areas of improvement)
-									</Title>
-									<Text size="xs">
-										Is a woman <em>(just kiddinggg)</em>
-									</Text>
-								</ListItem>
-							</List>
-						</GridCol>
-					</Grid>
-				</Paper>
-
-				<Title order={2}>Doug&rsquo;s MySpace Top 3</Title>
-
-				<SimpleGrid {...partyGridProps}>
-					{partyPeople.doug.map((person, i) => (
-						<PartyCard {...person} index={i} key={person.id} />
-					))}
-				</SimpleGrid>
-
-				<Title order={2}>
-					<span className="text-no-wrap">Jeff&rsquo;s Instagram</span>{" "}
-					<span className="text-no-wrap">Close Friends List</span>
-				</Title>
-
-				<SimpleGrid {...partyGridProps}>
-					{partyPeople.jeff.map((person, i) => (
-						<PartyCard {...person} index={i} key={person.id} />
-					))}
-				</SimpleGrid>
-
-				<Title order={2}>The San Diego Zoo</Title>
-				<Text>
-					While their pets won&rsquo;t be in attendance, their fur
-					will almost definitely be stuck to some of the grooms&rsquo;
-					attire, so they deserver a shout-out here.
-				</Text>
-
-				<SimpleGrid {...partyGridProps}>
-					{partyPeople.pets.map((person, i) => (
-						<PartyCard {...person} index={i} key={person.id} />
-					))}
-				</SimpleGrid>
-			</SubpageContainer>
-		</GridCol>
+								<Title order={3} mb="0">
+									<strong>ROSE</strong> (positives and
+									highlights)
+								</Title>
+								<Text size="xs">
+									Living proof that exposure to the queer
+									community <em>does</em> turn you gay
+								</Text>
+							</ListItem>
+							<ListItem
+								icon={
+									<SVG.Bud style={{ marginTop: "0.2em" }} />
+								}
+							>
+								<Title order={3} mb="0">
+									<strong>BUD</strong> (future hopes and
+									dreams)
+								</Title>
+								<Text size="xs">
+									Her ankle will heal someday, probably
+								</Text>
+							</ListItem>
+							<ListItem
+								icon={
+									<SVG.Thorn style={{ marginTop: "0.2em" }} />
+								}
+							>
+								<Title order={3} mb="0">
+									<strong>THORN</strong> (challenges or areas
+									of improvement)
+								</Title>
+								<Text size="xs">
+									Is a woman <em>(just kiddinggg)</em>
+								</Text>
+							</ListItem>
+						</List>
+					</GridCol>
+				</Grid>
+			</Paper>
+			<Title order={2}>Doug&rsquo;s MySpace Top 3</Title>
+			<SimpleGrid {...partyGridProps}>
+				{partyPeople.doug.map((person, i) => (
+					<PartyCard {...person} index={i} key={person.id} />
+				))}
+			</SimpleGrid>
+			<Title order={2}>
+				<span className="text-no-wrap">Jeff&rsquo;s Instagram</span>{" "}
+				<span className="text-no-wrap">Close Friends List</span>
+			</Title>
+			<SimpleGrid {...partyGridProps}>
+				{partyPeople.jeff.map((person, i) => (
+					<PartyCard {...person} index={i} key={person.id} />
+				))}
+			</SimpleGrid>
+			<Title order={2}>The San Diego Zoo</Title>
+			<Text>
+				While their pets won&rsquo;t be in attendance, their fur will
+				almost definitely be stuck to some of the grooms&rsquo; attire,
+				so they deserver a shout-out here.
+			</Text>
+			<SimpleGrid {...partyGridProps}>
+				{partyPeople.pets.map((person, i) => (
+					<PartyCard {...person} index={i} key={person.id} />
+				))}
+			</SimpleGrid>
+		</>
 	);
 };
 

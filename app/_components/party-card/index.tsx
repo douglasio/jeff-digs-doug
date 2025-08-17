@@ -1,7 +1,6 @@
 import React, { type ReactNode } from "react";
 import * as motion from "motion/react-client";
 import {
-	AspectRatio,
 	Card,
 	CardSection,
 	List,
@@ -9,6 +8,7 @@ import {
 	Text,
 	Title,
 	type CardProps,
+	Stack,
 } from "@mantine/core";
 import { Image, SVG } from "_components";
 
@@ -41,7 +41,7 @@ export const PartyCard = ({
 			viewport={{
 				once: true,
 				amount: 0.5,
-				margin: "50px",
+				margin: "100px",
 			}}
 			variants={{
 				offscreen: {
@@ -61,35 +61,44 @@ export const PartyCard = ({
 			}}
 		>
 			<Card {...props}>
-				<CardSection
-					mb="xs"
-					className="image-container-warm-ice"
-					mih={{ base: 400, sm: 300 }}
-					mt="-1rem"
-				>
-					<Image src={image.src} alt={image.alt} fill />
+				<CardSection className="image-container-warm-ice">
+					<Image
+						src={image.src}
+						alt={image.alt}
+						width="640"
+						height="640"
+						h={{
+							base: 450,
+							sm: 550,
+							md: 350,
+							lg: 400,
+							xl: 640,
+						}}
+					/>
 				</CardSection>
-				<Title order={3} size="md">
-					{name}
-				</Title>
-				<Text>{description.intro}</Text>
-				<List size="xs">
-					<ListItem
-						icon={<SVG.Rose style={{ marginTop: "0.25em" }} />}
-					>
-						{description.rose}
-					</ListItem>
-					<ListItem
-						icon={<SVG.Bud style={{ marginTop: "0.25em" }} />}
-					>
-						{description.bud}
-					</ListItem>
-					<ListItem
-						icon={<SVG.Thorn style={{ marginTop: "0.25em" }} />}
-					>
-						{description.thorn}
-					</ListItem>
-				</List>
+				<Stack p="xs" justify="flex-start" gap="0">
+					<Title order={3} size="md">
+						{name}
+					</Title>
+					<Text>{description.intro}</Text>
+					<List size="xs">
+						<ListItem
+							icon={<SVG.Rose style={{ marginTop: "0.25em" }} />}
+						>
+							{description.rose}
+						</ListItem>
+						<ListItem
+							icon={<SVG.Bud style={{ marginTop: "0.25em" }} />}
+						>
+							{description.bud}
+						</ListItem>
+						<ListItem
+							icon={<SVG.Thorn style={{ marginTop: "0.25em" }} />}
+						>
+							{description.thorn}
+						</ListItem>
+					</List>
+				</Stack>
 			</Card>
 		</motion.div>
 	);
