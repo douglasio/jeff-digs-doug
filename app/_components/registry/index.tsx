@@ -7,7 +7,6 @@ import {
 	Box,
 	Button,
 	Center,
-	Flex,
 	Modal,
 	NumberFormatter,
 	Paper,
@@ -20,7 +19,6 @@ import { useDisclosure } from "@mantine/hooks";
 import { Image } from "_components/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGift } from "@fortawesome/free-solid-svg-icons";
-import { mobileNavBreakpoint } from "_util";
 
 type RegistryCardType = {
 	id: number;

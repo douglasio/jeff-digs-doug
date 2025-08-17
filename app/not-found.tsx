@@ -1,16 +1,7 @@
 import Link from "next/link";
-import {
-	Container,
-	Grid,
-	GridCol,
-	Title,
-	Text,
-	Button,
-	SimpleGrid,
-	Box,
-} from "@mantine/core";
+import { Container, Title, Text, Button, SimpleGrid, Box } from "@mantine/core";
 import { Nav, SVG } from "_components";
-import { mobileNavBreakpoint } from "_util";
+import { FONTS } from "_styles";
 
 export const metadata = {
 	title: "Not Found",
@@ -33,11 +24,11 @@ export default function NotFound() {
 					<SVG.Initials variant="leaves" />
 
 					<Box>
-						<Title order={1}>
+						<Title order={1} className={FONTS.MRS_EAVES.className}>
 							Oh, no, that&rsquo;s{" "}
 							<span className="text-no-wrap">not&mdash;</span>
 						</Title>
-						<Text mt="sm" mb="sm">
+						<Text mb="sm">
 							<Link
 								href="https://www.tiktok.com/@pop_cltr/video/7326575851657612576?lang=en"
 								target="_blank"
