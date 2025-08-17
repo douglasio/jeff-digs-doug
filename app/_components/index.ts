@@ -9,6 +9,7 @@ export * from "./loader";
 export * from "./login-form";
 export * from "./nav";
 export * from "./party-card";
+export * from "./registry";
 export * from "./rsvp";
 export * as SVG from "./svgs";
 export * from "./transition";

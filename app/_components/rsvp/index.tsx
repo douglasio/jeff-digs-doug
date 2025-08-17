@@ -8,7 +8,7 @@ export const RSVP = () => {
 	useEffect(() => {
 		if (ref.current) {
 			const script = document.createElement("script");
-			script.src = "https://dougandjeffswedding.rsvpify.com/embed";
+			script.src = "https://jeffdigsdoug.rsvpify.com/embed";
 			script.async = true;
 			// tell RSVPify where to inject
 			ref.current.appendChild(script);

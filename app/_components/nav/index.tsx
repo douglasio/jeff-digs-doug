@@ -12,6 +12,7 @@ import {
 	classNames,
 	mobileNavBreakpoint,
 	pageGutterSize,
+	PATHS,
 	SITE_PAGES,
 } from "_util";
 import { COLORS, FONTS } from "_styles";
@@ -60,7 +61,7 @@ export const Nav = ({
 					classNameProp,
 				])}
 				component="nav"
-				gap="xs"
+				gap="0"
 				justify={variant === "top" ? "center" : "flex-start"}
 				maw="100%"
 				pos={variant === "inline" ? "relative" : "fixed"}
@@ -68,7 +69,7 @@ export const Nav = ({
 			>
 				{showLogo && (
 					<Link
-						href="/"
+						href={PATHS.PAGES.HOME}
 						className={classNames([
 							classes.logo,
 							!isScrolled && classes.isPinned,
@@ -81,6 +82,7 @@ export const Nav = ({
 					return page.display === "button" ? (
 						<Button
 							component={Link}
+							className={classes.navButton}
 							key={page.text}
 							href={page.url}
 						>

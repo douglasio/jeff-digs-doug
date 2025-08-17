@@ -21,10 +21,7 @@ const RSVP = () => {
 			<RSVPComponent />
 			<Text size="xs" ta="center">
 				(If the form isn&rsquo;t working for you,{" "}
-				<a
-					href="https://dougandjeffswedding.rsvpify.com"
-					target="_blank"
-				>
+				<a href="https://jeffdigsdoug.rsvpify.com" target="_blank">
 					try this
 				</a>
 				) .

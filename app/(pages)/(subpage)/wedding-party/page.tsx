@@ -32,7 +32,7 @@ const partyPeople = {
 			name: "Chris Hong",
 			image: {
 				src: "/static/images/webp/doug-and-chris.webp",
-				alt: "Chris Hong",
+				alt: "Doug and Chris on Doug’s 21st birthday, Chris giving a thumbs up",
 			},
 			description: {
 				intro: (
@@ -56,7 +56,7 @@ const partyPeople = {
 			name: "Tai Nguyen",
 			image: {
 				src: "/static/images/webp/doug-and-tai.webp",
-				alt: "Tai Nguyen",
+				alt: "Doug and Tai giving thumbs up to the camera wearing kimono in Kyoto",
 			},
 			description: {
 				intro: (
@@ -88,7 +88,7 @@ const partyPeople = {
 			name: "Tony Faraco-Hadlock",
 			image: {
 				src: "/static/images/webp/doug-and-tony.webp",
-				alt: "Anthony",
+				alt: "Doug and Tony at a BU Terriers game",
 			},
 			description: {
 				intro: (
@@ -116,7 +116,7 @@ const partyPeople = {
 			name: "Anthony Murphy",
 			image: {
 				src: "/static/images/webp/jeff-and-anthony.webp",
-				alt: "His mom is nice",
+				alt: "Anthony and Jeff posing for the camera wearing a lot of plaid flannel",
 			},
 			description: {
 				intro: (
@@ -144,7 +144,7 @@ const partyPeople = {
 			name: "Kevin Liang",
 			image: {
 				src: "/static/images/webp/jeff-and-kevin.webp",
-				alt: "Thank god there's someone besides Doug to help keep Jeff in check",
+				alt: "Jeff and Kevin wearing pride paraphernalia",
 			},
 			description: {
 				intro: (
@@ -169,7 +169,7 @@ const partyPeople = {
 			name: "Zach Giordano",
 			image: {
 				src: "/static/images/webp/jeff-and-zach.webp",
-				alt: "Anthony",
+				alt: "Jeff carrying Zach piggyback",
 			},
 			description: {
 				intro: (
@@ -196,7 +196,7 @@ const partyPeople = {
 			name: "Cheeto",
 			image: {
 				src: "/static/images/webp/cheeto.webp",
-				alt: "example of an animal with limited intelligence",
+				alt: "Orange cat being held up to the camera",
 			},
 			description: {
 				intro: <>Cheeto is orange.</>,
@@ -220,7 +220,7 @@ const partyPeople = {
 			name: "Boba",
 			image: {
 				src: "/static/images/webp/boba.webp",
-				alt: "cat peeing in toilet",
+				alt: "Black cat peeing in toilet",
 			},
 			description: {
 				intro: (
@@ -241,7 +241,7 @@ const partyPeople = {
 			name: "Gordy",
 			image: {
 				src: "/static/images/webp/gordy.webp",
-				alt: "italian greimaraner",
+				alt: "An italian greimaraner smiling on the beach",
 			},
 			description: {
 				intro: (
@@ -274,8 +274,7 @@ const WeddingParty = () => {
 				Wedding Party
 			</Title>
 			<IntroText>
-				We assembled the dream team. <br />
-				Presented in no particular order...
+				We assembled the dream team. Presented in no particular order...
 			</IntroText>
 			<Title order={2}>The Officiant</Title>
 			<Paper mb="xl">
@@ -284,10 +283,11 @@ const WeddingParty = () => {
 						<div className="image-container-warm-ice">
 							<Image
 								src="/static/images/webp/kara-jeff-doug-hawaii.webp"
-								alt="Thrupple"
+								alt="Doug, Jeff, and Kara laughing in Hawaiian shirts"
 								width={700}
 								height={700}
-								mah={500}
+								w="100%"
+								// mah={500}
 								priority
 							/>
 						</div>

@@ -12,6 +12,7 @@ import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { Image } from "_components";
 import { classNames } from "_util";
 import classes from "./index.module.css";
+import { COLORS } from "_styles";
 
 const timelineItemVariants: Variants = {
 	offscreen: {
@@ -48,7 +49,12 @@ type TimelineProps = {
 
 export const Timeline = ({ events, active }: TimelineProps) => {
 	return (
-		<MantineTimeline active={active} bulletSize={bulletSize} lineWidth={2}>
+		<MantineTimeline
+			active={active}
+			bulletSize={bulletSize}
+			color={COLORS.SAGE[7]}
+			lineWidth={2}
+		>
 			{events.map(
 				({ key, bullet, date, title, description, image }, i) => (
 					<TimelineItem
