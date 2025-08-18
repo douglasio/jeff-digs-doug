@@ -1,175 +1,176 @@
 {
-  "scope": "Workspace",
-  "tasks": {
-    "task-z9Rq3d7qQ11fKBiKDcftG": {
-      "id": "task-z9Rq3d7qQ11fKBiKDcftG",
-      "description": "Style password sign in page",
-      "columnId": "column-done"
-    },
-    "V97ov5mmQgJKHkSF8wE8W": {
-      "id": "V97ov5mmQgJKHkSF8wE8W",
-      "description": "Add success handler for Hubspot form",
-      "columnId": "column-done"
-    },
-    "GKackMcniUIwuGo9PpIBh": {
-      "id": "GKackMcniUIwuGo9PpIBh",
-      "description": "Add error handler for Hubspot form",
-      "columnId": "column-done"
-    },
-    "wFmkDOK6aTlCyrn7eGvAo": {
-      "id": "wFmkDOK6aTlCyrn7eGvAo",
-      "description": "Style the State dropdown",
-      "columnId": "column-done"
-    },
-    "Y9gmnLErVq2UiscdSp55N": {
-      "id": "Y9gmnLErVq2UiscdSp55N",
-      "description": "Style the 404 page",
-      "columnId": "column-todo"
-    },
-    "Xi_d5A0Ba3jY4vHCiHP8B": {
-      "id": "Xi_d5A0Ba3jY4vHCiHP8B",
-      "description": "Convert all Mantine Images to Next Images for optimization\n_Actually Next Images don't work with Cloudflare..._",
-      "columnId": "column-OhG4eQZ8zJtumE6fMmKEE"
-    },
-    "ELo9k1yY9hrjACNoxTDGV": {
-      "id": "ELo9k1yY9hrjACNoxTDGV",
-      "description": "Make the loader animation only show on first load?",
-      "columnId": "column-done"
-    },
-    "7e3WgMejyAAxP2hE2cYTX": {
-      "id": "7e3WgMejyAAxP2hE2cYTX",
-      "description": "Figure out why the stupid loader image is broken",
-      "columnId": "column-done"
-    },
-    "56wqNe6Xxjdi2DSB1Hx2n": {
-      "id": "56wqNe6Xxjdi2DSB1Hx2n",
-      "description": "Style homepage",
-      "columnId": "column-done"
-    },
-    "g0ZbAkcteRtFVVNtZNtS3": {
-      "id": "g0ZbAkcteRtFVVNtZNtS3",
-      "description": "SEO optimizations, OpenGraph, etc.",
-      "columnId": "column-todo"
-    },
-    "nPP6zM-QI6xh1wXOdOKL2": {
-      "id": "nPP6zM-QI6xh1wXOdOKL2",
-      "description": "Change \"error\" color",
-      "columnId": "column-done"
-    },
-    "fPsU0i-apCuFD_tb6_BFm": {
-      "id": "fPsU0i-apCuFD_tb6_BFm",
-      "description": "Change placeholder for ZIP code rom 90210",
-      "columnId": "column-done"
-    },
-    "I1pb13SrUFyWP2SJLZW-U": {
-      "id": "I1pb13SrUFyWP2SJLZW-U",
-      "description": "Get rid of useEffects where possible",
-      "columnId": "column-done"
-    },
-    "pe45NB96vtQ_wD71r3MGL": {
-      "id": "pe45NB96vtQ_wD71r3MGL",
-      "description": "Implement react-query",
-      "columnId": "column-done"
-    },
-    "FuxXXz2UHDMyjg-XBS45J": {
-      "id": "FuxXXz2UHDMyjg-XBS45J",
-      "description": "Route form submissions to list in Hubspot",
-      "columnId": "column-done"
-    },
-    "shfxb6XK9W66bzVj4YrnX": {
-      "id": "shfxb6XK9W66bzVj4YrnX",
-      "description": "Explore photo filtering libraries",
-      "columnId": "column-OhG4eQZ8zJtumE6fMmKEE"
-    },
-    "mEG9p78p2fwrT1p4EpNFp": {
-      "id": "mEG9p78p2fwrT1p4EpNFp",
-      "description": "Fix transitions",
-      "columnId": "column-todo"
-    },
-    "VeFMBUnN9ZFlFaavVZOdK": {
-      "id": "VeFMBUnN9ZFlFaavVZOdK",
-      "description": "Replace pngs with svgs",
-      "columnId": "column-done"
-    },
-    "IkW_-kBHksKyMwmQMl98P": {
-      "id": "IkW_-kBHksKyMwmQMl98P",
-      "description": "Style Venue page",
-      "columnId": "column-done"
-    },
-    "iJ5m8_q_mfAfpY9YieA2r": {
-      "id": "iJ5m8_q_mfAfpY9YieA2r",
-      "description": "Style Agenda page",
-      "columnId": "column-doing"
-    },
-    "ffY4NxNpxTaPtI00nKWgW": {
-      "id": "ffY4NxNpxTaPtI00nKWgW",
-      "description": "Animations and stuff for buttons, pages",
-      "columnId": "column-todo"
-    },
-    "mEZ5JvSIv88rxBU47nGFI": {
-      "id": "mEZ5JvSIv88rxBU47nGFI",
-      "description": "Mobile nav me",
-      "columnId": "column-done"
-    },
-    "hp7GQh-nn2G7RiR4_hkoD": {
-      "id": "hp7GQh-nn2G7RiR4_hkoD",
-      "description": "Page transition animations",
-      "columnId": "column-todo"
-    },
-    "4eixgtp_PpIR0b0JilrSd": {
-      "id": "4eixgtp_PpIR0b0JilrSd",
-      "description": "",
-      "columnId": "column-todo"
-    }
-  },
-  "columns": [
-    {
-      "id": "column-todo",
-      "title": "To do",
-      "tasksIds": [
-        "g0ZbAkcteRtFVVNtZNtS3",
-        "Y9gmnLErVq2UiscdSp55N",
-        "ffY4NxNpxTaPtI00nKWgW",
-        "hp7GQh-nn2G7RiR4_hkoD",
-        "mEG9p78p2fwrT1p4EpNFp",
-        "4eixgtp_PpIR0b0JilrSd"
-      ]
-    },
-    {
-      "id": "column-doing",
-      "title": "Doing",
-      "tasksIds": [
-        "iJ5m8_q_mfAfpY9YieA2r"
-      ]
-    },
-    {
-      "id": "column-done",
-      "title": "Done",
-      "tasksIds": [
-        "IkW_-kBHksKyMwmQMl98P",
-        "mEZ5JvSIv88rxBU47nGFI",
-        "56wqNe6Xxjdi2DSB1Hx2n",
-        "VeFMBUnN9ZFlFaavVZOdK",
-        "FuxXXz2UHDMyjg-XBS45J",
-        "pe45NB96vtQ_wD71r3MGL",
-        "wFmkDOK6aTlCyrn7eGvAo",
-        "I1pb13SrUFyWP2SJLZW-U",
-        "fPsU0i-apCuFD_tb6_BFm",
-        "nPP6zM-QI6xh1wXOdOKL2",
-        "7e3WgMejyAAxP2hE2cYTX",
-        "task-z9Rq3d7qQ11fKBiKDcftG",
-        "GKackMcniUIwuGo9PpIBh",
-        "V97ov5mmQgJKHkSF8wE8W",
-        "ELo9k1yY9hrjACNoxTDGV"
-      ]
-    },
-    {
-      "id": "column-OhG4eQZ8zJtumE6fMmKEE",
-      "title": "Skipped",
-      "tasksIds": [
-        "shfxb6XK9W66bzVj4YrnX",
-        "Xi_d5A0Ba3jY4vHCiHP8B"
-      ]
-    }
-  ]
+	"scope": "Workspace",
+	"tasks": {
+		"task-z9Rq3d7qQ11fKBiKDcftG": {
+			"id": "task-z9Rq3d7qQ11fKBiKDcftG",
+			"description": "Style password sign in page",
+			"columnId": "column-done"
+		},
+		"V97ov5mmQgJKHkSF8wE8W": {
+			"id": "V97ov5mmQgJKHkSF8wE8W",
+			"description": "Add success handler for Hubspot form",
+			"columnId": "column-done"
+		},
+		"GKackMcniUIwuGo9PpIBh": {
+			"id": "GKackMcniUIwuGo9PpIBh",
+			"description": "Add error handler for Hubspot form",
+			"columnId": "column-done"
+		},
+		"wFmkDOK6aTlCyrn7eGvAo": {
+			"id": "wFmkDOK6aTlCyrn7eGvAo",
+			"description": "Style the State dropdown",
+			"columnId": "column-done"
+		},
+		"Y9gmnLErVq2UiscdSp55N": {
+			"id": "Y9gmnLErVq2UiscdSp55N",
+			"description": "Style the 404 page",
+			"columnId": "column-todo"
+		},
+		"Xi_d5A0Ba3jY4vHCiHP8B": {
+			"id": "Xi_d5A0Ba3jY4vHCiHP8B",
+			"description": "Convert all Mantine Images to Next Images for optimization\n_Actually Next Images don't work with Cloudflare..._",
+			"columnId": "column-OhG4eQZ8zJtumE6fMmKEE"
+		},
+		"ELo9k1yY9hrjACNoxTDGV": {
+			"id": "ELo9k1yY9hrjACNoxTDGV",
+			"description": "Make the loader animation only show on first load?",
+			"columnId": "column-done"
+		},
+		"7e3WgMejyAAxP2hE2cYTX": {
+			"id": "7e3WgMejyAAxP2hE2cYTX",
+			"description": "Figure out why the stupid loader image is broken",
+			"columnId": "column-done"
+		},
+		"56wqNe6Xxjdi2DSB1Hx2n": {
+			"id": "56wqNe6Xxjdi2DSB1Hx2n",
+			"description": "Style homepage",
+			"columnId": "column-done"
+		},
+		"g0ZbAkcteRtFVVNtZNtS3": {
+			"id": "g0ZbAkcteRtFVVNtZNtS3",
+			"description": "SEO optimizations, OpenGraph, etc.",
+			"columnId": "column-todo"
+		},
+		"nPP6zM-QI6xh1wXOdOKL2": {
+			"id": "nPP6zM-QI6xh1wXOdOKL2",
+			"description": "Change \"error\" color",
+			"columnId": "column-done"
+		},
+		"fPsU0i-apCuFD_tb6_BFm": {
+			"id": "fPsU0i-apCuFD_tb6_BFm",
+			"description": "Change placeholder for ZIP code rom 90210",
+			"columnId": "column-done"
+		},
+		"I1pb13SrUFyWP2SJLZW-U": {
+			"id": "I1pb13SrUFyWP2SJLZW-U",
+			"description": "Get rid of useEffects where possible",
+			"columnId": "column-done"
+		},
+		"pe45NB96vtQ_wD71r3MGL": {
+			"id": "pe45NB96vtQ_wD71r3MGL",
+			"description": "Implement react-query",
+			"columnId": "column-done"
+		},
+		"FuxXXz2UHDMyjg-XBS45J": {
+			"id": "FuxXXz2UHDMyjg-XBS45J",
+			"description": "Route form submissions to list in Hubspot",
+			"columnId": "column-done"
+		},
+		"shfxb6XK9W66bzVj4YrnX": {
+			"id": "shfxb6XK9W66bzVj4YrnX",
+			"description": "Explore photo filtering libraries",
+			"columnId": "column-OhG4eQZ8zJtumE6fMmKEE"
+		},
+		"mEG9p78p2fwrT1p4EpNFp": {
+			"id": "mEG9p78p2fwrT1p4EpNFp",
+			"description": "Fix transitions",
+			"columnId": "column-todo"
+		},
+		"VeFMBUnN9ZFlFaavVZOdK": {
+			"id": "VeFMBUnN9ZFlFaavVZOdK",
+			"description": "Replace pngs with svgs",
+			"columnId": "column-done"
+		},
+		"IkW_-kBHksKyMwmQMl98P": {
+			"id": "IkW_-kBHksKyMwmQMl98P",
+			"description": "Style Venue page",
+			"columnId": "column-done"
+		},
+		"iJ5m8_q_mfAfpY9YieA2r": {
+			"id": "iJ5m8_q_mfAfpY9YieA2r",
+			"description": "Style Agenda page",
+			"columnId": "column-doing"
+		},
+		"ffY4NxNpxTaPtI00nKWgW": {
+			"id": "ffY4NxNpxTaPtI00nKWgW",
+			"description": "Animations and stuff for buttons, pages",
+			"columnId": "column-todo"
+		},
+		"mEZ5JvSIv88rxBU47nGFI": {
+			"id": "mEZ5JvSIv88rxBU47nGFI",
+			"description": "Mobile nav me",
+			"columnId": "column-done"
+		},
+		"hp7GQh-nn2G7RiR4_hkoD": {
+			"id": "hp7GQh-nn2G7RiR4_hkoD",
+			"description": "Page transition animations",
+			"columnId": "column-todo"
+		},
+		"4eixgtp_PpIR0b0JilrSd": {
+			"id": "4eixgtp_PpIR0b0JilrSd",
+			"description": "",
+			"columnId": "column-todo"
+		}
+	},
+	"columns": [
+		{
+			"id": "column-todo",
+			"title": "To do",
+			"tasksIds": [
+				"g0ZbAkcteRtFVVNtZNtS3",
+				"Y9gmnLErVq2UiscdSp55N",
+				"ffY4NxNpxTaPtI00nKWgW",
+				"hp7GQh-nn2G7RiR4_hkoD",
+				"mEG9p78p2fwrT1p4EpNFp",
+				"4eixgtp_PpIR0b0JilrSd"
+			]
+		},
+		{
+			"id": "column-doing",
+			"title": "Doing",
+			"tasksIds": [
+				"iJ5m8_q_mfAfpY9YieA2r"
+			]
+		},
+		{
+			"id": "column-done",
+			"title": "Done",
+			"tasksIds": [
+				"IkW_-kBHksKyMwmQMl98P",
+				"mEZ5JvSIv88rxBU47nGFI",
+				"56wqNe6Xxjdi2DSB1Hx2n",
+				"VeFMBUnN9ZFlFaavVZOdK",
+				"FuxXXz2UHDMyjg-XBS45J",
+				"pe45NB96vtQ_wD71r3MGL",
+				"wFmkDOK6aTlCyrn7eGvAo",
+				"I1pb13SrUFyWP2SJLZW-U",
+				"fPsU0i-apCuFD_tb6_BFm",
+				"nPP6zM-QI6xh1wXOdOKL2",
+				"7e3WgMejyAAxP2hE2cYTX",
+				"task-z9Rq3d7qQ11fKBiKDcftG",
+				"GKackMcniUIwuGo9PpIBh",
+				"V97ov5mmQgJKHkSF8wE8W",
+				"ELo9k1yY9hrjACNoxTDGV"
+			]
+		},
+		{
+			"id": "column-OhG4eQZ8zJtumE6fMmKEE",
+			"title": "Skipped",
+			"tasksIds": [
+				"shfxb6XK9W66bzVj4YrnX",
+				"Xi_d5A0Ba3jY4vHCiHP8B"
+			]
+		}
+	]
 }
+

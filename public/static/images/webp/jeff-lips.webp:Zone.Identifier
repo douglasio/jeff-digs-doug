@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://cloudconvert.com/
+HostUrl=https://us-east.storage.cloudconvert.com/tasks/4fe0334a-ff61-4a9f-94b2-3a970637210a/jeff-lips.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20250814%2Fva%2Fs3%2Faws4_request&X-Amz-Date=20250814T171512Z&X-Amz-Expires=86400&X-Amz-Signature=4020812b0d981cd08af8c2b37baf6b6b362965ae0a35ca914f9d5fa7c7aed847&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3D%22jeff-lips.webp%22&response-content-type=image%2Fwebp&x-id=GetObject

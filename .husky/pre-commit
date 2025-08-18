@@ -1,1 +1,1 @@
-# npx.cmd lint-staged 
+pnpm run precommit

@@ -1,0 +1,15 @@
+.chips {
+	z-index: 94;
+	&:before {
+		@media screen and (max-width: $mantine-breakpoint-md) {
+			background-color: var(--mantine-color-blue-9);
+			content: "";
+			display: block;
+			height: 100%;
+			left: -100%;
+			position: absolute;
+			width: 200%;
+		}
+	}
+}
+
