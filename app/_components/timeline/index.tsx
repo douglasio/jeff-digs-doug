@@ -95,7 +95,7 @@ export const Timeline = ({ events, active }: TimelineProps) => {
 									w="100%"
 									h="auto"
 									maw={800}
-									priority={i === 0 && true}
+									priority={i < 2 && true}
 								/>
 							)}
 						</motion.div>
