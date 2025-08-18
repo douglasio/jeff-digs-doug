@@ -19,6 +19,7 @@ import {
 	Chip,
 	Timeline,
 	List,
+	Alert,
 } from "@mantine/core";
 import { COLORS, FONTS } from "_styles";
 import classes from "./theme.module.css";
@@ -126,6 +127,16 @@ export const theme = createTheme({
 				chevron: <FontAwesomeIcon icon={faChevronDown} />,
 			},
 		}),
+		Alert: Alert.extend({
+			defaultProps: {
+				p: "xs",
+				color: COLORS.BLUE[1],
+			},
+			classNames: {
+				root: classes.alertRoot,
+				body: classes.alertBody,
+			},
+		}),
 		Autocomplete: Autocomplete.extend({
 			classNames: {
 				dropdown: classes.autocompleteDropdown,
@@ -175,7 +186,12 @@ export const theme = createTheme({
 			},
 		}),
 		Modal: Modal.extend({
-			classNames: { body: classes.modalBody },
+			classNames: {
+				root: classes.modalRoot,
+				body: classes.modalBody,
+				header: classes.modalHeader,
+				close: classes.modalClose,
+			},
 			defaultProps: {
 				transitionProps: { transition: "fade", duration: 500 },
 			},
@@ -216,6 +232,8 @@ export const theme = createTheme({
 		Timeline: Timeline.extend({
 			classNames: {
 				itemTitle: classes.timelineItemTitle,
+				itemBullet: classes.timelineItemBullet,
+				item: classes.timelineItem,
 			},
 		}),
 		Title: Title.extend({

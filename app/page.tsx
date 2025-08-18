@@ -10,7 +10,7 @@ import {
 } from "@mantine/core";
 
 import { HeroImage, IntroText, Nav, SVG } from "_components";
-import { pageGutterSize, mobileNavBreakpoint, WEDDING_DETAILS } from "_util";
+import { mobileNavBreakpoint, WEDDING_DETAILS } from "_util";
 import classes from "./page.module.css";
 import { COLORS } from "_styles";
 import Link from "next/link";
@@ -38,7 +38,7 @@ const Home = () => {
 					>
 						<Container
 							fluid
-							mx={pageGutterSize}
+							mx={0}
 							mt={{ base: "md", [mobileNavBreakpoint]: 0 }}
 						>
 							<Space h="lg" visibleFrom={mobileNavBreakpoint} />

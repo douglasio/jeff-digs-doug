@@ -102,21 +102,30 @@ const things = [
 				<List mr="sm">
 					<ListItem>
 						Double Queen
-						<br />3 available
-						<br />
-						$299 per night plus tax
+						<Text component="span" display="block" py={0} size="xs">
+							3 available
+						</Text>
+						<Text component="span" display="block" py={0} size="xs">
+							$299 per night plus tax
+						</Text>
 					</ListItem>
-					<ListItem>
+					<ListItem mt="xs">
 						Double Queen Suite
-						<br />5 available
-						<br />
-						$339 per night plus tax
+						<Text component="span" display="block" py={0} size="xs">
+							5 available
+						</Text>
+						<Text component="span" display="block" py={0} size="xs">
+							$339 per night plus tax
+						</Text>
 					</ListItem>
-					<ListItem>
+					<ListItem mt="xs">
 						King Suite
-						<br />7 available
-						<br />
-						$349 per night plus tax
+						<Text component="span" display="block" py={0} size="xs">
+							7 available
+						</Text>
+						<Text component="span" display="block" py={0} size="xs">
+							$349 per night plus tax
+						</Text>
 					</ListItem>
 				</List>
 			</>
@@ -131,7 +140,7 @@ const things = [
 					your invitation for details or ask for more info.
 				</Text>
 				<Text>
-					We request that all RSVPs be submitting by{" "}
+					We request that all RSVPs be submitted by{" "}
 					<strong>October 1, 2025</strong>.
 				</Text>
 				<Button component={Link} variant="outline" href="/rsvp">
@@ -210,7 +219,6 @@ const things = [
 		title: "Dress Code",
 		body: (
 			<>
-				{" "}
 				<Text>
 					Think <em>Hunger Games</em> realness. The costumes, not the
 					killing. Well...

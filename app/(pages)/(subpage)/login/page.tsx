@@ -9,7 +9,7 @@ export const metadata = {
 
 const Login = () => {
 	return (
-		<Container mt="lg" w={{ base: "auto", sm: "50%" }}>
+		<Container mt={"calc(var(--mobile-nav-height) * 2)"}>
 			<Title className={FONTS.MRS_EAVES.className} order={1}>
 				Hold it right there!
 			</Title>

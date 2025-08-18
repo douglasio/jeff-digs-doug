@@ -28,6 +28,7 @@ const LeftImage = () => (
 		width={900}
 		quality={95}
 		className="image-dimmed image-fill"
+		priority
 	/>
 );
 
@@ -52,7 +53,7 @@ const Agenda = () => {
 					you&rsquo;re supposed to be.
 				</IntroText>
 
-				<Text w="80%">
+				<Text w={{ base: "100%", [mobileNavBreakpoint]: "80%" }}>
 					These dates and times and events are all subject to change.
 					Check back closer to the wedding date to verify.
 				</Text>

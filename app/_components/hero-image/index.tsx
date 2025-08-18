@@ -15,7 +15,7 @@ export const HeroImage = () => {
 	return (
 		<Box pos="relative" w="100%" h="100%">
 			<motion.div
-				initial={{ y: "-25%", opacity: 0.25 }}
+				initial={{ opacity: 0 }}
 				animate={isHeroLoaded ? { y: 0, opacity: 1 } : {}}
 				transition={{ duration: 1, ease: "easeOut" }}
 				style={{ height: "100%" }}
@@ -30,25 +30,19 @@ export const HeroImage = () => {
 					src="/static/images/webp/engagement_1.webp"
 					placeholder="blur"
 					blurDataURL={blurDataURL}
-					onLoadingComplete={() => setIsHeroLoaded(true)}
+					onLoad={() => setIsHeroLoaded(true)}
 					priority
 				/>
 			</motion.div>
 			<Box
-				component={motion.div}
-				initial={{ y: "50%", opacity: 0 }}
-				animate={isHeroLoaded ? { y: 0, opacity: 1 } : {}}
-				transition={{ duration: 1, ease: "easeOut" }}
 				w={{ base: "40%", sm: rem(250) }}
 				pos="absolute"
 				left="5vw"
 				top={{ base: "5%", sm: "10%" }}
 			>
-				<SVG.Initials
-					variant="vertical"
-					color="green"
-					// className={classes.floatingInitials}
-				/>
+				{isHeroLoaded && (
+					<SVG.Initials variant="vertical" color="green" animate />
+				)}
 			</Box>
 		</Box>
 	);

@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -8,16 +9,10 @@ import {
 	useWindowEvent,
 } from "@mantine/hooks";
 import { Burger, Button, Flex, Menu, rem } from "@mantine/core";
-import {
-	classNames,
-	mobileNavBreakpoint,
-	pageGutterSize,
-	SITE_PAGES,
-} from "_util";
+import { classNames, mobileNavBreakpoint, PATHS, SITE_PAGES } from "_util";
 import { COLORS, FONTS } from "_styles";
 import { SVG } from "_components";
 import classes from "./index.module.css";
-import { useState } from "react";
 
 type NavProps = {
 	className?: string;
@@ -60,7 +55,7 @@ export const Nav = ({
 					classNameProp,
 				])}
 				component="nav"
-				gap="xs"
+				gap="0"
 				justify={variant === "top" ? "center" : "flex-start"}
 				maw="100%"
 				pos={variant === "inline" ? "relative" : "fixed"}
@@ -68,19 +63,20 @@ export const Nav = ({
 			>
 				{showLogo && (
 					<Link
-						href="/"
+						href={PATHS.PAGES.HOME}
 						className={classNames([
 							classes.logo,
 							!isScrolled && classes.isPinned,
 						])}
 					>
-						<SVG.Initials />
+						<SVG.Initials variant="vertical" />
 					</Link>
 				)}
 				{SITE_PAGES.map((page) => {
 					return page.display === "button" ? (
 						<Button
 							component={Link}
+							className={classes.navButton}
 							key={page.text}
 							href={page.url}
 						>
@@ -111,7 +107,8 @@ export const Nav = ({
 					isScrolled && classes.isPinned,
 				])}
 				py={rem(20)}
-				px={`calc(var(--mantine-spacing-${pageGutterSize.base}) * 1.5)`}
+				// px={`calc(var(--mantine-spacing-${pageGutterSize.base}) * 1.5)`}
+				px="sm"
 			>
 				{/* if showLogo is true and nav is pinned */}
 				<Link href="/">
@@ -123,7 +120,6 @@ export const Nav = ({
 						variant="horizontal"
 					/>
 				</Link>
-				{/* <Box className={classes.menu}> */}
 				<Menu
 					closeOnItemClick={true}
 					transitionProps={{
@@ -168,7 +164,12 @@ export const Nav = ({
 								? "var(--mobile-nav-height)"
 								: "auto"
 						}
+						style={{ zIndex: 90 }}
 					>
+						<SVG.EdgeLeaves
+							className={classes.navLeaves}
+							color={COLORS.BLUE[9]}
+						/>
 						{SITE_PAGES.map((page) => (
 							<Menu.Item
 								component={Link}
@@ -184,10 +185,6 @@ export const Nav = ({
 								{page.text}
 							</Menu.Item>
 						))}
-						<SVG.EdgeLeaves
-							className={classes.navLeaves}
-							color={COLORS.BLUE[9]}
-						/>
 					</Menu.Dropdown>
 				</Menu>
 			</Flex>

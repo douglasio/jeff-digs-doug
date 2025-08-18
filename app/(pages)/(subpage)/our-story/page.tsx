@@ -14,8 +14,8 @@ const OurStory = () => {
 				Our Story
 			</Title>
 			<IntroText>
-				Look through this timeline of the story of how made it from
-				fools to fianc&eacute;s.
+				A timeline of the story of how we made it from fools to
+				fianc&eacute;s.
 			</IntroText>
 			<Space h="md" />
 			<Timeline

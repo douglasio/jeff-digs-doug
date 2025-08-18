@@ -60,6 +60,7 @@ type EventType = {
 	};
 	description?: ReactNode | string;
 	audience: AudienceType;
+	showDate: boolean;
 	showTime: boolean;
 }[];
 
@@ -68,11 +69,12 @@ const events: EventType = [
 		id: 1,
 		name: "Wedding Rehearsal",
 		startTime: new Date("2025-10-07 15:00:00"),
-		endTime: new Date("2025-10-07 17:00:00"),
-		location: locations.deacongiles,
-		description: "Timing TBD.",
+		endTime: new Date("2025-10-07 16:00:00"),
+		location: locations.willowdale,
+		// description: "More details to come.",
 		audience: "Wedding Party",
-		showTime: true,
+		showDate: true,
+		showTime: false,
 	},
 	{
 		id: 7,
@@ -80,8 +82,10 @@ const events: EventType = [
 		startTime: new Date("2025-10-07 17:00:00"),
 		endTime: new Date("2025-10-07 19:00:00"),
 		location: locations.deacongiles,
-		description: "After the rehearsal",
+		description:
+			"After the rehearsal, the wedding party will regroup at Deacon Giles to enjoy food and drinks on us before other guests arrive.",
 		audience: "Wedding Party",
+		showDate: true,
 		showTime: true,
 	},
 	{
@@ -91,13 +95,22 @@ const events: EventType = [
 		endTime: new Date("2025-11-08 23:30:00"),
 		location: locations.willowdale,
 		description: (
-			<List size="xs">
-				<ListItem>Cocktail Hour</ListItem>
-				<ListItem>The Roast of Doug & Jeff</ListItem>
-				<ListItem>Cocktail Hour</ListItem>
-			</List>
+			<>
+				<Text>
+					We&rsquo;re still finalizing the intinerary for the evening,
+					but here&rsquo;s a preview of what to expect:
+				</Text>
+				<List size="sm">
+					<ListItem>Cocktail hour</ListItem>
+					<ListItem>The Roast of Doug & Jeff</ListItem>
+					<ListItem>Food</ListItem>
+					<ListItem>Dancing</ListItem>
+					<ListItem>Late night snacks</ListItem>
+				</List>
+			</>
 		),
 		audience: "Guests",
+		showDate: true,
 		showTime: true,
 	},
 	{
@@ -108,13 +121,15 @@ const events: EventType = [
 		location: locations.deacongiles,
 		description: (
 			<>
-				If you&rsquo;re in town early, please join us for a welcome
-				beverage on us! Seriously we&rsquo;ve got minimums to hit.
-				Kindly let us know if you are planning to join using the{" "}
+				If you&rsquo;re in town early, please join us following our
+				rehearsal dinner for a welcome beverage (or three) on us!
+				Seriously, we&rsquo;ve got minimums to hit. Kindly let us know
+				if you are planning to join using the{" "}
 				<Link href="/rsvp">RSVP form</Link>.
 			</>
 		),
 		audience: "Guests",
+		showDate: true,
 		showTime: true,
 	},
 	{
@@ -123,8 +138,9 @@ const events: EventType = [
 		startTime: new Date("2025-11-08 16:00:00"),
 		endTime: new Date("2025-11-08 17:00:00"),
 		location: locations.willowdale,
-		description: "Sample description",
+		// description: "Transportation will be provided to the ceremony/reception venue for those staying in Salem.",
 		audience: "Guests",
+		showDate: true,
 		showTime: true,
 	},
 	{
@@ -140,6 +156,7 @@ const events: EventType = [
 				className="image-dimmed-more"
 			/>
 		),
+		showDate: false,
 		showTime: false,
 	},
 ];
@@ -181,7 +198,7 @@ export const FilterAgenda = () => {
 							checked={isSelected}
 							onClick={() => toggleAudience(audience)}
 							color={audienceColors[audiences.indexOf(audience)]}
-							style={{ zIndex: 995 }}
+							style={{ zIndex: 95 }}
 						>
 							{audience}
 						</Chip>
@@ -257,49 +274,59 @@ export const FilterAgenda = () => {
 											/>
 										)}
 
-										{event.showTime && (
+										{(event.showDate || event.showTime) && (
 											<>
 												<Title order={3} mt="xs" mb="0">
 													When
 												</Title>
 												<Title order={6}>
-													{event.startTime.toLocaleDateString(
-														"en-US",
-														{
-															weekday: "long",
-															year: "numeric",
-															month: "long",
-															day: "numeric",
-															timeZone:
-																"America/New_York",
-														},
-													)}
-													<br />
-													{event.startTime.toLocaleTimeString(
-														"en-US",
-														{
-															hour: "numeric",
-															minute: "numeric",
-															timeZone:
-																"America/New_York",
-														},
-													)}
-													&ndash;
-													{event.endTime.toLocaleTimeString(
-														"en-US",
-														{
-															hour: "numeric",
-															minute: "numeric",
-															timeZone:
-																"America/New_York",
-														},
+													{event.showDate &&
+														event.startTime.toLocaleDateString(
+															"en-US",
+															{
+																weekday: "long",
+																year: "numeric",
+																month: "long",
+																day: "numeric",
+																timeZone:
+																	"America/New_York",
+															},
+														)}
+
+													{event.showTime && (
+														<>
+															<br />
+															{event.startTime.toLocaleTimeString(
+																"en-US",
+																{
+																	hour: "numeric",
+																	minute: "numeric",
+																	timeZone:
+																		"America/New_York",
+																},
+															)}
+															{event.endTime && (
+																<>
+																	&ndash;
+																	{event.endTime.toLocaleTimeString(
+																		"en-US",
+																		{
+																			hour: "numeric",
+																			minute: "numeric",
+																			timeZone:
+																				"America/New_York",
+																		},
+																	)}
+																</>
+															)}
+														</>
 													)}
 												</Title>
 											</>
 										)}
 										{event.location && (
 											<>
-												<Title order={3} mb="0">
+												<Title order={3} mt="xs" mb="0">
 													Where
 												</Title>
 												<Title order={6}>

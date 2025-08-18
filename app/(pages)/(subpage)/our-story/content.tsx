@@ -1,4 +1,5 @@
 import {
+	faArrowUpRightFromSquare,
 	faBeer,
 	faCat,
 	faDiceThree,
@@ -9,6 +10,8 @@ import {
 	faRing,
 	faTruckMoving,
 } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Button } from "@mantine/core";
 
 export const timelineEvents = [
 	{
@@ -35,7 +38,7 @@ export const timelineEvents = [
 				destroyed our own orders. Jeff thought Doug was ditching him
 				because he had to use the bathroom. But he just has a small
 				bladder. Once we realized we both played Pok&eacute;mon Go, we
-				knew we&rsquo;d found something special.
+				knew we were onto something.
 			</>
 		),
 	},
@@ -61,12 +64,13 @@ export const timelineEvents = [
 		title: "Moved in together",
 		description: (
 			<>
-				Jeff basically moved into Doug&rsquo;s apartment 3 weeks after
-				we met, but we actually moved into our own place in Everett
-				later that year. It was a year marked by painting walls in fun
-				shades of blue, trying to stop Boba from peeing on everything we
-				owned, and recovering from concussions inflicted by the
-				apartment&rsquo;s beautiful polished concrete floors.{" "}
+				Jeff had basically moved into Doug&rsquo;s apartment 3 weeks
+				after we met, but we actually moved into our own place in
+				Everett later that year. It was a year marked by painting walls
+				in fun shades of blue, trying to stop Boba from peeing on
+				everything we owned, and recovering from concussions inflicted
+				by the apartment&rsquo;s beautiful polished concrete
+				floors.{" "}
 			</>
 		),
 		image: {
@@ -159,6 +163,21 @@ export const timelineEvents = [
 				house party at an oceanfront resort with an in-house chef to
 				prepare dinner and a photographer to capture the occasion. And
 				yet Jeff still complains that Doug never plans anything.
+				<Button
+					component="a"
+					href="https://adolfoflorentinophoto.pic-time.com/-dougjeffengagement/gallery"
+					target="_blank"
+					variant="outline"
+					mt="xs"
+					rightSection={
+						<FontAwesomeIcon
+							icon={faArrowUpRightFromSquare}
+							style={{ width: "1rem" }}
+						/>
+					}
+				>
+					See more photos from our engagement
+				</Button>
 			</>
 		),
 		image: {
@@ -177,10 +196,10 @@ export const timelineEvents = [
 				On November 8, 2025, we throw the best wedding anyone has ever
 				been to, everything goes off without a hitch, and the venue
 				thinks it&rsquo;s such an amazing event they decide to comp the
-				entire thing. we live happily ever after, both separately
-				winning the lottery immediately following their nuptials and
-				retiring early to travel the world and/or buy a small compound
-				for all their family, friends, and animals to live on.
+				entire thing. We live happily ever after, both separately
+				winning the lottery immediately following our nuptials and
+				retire early to travel the world and/or buy a small compound for
+				all of our family, friends, and animals to live on.
 			</>
 		),
 	},
