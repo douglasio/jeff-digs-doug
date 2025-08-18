@@ -37,7 +37,7 @@ export const PATHS = {
 		WEDDING_PARTY: "/wedding-party",
 		LOGIN: "/login",
 		REGISTRY: "/registry",
-		RSVP: "rsvp",
+		RSVP: "/rsvp",
 	},
 };
 
