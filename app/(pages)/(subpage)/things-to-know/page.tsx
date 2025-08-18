@@ -232,6 +232,17 @@ const things = [
 					Think <em>Hunger Games</em> Capitol realness. The costumes,
 					not the killing. Unless...
 				</Text>
+				<Text>
+					But, y&rsquo;know, do your best. Traditional wedding attire
+					is also acceptable if{" "}
+					<a
+						href="https://thehungergames.fandom.com/wiki/Cinna"
+						target="_blank"
+					>
+						Cinna
+					</a>{" "}
+					is unavailable to design your look.
+				</Text>
 				<Button
 					component="a"
 					href="https://pin.it/1EeqEsc06"
@@ -258,7 +269,6 @@ const things = [
 						/>
 					))}
 				</SimpleGrid>
-				<Text>But, y&rsquo;know, do your best.</Text>
 			</>
 		),
 	},
