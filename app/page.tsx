@@ -16,7 +16,7 @@ import { COLORS } from "_styles";
 import Link from "next/link";
 
 export const metadata = {
-	title: "Home",
+	title: "Doug & Jeff’s Wedding",
 };
 
 const Home = () => {

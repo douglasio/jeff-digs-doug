@@ -51,8 +51,9 @@ type AudienceType = (typeof audiences)[number];
 type EventType = {
 	id: number;
 	name: string;
-	startTime: Date;
-	endTime: Date;
+	date: string;
+	startTime: string;
+	endTime: string;
 	location?: {
 		name: string;
 		address: string;
@@ -68,8 +69,9 @@ const events: EventType = [
 	{
 		id: 1,
 		name: "Wedding Rehearsal",
-		startTime: new Date("2025-10-07 15:00:00"),
-		endTime: new Date("2025-10-07 16:00:00"),
+		date: "November 7, 2025",
+		startTime: "5:00 PM",
+		endTime: "6:00 PM",
 		location: locations.willowdale,
 		// description: "More details to come.",
 		audience: "Wedding Party",
@@ -79,8 +81,9 @@ const events: EventType = [
 	{
 		id: 7,
 		name: "Rehearsal Dinner",
-		startTime: new Date("2025-10-07 17:00:00"),
-		endTime: new Date("2025-10-07 19:00:00"),
+		date: "November 7, 2025",
+		startTime: "5:00 PM",
+		endTime: "6:00 PM",
 		location: locations.deacongiles,
 		description:
 			"After the rehearsal, the wedding party will regroup at Deacon Giles to enjoy food and drinks on us before other guests arrive.",
@@ -89,10 +92,43 @@ const events: EventType = [
 		showTime: true,
 	},
 	{
+		id: 3,
+		name: "Welcome Drinks",
+		date: "November 7, 2025",
+		startTime: "7:00 PM",
+		endTime: "9:00 PM",
+		location: locations.deacongiles,
+		description: (
+			<>
+				If you&rsquo;re in town early, please join us following our
+				rehearsal dinner for a welcome beverage (or three) on us!
+				Seriously, we&rsquo;ve got minimums to hit. Kindly let us know
+				if you are planning to join using the{" "}
+				<Link href="/rsvp">RSVP form</Link>.
+			</>
+		),
+		audience: "Guests",
+		showDate: true,
+		showTime: true,
+	},
+	{
+		id: 2,
+		name: "Ceremony",
+		date: "November 8, 2025",
+		startTime: "4:00 PM",
+		endTime: "5:00 PM",
+		location: locations.willowdale,
+		// description: "Transportation will be provided to the ceremony/reception venue for those staying in Salem.",
+		audience: "Guests",
+		showDate: true,
+		showTime: true,
+	},
+	{
 		id: 5,
 		name: "Reception",
-		startTime: new Date("2025-11-08 18:00:00"),
-		endTime: new Date("2025-11-08 23:30:00"),
+		date: "November 8, 2025",
+		startTime: "6:00 PM",
+		endTime: "11:30 PM",
 		location: locations.willowdale,
 		description: (
 			<>
@@ -114,40 +150,11 @@ const events: EventType = [
 		showTime: true,
 	},
 	{
-		id: 3,
-		name: "Welcome Drinks",
-		startTime: new Date("2025-10-07 19:00:00"),
-		endTime: new Date("2025-10-07 21:00:00"),
-		location: locations.deacongiles,
-		description: (
-			<>
-				If you&rsquo;re in town early, please join us following our
-				rehearsal dinner for a welcome beverage (or three) on us!
-				Seriously, we&rsquo;ve got minimums to hit. Kindly let us know
-				if you are planning to join using the{" "}
-				<Link href="/rsvp">RSVP form</Link>.
-			</>
-		),
-		audience: "Guests",
-		showDate: true,
-		showTime: true,
-	},
-	{
-		id: 2,
-		name: "Ceremony",
-		startTime: new Date("2025-11-08 16:00:00"),
-		endTime: new Date("2025-11-08 17:00:00"),
-		location: locations.willowdale,
-		// description: "Transportation will be provided to the ceremony/reception venue for those staying in Salem.",
-		audience: "Guests",
-		showDate: true,
-		showTime: true,
-	},
-	{
 		id: 8,
 		name: "Live Happily Ever After",
-		startTime: new Date("2025-11-09 16:00:00"),
-		endTime: new Date("2025-11-09 16:00:00"),
+		date: "November 9, 2025",
+		startTime: "5:00 PM",
+		endTime: "6:00 PM",
 		audience: "The Couple",
 		description: (
 			<Image
@@ -222,152 +229,114 @@ export const FilterAgenda = () => {
 			)}
 
 			<AnimatePresence>
-				{events
-					.sort(
-						(a, b) => a.startTime.getTime() - b.startTime.getTime(),
-					)
-					.map((event) => {
-						return (
-							selectedAudience.includes(event.audience) && (
-								<motion.div
-									key={event.id}
-									initial={{ opacity: 0, x: -25, height: 0 }}
-									animate={{
-										opacity: 1,
-										x: 0,
-										height: "auto",
-									}}
-									exit={{ opacity: 0, x: -25, height: 0 }}
-								>
-									<Paper mb="sm">
-										<Group gap="xs" mb="xs">
-											<Title mt={0} mb="0" order={5}>
-												{event.name}{" "}
-											</Title>
-											<Badge
-												onClick={() =>
-													toggleOneAudience(
+				{events.map((event) => {
+					return (
+						selectedAudience.includes(event.audience) && (
+							<motion.div
+								key={event.id}
+								initial={{ opacity: 0, x: -25, height: 0 }}
+								animate={{
+									opacity: 1,
+									x: 0,
+									height: "auto",
+								}}
+								exit={{ opacity: 0, x: -25, height: 0 }}
+							>
+								<Paper mb="sm">
+									<Group gap="xs" mb="xs">
+										<Title mt={0} mb="0" order={5}>
+											{event.name}{" "}
+										</Title>
+										<Badge
+											onClick={() =>
+												toggleOneAudience(
+													event.audience,
+												)
+											}
+											color={
+												audienceColors[
+													audiences.indexOf(
 														event.audience,
 													)
-												}
-												color={
-													audienceColors[
-														audiences.indexOf(
-															event.audience,
-														)
-													]
-												}
-												style={{ cursor: "pointer" }}
-											>
-												{event.audience}
-											</Badge>
-										</Group>
-										{event.location && (
-											<AddToCalendar
-												event={{
-													title: event.name,
-													start: event.startTime,
-													end: event.endTime,
-													location:
-														event.location.address,
-												}}
-											/>
-										)}
-
-										{(event.showDate || event.showTime) && (
-											<>
-												<Title order={3} mt="xs" mb="0">
-													When
-												</Title>
-												<Title order={6}>
-													{event.showDate &&
-														event.startTime.toLocaleDateString(
-															"en-US",
-															{
-																weekday: "long",
-																year: "numeric",
-																month: "long",
-																day: "numeric",
-																timeZone:
-																	"America/New_York",
-															},
-														)}
-
-													{event.showTime && (
-														<>
-															<br />
-															{event.startTime.toLocaleTimeString(
-																"en-US",
-																{
-																	hour: "numeric",
-																	minute: "numeric",
-																	timeZone:
-																		"America/New_York",
-																},
-															)}
-															{event.endTime && (
-																<>
-																	&ndash;
-																	{event.endTime.toLocaleTimeString(
-																		"en-US",
-																		{
-																			hour: "numeric",
-																			minute: "numeric",
-																			timeZone:
-																				"America/New_York",
-																		},
-																	)}
-																</>
-															)}
-														</>
-													)}
-												</Title>
-											</>
-										)}
-										{event.location && (
-											<>
-												<Title order={3} mt="xs" mb="0">
-													Where
-												</Title>
-												<Title order={6}>
-													<address>
-														<a
-															href={
-																event.location
-																	.url
-															}
-															target="_blank"
-														>
-															{
-																event.location
-																	.name
-															}
-															<br />
-															{
-																event.location
-																	.address
-															}
-														</a>
-													</address>
-												</Title>
-											</>
-										)}
-										<Text
-											mt="xs"
-											component={
-												typeof event.description ===
-												"string"
-													? "p"
-													: "div"
+												]
 											}
+											style={{ cursor: "pointer" }}
 										>
-											{event.description}
-										</Text>
-									</Paper>
-								</motion.div>
-							)
-						);
-					})}
+											{event.audience}
+										</Badge>
+									</Group>
+									{event.location && (
+										<AddToCalendar
+											event={{
+												title: event.name,
+												start: `${event.date} ${event.startTime}`,
+												end: `${event.date} ${event.endTime}`,
+												location:
+													event.location.address,
+											}}
+										/>
+									)}
+
+									{(event.showDate || event.showTime) && (
+										<>
+											<Title order={3} mt="xs" mb="0">
+												When
+											</Title>
+											<Title order={6}>
+												{event.showDate && event.date}
+
+												{event.showTime && (
+													<>
+														<br />
+														{event.startTime}
+														{event.endTime && (
+															<>
+																&ndash;
+																{event.endTime}
+															</>
+														)}
+													</>
+												)}
+											</Title>
+										</>
+									)}
+									{event.location && (
+										<>
+											<Title order={3} mt="xs" mb="0">
+												Where
+											</Title>
+											<Title order={6}>
+												<address>
+													<a
+														href={
+															event.location.url
+														}
+														target="_blank"
+													>
+														{event.location.name}
+														<br />
+														{event.location.address}
+													</a>
+												</address>
+											</Title>
+										</>
+									)}
+									<Text
+										mt="xs"
+										component={
+											typeof event.description ===
+											"string"
+												? "p"
+												: "div"
+										}
+									>
+										{event.description}
+									</Text>
+								</Paper>
+							</motion.div>
+						)
+					);
+				})}
 			</AnimatePresence>
 		</Container>
 	);
