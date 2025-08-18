@@ -63,7 +63,7 @@
 	}
 
 	&.mobile {
-		padding: 0.5rem 3rem;
+		padding: 0.5rem 1rem;
 		position: relative;
 		text-align: right;
 	}
@@ -76,6 +76,7 @@
 	margin-right: 1em;
 	width: 3.5rem;
 	transition: 200ms width linear;
+	/* z-index: 301; */
 
 	&.isPinned {
 		height: 6rem;
@@ -111,7 +112,10 @@
 		height: 100%;
 		width: auto;
 		margin: 0;
-		z-index: 99;
+
+		a {
+			z-index: 301; /* relative to mantine's zindex for the menu dropdown, which is 300 */
+		}
 
 		> * {
 			height: 100%;
@@ -133,10 +137,6 @@
 		margin-bottom: calc(var(--mobile-nav-height) * -1);
 	}
 }
-
-/* .navButton {
-	padding: 0.5rem 0.75rem;
-} */
 
 .navLeaves {
 	height: 90vh;
