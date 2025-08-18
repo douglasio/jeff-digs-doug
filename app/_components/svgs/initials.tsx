@@ -2,7 +2,7 @@ import React from "react";
 import { VisuallyHidden } from "@mantine/core";
 import { COLORS } from "_styles";
 import * as motion from "motion/react-client";
-import { hover, spring } from "motion";
+import { spring } from "motion";
 
 const initialsProps = {
 	variants: {
