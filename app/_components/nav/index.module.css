@@ -1,12 +1,41 @@
+.nav {
+	background-color: transparent;
+	flex-wrap: wrap;
+	top: -1px;
+	width: 100%;
+	z-index: 90;
+
+	&.isPinned {
+		background-color: var(--mantine-color-blue-9);
+		/* transition: 200ms background-color; */
+	}
+
+	/* &.top {
+		margin-bottom: var(--mantine-spacing-sm);
+	} */
+}
+
+.navButton {
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+}
+
 .navLink {
 	border-bottom: 2px solid transparent;
 	color: var(--text-color);
 	font-size: var(--mantine-font-size-sm);
 	font-style: italic;
 	font-weight: 300;
-	padding: 0.5rem 0.5%;
+	padding: 0.5rem 0.75rem;
+	position: static;
 	text-decoration: none;
 	white-space: nowrap;
+	z-index: 991;
+
+	&:hover,
+	&.active {
+		text-decoration: none;
+	}
 
 	&:after {
 		background-color: transparent;
@@ -15,7 +44,6 @@
 		height: 2px;
 		margin: 0 auto;
 		opacity: 0;
-		/* transition: 200ms all; */
 	}
 
 	&.active:not(.mobile) {
@@ -33,15 +61,87 @@
 			width: 100%;
 		}
 	}
-}
-.menu {
-	right: var(--grid-col-padding);
-	position: fixed;
-	top: 1rem;
+
+	&.mobile {
+		padding: 0.5rem 1rem;
+		position: relative;
+		text-align: right;
+	}
 }
 
 .logo {
 	display: flex;
-	margin-right: 1rem;
+	height: 3.5rem;
+	margin: 1rem 1rem;
+	margin-right: 1em;
 	width: 3.5rem;
+	transition: 200ms width linear;
+	/* z-index: 301; */
+
+	&.isPinned {
+		height: 6rem;
+		width: 6rem;
+	}
+
+	&.logoHidden {
+		opacity: 0;
+	}
+}
+
+.mobileNav {
+	align-items: stretch;
+	background-color: var(--mantine-color-navy-9);
+	display: flex;
+	height: var(--mobile-nav-height);
+	position: fixed;
+	justify-content: space-between;
+	top: 0;
+	width: 100%;
+	z-index: 98;
+
+	.burger {
+		display: inline-flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-end;
+		z-index: 99;
+	}
+
+	.logo {
+		display: block;
+		height: 100%;
+		width: auto;
+		margin: 0;
+
+		a {
+			z-index: 301; /* relative to mantine's zindex for the menu dropdown, which is 300 */
+		}
+
+		> * {
+			height: 100%;
+			width: auto;
+		}
+	}
+
+	.dropdown {
+		background-color: var(--mantine-color-navy-9);
+		padding: var(--mantine-spacing-xs);
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 99;
+	}
+
+	&.isInline {
+		background-color: transparent;
+		margin-bottom: calc(var(--mobile-nav-height) * -1);
+	}
+}
+
+.navLeaves {
+	height: 90vh;
+	pointer-events: none;
+	position: absolute;
+	bottom: 0;
+	z-index: 0;
 }

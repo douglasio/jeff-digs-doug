@@ -32,6 +32,16 @@
 	background-color: transparent;
 }
 
+/* Alert */
+.alertRoot {
+	background-color: var(--mantine-color-blue-8);
+	/* display: inline-block; */
+}
+
+.alertBody {
+	gap: 0;
+}
+
 /* Autocomplete */
 
 .autocompleteDropdown {
@@ -60,11 +70,6 @@
 	--button-height-compact-lg: calc(2.125rem * var(--mantine-scale));
 	--button-height-compact-xl: calc(2.5rem * var(--mantine-scale));*/
 
-	--button-padding-x-xs: calc(1rem * var(--mantine-scale));
-	--button-padding-x-sm: calc(5rem * var(--mantine-scale));
-	--button-padding-x-md: calc(6rem * var(--mantine-scale));
-	--button-padding-x-lg: calc(7rem * var(--mantine-scale));
-	--button-padding-x-xl: calc(8rem * var(--mantine-scale));
 	/*
 	--button-padding-x-compact-xs: calc(0.4375rem * var(--mantine-scale));
 	--button-padding-x-compact-sm: calc(0.5rem * var(--mantine-scale));
@@ -83,6 +88,20 @@ a.buttonRoot:hover {
 	text-decoration: underline;
 }
 
+.chipRoot {
+}
+
+.chipLabel {
+	height: 2em;
+}
+
+/* makes the homepage go full height, along with 0 top/bottom padding on the GridCol with the image */
+.gridInner {
+	height: 100%;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
 .navLinkRoot {
 	--nl-bg: transparent !important;
 	line-height: 0.75;
@@ -94,11 +113,6 @@ a.buttonRoot:hover {
 	&:hover {
 		border-bottom: 2px solid var(--mantine-color-sage-6);
 	}
-}
-
-.gridInner {
-	height: 100%;
-	margin: 0;
 }
 
 .input {
@@ -118,6 +132,11 @@ a.buttonRoot:hover {
 	&label {
 		color: red;
 	}
+}
+
+.listItemWrapper {
+	--li-align: top;
+	/* padding-bottom: var(--mantine-spacing-xs); */
 }
 
 .loaderSpin {
@@ -146,22 +165,74 @@ a.buttonRoot:hover {
 
 .menuItem {
 	border-bottom: 0;
+	border-right: 2px solid transparent;
 	padding: 0.5rem 2rem;
+	transform: translateX(2px);
 
 	&:hover {
-		background-color: var(--mantine-color-blue-9);
+		background-color: transparent;
+		border-right: 2px solid var(--mantine-color-sage-6);
 	}
+}
+
+.modalRoot {
+	/* z-index: 97; */
 }
 
 .modalBody {
-	background-color: var(--mantine-color-blue-9);
+	padding: 0;
+}
+
+.modalHeader {
+	background-color: transparent;
+	padding: var(--mantine-spacing-xs) 0 var(--mantine-spacing-sm);
+}
+
+.modalClose {
+	background-color: var(--button-bg, var(--mantine-primary-color-filled));
+
+	svg {
+		path {
+			fill: var(--mantine-color-white);
+		}
+	}
+
+	&:hover {
+		background-color: var(
+			--button-hover,
+			var(--mantine-primary-color-filled-hover)
+		);
+
+		svg {
+			path {
+				fill: var(--mantine-color-sage-1);
+			}
+		}
+	}
+}
+
+.paperRoot {
+	background-color: var(--mantine-color-navy-9);
+	padding: 1rem;
+}
+
+.timelineItem {
+	&[data-line-active] {
+		&:before {
+			border-color: var(--mantine-color-sage-3);
+		}
+	}
+}
+
+.timelineItemTitle {
+	font-size: var(--mantine-font-size-sm);
+}
+
+.timelineItemBullet {
+	overflow: hidden;
 }
 
 .title {
-	h1& {
-		/* text-transform: uppercase; */
-	}
-
 	h2& {
 		color: var(--mantine-color-sage-9);
 		font-style: italic;

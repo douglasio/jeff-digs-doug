@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://cloudconvert.com/
+HostUrl=https://us-east.storage.cloudconvert.com/tasks/2dd25295-a599-4888-9ae0-d724771d5f1a/kara-jeff-doug-hawaii.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20250815%2Fva%2Fs3%2Faws4_request&X-Amz-Date=20250815T170629Z&X-Amz-Expires=86400&X-Amz-Signature=a38bf9a55692447a941213efa2be5636e24b50823ca7dfc50a7ea438482a424e&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3D%22kara-jeff-doug-hawaii.webp%22&response-content-type=image%2Fwebp&x-id=GetObject

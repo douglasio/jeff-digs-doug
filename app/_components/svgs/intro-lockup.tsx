@@ -22,3 +22,4 @@ export const IntroLockup = (props: React.SVGProps<SVGSVGElement>) => (
 		/>
 	</svg>
 );
+
