@@ -121,9 +121,8 @@ const partyPeople = {
 			description: {
 				intro: (
 					<>
-						Jeff and Anthony met at Saint Anselm College where
-						Anthony protected a drunken Jeff from being written up
-						by RAs.
+						Jeff and Anthony met at Saint A’s where Anthony
+						protected a drunken Jeff from being written up by RAs.
 					</>
 				),
 				rose: "Gave Jeff the white family he always wanted",
@@ -364,7 +363,7 @@ const WeddingParty = () => {
 			<Text>
 				While their pets won&rsquo;t be in attendance, their fur will
 				almost definitely be stuck to some of the grooms&rsquo; attire,
-				so they deserver a shout-out here.
+				so they deserve a shout-out here.
 			</Text>
 			<SimpleGrid {...partyGridProps}>
 				{partyPeople.pets.map((person, i) => (
