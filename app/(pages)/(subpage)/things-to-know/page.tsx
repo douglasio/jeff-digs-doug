@@ -182,7 +182,8 @@ const things = [
 				</Text>
 				<Text>
 					Please do not bring your children or pets to our wedding. It
-					would make Boba too jealous.
+					would make Boba too jealous, and you won&rsquo;t like her
+					when she&rsquo;s jealous.
 				</Text>
 			</>
 		),
