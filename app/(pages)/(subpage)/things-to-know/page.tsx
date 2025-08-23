@@ -16,6 +16,7 @@ import {
 	AccordionControl,
 	AccordionPanel,
 	Space,
+	Image as MantineImage,
 } from "@mantine/core";
 import { COLORS, FONTS } from "_styles";
 import { mobileNavBreakpoint } from "_util";
@@ -65,6 +66,13 @@ const listItemProps = {
 	},
 };
 
+const dressCodeImages = [
+	"https://i.pinimg.com/736x/c8/5c/15/c85c158a188026310e4ccb2a3c2ef896.jpg",
+	"https://i.pinimg.com/736x/f1/90/82/f190825935e0ea210367f58d0155b86d.jpg",
+	"https://i.pinimg.com/736x/45/a7/61/45a7618a7c3a98d9201c488e569c5b8c.jpg",
+	"https://i.pinimg.com/736x/b8/81/d8/b881d8f193e97a8c4cd3bebd50f51db6.jpg",
+];
+
 const things = [
 	{
 		title: "Hotels",
@@ -94,8 +102,7 @@ const things = [
 
 				<Text mt="sm">
 					Use the link above to get the room block rates listed below,
-					or book wherever wherever you want, you&rsquo;re an
-					independent lady.
+					or book wherever you want, you&rsquo;re an independent lady.
 				</Text>
 
 				<Title order={5}>Rates:</Title>
@@ -174,7 +181,8 @@ const things = [
 					specifically mentioned in their invitation.
 				</Text>
 				<Text>
-					Please do not bring your children or pets to our wedding.
+					Please do not bring your children or pets to our wedding. It
+					would make Boba too jealous.
 				</Text>
 			</>
 		),
@@ -220,9 +228,46 @@ const things = [
 		body: (
 			<>
 				<Text>
-					Think <em>Hunger Games</em> realness. The costumes, not the
-					killing. Well...
+					Think <em>Hunger Games</em> Capitol realness. The costumes,
+					not the killing. Unless...
 				</Text>
+				<Text>
+					But, y&rsquo;know, do your best. Traditional wedding attire
+					is also acceptable if{" "}
+					<a
+						href="https://thehungergames.fandom.com/wiki/Cinna"
+						target="_blank"
+					>
+						Cinna
+					</a>{" "}
+					is unavailable to design your look.
+				</Text>
+				<Button
+					component="a"
+					href="https://pin.it/1EeqEsc06"
+					target="_blank"
+					rightSection={
+						<FontAwesomeIcon
+							icon={faArrowUpRightFromSquare}
+							style={{ width: "1rem" }}
+						/>
+					}
+				>
+					Check the Pinterest board
+				</Button>
+				<SimpleGrid cols={2} my="sm" spacing="sm">
+					{dressCodeImages.map((image, i) => (
+						<MantineImage
+							key={i}
+							src={image}
+							className="image-dimmed"
+							width={607}
+							height={911}
+							w="100%"
+							h="auto"
+						/>
+					))}
+				</SimpleGrid>
 			</>
 		),
 	},

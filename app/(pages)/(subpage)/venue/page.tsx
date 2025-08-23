@@ -64,12 +64,14 @@ const Venue = () => {
 					The Venue
 				</Title>
 				<section>
-					<Title order={2} size="lg">
-						{WEDDING_DETAILS.VENUE}
-					</Title>
-					<Title order={2}>
-						{WEDDING_DETAILS.STREET}, {WEDDING_DETAILS.CITY}
-					</Title>
+					<address>
+						<Title order={2} size="lg">
+							{WEDDING_DETAILS.VENUE}
+						</Title>
+						<Title order={2}>
+							{WEDDING_DETAILS.STREET}, {WEDDING_DETAILS.CITY}
+						</Title>
+					</address>
 				</section>
 				<IntroText>
 					We&rsquo;re throwing a house party at the New England
@@ -135,8 +137,8 @@ const Venue = () => {
 						lists despite Doug repeatedly saying it looked dated and
 						like it might smell weird. But after touring, the energy
 						was undeniable. Loaded with character, cozy but premium,
-						historic, and shrouded by forest so one will hear your
-						screams&mdash;of joy, of course.
+						historic, and shrouded by forest so no one will hear
+						your screams&mdash;of joy, of course.
 					</Text>
 					<Text>
 						After consulting with some friends and trying to picture
