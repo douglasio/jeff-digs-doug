@@ -102,8 +102,7 @@ const things = [
 
 				<Text mt="sm">
 					Use the link above to get the room block rates listed below,
-					or book wherever wherever you want, you&rsquo;re an
-					independent lady.
+					or book wherever you want, you&rsquo;re an independent lady.
 				</Text>
 
 				<Title order={5}>Rates:</Title>
@@ -183,7 +182,8 @@ const things = [
 				</Text>
 				<Text>
 					Please do not bring your children or pets to our wedding. It
-					would make Boba too jealous.
+					would make Boba too jealous, and you won&rsquo;t like her
+					when she&rsquo;s jealous.
 				</Text>
 			</>
 		),
