@@ -102,8 +102,7 @@ const things = [
 
 				<Text mt="sm">
 					Use the link above to get the room block rates listed below,
-					or book wherever wherever you want, you&rsquo;re an
-					independent lady.
+					or book wherever you want, you&rsquo;re an independent lady.
 				</Text>
 
 				<Title order={5}>Rates:</Title>
