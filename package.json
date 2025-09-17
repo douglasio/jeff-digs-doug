@@ -29,7 +29,7 @@
 		"@types/node": "^24.3.0",
 		"@types/react": "19.1.10",
 		"@types/react-dom": "19.1.7",
-		"axios": "^1.10.0",
+		"axios": "^1.12.2",
 		"calendar-link": "^2.11.0",
 		"jose": "^6.0.12",
 		"motion": "^12.23.12",
@@ -65,4 +65,3 @@
 		"@types/react-dom": "19.1.6"
 	}
 }
-
