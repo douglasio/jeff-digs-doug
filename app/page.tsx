@@ -65,8 +65,28 @@ const Home = () => {
 								getting married. No, they&rsquo;re not related.
 								That&rsquo;s what makes it so special.
 							</IntroText>
-							<Button component={Link} href="/our-story">
-								See how we got here
+							<Button component={Link} href="/agenda">
+								Check the updated agenda
+							</Button>
+
+							<Space h="xs" />
+							<Button
+								variant="outline"
+								size="xs"
+								component={Link}
+								href="/things-to-know"
+							>
+								Also, clock the dress code, and more things you
+								should know
+							</Button>
+							<Space h="xs" />
+							<Button
+								variant="outline"
+								size="xs"
+								component={Link}
+								href="/registry"
+							>
+								Also give us money
 							</Button>
 							<Space h="lg" />
 						</Container>

@@ -9,12 +9,13 @@ import {
 	Paper,
 	Text,
 	Title,
-	ListItem,
-	List,
 	Image,
+	Table,
+	TableTbody,
+	TableTr,
+	TableTd,
 } from "@mantine/core";
 import { AnimatePresence, motion } from "motion/react";
-import Link from "next/link";
 import { WEDDING_DETAILS } from "_util";
 import { AddToCalendar } from "_components/add-to-calendar";
 import { COLORS } from "_styles";
@@ -44,6 +45,11 @@ const locations = {
 		address: "75 Canal Street, Salem, MA",
 		url: "https://www.google.com/maps/place/Deacon+Giles+Distillery/@42.5133727,-70.8984996,2221m/data=!3m2!1e3!4b1!4m6!3m5!1s0x89e31487c30046bf:0x100b9c44b66cd70b!8m2!3d42.5133688!4d-70.8959247!16s%2Fg%2F11cm18fpdg?hl=en&entry=ttu&g_ep=EgoyMDI1MDgxMC4wIKXMDSoASAFQAw%3D%3D",
 	},
+	hotel: {
+		name: "The Cove Hotel",
+		address: "40 Bridge St, Salem, MA",
+		url: "https://maps.app.goo.gl/YHx34hUsnTFJnJhF9",
+	},
 };
 
 type AudienceType = (typeof audiences)[number];
@@ -67,26 +73,26 @@ type EventType = {
 
 const events: EventType = [
 	{
-		id: 1,
-		name: "Wedding Rehearsal",
-		date: "November 7, 2025",
-		startTime: "5:00 PM",
-		endTime: "6:00 PM",
-		location: locations.willowdale,
-		// description: "More details to come.",
-		audience: "Wedding Party",
-		showDate: true,
-		showTime: false,
-	},
-	{
 		id: 7,
-		name: "Rehearsal Dinner",
+		name: "Wedding Party & VIP Dinner",
 		date: "November 7, 2025",
 		startTime: "5:00 PM",
 		endTime: "6:00 PM",
 		location: locations.deacongiles,
-		description:
-			"After the rehearsal, the wedding party will regroup at Deacon Giles to enjoy food and drinks on us before other guests arrive.",
+		description: (
+			<>
+				There&rsquo;s no rehearsal,{" "}
+				<a
+					href="https://www.youtube.com/watch?v=vu2NK5REvWM"
+					target="_blank"
+				>
+					we&rsquo;ll do it live!
+				</a>{" "}
+				But the wedding party will still gather at Deacon Giles on the
+				eve of the big day to enjoy food and drinks on us before other
+				guests arrive.
+			</>
+		),
 		audience: "Wedding Party",
 		showDate: true,
 		showTime: true,
@@ -102,9 +108,8 @@ const events: EventType = [
 			<>
 				If you&rsquo;re in town early, please join us following our
 				rehearsal dinner for a welcome beverage (or three) on us!
-				Seriously, we&rsquo;ve got minimums to hit. Kindly let us know
-				if you are planning to join using the{" "}
-				<Link href="/rsvp">RSVP form</Link>.
+				Seriously, we&rsquo;ve got minimums to hit. Hope you
+				RSVP&rsquo;d yes!
 			</>
 		),
 		audience: "Guests",
@@ -112,13 +117,63 @@ const events: EventType = [
 		showTime: true,
 	},
 	{
+		id: 1,
+		name: "Doug & Jeff Arrive at the Venue",
+		date: "November 8, 2025",
+		startTime: "2:00 PM",
+		endTime: "2:30 PM",
+		// location: locations.willowdale,
+		audience: "The Couple",
+		showDate: true,
+		showTime: true,
+	},
+	{
+		id: 3431,
+		name: "Pre-Ceremony Photos",
+		date: "November 8, 2025",
+		startTime: "2:30 PM",
+		endTime: "4:00 PM",
+		location: locations.willowdale,
+		description:
+			"For the couple, wedding party members, and VIPs, please arrive at Willowdale early for getting ready and photos.",
+		audience: "Wedding Party",
+		showDate: true,
+		showTime: true,
+	},
+	{
+		id: 431234,
+		name: "Guest Shuttle Pickup",
+		date: "November 8, 2025",
+		startTime: "3:20 PM",
+		endTime: "3:30 PM",
+		location: locations.hotel,
+		description:
+			"Transportation is available to the ceremony/reception venue for those staying in Salem, departing promptly at 3:30 P.M.",
+		audience: "Guests",
+		showDate: true,
+		showTime: true,
+	},
+	{
 		id: 2,
-		name: "Ceremony",
+		name: "Guest Arrival",
 		date: "November 8, 2025",
 		startTime: "4:00 PM",
+		endTime: "4:30 PM",
+		location: locations.willowdale,
+		description:
+			"Guests may arrive, grab a welcome liquid, and take their seats as directed by venue staff.",
+		audience: "Guests",
+		showDate: true,
+		showTime: true,
+	},
+	{
+		id: 24,
+		name: "Ceremony",
+		date: "November 8, 2025",
+		startTime: "4:30 PM",
 		endTime: "5:00 PM",
 		location: locations.willowdale,
-		// description: "Transportation will be provided to the ceremony/reception venue for those staying in Salem.",
+		description: "Get ready to cry.",
 		audience: "Guests",
 		showDate: true,
 		showTime: true,
@@ -127,22 +182,79 @@ const events: EventType = [
 		id: 5,
 		name: "Reception",
 		date: "November 8, 2025",
-		startTime: "6:00 PM",
-		endTime: "11:30 PM",
+		startTime: "5:00 PM",
+		endTime: "11:00 PM",
 		location: locations.willowdale,
 		description: (
 			<>
 				<Text>
-					We&rsquo;re still finalizing the intinerary for the evening,
-					but here&rsquo;s a preview of what to expect:
+					The reception agenda is subject to change, but here&rsquo;s
+					about what you can expect:
 				</Text>
-				<List size="sm">
-					<ListItem>Cocktail hour</ListItem>
-					<ListItem>The Roast of Doug & Jeff</ListItem>
-					<ListItem>Food</ListItem>
-					<ListItem>Dancing</ListItem>
-					<ListItem>Late night snacks</ListItem>
-				</List>
+				<Table withColumnBorders>
+					<TableTbody>
+						<TableTr>
+							<TableTd w="10rem">5:00 P.M.</TableTd>
+							<TableTd>Cocktail hour</TableTd>
+						</TableTr>
+						<TableTr>
+							<TableTd>6:30 P.M.</TableTd>
+							<TableTd>
+								Dinner and a Show: <br />
+								The Roast (and Toast) of Doug & Jeff
+							</TableTd>
+						</TableTr>
+						<TableTr>
+							<TableTd>8:00 P.M.</TableTd>
+							<TableTd>Dancing</TableTd>
+						</TableTr>
+						<TableTr>
+							<TableTd>10:00 P.M.</TableTd>
+							<TableTd>Late-Night Snack</TableTd>
+						</TableTr>
+						<TableTr>
+							<TableTd>10:30 P.M.</TableTd>
+							<TableTd>Last Call</TableTd>
+						</TableTr>
+						<TableTr>
+							<TableTd>11:00 P.M.</TableTd>
+							<TableTd>The End...?</TableTd>
+						</TableTr>
+					</TableTbody>
+				</Table>
+			</>
+		),
+		audience: "Guests",
+		showDate: true,
+		showTime: true,
+	},
+	{
+		id: 4353415,
+		name: "Early Guest Shuttle Departs",
+		date: "November 8, 2025",
+		startTime: "9:00 PM",
+		endTime: "9:10 PM",
+		// location: locations.willowdale,
+		description: (
+			<>
+				If you aren&rsquo;t down for two more hours of dancing, this
+				shuttle is for you.
+			</>
+		),
+		audience: "Guests",
+		showDate: true,
+		showTime: true,
+	},
+	{
+		id: 4545452331234,
+		name: "Final Guest Shuttle Departs",
+		date: "November 8, 2025",
+		startTime: "11:00 PM",
+		endTime: "11:10 PM",
+		// location: locations.willowdale,
+		description: (
+			<>
+				If you&rsquo;re one of our cool guests, this shuttle is for you.
 			</>
 		),
 		audience: "Guests",
@@ -242,7 +354,14 @@ export const FilterAgenda = () => {
 								}}
 								exit={{ opacity: 0, x: -25, height: 0 }}
 							>
-								<Paper mb="sm">
+								<Paper
+									mb="sm"
+									bd={
+										event.audience === "Guests"
+											? `1px solid ${COLORS.SAGE[3]}`
+											: "none"
+									}
+								>
 									<Group gap="xs" mb="xs">
 										<Title mt={0} mb="0" order={5}>
 											{event.name}{" "}
