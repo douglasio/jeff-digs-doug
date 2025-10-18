@@ -79,15 +79,6 @@ const Home = () => {
 								Also, clock the dress code, and more things you
 								should know
 							</Button>
-							<Space h="xs" />
-							<Button
-								variant="outline"
-								size="xs"
-								component={Link}
-								href="/registry"
-							>
-								Also give us money
-							</Button>
 							<Space h="lg" />
 						</Container>
 					</GridCol>
