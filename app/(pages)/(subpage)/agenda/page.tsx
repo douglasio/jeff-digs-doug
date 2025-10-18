@@ -54,8 +54,9 @@ const Agenda = () => {
 				</IntroText>
 
 				<Text w={{ base: "100%", [mobileNavBreakpoint]: "80%" }}>
-					These dates and times and events are all subject to change.
-					Check back closer to the wedding date to verify.
+					<em>
+						<strong>Updated October 17</strong>
+					</em>
 				</Text>
 
 				<FilterAgenda />

@@ -52,6 +52,32 @@ const partyPeople = {
 		},
 
 		{
+			id: "tony",
+			name: "Tony Faraco-Hadlock",
+			image: {
+				src: "/static/images/webp/doug-and-tony.webp",
+				alt: "Doug and Tony at a BU Terriers game",
+			},
+			description: {
+				intro: (
+					<>
+						Tony, or Anthony if you didn&rsquo;t go to BU, was in
+						the theatre group <em>Wandering Minds</em> with Doug.
+						They built a lasting connection over being theatre
+						nerds, computer nerds, and nerds for staying in touch
+						with good people despite time and distance.
+					</>
+				),
+				rose: (
+					<>
+						Made valiant efforts to get Doug into <em>Overwatch</em>
+					</>
+				),
+				bud: "Looking forward to meeting his dog one day",
+				thorn: "Former Tesla owner (pre-Elon villain arc)",
+			},
+		},
+		{
 			id: "tai",
 			name: "Tai Nguyen",
 			image: {
@@ -81,32 +107,6 @@ const partyPeople = {
 						recent years
 					</>
 				),
-			},
-		},
-		{
-			id: "tony",
-			name: "Tony Faraco-Hadlock",
-			image: {
-				src: "/static/images/webp/doug-and-tony.webp",
-				alt: "Doug and Tony at a BU Terriers game",
-			},
-			description: {
-				intro: (
-					<>
-						Tony, or Anthony if you didn&rsquo;t go to BU, was in
-						the theatre group <em>Wandering Minds</em> with Doug.
-						They built a lasting connection over being theatre
-						nerds, computer nerds, and nerds for staying in touch
-						with good people despite time and distance.
-					</>
-				),
-				rose: (
-					<>
-						Made valiant efforts to get Doug into <em>Overwatch</em>
-					</>
-				),
-				bud: "Looking forward to meeting his dog one day",
-				thorn: "Tesla owner (pre-Elon villain arc)",
 			},
 		},
 	],
@@ -297,7 +297,13 @@ const WeddingParty = () => {
 						</Title>
 						<Text>
 							Kara is Doug and Jeff&rsquo;s unofficial third, and
-							their official officiant. And they were roommates.
+							their official officiant.{" "}
+							<a
+								href="https://www.youtube.com/shorts/y-P0m0M_8pc"
+								target="_blank"
+							>
+								And they were roommates.
+							</a>
 						</Text>
 						<List>
 							<ListItem

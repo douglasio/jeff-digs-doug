@@ -26,7 +26,6 @@ import {
 	faThumbsDown,
 	faThumbsUp,
 } from "@fortawesome/free-solid-svg-icons";
-import Link from "next/link";
 
 export const metadata: Metadata = {
 	title: "Things to Know",
@@ -74,6 +73,95 @@ const dressCodeImages = [
 ];
 
 const things = [
+	{
+		title: "Dress Code",
+		body: (
+			<>
+				<Text>
+					Think <em>Hunger Games</em> Capitol realness. The costumes,
+					not the killing. Unless...
+				</Text>
+				<Text>
+					You can also draw inspiration from{" "}
+					<a
+						href="https://www.vogue.com/slideshow/met-gala-2025-red-carpet"
+						target="_blank"
+					>
+						Met Gala red carpet
+					</a>{" "}
+					fashion if{" "}
+					<a
+						href="https://thehungergames.fandom.com/wiki/Cinna"
+						target="_blank"
+					>
+						Cinna
+					</a>{" "}
+					is unavailable to design your look.
+				</Text>{" "}
+				<Text>
+					Or wear whatever formal stuff you&rsquo;ve got, we just want
+					you to make our moment your moment, too!
+				</Text>
+				<Button
+					component="a"
+					href="https://pin.it/1EeqEsc06"
+					target="_blank"
+					rightSection={
+						<FontAwesomeIcon
+							icon={faArrowUpRightFromSquare}
+							style={{ width: "1rem" }}
+						/>
+					}
+				>
+					Check the Pinterest board
+				</Button>
+				<SimpleGrid cols={2} my="sm" spacing="sm">
+					{dressCodeImages.map((image, i) => (
+						<MantineImage
+							key={i}
+							src={image}
+							className="image-dimmed"
+							width={607}
+							height={911}
+							w="100%"
+							h="auto"
+						/>
+					))}
+				</SimpleGrid>
+			</>
+		),
+	},
+	{
+		title: "Transportation",
+		body: (
+			<>
+				<Title order={5}>Shuttle</Title>
+				<Text>
+					A shuttle will be provided between The Cove Hotel and
+					Willowdate Estate.
+				</Text>
+				<Text>
+					The shuttle, which is a school bus, will leave promptly at{" "}
+					<strong>3:30 P.M.</strong> from{" "}
+					<strong>40 Bridge Street, Salem, MA</strong>. All aboard,
+					school children!
+				</Text>
+				<Text>
+					Two departure times are available: one at{" "}
+					<strong>9:00 PM</strong> and one at{" "}
+					<strong>11:00 P.M.</strong> when the event ends.
+				</Text>
+				<Text>
+					Fortunately, true love never ends, nor does it require a
+					shuttle bus.{" "}
+				</Text>
+				<Title order={5}>Parking</Title>
+				<Text>
+					There is ample parking at the venue if you are driving.
+				</Text>
+			</>
+		),
+	},
 	{
 		title: "Hotels",
 		body: (
@@ -139,40 +227,6 @@ const things = [
 		),
 	},
 	{
-		title: "RSVPs",
-		body: (
-			<>
-				<Text>
-					All RSVPs can be submitted digitally via this website. See
-					your invitation for details or ask for more info.
-				</Text>
-				<Text>
-					We request that all RSVPs be submitted by{" "}
-					<strong>October 1, 2025</strong>.
-				</Text>
-				<Button component={Link} variant="outline" href="/rsvp">
-					RSVP
-				</Button>
-			</>
-		),
-	},
-	{
-		title: "Transportation",
-		body: (
-			<>
-				<Title order={5}>Shuttle</Title>
-				<Text>
-					Shuttles will be provided from The Cove Hotel to Willowdate
-					Estate.
-				</Text>
-				<Title order={5}>Parking</Title>
-				<Text>
-					There is ample parking at the venue if you are driving.
-				</Text>
-			</>
-		),
-	},
-	{
 		title: "Plus Ones and Children",
 		body: (
 			<>
@@ -221,54 +275,6 @@ const things = [
 					We are happy to provide an open bar for the entire evening.
 				</Text>
 				<Text>Drink up if you partake, fools.</Text>
-			</>
-		),
-	},
-	{
-		title: "Dress Code",
-		body: (
-			<>
-				<Text>
-					Think <em>Hunger Games</em> Capitol realness. The costumes,
-					not the killing. Unless...
-				</Text>
-				<Text>
-					But, y&rsquo;know, do your best. Traditional wedding attire
-					is also acceptable if{" "}
-					<a
-						href="https://thehungergames.fandom.com/wiki/Cinna"
-						target="_blank"
-					>
-						Cinna
-					</a>{" "}
-					is unavailable to design your look.
-				</Text>
-				<Button
-					component="a"
-					href="https://pin.it/1EeqEsc06"
-					target="_blank"
-					rightSection={
-						<FontAwesomeIcon
-							icon={faArrowUpRightFromSquare}
-							style={{ width: "1rem" }}
-						/>
-					}
-				>
-					Check the Pinterest board
-				</Button>
-				<SimpleGrid cols={2} my="sm" spacing="sm">
-					{dressCodeImages.map((image, i) => (
-						<MantineImage
-							key={i}
-							src={image}
-							className="image-dimmed"
-							width={607}
-							height={911}
-							w="100%"
-							h="auto"
-						/>
-					))}
-				</SimpleGrid>
 			</>
 		),
 	},

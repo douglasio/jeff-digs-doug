@@ -37,7 +37,7 @@ export const PATHS = {
 		WEDDING_PARTY: "/wedding-party",
 		LOGIN: "/login",
 		REGISTRY: "/registry",
-		RSVP: "/rsvp",
+		// RSVP: "/rsvp",
 	},
 };
 
@@ -70,11 +70,11 @@ export const SITE_PAGES: PageType[] = [
 		text: "Registry",
 		url: PATHS.PAGES.REGISTRY,
 	},
-	{
-		text: "RSVP",
-		url: PATHS.PAGES.RSVP,
-		display: "button",
-	},
+	// {
+	// 	text: "RSVP",
+	// 	url: PATHS.PAGES.RSVP,
+	// 	display: "button",
+	// },
 ];
 
 export const mobileNavBreakpoint = "md";

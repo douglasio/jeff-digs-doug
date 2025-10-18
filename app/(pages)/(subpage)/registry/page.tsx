@@ -29,6 +29,11 @@ const Registry = () => {
 				of our union, we will graciously accept your contribution to one
 				of the gift packages below!
 			</Text>
+			<Text>
+				A card box will also be available at the venue, if you&rsquo;re
+				old school. We&rsquo;re not picky; we just want to afford a
+				house someday.
+			</Text>
 			<RegistryComponent />
 			<Center mt="xl">
 				<Box
