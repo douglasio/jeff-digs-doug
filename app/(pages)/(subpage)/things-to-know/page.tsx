@@ -17,6 +17,7 @@ import {
 	AccordionPanel,
 	Space,
 	Image as MantineImage,
+	Alert,
 } from "@mantine/core";
 import { COLORS, FONTS } from "_styles";
 import { mobileNavBreakpoint } from "_util";
@@ -138,19 +139,19 @@ const things = [
 				<Title order={5}>Shuttle</Title>
 				<Text>
 					A shuttle will be provided between The Cove Hotel and
-					Willowdate Estate.
+					Willowdate Estate. All aboard, school children!
 				</Text>
-				<Text>
-					The shuttle, which is a school bus, will leave promptly at{" "}
-					<strong>3:30 P.M.</strong> from{" "}
-					<strong>40 Bridge Street, Salem, MA</strong>. All aboard,
-					school children!
-				</Text>
-				<Text>
-					Two departure times are available: one at{" "}
-					<strong>9:00 PM</strong> and one at{" "}
-					<strong>11:00 P.M.</strong> when the event ends.
-				</Text>
+				<Alert mb="sm">
+					<Text>
+						The shuttle, which is a school bus, will leave promptly
+						at <strong>3:30 P.M.</strong> from{" "}
+						<strong>40 Bridge Street, Salem, MA</strong>.
+					</Text>
+					<Text>
+						Departure time will be at <strong>11:00 P.M.</strong>{" "}
+						when the event ends.
+					</Text>
+				</Alert>
 				<Text>
 					Fortunately, true love never ends, nor does it require a
 					shuttle bus.{" "}
@@ -159,6 +160,50 @@ const things = [
 				<Text>
 					There is ample parking at the venue if you are driving.
 				</Text>
+			</>
+		),
+	},
+	{
+		title: "Photos",
+		body: (
+			<>
+				<Text>
+					We will have professional photographers documenting the
+					evening.
+				</Text>
+				<Title order={3}>Do&rsquo;s and Don&rsquo;ts:</Title>
+				<List {...listItemProps.check}>
+					<ListItem {...listItemProps.x}>
+						Conspicuous photo-taking during the ceremony
+					</ListItem>
+					<ListItem>Photos during the reception</ListItem>
+					<ListItem {...listItemProps.x}>
+						Posting photos of the ceremony social media
+					</ListItem>
+					<ListItem>
+						Posting ceremony photos on social media after Jeff and
+						Doug have posted the professional shots
+					</ListItem>
+				</List>
+				<Alert my="sm">
+					We&rsquo;d love to see your photos from the reception! Share
+					them via the site below for all (but mostly us) to enjoy:{" "}
+					<Space h="xs" />
+					<Button
+						component="a"
+						color={COLORS.NAVY[4]}
+						href="https://weduploader.com/upload/sO2CpfOIfmDK3KpZ"
+						target="_blank"
+						rightSection={
+							<FontAwesomeIcon
+								icon={faArrowUpRightFromSquare}
+								style={{ width: "1rem" }}
+							/>
+						}
+					>
+						Share your photos
+					</Button>
+				</Alert>
 			</>
 		),
 	},
@@ -173,6 +218,12 @@ const things = [
 					</a>{" "}
 					in Salem, MA.
 				</Text>
+
+				<Alert my="sm">
+					Our room block may or may not be booked out at this point,
+					but feel free to give it a shot. Odds ever in your favor,
+					and all that.
+				</Alert>
 				<Button
 					component="a"
 					href="https://app.mews.com/distributor/cb5dea8f-d140-45d4-927c-b241005464d4?mewsAvailabilityBlockId=57549677-c061-4830-b419-b2a2016540b2&mewsStart=2025-11-07&mewsEnd=2025-11-09"
@@ -239,31 +290,6 @@ const things = [
 					would make Boba too jealous, and you won&rsquo;t like her
 					when she&rsquo;s jealous.
 				</Text>
-			</>
-		),
-	},
-	{
-		title: "Photos",
-		body: (
-			<>
-				<Text>
-					We will have professional photographers documenting the
-					evening.
-				</Text>
-				<Title order={3}>Do&rsquo;s and Don&rsquo;ts:</Title>
-				<List {...listItemProps.check}>
-					<ListItem {...listItemProps.x}>
-						Conspicuous photo-taking during the ceremony
-					</ListItem>
-					<ListItem>Photos during the reception</ListItem>
-					<ListItem {...listItemProps.x}>
-						Posting photos of the ceremony social media
-					</ListItem>
-					<ListItem>
-						Posting ceremony photos on social media after Jeff and
-						Doug have posted the professional shots
-					</ListItem>
-				</List>
 			</>
 		),
 	},

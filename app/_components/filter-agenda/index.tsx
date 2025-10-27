@@ -201,12 +201,12 @@ const events: EventType = [
 							<TableTd>6:30 P.M.</TableTd>
 							<TableTd>
 								Dinner and a Show: <br />
-								The Roast (and Toast) of Doug & Jeff
+								The Roast (and Toasts) of Doug & Jeff
 							</TableTd>
 						</TableTr>
 						<TableTr>
 							<TableTd>8:00 P.M.</TableTd>
-							<TableTd>Dancing</TableTd>
+							<TableTd>Category is: Dance or Die</TableTd>
 						</TableTr>
 						<TableTr>
 							<TableTd>10:00 P.M.</TableTd>
@@ -229,34 +229,11 @@ const events: EventType = [
 		showTime: true,
 	},
 	{
-		id: 4353415,
-		name: "Early Guest Shuttle Departs",
-		date: "November 8, 2025",
-		startTime: "9:00 PM",
-		endTime: "9:10 PM",
-		// location: locations.willowdale,
-		description: (
-			<>
-				If you aren&rsquo;t down for two more hours of dancing, this
-				shuttle is for you.
-			</>
-		),
-		audience: "Guests",
-		showDate: true,
-		showTime: true,
-	},
-	{
 		id: 4545452331234,
-		name: "Final Guest Shuttle Departs",
+		name: "Guest Shuttle Departs",
 		date: "November 8, 2025",
 		startTime: "11:00 PM",
 		endTime: "11:10 PM",
-		// location: locations.willowdale,
-		description: (
-			<>
-				If you&rsquo;re one of our cool guests, this shuttle is for you.
-			</>
-		),
 		audience: "Guests",
 		showDate: true,
 		showTime: true,
