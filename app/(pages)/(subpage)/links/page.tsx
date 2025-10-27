@@ -38,7 +38,7 @@ const links = [
 	},
 	{
 		id: 3,
-		title: "Guest Photos",
+		title: "Guest Photos, Voice Messages, and Guest Book",
 		url: "https://weduploader.com/upload/sO2CpfOIfmDK3KpZ",
 		icon: faCamera,
 	},
