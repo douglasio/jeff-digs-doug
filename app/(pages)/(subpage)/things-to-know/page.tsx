@@ -147,9 +147,8 @@ const things = [
 					school children!
 				</Text>
 				<Text>
-					Two departure times are available: one at{" "}
-					<strong>9:00 PM</strong> and one at{" "}
-					<strong>11:00 P.M.</strong> when the event ends.
+					Departure time will be at <strong>11:00 P.M.</strong> when
+					the event ends.
 				</Text>
 				<Text>
 					Fortunately, true love never ends, nor does it require a
