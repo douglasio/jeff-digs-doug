@@ -76,8 +76,8 @@ const events: EventType = [
 		id: 7,
 		name: "Wedding Party & VIP Dinner",
 		date: "November 7, 2025",
-		startTime: "5:00 PM",
-		endTime: "6:00 PM",
+		startTime: "5:30 PM",
+		endTime: "7:30 PM",
 		location: locations.deacongiles,
 		description: (
 			<>
@@ -101,8 +101,8 @@ const events: EventType = [
 		id: 3,
 		name: "Welcome Drinks",
 		date: "November 7, 2025",
-		startTime: "7:00 PM",
-		endTime: "9:00 PM",
+		startTime: "7:30 PM",
+		endTime: "10:00 PM",
 		location: locations.deacongiles,
 		description: (
 			<>
