@@ -27,7 +27,7 @@ const links = [
 	{
 		id: 2,
 		title: "Seating",
-		url: "https://www.canva.com/design/DAG3BCzQ4c4/V-YhfBuT6w61rYINKK9sgw/edit?utm_content=DAG3BCzQ4c4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
+		url: "https://www.canva.com/design/DAG3CUf3mEc/x-x4AGL1p9QvAh7vFzM8MA/edit?utm_content=DAG3CUf3mEc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
 		icon: faChair,
 	},
 	{
