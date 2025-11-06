@@ -81,16 +81,21 @@ const events: EventType = [
 		location: locations.deacongiles,
 		description: (
 			<>
-				There&rsquo;s no rehearsal,{" "}
-				<a
-					href="https://www.youtube.com/watch?v=vu2NK5REvWM"
-					target="_blank"
-				>
-					we&rsquo;ll do it live!
-				</a>{" "}
-				But the wedding party will still gather at Deacon Giles on the
-				eve of the big day to enjoy food and drinks on us before other
-				guests arrive.
+				<Text>
+					There&rsquo;s no rehearsal,{" "}
+					<a
+						href="https://www.youtube.com/watch?v=vu2NK5REvWM"
+						target="_blank"
+					>
+						we&rsquo;ll do it live!
+					</a>{" "}
+					But the wedding party will still gather at Deacon Giles on
+					the eve of the big day to enjoy food and drinks on us before
+					other guests arrive.
+				</Text>
+				<Text>
+					<strong>Attire:</strong> Smart casual
+				</Text>
 			</>
 		),
 		audience: "Wedding Party",
@@ -106,10 +111,15 @@ const events: EventType = [
 		location: locations.deacongiles,
 		description: (
 			<>
-				If you&rsquo;re in town early, please join us following our
-				rehearsal dinner for a welcome beverage (or three) on us!
-				Seriously, we&rsquo;ve got minimums to hit. Hope you
-				RSVP&rsquo;d yes!
+				<Text>
+					If you&rsquo;re in town early, please join us following our
+					rehearsal dinner for a welcome beverage (or three) on us!
+					Seriously, we&rsquo;ve got minimums to hit. Hope you
+					RSVP&rsquo;d yes!
+				</Text>
+				<Text>
+					<strong>Attire:</strong> Smart casual
+				</Text>
 			</>
 		),
 		audience: "Guests",
