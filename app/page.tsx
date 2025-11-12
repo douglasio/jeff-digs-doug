@@ -5,15 +5,19 @@ import {
 	Container,
 	Grid,
 	GridCol,
+	Group,
 	Space,
+	Text,
 	Title,
 } from "@mantine/core";
 
-import { HeroImage, IntroText, Nav, SVG } from "_components";
-import { mobileNavBreakpoint, WEDDING_DETAILS } from "_util";
+import { HeroImage, IntroText, SVG } from "_components";
+import { mobileNavBreakpoint } from "_util";
 import classes from "./page.module.css";
-import { COLORS } from "_styles";
+import { COLORS, FONTS } from "_styles";
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata = {
 	title: "Doug & Jeff’s Wedding",
@@ -22,11 +26,11 @@ export const metadata = {
 const Home = () => {
 	return (
 		<>
-			<Nav
+			{/* <Nav
 				className={classes.homeMobileNav}
 				variant="inline"
 				showLogo={false}
-			/>
+			/> */}
 			<Container px={0} fluid>
 				<Grid gutter={0}>
 					<GridCol span={{ base: 12, md: 5 }} pb="0" pt="0">
@@ -34,52 +38,81 @@ const Home = () => {
 					</GridCol>
 					<GridCol
 						span={{ base: 12, md: 7 }}
-						pl={{ base: 0, [mobileNavBreakpoint]: "md" }}
+						pl={{ base: 0, [mobileNavBreakpoint]: "sm" }}
 					>
 						<Container
 							fluid
 							mx={0}
 							mt={{ base: "md", [mobileNavBreakpoint]: 0 }}
 						>
-							<Space h="lg" visibleFrom={mobileNavBreakpoint} />
-							<Box visibleFrom={mobileNavBreakpoint}>
-								<Nav variant="inline" showLogo={false} />
+							<Space h="xl" visibleFrom={mobileNavBreakpoint} />
+
+							<Title
+								className={FONTS.MRS_EAVES.className}
+								order={1}
+								size={75}
+								mb="sm"
+								ml="-0.15em"
+							>
+								Thank you.
+							</Title>
+
+							<Title order={2} size="40">
+								&ldquo;I&rsquo;ve had the time of my life, and I
+								owe it all to you.&rdquo;
+								<Text mt="xs" ml="sm">
+									&mdash; The Time (Dirty Bit),{" "}
+									<span className="text-no-wrap">
+										The Black Eyed Peas
+									</span>
+								</Text>
+							</Title>
+
+							<Box mt="sm">
+								<IntroText>
+									This wedding was everything we
+									could&rsquo;ve hoped for, and so much more.
+									Turns out us not being related wasn&rsquo;t
+									what made it so special after all&mdash;it
+									was all of you.
+								</IntroText>
 							</Box>
-							<Space h="sm" visibleFrom={mobileNavBreakpoint} />
-							<SVG.IntroLockup className={classes.lockup} />
-							<Box mb="sm">
-								<Title order={2}>
-									{WEDDING_DETAILS.DATE}
-									<br />
-									<address>
-										{WEDDING_DETAILS.VENUE},{" "}
-										<span className="text-no-wrap">
-											{WEDDING_DETAILS.CITY}
-										</span>
-									</address>
-								</Title>
-							</Box>
-							<IntroText mb="md">
-								Welcome to the wedding of Doug &amp; Jeff, where
-								two people who love each other are finally
-								getting married. No, they&rsquo;re not related.
-								That&rsquo;s what makes it so special.
-							</IntroText>
-							<Button component={Link} href="/agenda">
-								Check the updated agenda
+							<Group gap="sm">
+								<Button
+									component="a"
+									display="inline-block"
+									href="/photos"
+									rightSection={
+										<FontAwesomeIcon
+											icon={faArrowUpRightFromSquare}
+											style={{ width: "1rem" }}
+										/>
+									}
+								>
+									Send us your photos
+								</Button>
+								<Button component={Link} href="/registry">
+									Visit the registry
+								</Button>
+							</Group>
+							<Space h="md" />
+							<Title order={2}>Credit Where Credit Is Due</Title>
+							<Text>
+								A special thanks to all of our vendors, friends,
+								family, and SaaS products who made this happen.
+							</Text>
+							<Button
+								component={Link}
+								href="/credits"
+								variant="outline"
+							>
+								View the credits
 							</Button>
 
-							<Space h="xs" />
-							<Button
-								variant="outline"
-								size="xs"
-								component={Link}
-								href="/things-to-know"
-							>
-								Also, clock the dress code, and more things you
-								should know
-							</Button>
-							<Space h="lg" />
+							<Text size="xs" mt="lg" w="70%">
+								Note: This website will self-destruct whenever
+								the domain registration expires.
+							</Text>
 						</Container>
 					</GridCol>
 				</Grid>
