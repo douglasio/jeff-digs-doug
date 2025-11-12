@@ -81,7 +81,8 @@ const Home = () => {
 								<Button
 									component="a"
 									display="inline-block"
-									href="/photos"
+									href="https://www.jeffdigsdoug.com/photos"
+									target="_blank"
 									rightSection={
 										<FontAwesomeIcon
 											icon={faArrowUpRightFromSquare}
