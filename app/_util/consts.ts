@@ -37,6 +37,7 @@ export const PATHS = {
 		WEDDING_PARTY: "/wedding-party",
 		LOGIN: "/login",
 		REGISTRY: "/registry",
+		CREDITS: "/credits",
 		// RSVP: "/rsvp",
 	},
 };
@@ -46,26 +47,27 @@ export const SITE_PAGES: PageType[] = [
 		text: "Home",
 		url: PATHS.PAGES.HOME,
 	},
-	{
-		text: "Venue",
-		url: PATHS.PAGES.VENUE,
-	},
-	{
-		text: "Agenda",
-		url: PATHS.PAGES.AGENDA,
-	},
-	{
-		text: "Things to Know",
-		url: PATHS.PAGES.THINGS_TO_KNOW,
-	},
-	{
-		text: "Wedding Party",
-		url: PATHS.PAGES.WEDDING_PARTY,
-	},
-	{
-		text: "Our Story",
-		url: PATHS.PAGES.OUR_STORY,
-	},
+	// {
+	// 	text: "Venue",
+	// 	url: PATHS.PAGES.VENUE,
+	// },
+	// {
+	// 	text: "Agenda",
+	// 	url: PATHS.PAGES.AGENDA,
+	// },
+	// {
+	// 	text: "Things to Know",
+	// 	url: PATHS.PAGES.THINGS_TO_KNOW,
+	// },
+	// {
+	// 	text: "Wedding Party",
+	// 	url: PATHS.PAGES.WEDDING_PARTY,
+	// },
+	// {
+	// 	text: "Our Story",
+	// 	url: PATHS.PAGES.OUR_STORY,
+	// },
+	{ text: "Credits", url: PATHS.PAGES.CREDITS },
 	{
 		text: "Registry",
 		url: PATHS.PAGES.REGISTRY,

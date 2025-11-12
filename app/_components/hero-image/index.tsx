@@ -10,7 +10,11 @@ export const HeroImage = () => {
 	const [isHeroLoaded, setIsHeroLoaded] = useState(false);
 
 	return (
-		<Box pos="relative" w="100%" h="100%">
+		<Box
+			pos="relative"
+			w="100%"
+			h={{ base: "60vh", [mobileNavBreakpoint]: "100vh" }}
+		>
 			<motion.div
 				initial={{ opacity: 0.25 }}
 				animate={isHeroLoaded ? { y: 0, opacity: 1 } : {}}
@@ -23,17 +27,18 @@ export const HeroImage = () => {
 					fit="cover"
 					width={1200}
 					height={800}
-					h={{ base: "100%", [mobileNavBreakpoint]: "100vh" }}
-					src="/static/images/webp/engagement_1.webp"
+					h="100%"
+					src="/static/images/webp/wedding-walking-outside.webp"
 					onLoad={() => setIsHeroLoaded(true)}
+					style={{ objectPosition: "top center" }}
 					priority
 				/>
 			</motion.div>
 			<Box
-				w={{ base: "40%", sm: rem(250) }}
+				w={{ base: "30%", sm: rem(200) }}
 				pos="absolute"
-				left="5vw"
-				top={{ base: "5%", sm: "10%" }}
+				right={{ base: "10vw", sm: "5vw" }}
+				top="3%"
 			>
 				{isHeroLoaded && (
 					<SVG.Initials variant="vertical" color="green" animate />
