@@ -167,6 +167,7 @@ export const RegistryComponent = () => {
 					<NumberFormatter
 						prefix="Gift $"
 						value={gift}
+						suffix=" - @douglasio on Venmo"
 						thousandSeparator
 					/>
 				}
@@ -204,10 +205,9 @@ export const RegistryComponent = () => {
 					Open Venmo
 				</Button>
 				<Alert title="Don&rsquo;t have Venmo?" mt="xs">
-					<>An envelope of cash works, too.</>
+					<>An envelope of cash at the venue works, too.</>
 				</Alert>
 			</Modal>
 		</>
 	);
 };
-

@@ -55,7 +55,7 @@ const Agenda = () => {
 
 				<Text w={{ base: "100%", [mobileNavBreakpoint]: "80%" }}>
 					<em>
-						<strong>Updated October 17</strong>
+						<strong>Updated October 27</strong>
 					</em>
 				</Text>
 
