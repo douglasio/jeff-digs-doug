@@ -1,7 +1,7 @@
 import React from "react";
 import { Metadata } from "next";
 import { Image, IntroText, RegistryComponent } from "_components";
-import { Box, Center, Space, Text, Title } from "@mantine/core";
+import { Alert, Box, Center, Space, Text, Title } from "@mantine/core";
 import { FONTS } from "_styles";
 import { mobileNavBreakpoint } from "_util";
 import {} from "_components/registry";
@@ -29,11 +29,17 @@ const Registry = () => {
 				of our union, we will graciously accept your contribution to one
 				of the gift packages below!
 			</Text>
-			<Text>
-				A card box will also be available at the venue, if you&rsquo;re
-				old school. We&rsquo;re not picky; we just want to afford a
-				house someday.
-			</Text>
+			<Alert>
+				Please send any gifts via:
+				<ul>
+					<li>Venmo, to @douglasio</li>
+					<li>
+						Zelle, to Douglas Odell, phone number ending in 6041
+					</li>
+				</ul>{" "}
+				Thank you so much to those who already have!
+			</Alert>
+			<Space h="sm" />
 			<RegistryComponent />
 			<Center mt="xl">
 				<Box
